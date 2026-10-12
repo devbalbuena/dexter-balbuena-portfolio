@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="admin-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#admin-bg)" />
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+  <rect x="40" y="30" width="720" height="45" rx="12" fill="#1e1b4b" />
+  <circle cx="65" cy="52" r="6" fill="#ef4444" opacity="0.8" />
+  <circle cx="85" cy="52" r="6" fill="#f59e0b" opacity="0.8" />
+  <circle cx="105" cy="52" r="6" fill="#10b981" opacity="0.8" />
+  <text x="140" y="58" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">VA_Daily_Workflow_&amp;_SOP_Hub.gdoc [Portfolio Sample]</text>
+  
+  <rect x="65" y="95" width="310" height="295" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="85" y="125" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">EXECUTIVE ASSISTANT CHECKLIST</text>
+  <text x="85" y="155" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">✓ 11:00 PM PHT: Inbox Zero Sorting</text>
+  <text x="85" y="185" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">✓ 12:30 AM PHT: Supplier Stock Sync</text>
+  <text x="85" y="215" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">✓ 02:00 AM PHT: Competitor Price Scrape</text>
+  <text x="85" y="245" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">✓ 04:00 AM PHT: Daily Executive Briefing</text>
+  <text x="85" y="275" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">✓ 05:45 AM PHT: Shift End Summary Log</text>
+
+  <rect x="400" y="95" width="335" height="295" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="420" y="125" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">TIME UTILIZATION BY CATEGORY</text>
+  <rect x="420" y="145" width="295" height="24" rx="4" fill="#334155" />
+  <rect x="420" y="145" width="135" height="24" rx="4" fill="#6366f1" />
+  <text x="430" y="161" fill="#fff" font-family="system-ui, sans-serif" font-size="11">E-Commerce Ops (45%)</text>
+  
+  <rect x="420" y="180" width="295" height="24" rx="4" fill="#334155" />
+  <rect x="420" y="180" width="95" height="24" rx="4" fill="#10b981" />
+  <text x="430" y="196" fill="#fff" font-family="system-ui, sans-serif" font-size="11">Data &amp; Sheets (30%)</text>
+
+  <rect x="420" y="215" width="295" height="24" rx="4" fill="#334155" />
+  <rect x="420" y="215" width="75" height="24" rx="4" fill="#f59e0b" />
+  <text x="430" y="231" fill="#fff" font-family="system-ui, sans-serif" font-size="11">Admin &amp; Comms (25%)</text>
+
+  <rect x="420" y="260" width="295" height="110" rx="6" fill="#0f172a" stroke="#4338ca" stroke-width="1" />
+  <text x="435" y="285" fill="#c7d2fe" font-family="system-ui, sans-serif" font-size="11" font-weight="600">TIMEZONE ADVANTAGE</text>
+  <text x="435" y="308" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">11 PM - 6 AM PHT active shift covers:</text>
+  <text x="435" y="330" fill="#38bdf8" font-family="monospace" font-size="11">• US Eastern: 10:00 AM - 5:00 PM</text>
+  <text x="435" y="350" fill="#38bdf8" font-family="monospace" font-size="11">• UK GMT: 3:00 PM - 10:00 PM</text>
+</svg>

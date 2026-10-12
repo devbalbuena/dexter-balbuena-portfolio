@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="design-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a044e" />
+      <stop offset="100%" stop-color="#18021a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#design-bg)" />
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#0f172a" stroke="#d946ef" stroke-width="1.5" />
+  <rect x="40" y="30" width="720" height="45" rx="12" fill="#2e0854" />
+  <circle cx="65" cy="52" r="6" fill="#ef4444" opacity="0.8" />
+  <circle cx="85" cy="52" r="6" fill="#f59e0b" opacity="0.8" />
+  <circle cx="105" cy="52" r="6" fill="#10b981" opacity="0.8" />
+  <text x="140" y="58" fill="#f5d0fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Canva_Pinterest_Creative_Kit_v2.design [Portfolio Design Asset]</text>
+  
+  <!-- 3 Pin Mockups (2:3 aspect ratio) -->
+  <rect x="80" y="95" width="180" height="270" rx="8" fill="#fdf4ff" stroke="#f0abfc" stroke-width="2" />
+  <rect x="95" y="110" width="150" height="110" rx="4" fill="#fae8ff" />
+  <text x="105" y="150" fill="#a21caf" font-family="system-ui, sans-serif" font-size="14" font-weight="800">5 DESK HACKS</text>
+  <text x="105" y="172" fill="#701a75" font-family="system-ui, sans-serif" font-size="11">for peak focus</text>
+  <rect x="105" y="240" width="130" height="28" rx="14" fill="#a21caf" />
+  <text x="125" y="258" fill="#fff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">READ GUIDE ↗</text>
+  <text x="95" y="310" fill="#86198f" font-family="system-ui, sans-serif" font-size="10">2:3 High-Click Pin</text>
+  <text x="95" y="330" fill="#a21caf" font-family="monospace" font-size="9">1000 x 1500 PX</text>
+
+  <rect x="290" y="95" width="180" height="270" rx="8" fill="#0f172a" stroke="#d946ef" stroke-width="2" />
+  <rect x="305" y="110" width="150" height="110" rx="4" fill="#2e0854" />
+  <text x="315" y="150" fill="#f5d0fe" font-family="system-ui, sans-serif" font-size="14" font-weight="800">NEW DROP ⚡</text>
+  <text x="315" y="172" fill="#e879f9" font-family="system-ui, sans-serif" font-size="11">Minimalist Organizer</text>
+  <rect x="315" y="240" width="130" height="28" rx="14" fill="#c026d3" />
+  <text x="335" y="258" fill="#fff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">SHOP 20% OFF</text>
+  <text x="305" y="310" fill="#f0abfc" font-family="system-ui, sans-serif" font-size="10">Product Feature Card</text>
+  <text x="305" y="330" fill="#d946ef" font-family="monospace" font-size="9">1000 x 1500 PX</text>
+
+  <!-- Color Palette & Tools Panel -->
+  <rect x="500" y="95" width="235" height="270" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="520" y="125" fill="#f5d0fe" font-family="system-ui, sans-serif" font-size="12" font-weight="700">BRAND ASSET PALETTE</text>
+  
+  <circle cx="530" cy="155" r="14" fill="#a21caf" />
+  <text x="555" y="160" fill="#e2e8f0" font-family="monospace" font-size="11">#A21CAF (Primary)</text>
+
+  <circle cx="530" cy="195" r="14" fill="#c026d3" />
+  <text x="555" y="200" fill="#e2e8f0" font-family="monospace" font-size="11">#C026D3 (Accent)</text>
+
+  <circle cx="530" cy="235" r="14" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+  <text x="555" y="240" fill="#e2e8f0" font-family="monospace" font-size="11">#0F172A (Deep Slate)</text>
+
+  <rect x="515" y="270" width="205" height="80" rx="6" fill="#0f172a" />
+  <text x="525" y="295" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Batch Creative Efficiency</text>
+  <text x="525" y="318" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">25+ Pinterest &amp; IG asset variants</text>
+  <text x="525" y="335" fill="#c084fc" font-family="system-ui, sans-serif" font-size="10">[DEMO DESIGN PACK]</text>
+</svg>

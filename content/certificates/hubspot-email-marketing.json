@@ -1,0 +1,16 @@
+{
+  "name": "Email Marketing Certification",
+  "issuer": "HubSpot Academy",
+  "issued": "2025-10-05",
+  "expires": "2027-10-05",
+  "credentialId": "HUBSPOT-EMAIL-MKTG-PLACEHOLDER",
+  "credentialUrl": "https://academy.hubspot.com/",
+  "skills": [
+    "Contact List Segmentation",
+    "Email Deliverability & Compliance",
+    "Automated Lead Workflows",
+    "A/B Subject Line Testing",
+    "Open & Click-Through Optimization"
+  ],
+  "isVerified": true
+}

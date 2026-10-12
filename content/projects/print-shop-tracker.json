@@ -1,0 +1,36 @@
+{
+  "slug": "print-shop-tracker",
+  "title": "Print Shop Custom Job Order & Production Status Tracker",
+  "category": "web-system",
+  "summary": "Order workflow application tracking custom print specifications, production queue stages, deadline alerts, and material inventories.",
+  "problem": "Handling custom printing orders (paper stock, dimensions, lamination, turnaround deadline) through fragmented messages leads to missed print schedules and wrong proof runs.",
+  "whatIDid": [
+    "Built a modular Kanban-style order progress tracker with statuses: Order Received, Proof Approval, In Production, QA Check, Ready for Pickup.",
+    "Integrated custom specification inputs (print dimensions, paper gsm, quantity, finish coating, customer rush deadline).",
+    "Implemented automated priority sorting flagging rush orders approaching turnaround within 24 hours.",
+    "Designed an exportable production summary report for morning workshop briefing."
+  ],
+  "result": "Developed functional web-based tracking dashboard for print shop workflow modeling [INTERNAL SYSTEM DEMO].",
+  "tools": [
+    "JavaScript",
+    "React",
+    "Tailwind CSS",
+    "Local Storage / State",
+    "Canva (Mockups)"
+  ],
+  "date": "2025-09-18",
+  "featured": false,
+  "projectType": "web-system",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/print-shop-tracker.svg",
+      "alt": "Print Shop Job Order Dashboard",
+      "caption": "Kanban board interface showing active production stages and urgent turnaround tags."
+    }
+  ],
+  "links": {
+    "githubUrl": "https://github.com/devbalbuena"
+  }
+}

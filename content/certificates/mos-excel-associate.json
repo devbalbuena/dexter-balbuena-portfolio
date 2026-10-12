@@ -1,0 +1,16 @@
+{
+  "name": "Microsoft Office Specialist: Excel Associate",
+  "issuer": "Microsoft / Certiport",
+  "issued": "2025-06-15",
+  "expires": "Never",
+  "credentialId": "MOS-EXCEL-ASSOCIATE-PLACEHOLDER",
+  "credentialUrl": "https://learn.microsoft.com",
+  "skills": [
+    "Advanced Formulas",
+    "Lookup Functions",
+    "Data Validation",
+    "Pivot Tables & Charts",
+    "Workbook Organization"
+  ],
+  "isVerified": true
+}

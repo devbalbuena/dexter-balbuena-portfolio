@@ -1,0 +1,36 @@
+{
+  "slug": "inventory-task-tracker",
+  "title": "VA Multi-Store Task & Inventory Tracking Sheet System",
+  "category": "admin-docs",
+  "summary": "Standard Operating Procedure (SOP) dashboard and multi-client virtual assistant daily task logger with automated time utilization formulas.",
+  "problem": "Freelance virtual assistants balancing multiple administrative workflows require structured logging to prevent missed client milestones and ensure accurate task reporting.",
+  "whatIDid": [
+    "Drafted structured SOP templates covering supplier communications, daily listing checks, and customer inquiry response protocols.",
+    "Engineered an automated time-utilization tracking sheet with timestamp formatting and category aggregation (Admin, Listing, Customer Support).",
+    "Configured automated status highlights for overdue or pending items.",
+    "Prepared clean PDF and Google Docs deliverable templates formatted for executive handover."
+  ],
+  "result": "Created a complete operational template toolkit ready for deployment across e-commerce and administrative VA assignments [PORTFOLIO WORK SAMPLE].",
+  "tools": [
+    "Google Sheets",
+    "Google Docs",
+    "Notion",
+    "SOP Architecture",
+    "Formula Automation"
+  ],
+  "date": "2026-01-10",
+  "featured": false,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/inventory-task-tracker.svg",
+      "alt": "VA Task Tracking and SOP Documentation Sheet",
+      "caption": "Executive summary view detailing task categories, completion timestamps, and operational checklists."
+    }
+  ],
+  "links": {
+    "sheetPreviewUrl": "#"
+  }
+}

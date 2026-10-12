@@ -1,0 +1,35 @@
+{
+  "slug": "sari-sari-store-records",
+  "title": "Family Sari-Sari Store Inventory & Daily Sales Ledger",
+  "category": "excel-sheets",
+  "summary": "Automated Excel ledger tracking daily cash flow, wholesale supplier margins, retail markup, and restocking alerts for a family micro-retail store.",
+  "problem": "Manual paper notebook records caused unrecorded inventory shrink, missing credit payment tracking, and inaccurate end-of-day profit balancing.",
+  "whatIDid": [
+    "Architected an automated Excel workbook with dynamic SKU lookup formulas, input data validation, and conditional formatting.",
+    "Engineered an automated Daily Sales Reconciliation sheet calculating gross margin, cash-on-hand differences, and customer ledger receivables.",
+    "Formulated dynamic low-stock alert triggers highlighting items with under 3 days of average daily velocity.",
+    "Designed a streamlined mobile-friendly sheet view enabling single-tap tally updates during rush hours."
+  ],
+  "result": "Transitioned 100% of store sales logging from paper to digital tracking across 140+ active household grocery items [REAL FAMILY BUSINESS WORK SAMPLE].",
+  "tools": [
+    "Microsoft Excel",
+    "Google Sheets",
+    "Advanced Formulas (XLOOKUP, SUMIFS, LET)",
+    "Data Validation",
+    "Conditional Formatting"
+  ],
+  "date": "2025-11-20",
+  "featured": true,
+  "projectType": "family-business",
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/sari-sari-store-records.svg",
+      "alt": "Excel Spreadsheet Daily Sales Ledger and Low Stock Dashboard",
+      "caption": "Sanitized workbook screenshot showing formula-driven profit margins and automated reorder triggers."
+    }
+  ],
+  "links": {
+    "sheetPreviewUrl": "#"
+  }
+}

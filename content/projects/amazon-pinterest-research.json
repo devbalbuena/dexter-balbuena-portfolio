@@ -1,0 +1,37 @@
+{
+  "slug": "amazon-pinterest-research",
+  "title": "Amazon Affiliate & Pinterest Trend Product Research",
+  "category": "ecommerce-research",
+  "summary": "Data-driven niche product hunting, keyword mapping, competitor pricing analysis, and Pinterest pin asset planning.",
+  "problem": "Identifying unsaturated e-commerce product niches and validating consumer demand using search volume, Pinterest visual discovery trends, and competitor listing reviews.",
+  "whatIDid": [
+    "Filtered 120+ Amazon product listings across home organizer and desk accessory categories using BSR (Best Sellers Rank) and review velocity metrics.",
+    "Built a structured competitor analysis sheet tracking ASINs, pricing tier, rating distributions, and recurring buyer complaints.",
+    "Conducted keyword trend discovery on Pinterest to identify high-intent search phrases and visual aesthetic patterns.",
+    "Created sample Pinterest board templates and optimized pin title/description copy with relevant buyer hashtags."
+  ],
+  "result": "Completed a comprehensive 45-item niche research matrix and 10 ready-to-test Pinterest campaign boards [EDUCATIONAL / INDEPENDENT RESEARCH].",
+  "resultPlaceholder": "[PORTFOLIO WORK SAMPLE: Independent market research conducted to demonstrate product hunting and Pinterest audience targeting methodologies without live client spend]",
+  "tools": [
+    "Amazon Search",
+    "Pinterest Analytics",
+    "Google Sheets",
+    "Canva",
+    "Helium 10 (Demo)"
+  ],
+  "date": "2026-02-15",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/amazon-pinterest-research.svg",
+      "alt": "Amazon and Pinterest Product Research Spreadsheet and Board Preview",
+      "caption": "Sanitized product research spreadsheet tracking BSR, estimated volume, and competitor weaknesses."
+    }
+  ],
+  "links": {
+    "sheetPreviewUrl": "#"
+  }
+}

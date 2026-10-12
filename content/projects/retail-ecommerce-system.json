@@ -1,0 +1,37 @@
+{
+  "slug": "retail-ecommerce-system",
+  "title": "Full-Stack Retail E-Commerce Catalog & Checkout System",
+  "category": "web-system",
+  "summary": "Full-stack web application featuring categorized product catalogs, variant inventory tracking, admin item management, and cart processing.",
+  "problem": "Developing a robust inventory and catalog management prototype to model retail store order flows and database synchronization for BSIT coursework.",
+  "whatIDid": [
+    "Programmed the product management dashboard allowing rapid catalog bulk updates, SKU categorization, price edits, and inventory depletion logic.",
+    "Integrated responsive product browsing with real-time stock counters, multi-attribute filter badges, and search indexing.",
+    "Structured relational data tables modeling customer orders, line-item transactions, and inventory logs.",
+    "Engineered role-based views separating administrative inventory operations from the customer catalog interface."
+  ],
+  "result": "Completed and successfully defended as a functioning academic capstone prototype [ACADEMIC PROJECT - NOT DEPLOYED FOR PUBLIC CONSUMERS].",
+  "resultPlaceholder": "[ACADEMIC CAPSTONE: Functional full-stack prototype built and tested in a local staging environment for coursework evaluation]",
+  "tools": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "SQL / Relational DB",
+    "REST APIs"
+  ],
+  "date": "2025-12-10",
+  "featured": true,
+  "projectType": "school-capstone",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/retail-ecommerce-system.svg",
+      "alt": "Retail E-Commerce Web System Dashboard and Product Catalog",
+      "caption": "Admin inventory control center displaying real-time stock depletion and order queue."
+    }
+  ],
+  "links": {
+    "githubUrl": "https://github.com/devbalbuena"
+  }
+}

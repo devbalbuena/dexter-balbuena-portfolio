@@ -1,0 +1,35 @@
+{
+  "slug": "canva-pinterest-assets",
+  "title": "E-Commerce Promotional Graphics & Pinterest Brand Kits",
+  "category": "graphic-design",
+  "summary": "High-converting social media creatives, Pinterest pin packs, promotional banner variants, and brand style guides designed in Canva.",
+  "problem": "E-commerce stores require continuous, high-volume visual collateral adhering to platform-specific aspect ratios (2:3 for Pinterest, 1:1 for Instagram) without slow design turnarounds.",
+  "whatIDid": [
+    "Designed 25+ responsive Canva templates for product feature spotlights, seasonal sale discounts, and customer review highlights.",
+    "Engineered cohesive color palettes, typography pairings, and reusable asset libraries for quick batch generation.",
+    "Formulated Pinterest-optimized 1000x1500px pins with high-contrast text overlays and prominent call-to-action tabs.",
+    "Exported clean asset folders organized by campaign date and platform resolution requirements."
+  ],
+  "result": "Assembled an organized, production-ready e-commerce creative asset kit [PORTFOLIO DESIGN SAMPLE].",
+  "tools": [
+    "Canva Pro",
+    "Pinterest Design Guidelines",
+    "Brand Identity Styling",
+    "Color Theory"
+  ],
+  "date": "2026-02-01",
+  "featured": false,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/canva-pinterest-assets.svg",
+      "alt": "Pinterest Pin Templates and Canva Brand Kit Collateral",
+      "caption": "Sample 2:3 ratio Pinterest pin mockups designed for e-commerce conversion."
+    }
+  ],
+  "links": {
+    "canvaPreviewUrl": "#"
+  }
+}

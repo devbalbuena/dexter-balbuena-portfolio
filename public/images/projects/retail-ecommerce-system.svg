@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="code-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#code-bg)" />
+  
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" />
+  <rect x="40" y="30" width="720" height="45" rx="12" fill="#18181b" />
+  <circle cx="65" cy="52" r="6" fill="#ef4444" opacity="0.8" />
+  <circle cx="85" cy="52" r="6" fill="#f59e0b" opacity="0.8" />
+  <circle cx="105" cy="52" r="6" fill="#10b981" opacity="0.8" />
+  <text x="140" y="58" fill="#c7d2fe" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Retail_Store_Catalog_Admin / localhost:3000 [BSIT Capstone Prototype]</text>
+  
+  <!-- Sidebar -->
+  <rect x="40" y="75" width="160" height="345" fill="#111827" />
+  <text x="60" y="110" fill="#818cf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">STORE MANAGEMENT</text>
+  <rect x="52" y="125" width="136" height="28" rx="6" fill="#312e81" />
+  <text x="68" y="144" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="12">Products &amp; SKUs</text>
+  <text x="68" y="180" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Inventory Depletion</text>
+  <text x="68" y="215" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Incoming Orders</text>
+  <text x="68" y="250" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Sales Analytics</text>
+
+  <!-- Product Catalog Grid -->
+  <rect x="220" y="95" width="160" height="150" rx="8" fill="#1f2937" stroke="#374151" stroke-width="1" />
+  <rect x="235" y="110" width="130" height="60" rx="6" fill="#374151" />
+  <text x="235" y="190" fill="#f9fafb" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Ergonomic Mouse</text>
+  <text x="235" y="208" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">SKU: TECH-991 • Stock: 18</text>
+  <text x="235" y="228" fill="#818cf8" font-family="monospace" font-size="13" font-weight="700">$45.00</text>
+
+  <rect x="400" y="95" width="160" height="150" rx="8" fill="#1f2937" stroke="#374151" stroke-width="1" />
+  <rect x="415" y="110" width="130" height="60" rx="6" fill="#374151" />
+  <text x="415" y="190" fill="#f9fafb" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Mechanical KB</text>
+  <text x="415" y="208" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">SKU: TECH-204 • Stock: 6</text>
+  <text x="415" y="228" fill="#818cf8" font-family="monospace" font-size="13" font-weight="700">$89.00</text>
+
+  <rect x="580" y="95" width="160" height="150" rx="8" fill="#1f2937" stroke="#374151" stroke-width="1" />
+  <rect x="595" y="110" width="130" height="60" rx="6" fill="#374151" />
+  <text x="595" y="190" fill="#f9fafb" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Type-C Hub 7-in-1</text>
+  <text x="595" y="208" fill="#ef4444" font-family="system-ui, sans-serif" font-size="11">SKU: ACC-102 • Low (2)</text>
+  <text x="595" y="228" fill="#818cf8" font-family="monospace" font-size="13" font-weight="700">$34.50</text>
+
+  <!-- Lower Panel -->
+  <rect x="220" y="265" width="520" height="135" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+  <text x="240" y="295" fill="#f9fafb" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Real-Time Inventory Reconciliation Queue</text>
+  <text x="240" y="325" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">• Automated deduction on order placement</text>
+  <text x="240" y="348" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">• Category-based tag filtering (Office, Electronics, Cable Organizers)</text>
+  <text x="240" y="375" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="11">[ACADEMIC CAPSTONE: Educational demonstration of e-commerce operational workflows]</text>
+</svg>
