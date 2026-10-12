@@ -1,10 +1,10 @@
 {
   "name": "Microsoft Office Specialist: Excel Associate",
-  "issuer": "Microsoft / Certiport",
-  "issued": "2025-06-15",
+  "issuer": "Microsoft",
+  "issued": "2026-10",
   "expires": "Never",
-  "credentialId": "MOS-EXCEL-ASSOCIATE-PLACEHOLDER",
-  "credentialUrl": "https://learn.microsoft.com",
+  "credentialId": "TODO: Credential ID",
+  "credentialUrl": "",
   "skills": [
     "Advanced Formulas",
     "Lookup Functions",

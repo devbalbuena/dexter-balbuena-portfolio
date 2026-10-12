@@ -1,10 +1,10 @@
 {
-  "name": "Email Marketing Certification",
+  "name": "Email Marketing Certified",
   "issuer": "HubSpot Academy",
-  "issued": "2025-10-05",
-  "expires": "2027-10-05",
-  "credentialId": "HUBSPOT-EMAIL-MKTG-PLACEHOLDER",
-  "credentialUrl": "https://academy.hubspot.com/",
+  "issued": "2026-10",
+  "expires": "2028-10",
+  "credentialId": "TODO: Credential ID",
+  "credentialUrl": "",
   "skills": [
     "Contact List Segmentation",
     "Email Deliverability & Compliance",

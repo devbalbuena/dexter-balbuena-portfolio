@@ -16,9 +16,9 @@ export function Badge({
     default:
       "bg-blue-50 text-blue-700 border-blue-200/60 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800/40",
     secondary:
-      "bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800/60 dark:text-slate-300 dark:border-slate-700/60",
+      "bg-stone-200/60 text-stone-700 border-stone-200/90 dark:bg-stone-800/80 dark:text-stone-300 dark:border-stone-700/80",
     outline:
-      "bg-transparent text-slate-600 border-slate-300 dark:text-slate-400 dark:border-slate-700",
+      "bg-transparent text-stone-600 border-stone-300 dark:text-stone-400 dark:border-stone-700",
     success:
       "bg-emerald-50 text-emerald-700 border-emerald-200/70 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/40",
     accent:

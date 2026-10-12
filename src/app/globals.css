@@ -3,41 +3,37 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #f6f2ec;
+  --foreground: #1c1917;
   --card: #ffffff;
-  --card-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
+  --card-foreground: #1c1917;
+  --muted: #eae4d9;
+  --muted-foreground: #78716c;
+  --border: #e2ddd3;
   --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --accent: #f8fafc;
-  --accent-foreground: #0f172a;
+  --accent: #f0ebe2;
+  --accent-foreground: #1c1917;
   --success: #16a34a;
   --success-foreground: #ffffff;
   --ring: #2563eb;
-  --grid-line: rgba(15, 23, 42, 0.04);
-  --grid-dot: rgba(15, 23, 42, 0.08);
 }
 
 .dark {
-  --background: #090d16;
-  --foreground: #f8fafc;
-  --card: #101626;
-  --card-foreground: #f8fafc;
-  --muted: #172033;
-  --muted-foreground: #94a3b8;
-  --border: #1e293b;
+  --background: #131110;
+  --foreground: #f5f5f4;
+  --card: #1c1917;
+  --card-foreground: #f5f5f4;
+  --muted: #262220;
+  --muted-foreground: #a8a29e;
+  --border: #2d2825;
   --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --accent: #131c31;
-  --accent-foreground: #f8fafc;
+  --accent: #221e1c;
+  --accent-foreground: #f5f5f4;
   --success: #22c55e;
-  --success-foreground: #0f172a;
+  --success-foreground: #131110;
   --ring: #60a5fa;
-  --grid-line: rgba(255, 255, 255, 0.035);
-  --grid-dot: rgba(255, 255, 255, 0.06);
 }
 
 @theme inline {
@@ -57,35 +53,33 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Subtle Workspace Grid Background */
-.bg-workspace-grid {
-  background-color: var(--background);
-  background-image: 
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 28px 28px;
+html {
+  scroll-behavior: smooth;
 }
 
-.bg-workspace-dots {
-  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
-  background-size: 20px 20px;
+/* Offset for fixed/sticky header */
+[id] {
+  scroll-margin-top: 5rem;
 }
 
-/* Trello / Workspace Card aesthetic */
+/* Workspace Card styling with warm tones */
 .workspace-card {
   background-color: var(--card);
   border: 1px solid var(--border);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .workspace-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.45);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
 }
 
 .dark .workspace-card:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.5), 0 8px 12px -6px rgba(0, 0, 0, 0.35);
 }
 
 /* Focus styles for keyboard accessibility */
@@ -96,7 +90,13 @@
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

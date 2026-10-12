@@ -8,6 +8,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
+import { Reveal } from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
@@ -98,8 +99,8 @@ const SERVICES = [
 
 export function ServicesSection() {
   return (
-    <section className="w-full py-16 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/40">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="w-full py-16 border-t border-stone-200/80 dark:border-stone-800/80 bg-stone-100/50 dark:bg-stone-900/40">
+      <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
@@ -108,15 +109,15 @@ export function ServicesSection() {
                 Core Capabilities
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50">
               Services Tailored for Growing Online Businesses
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-base text-stone-600 dark:text-stone-400 leading-relaxed">
               No guesswork or vanity metrics. I combine methodical daily execution with BSIT technical 
               problem-solving to handle high-stakes operational tasks.
             </p>
           </div>
-          <div className="text-xs font-mono text-slate-500">
+          <div className="text-xs font-mono text-stone-500">
             Available 20-30 hrs/week
           </div>
         </div>
@@ -140,19 +141,19 @@ export function ServicesSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                    <h3 className="text-lg font-bold text-stone-900 dark:text-stone-100">
                       {srv.title}
                     </h3>
-                    <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="mt-1.5 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
                       {srv.description}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2">
-                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="pt-3 border-t border-stone-200/70 dark:border-stone-800 space-y-2">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-stone-400">
                       Key Deliverables
                     </span>
-                    <ul className="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+                    <ul className="space-y-1.5 text-xs text-stone-700 dark:text-stone-300">
                       {srv.deliverables.map((item, dIdx) => (
                         <li key={dIdx} className="flex items-start gap-2">
                           <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5" />
@@ -166,7 +167,7 @@ export function ServicesSection() {
             );
           })}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

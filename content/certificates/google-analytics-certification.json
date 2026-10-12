@@ -1,10 +1,10 @@
 {
-  "name": "Google Analytics Certification (GA4)",
+  "name": "Google Analytics Certification 2026",
   "issuer": "Google Skillshop",
-  "issued": "2026-01-18",
-  "expires": "2027-01-18",
-  "credentialId": "GA4-SKILLSHOP-PLACEHOLDER",
-  "credentialUrl": "https://skillshop.credential.net/",
+  "issued": "2026-10",
+  "expires": "2027-10",
+  "credentialId": "TODO: Credential ID",
+  "credentialUrl": "",
   "skills": [
     "GA4 Event Tracking",
     "Conversion Funnels",

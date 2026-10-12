@@ -4,6 +4,7 @@ import { Project, CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, ExternalLink, AlertCircle } from "lucide-react";
+import { Reveal } from "@/components/ui/Reveal";
 
 interface FeaturedWorkProps {
   projects: Project[];
@@ -12,7 +13,7 @@ interface FeaturedWorkProps {
 export function FeaturedWork({ projects }: FeaturedWorkProps) {
   return (
     <section id="featured-work" className="w-full py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
@@ -146,7 +147,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
             );
           })}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
