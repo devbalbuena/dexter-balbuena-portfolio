@@ -10,20 +10,20 @@ interface CertificatesStripProps {
 
 export function CertificatesStrip({ certificates }: CertificatesStripProps) {
   return (
-    <section className="w-full py-16 border-t border-stone-200/80 dark:border-stone-800/80 bg-stone-100/40 dark:bg-stone-900/30">
+    <section className="w-full py-16 border-t border-[#e8ded3] bg-[#fbf9f6]">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-amber-500" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+              <span className="h-2 w-2 rounded-full bg-amber-600" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-700">
                 Verified Credentials
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900">
               Certifications &amp; Technical Accreditations
             </h2>
-            <p className="text-base text-stone-600 dark:text-stone-400 leading-relaxed">
+            <p className="text-base text-stone-600 leading-relaxed">
               Formally evaluated on spreadsheet data manipulation, e-commerce search marketing, 
               lifecycle email flows, and web measurement.
             </p>
@@ -31,7 +31,7 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
           <div>
             <Link
               href="/certificates"
-              className="text-sm font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1.5"
+              className="text-sm font-semibold text-[#8c532b] hover:text-[#704221] inline-flex items-center gap-1.5"
             >
               All credential details <ArrowRight className="h-4 w-4" />
             </Link>
@@ -42,11 +42,11 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
           {certificates.map((cert, idx) => (
             <div
               key={idx}
-              className="workspace-card rounded-xl p-5 flex flex-col justify-between"
+              className="workspace-card rounded-xl p-5 flex flex-col justify-between bg-white border border-[#e8ded3]"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-amber-600 dark:bg-amber-950/60 dark:text-amber-400">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-amber-700">
                     <Award className="h-4 w-4" />
                   </span>
                   <Badge variant="success" size="sm">
@@ -55,15 +55,15 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-bold text-stone-900 dark:text-stone-100 leading-snug">
+                  <h3 className="text-sm font-bold text-stone-900 leading-snug">
                     {cert.name}
                   </h3>
-                  <p className="text-xs font-medium text-stone-500 dark:text-stone-400 mt-1">
+                  <p className="text-xs font-medium text-stone-500 mt-1">
                     {cert.issuer}
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-stone-200/70 dark:border-stone-800 space-y-1">
+                <div className="pt-2 border-t border-stone-100 space-y-1">
                   <span className="text-[10px] font-mono text-stone-400 block uppercase">
                     Core Competencies:
                   </span>
@@ -71,7 +71,7 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
                     {cert.skills.slice(0, 2).map((s, sIdx) => (
                       <span
                         key={sIdx}
-                        className="inline-block rounded bg-stone-100 px-1.5 py-0.5 font-mono text-[10px] text-stone-600 dark:bg-stone-800 dark:text-stone-300"
+                        className="inline-block rounded bg-[#f5ede3] px-1.5 py-0.5 font-mono text-[10px] text-stone-700"
                       >
                         {s}
                       </span>
@@ -80,14 +80,14 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-stone-200/70 dark:border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-500">
+              <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-500">
                 <span>Issued {cert.issued}</span>
                 {cert.credentialUrl ? (
                   <a
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] flex items-center gap-1"
+                    className="hover:text-[#8c532b] flex items-center gap-1"
                   >
                     Verify <ExternalLink className="h-3 w-3" />
                   </a>

@@ -62,8 +62,8 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
               className={cn(
                 "relative rounded-lg px-3.5 py-1.5 text-xs font-mono font-medium transition-all cursor-pointer",
                 isActive
-                  ? "bg-[#a86e3b] dark:bg-[#c28b58] text-white dark:text-[#110f0d] font-semibold shadow-xs"
-                  : "bg-card text-stone-600 hover:text-stone-900 border border-stone-200/90 hover:bg-stone-100/70 dark:border-stone-800 dark:text-stone-400 dark:hover:text-stone-200 dark:hover:bg-stone-800"
+                  ? "bg-[#8c532b] text-white font-semibold shadow-xs"
+                  : "bg-white text-stone-600 hover:text-stone-900 border border-[#e8ded3] hover:bg-[#f7efe6]"
               )}
             >
               {cat.label}
@@ -79,7 +79,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
 
       {/* Filtered Grid */}
       {filteredProjects.length === 0 ? (
-        <div className="workspace-card rounded-xl p-8 text-center text-sm text-stone-500">
+        <div className="workspace-card rounded-xl p-8 text-center text-sm text-stone-500 bg-white border border-[#e8ded3]">
           No projects found in this category yet.
         </div>
       ) : (
@@ -98,11 +98,11 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
                   key={project.slug}
-                  className="workspace-card rounded-2xl overflow-hidden flex flex-col justify-between group"
+                  className="workspace-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3]"
                 >
                   <div>
                     {/* Visual Preview */}
-                    <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-200/60 dark:border-stone-800">
+                    <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-100">
                       {previewImage ? (
                         <Image
                           src={previewImage.url}
@@ -116,7 +116,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         </div>
                       )}
                       <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                        <Badge variant="secondary" size="sm" className="bg-white/90 dark:bg-stone-900/90 backdrop-blur-xs">
+                        <Badge variant="secondary" size="sm" className="bg-white/95 shadow-xs">
                           {CATEGORY_LABELS[project.category]}
                         </Badge>
                       </div>
@@ -129,21 +129,21 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         <span className="capitalize">{project.projectType.replace("-", " ")}</span>
                       </div>
 
-                      <h3 className="text-base font-bold text-stone-900 dark:text-stone-100 group-hover:text-[#8c532b] dark:group-hover:text-[#d9a36f] transition-colors">
+                      <h3 className="text-base font-bold text-stone-900 group-hover:text-[#8c532b] transition-colors">
                         <Link href={`/work/${project.slug}`}>
                           {project.title}
                         </Link>
                       </h3>
 
-                      <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-2">
+                      <p className="text-xs text-stone-600 leading-relaxed line-clamp-2">
                         {project.summary}
                       </p>
 
-                      <div className="rounded-lg bg-stone-100/70 p-2.5 dark:bg-stone-850/60 text-xs">
-                        <span className="font-semibold text-stone-800 dark:text-stone-200 block mb-0.5">
+                      <div className="rounded-lg bg-[#f9f6f2] border border-[#eee6dc] p-2.5 text-xs">
+                        <span className="font-semibold text-stone-900 block mb-0.5">
                           Problem &amp; Approach:
                         </span>
-                        <p className="text-stone-600 dark:text-stone-400 line-clamp-2 text-[11px]">
+                        <p className="text-stone-600 line-clamp-2 text-[11px]">
                           {project.problem}
                         </p>
                       </div>
@@ -153,7 +153,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         {project.tools.slice(0, 3).map((tool, tIdx) => (
                           <span
                             key={tIdx}
-                            className="inline-block rounded bg-stone-100 px-2 py-0.5 font-mono text-[10px] text-stone-700 dark:bg-stone-800 dark:text-stone-300"
+                            className="inline-block rounded bg-[#f5ede3] px-2 py-0.5 font-mono text-[10px] text-stone-700"
                           >
                             {tool}
                           </span>
@@ -170,16 +170,16 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                   {/* Card bottom */}
                   <div className="p-5 pt-0">
                     {project.resultPlaceholder && (
-                      <div className="mb-3 flex items-start gap-1.5 rounded-md bg-amber-500/10 p-2 text-[11px] text-amber-700 dark:text-amber-300">
+                      <div className="mb-3 flex items-start gap-1.5 rounded-md bg-amber-500/10 p-2 text-[11px] text-amber-800">
                         <AlertCircle className="h-3.5 w-3.5 shrink-0 mt-0.5" />
                         <span className="line-clamp-2">{project.resultPlaceholder}</span>
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between border-t border-stone-200/60 dark:border-stone-800 pt-3">
+                    <div className="flex items-center justify-between border-t border-stone-100 pt-3">
                       <Link
                         href={`/work/${project.slug}`}
-                        className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1"
+                        className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] inline-flex items-center gap-1"
                       >
                         Case Study Details <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
@@ -189,7 +189,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                           href={project.links.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs font-mono text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 flex items-center gap-1"
+                          className="text-xs font-mono text-stone-500 hover:text-stone-900 flex items-center gap-1"
                         >
                           Code <ExternalLink className="h-3 w-3" />
                         </a>

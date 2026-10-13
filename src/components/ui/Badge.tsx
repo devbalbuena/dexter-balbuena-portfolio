@@ -14,17 +14,17 @@ export function Badge({
 }: BadgeProps) {
   const variantStyles = {
     default:
-      "bg-[#f7efe6] text-[#8c532b] border-[#ebdccb] dark:bg-[#231d17] dark:text-[#d9a36f] dark:border-[#3d3126]",
+      "bg-[#f7efe6] text-[#8c532b] border-[#ebdccb]",
     secondary:
-      "bg-[#f0ebe3] text-[#5c5247] border-[#e3dacd] dark:bg-[#1e1a16] dark:text-[#b8aba0] dark:border-[#302821]",
+      "bg-[#f0ebe3] text-[#5c5247] border-[#e3dacd]",
     outline:
-      "bg-transparent text-[#6e6356] border-[#ded4c5] dark:text-[#a89d91] dark:border-[#362e26]",
+      "bg-transparent text-[#6e6356] border-[#ded4c5]",
     success:
-      "bg-emerald-50 text-emerald-800 border-emerald-200/70 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/40",
+      "bg-emerald-50 text-emerald-800 border-emerald-200/70",
     accent:
-      "bg-[#eedfce] text-[#7a4621] border-[#e2cbaf] dark:bg-[#2e2319] dark:text-[#e2b07e] dark:border-[#4e3825]",
+      "bg-[#eedfce] text-[#7a4621] border-[#e2cbaf]",
     warning:
-      "bg-amber-50 text-amber-800 border-amber-200/60 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800/40",
+      "bg-amber-50 text-amber-800 border-amber-200/60",
   };
 
   const sizeStyles = {

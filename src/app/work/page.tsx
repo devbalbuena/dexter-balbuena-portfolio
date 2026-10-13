@@ -15,15 +15,15 @@ export default async function WorkPage() {
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16 space-y-10">
       <div className="max-w-3xl space-y-4">
         <div className="inline-flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
+          <span className="h-2 w-2 rounded-full bg-[#8c532b]" />
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
             Portfolio Hub
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900">
           Work Samples &amp; Case Studies
         </h1>
-        <p className="text-base text-stone-600 dark:text-stone-400 leading-relaxed">
+        <p className="text-base text-stone-600 leading-relaxed">
           Filter by niche or browse my deliverables. Every sample is transparently tagged to distinguish 
           personal research, family store systems, and academic prototypes.
         </p>

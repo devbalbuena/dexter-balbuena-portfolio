@@ -28,24 +28,24 @@ export default function AboutPage() {
       {/* Title */}
       <div className="max-w-3xl space-y-4">
         <div className="inline-flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
+          <span className="h-2 w-2 rounded-full bg-[#8c532b]" />
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
             Background &amp; Workstyle
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900">
           About Dexter E. Balbuena
         </h1>
-        <p className="text-lg text-stone-600 dark:text-stone-300 leading-relaxed">
+        <p className="text-lg text-stone-600 leading-relaxed">
           E-Commerce, Administrative, and Executive Virtual Assistant based in Butuan City, Philippines.
         </p>
       </div>
 
       {/* Main Narrative & Story */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <div className="lg:col-span-7 space-y-6 text-base text-stone-600 dark:text-stone-300 leading-relaxed">
+        <div className="lg:col-span-7 space-y-6 text-base text-stone-600 leading-relaxed">
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100">
+            <h2 className="text-xl font-bold text-stone-900">
               The IT Student Advantage
             </h2>
             <p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100">
+            <h2 className="text-xl font-bold text-stone-900">
               My Core Niches
             </h2>
             <p>
@@ -75,8 +75,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-xl border border-stone-200/90 bg-stone-100/70 p-4 dark:border-stone-800 dark:bg-stone-900/80 text-xs font-mono text-stone-500 dark:text-stone-400 space-y-1">
-            <p className="font-bold text-stone-700 dark:text-stone-200">
+          <div className="rounded-xl border border-[#e8ded3] bg-[#f9f6f2] p-4 text-xs font-mono text-stone-600 space-y-1">
+            <p className="font-bold text-[#8c532b]">
               [TRANSPARENCY GUARANTEE]
             </p>
             <p>
@@ -88,55 +88,55 @@ export default function AboutPage() {
 
         {/* Operational Snapshot Sidebar */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="workspace-card rounded-2xl p-6 space-y-5">
-            <h3 className="text-sm font-mono font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 pb-3 border-b border-stone-200/80 dark:border-stone-800">
+          <div className="workspace-card rounded-2xl p-6 space-y-5 bg-white border border-[#e8ded3]">
+            <h3 className="text-sm font-mono font-bold uppercase tracking-wider text-stone-900 pb-3 border-b border-[#e8ded3]">
               Operational Snapshot
             </h3>
 
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] mt-1 shrink-0" />
+                <MapPin className="h-4 w-4 text-[#8c532b] mt-1 shrink-0" />
                 <div>
-                  <span className="block font-semibold text-stone-900 dark:text-stone-100">Location</span>
-                  <span className="text-xs text-stone-500 dark:text-stone-400">Butuan City, Caraga, Philippines</span>
+                  <span className="block font-semibold text-stone-900">Location</span>
+                  <span className="text-xs text-stone-500">Butuan City, Caraga, Philippines</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="h-4 w-4 text-emerald-500 mt-1 shrink-0" />
+                <Clock className="h-4 w-4 text-emerald-600 mt-1 shrink-0" />
                 <div>
-                  <span className="block font-semibold text-stone-900 dark:text-stone-100">Working Shift</span>
-                  <span className="text-xs text-stone-500 dark:text-stone-400">
+                  <span className="block font-semibold text-stone-900">Working Shift</span>
+                  <span className="text-xs text-stone-500">
                     11:00 PM – 6:00 AM PHT (Dedicated nocturnal shift)
                   </span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <GraduationCap className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] mt-1 shrink-0" />
+                <GraduationCap className="h-4 w-4 text-[#8c532b] mt-1 shrink-0" />
                 <div>
-                  <span className="block font-semibold text-stone-900 dark:text-stone-100">Education</span>
-                  <span className="text-xs text-stone-500 dark:text-stone-400">BS Information Technology (Expected April 2027)</span>
+                  <span className="block font-semibold text-stone-900">Education</span>
+                  <span className="text-xs text-stone-500">BS Information Technology (Expected April 2027)</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-stone-200/80 dark:border-stone-800 space-y-2">
+            <div className="pt-4 border-t border-[#e8ded3] space-y-2">
               <span className="text-xs font-mono font-semibold uppercase text-stone-500 block">
                 Timezone Overlaps:
               </span>
               <div className="grid grid-cols-3 gap-2 text-center font-mono text-[11px]">
-                <div className="rounded bg-stone-100 p-2 dark:bg-stone-800">
+                <div className="rounded bg-[#f9f6f2] border border-[#eee6dc] p-2">
                   <span className="block text-[10px] text-stone-500">US EST</span>
-                  <span className="font-bold">10 AM - 5 PM</span>
+                  <span className="font-bold text-stone-900">10 AM - 5 PM</span>
                 </div>
-                <div className="rounded bg-stone-100 p-2 dark:bg-stone-800">
+                <div className="rounded bg-[#f9f6f2] border border-[#eee6dc] p-2">
                   <span className="block text-[10px] text-stone-500">UK GMT</span>
-                  <span className="font-bold">3 PM - 10 PM</span>
+                  <span className="font-bold text-stone-900">3 PM - 10 PM</span>
                 </div>
-                <div className="rounded bg-stone-100 p-2 dark:bg-stone-800">
+                <div className="rounded bg-[#f9f6f2] border border-[#eee6dc] p-2">
                   <span className="block text-[10px] text-stone-500">AU AEST</span>
-                  <span className="font-bold">1 AM - 8 AM</span>
+                  <span className="font-bold text-stone-900">1 AM - 8 AM</span>
                 </div>
               </div>
             </div>
@@ -145,28 +145,28 @@ export default function AboutPage() {
       </div>
 
       {/* Tools & Tech Stack Matrix */}
-      <div className="space-y-6 pt-6 border-t border-stone-200/80 dark:border-stone-800">
+      <div className="space-y-6 pt-6 border-t border-[#e8ded3]">
         <div className="space-y-1">
-          <h2 className="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100">
+          <h2 className="text-2xl font-bold tracking-tight text-stone-900">
             Tools &amp; Technical Capabilities
           </h2>
-          <p className="text-sm text-stone-600 dark:text-stone-400">
+          <p className="text-sm text-stone-600">
             Software and workflows I utilize daily for store administration and client support.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {TOOLS_STACK.map((group, idx) => (
-            <div key={idx} className="workspace-card rounded-xl p-5 space-y-3">
-              <h3 className="text-sm font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-                <Wrench className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373]" />
+            <div key={idx} className="workspace-card rounded-xl p-5 space-y-3 bg-white border border-[#e8ded3]">
+              <h3 className="text-sm font-bold text-stone-900 flex items-center gap-2">
+                <Wrench className="h-4 w-4 text-[#8c532b]" />
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {group.tools.map((t, tIdx) => (
                   <span
                     key={tIdx}
-                    className="rounded-md bg-stone-100 px-2.5 py-1 font-mono text-xs text-stone-700 dark:bg-stone-800 dark:text-stone-300"
+                    className="rounded-md bg-[#f9f6f2] border border-[#eee6dc] px-2.5 py-1 font-mono text-xs text-stone-700"
                   >
                     {t}
                   </span>
@@ -178,8 +178,8 @@ export default function AboutPage() {
       </div>
 
       {/* Next step callout */}
-      <div className="pt-6 border-t border-stone-200/80 dark:border-stone-800 flex flex-wrap items-center justify-between gap-4">
-        <Link href="/work" className="text-xs font-mono text-stone-500 hover:text-stone-900 dark:hover:text-stone-200">
+      <div className="pt-6 border-t border-[#e8ded3] flex flex-wrap items-center justify-between gap-4">
+        <Link href="/work" className="text-xs font-mono text-stone-500 hover:text-stone-900">
           ← Inspect verified work samples
         </Link>
         <Button href="/contact" size="md">

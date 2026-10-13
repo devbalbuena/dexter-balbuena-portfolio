@@ -53,23 +53,23 @@ export function ContactForm() {
   }
 
   return (
-    <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-6">
+    <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-6 bg-white border border-[#e8ded3]">
       <div className="space-y-1">
-        <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100">
+        <h2 className="text-xl font-bold text-stone-900">
           Send a Message
         </h2>
-        <p className="text-xs text-stone-500 dark:text-stone-400">
+        <p className="text-xs text-stone-500">
           Fill out the form below or message me directly via WhatsApp or Email.
         </p>
       </div>
 
       {status === "success" ? (
-        <div className="rounded-xl border border-emerald-200 bg-emerald-50/80 p-6 text-center dark:border-emerald-800/60 dark:bg-emerald-950/40 space-y-3">
-          <CheckCircle2 className="mx-auto h-8 w-8 text-emerald-600 dark:text-emerald-400" />
-          <h3 className="font-bold text-emerald-900 dark:text-emerald-200">
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50/80 p-6 text-center space-y-3">
+          <CheckCircle2 className="mx-auto h-8 w-8 text-emerald-600" />
+          <h3 className="font-bold text-emerald-900">
             Message Sent Successfully!
           </h3>
-          <p className="text-xs text-emerald-700 dark:text-emerald-300">
+          <p className="text-xs text-emerald-700">
             Thank you! I will review your requirements and respond within 12 hours.
           </p>
           <Button
@@ -84,12 +84,12 @@ export function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           {status === "no-endpoint" && (
-            <div className="flex items-start gap-2 rounded-lg bg-amber-500/10 p-3 text-xs text-amber-800 dark:text-amber-300 border border-amber-200/50 dark:border-amber-800/50">
+            <div className="flex items-start gap-2 rounded-lg bg-amber-500/10 p-3 text-xs text-amber-800 border border-amber-200/50">
               <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
               <div>
                 <strong>[ENDPOINT PLACEHOLDER]:</strong> The contact form endpoint is not configured yet. 
                 Please reach me directly at{" "}
-                <a href="mailto:balbuena.dexter.va@gmail.com" className="underline font-semibold">
+                <a href="mailto:balbuena.dexter.va@gmail.com" className="underline font-semibold text-[#8c532b]">
                   balbuena.dexter.va@gmail.com
                 </a>{" "}
                 or WhatsApp at <strong>+63 9912131795</strong>.
@@ -98,14 +98,14 @@ export function ContactForm() {
           )}
 
           {status === "error" && (
-            <div className="flex items-start gap-2 rounded-lg bg-red-500/10 p-3 text-xs text-red-800 dark:text-red-300">
+            <div className="flex items-start gap-2 rounded-lg bg-red-500/10 p-3 text-xs text-red-800">
               <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
               <span>{statusMessage}</span>
             </div>
           )}
 
           <div className="space-y-1.5">
-            <label htmlFor="name" className="block text-xs font-mono font-medium text-stone-700 dark:text-stone-300">
+            <label htmlFor="name" className="block text-xs font-mono font-medium text-stone-700">
               Your Name / Company
             </label>
             <input
@@ -115,12 +115,12 @@ export function ContactForm() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="Jane Doe (Store Founder)"
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label htmlFor="email" className="block text-xs font-mono font-medium text-stone-700 dark:text-stone-300">
+            <label htmlFor="email" className="block text-xs font-mono font-medium text-stone-700">
               Email Address
             </label>
             <input
@@ -130,19 +130,19 @@ export function ContactForm() {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="jane@yourbrand.com"
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label htmlFor="projectType" className="block text-xs font-mono font-medium text-stone-700 dark:text-stone-300">
+            <label htmlFor="projectType" className="block text-xs font-mono font-medium text-stone-700">
               Service Needed
             </label>
             <select
               id="projectType"
               value={formData.projectType}
               onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             >
               <option value="E-Commerce Research / Operations">E-Commerce Research &amp; Operations</option>
               <option value="Excel / Google Sheets Ledger & Modeling">Excel &amp; Google Sheets Modeling</option>
@@ -154,7 +154,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label htmlFor="message" className="block text-xs font-mono font-medium text-stone-700 dark:text-stone-300">
+            <label htmlFor="message" className="block text-xs font-mono font-medium text-stone-700">
               Project Details &amp; Timeline
             </label>
             <textarea
@@ -164,7 +164,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Tell me about your product niche, sheet requirements, or weekly hours..."
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100 resize-none"
+              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20 resize-none"
             />
           </div>
 
@@ -172,7 +172,7 @@ export function ContactForm() {
             type="submit"
             size="md"
             disabled={status === "submitting"}
-            className="w-full justify-center font-semibold"
+            className="w-full justify-center font-semibold bg-[#8c532b] hover:bg-[#734320] text-white"
           >
             {status === "submitting" ? (
               <>

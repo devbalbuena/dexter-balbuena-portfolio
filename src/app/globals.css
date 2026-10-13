@@ -3,41 +3,42 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #fcfaf7;
-  --foreground: #181512;
+  --background: #ffffff;
+  --foreground: #1c1917;
   --card: #ffffff;
-  --card-foreground: #181512;
-  --muted: #f4eee6;
-  --muted-foreground: #7d7267;
-  --border: #e8dfd5;
-  --primary: #a86e3b;
-  --primary-hover: #935d2d;
+  --card-foreground: #1c1917;
+  --muted: #f7f3ee;
+  --muted-foreground: #78716c;
+  --border: #e7dfd5;
+  --primary: #8c532b;
+  --primary-hover: #734320;
   --primary-foreground: #ffffff;
-  --accent: #f4eee6;
-  --accent-foreground: #181512;
-  --accent-warm: #c28b58;
+  --accent: #f7f3ee;
+  --accent-foreground: #1c1917;
+  --accent-warm: #a86e3b;
   --success: #16a34a;
   --success-foreground: #ffffff;
-  --ring: #a86e3b;
+  --ring: #8c532b;
 }
 
+/* Neutralize dark mode so the site is permanently in white/clean mode */
 .dark {
-  --background: #110f0d;
-  --foreground: #fbf8f5;
-  --card: #191613;
-  --card-foreground: #fbf8f5;
-  --muted: #221e1a;
-  --muted-foreground: #a69a8e;
-  --border: #2c251f;
-  --primary: #c28b58;
-  --primary-hover: #d49b6a;
-  --primary-foreground: #110f0d;
-  --accent: #221e1a;
-  --accent-foreground: #fbf8f5;
-  --accent-warm: #c28b58;
-  --success: #22c55e;
-  --success-foreground: #110f0d;
-  --ring: #c28b58;
+  --background: #ffffff;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --muted: #f7f3ee;
+  --muted-foreground: #78716c;
+  --border: #e7dfd5;
+  --primary: #8c532b;
+  --primary-hover: #734320;
+  --primary-foreground: #ffffff;
+  --accent: #f7f3ee;
+  --accent-foreground: #1c1917;
+  --accent-warm: #a86e3b;
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+  --ring: #8c532b;
 }
 
 @theme inline {
@@ -76,14 +77,9 @@ html {
 }
 
 .workspace-card:hover {
-  border-color: rgba(194, 139, 88, 0.45);
+  border-color: rgba(140, 83, 43, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-}
-
-.dark .workspace-card:hover {
-  border-color: rgba(194, 139, 88, 0.45);
-  box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.65), 0 8px 12px -6px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(45, 28, 19, 0.08), 0 8px 10px -6px rgba(45, 28, 19, 0.03);
 }
 
 /* Focus styles for keyboard accessibility */

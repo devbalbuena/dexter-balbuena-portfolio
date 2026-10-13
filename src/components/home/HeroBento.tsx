@@ -37,27 +37,27 @@ export function HeroBento() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-[1.1]">
               Virtual Assistant with <br className="hidden sm:inline" />
-              <span className="text-[#9e6231] dark:text-[#d4a373]">
+              <span className="text-[#8c532b]">
                 Technical Precision.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl">
               Hi, I&apos;m <strong>Dexter E. Balbuena</strong>. I help e-commerce founders and busy operators streamline 
               product research, catalog listings, inventory tracking, and spreadsheet systems without babysitting.
             </p>
 
             {/* 2 CTA Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button href="/#featured-work" size="lg" className="font-semibold shadow-md">
+              <Button href="/#featured-work" size="lg" className="font-semibold shadow-xs">
                 View My Work <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
               <Button href="/contact" variant="outline" size="lg" className="font-semibold">
                 Contact Me
               </Button>
-              <span className="text-xs font-mono text-stone-500 dark:text-stone-400 pl-2">
+              <span className="text-xs font-mono text-stone-500 pl-2">
                 US • UK • AU Timezones
               </span>
             </div>
@@ -73,34 +73,34 @@ export function HeroBento() {
         <Reveal delay={0.1} className="mt-14 sm:mt-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4">
             {/* Card 1: Core E-Commerce Niche (lg:col-span-6) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 relative overflow-hidden flex flex-col justify-between">
+            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 relative overflow-hidden flex flex-col justify-between bg-white border border-[#e8ded3]">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#f7efe6] text-[#8c532b] dark:bg-[#282017] dark:text-[#d9a36f]">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#f7efe6] text-[#8c532b]">
                     <ShoppingCart className="h-5 w-5" />
                   </span>
                   <Badge variant="default" size="sm">Primary Niche</Badge>
                 </div>
-                <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100">
+                <h2 className="text-lg font-bold text-stone-900">
                   E-Commerce Operations VA
                 </h2>
-                <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                <p className="text-sm text-stone-600 leading-relaxed">
                   Hands-on execution for online retailers: structured ASIN &amp; supplier research, bulk catalog entry, price monitoring, and stock depletion tracking.
                 </p>
               </div>
               
-              <div className="mt-6 pt-4 border-t border-stone-200/70 dark:border-stone-800/80 grid grid-cols-2 gap-2 text-xs font-medium text-stone-700 dark:text-stone-300">
+              <div className="mt-6 pt-4 border-t border-stone-200/70 grid grid-cols-2 gap-2 text-xs font-medium text-stone-700">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Product Research
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Product Research
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Listing Creation
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Listing Creation
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Inventory Tracking
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Inventory Tracking
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Data Entry Quality
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Data Entry Quality
                 </div>
               </div>
             </div>
@@ -117,40 +117,40 @@ export function HeroBento() {
                 <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100">
                   Timezone Availability: 11 PM – 6 AM PHT
                 </h2>
-                <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                <p className="text-sm text-stone-600 leading-relaxed">
                   Dedicated nocturnal schedule aligned for seamless real-time handoffs with Western teams during core operational hours.
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-stone-200/70 dark:border-stone-800/80 grid grid-cols-3 gap-2 text-xs font-mono">
-                <div className="rounded-lg bg-stone-100 p-2 dark:bg-stone-800/60">
-                  <span className="block text-[10px] text-stone-500 dark:text-stone-400">US EST</span>
-                  <span className="font-semibold text-stone-900 dark:text-stone-200">10 AM – 5 PM</span>
+              <div className="mt-6 pt-4 border-t border-stone-200/70 grid grid-cols-3 gap-2 text-xs font-mono">
+                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
+                  <span className="block text-[10px] text-stone-500">US EST</span>
+                  <span className="font-semibold text-stone-900">10 AM – 5 PM</span>
                 </div>
-                <div className="rounded-lg bg-stone-100 p-2 dark:bg-stone-800/60">
-                  <span className="block text-[10px] text-stone-500 dark:text-stone-400">UK GMT</span>
-                  <span className="font-semibold text-stone-900 dark:text-stone-200">3 PM – 10 PM</span>
+                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
+                  <span className="block text-[10px] text-stone-500">UK GMT</span>
+                  <span className="font-semibold text-stone-900">3 PM – 10 PM</span>
                 </div>
-                <div className="rounded-lg bg-stone-100 p-2 dark:bg-stone-800/60">
-                  <span className="block text-[10px] text-stone-500 dark:text-stone-400">AU AEST</span>
-                  <span className="font-semibold text-stone-900 dark:text-stone-200">1 AM – 8 AM</span>
+                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
+                  <span className="block text-[10px] text-stone-500">AU AEST</span>
+                  <span className="font-semibold text-stone-900">1 AM – 8 AM</span>
                 </div>
               </div>
             </div>
 
             {/* Card 3: Certifications Count & Proof (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between">
+            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800">
                     <Award className="h-5 w-5" />
                   </span>
-                  <span className="text-2xl font-black font-mono text-amber-600 dark:text-amber-400">4</span>
+                  <span className="text-2xl font-black font-mono text-amber-700">4</span>
                 </div>
-                <h2 className="text-base font-bold text-stone-900 dark:text-stone-100">
+                <h2 className="text-base font-bold text-stone-900">
                   Industry Certifications
                 </h2>
-                <ul className="text-xs space-y-1.5 text-stone-600 dark:text-stone-400">
+                <ul className="text-xs space-y-1.5 text-stone-600">
                   <li>• MOS: Excel Associate</li>
                   <li>• Semrush SEO Crash Course</li>
                   <li>• HubSpot Email Marketing</li>
@@ -158,10 +158,10 @@ export function HeroBento() {
                 </ul>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-stone-200/70 dark:border-stone-800/80">
+              <div className="mt-5 pt-3 border-t border-stone-200/70">
                 <Link 
                   href="/certificates" 
-                  className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1"
+                  className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] inline-flex items-center gap-1"
                 >
                   Inspect credentials ↗
                 </Link>
@@ -169,15 +169,15 @@ export function HeroBento() {
             </div>
 
             {/* Card 4: Tools & Bonus Technical Edge (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between">
+            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#efe8df] text-[#6d5742] dark:bg-[#25201a] dark:text-[#c4b3a1]">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#efe8df] text-[#6d5742]">
                     <Wrench className="h-5 w-5" />
                   </span>
                   <Badge variant="accent" size="sm">Tools</Badge>
                 </div>
-                <h2 className="text-base font-bold text-stone-900 dark:text-stone-100">
+                <h2 className="text-base font-bold text-stone-900">
                   Bonus Services &amp; Tech Stack
                 </h2>
                 <div className="flex flex-wrap gap-1.5 pt-1">
@@ -190,31 +190,31 @@ export function HeroBento() {
                 </div>
               </div>
 
-              <p className="mt-5 pt-3 border-t border-stone-200/70 dark:border-stone-800/80 text-[11px] text-stone-500 dark:text-stone-400">
+              <p className="mt-5 pt-3 border-t border-stone-200/70 text-[11px] text-stone-500">
                 Able to build internal automations &amp; customized tracker sheets.
               </p>
             </div>
 
             {/* Card 5: BSIT Degree Status (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between">
+            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-stone-100 text-stone-700">
                     <GraduationCap className="h-5 w-5" />
                   </span>
                   <span className="text-xs font-mono font-semibold text-stone-500">BSIT 2027</span>
                 </div>
-                <h2 className="text-base font-bold text-stone-900 dark:text-stone-100">
+                <h2 className="text-base font-bold text-stone-900">
                   IT Student Advantage
                 </h2>
-                <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                <p className="text-xs text-stone-600 leading-relaxed">
                   Graduating BSIT in April 2027. Fast to adapt to proprietary SaaS, database structures, web portals, and API-driven tools.
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-stone-200/70 dark:border-stone-800/80 flex items-center justify-between text-[11px] font-mono text-stone-500">
+              <div className="mt-5 pt-3 border-t border-stone-200/70 flex items-center justify-between text-[11px] font-mono text-stone-500">
                 <span>Caraga State / Butuan</span>
-                <span className="text-[#8c532b] dark:text-[#d9a36f] font-semibold">Quick Learner</span>
+                <span className="text-[#8c532b] font-semibold">Quick Learner</span>
               </div>
             </div>
           </div>
