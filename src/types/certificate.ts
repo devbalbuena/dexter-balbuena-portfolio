@@ -7,5 +7,6 @@ export interface Certificate {
   credentialUrl?: string;
   skills: string[];
   badgeImage?: string;
+  certificateImage?: string;
   isVerified?: boolean;
 }

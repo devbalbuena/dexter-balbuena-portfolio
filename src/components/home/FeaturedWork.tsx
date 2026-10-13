@@ -23,7 +23,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900">
-              Featured Projects &amp; Work Samples
+              Selected Projects &amp; Actual Work
             </h2>
             <p className="text-base text-stone-600 leading-relaxed">
               Real deliverables demonstrating product research methodology, advanced spreadsheet modeling, 

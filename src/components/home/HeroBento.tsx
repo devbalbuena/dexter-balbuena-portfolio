@@ -1,19 +1,12 @@
 import fs from "fs";
 import path from "path";
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Reveal } from "@/components/ui/Reveal";
 import { HeroPortrait } from "./HeroPortrait";
+import { ToolsRibbon } from "./ToolsRibbon";
 import { 
   ArrowRight, 
-  CheckCircle2, 
-  Clock, 
-  Award, 
-  Wrench, 
-  GraduationCap, 
-  MapPin, 
-  ShoppingCart
+  MapPin 
 } from "lucide-react";
 
 export function HeroBento() {
@@ -21,7 +14,7 @@ export function HeroBento() {
   const hasPhoto = fs.existsSync(photoPath);
 
   return (
-    <section className="relative w-full pt-8 pb-16 md:pt-14 md:pb-24">
+    <section className="relative w-full pt-8 pb-4 md:pt-14 md:pb-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top 2-Column Hero: Text on Left, Portrait on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -63,162 +56,16 @@ export function HeroBento() {
             </div>
           </div>
 
-          {/* Right Column: Portrait Frame with Spotlight Glow (Task 3 & 4) */}
+          {/* Right Column: Portrait Frame with Spotlight Glow */}
           <div className="lg:col-span-5 flex justify-center">
             <HeroPortrait hasPhoto={hasPhoto} />
           </div>
         </div>
 
-        {/* Bento Grid */}
-        <Reveal delay={0.1} className="mt-14 sm:mt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4">
-            {/* Card 1: Core E-Commerce Niche (lg:col-span-6) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 relative overflow-hidden flex flex-col justify-between bg-white border border-[#e8ded3]">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#f7efe6] text-[#8c532b]">
-                    <ShoppingCart className="h-5 w-5" />
-                  </span>
-                  <Badge variant="default" size="sm">Primary Niche</Badge>
-                </div>
-                <h2 className="text-lg font-bold text-stone-900">
-                  E-Commerce Operations VA
-                </h2>
-                <p className="text-sm text-stone-600 leading-relaxed">
-                  Hands-on execution for online retailers: structured ASIN &amp; supplier research, bulk catalog entry, price monitoring, and stock depletion tracking.
-                </p>
-              </div>
-              
-              <div className="mt-6 pt-4 border-t border-stone-200/70 grid grid-cols-2 gap-2 text-xs font-medium text-stone-700">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Product Research
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Listing Creation
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Inventory Tracking
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#8c532b]" /> Data Entry Quality
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Hours & Timezone Coverage (lg:col-span-6) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 flex flex-col justify-between bg-white border border-[#e8ded3]">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
-                    <Clock className="h-5 w-5" />
-                  </span>
-                  <Badge variant="success" size="sm">Direct Coverage</Badge>
-                </div>
-                <h2 className="text-lg font-bold text-stone-900">
-                  Timezone Availability: 11 PM – 6 AM PHT
-                </h2>
-                <p className="text-sm text-stone-600 leading-relaxed">
-                  Dedicated nocturnal schedule aligned for seamless real-time handoffs with Western teams during core operational hours.
-                </p>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-stone-200/70 grid grid-cols-3 gap-2 text-xs font-mono">
-                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
-                  <span className="block text-[10px] text-stone-500">US EST</span>
-                  <span className="font-semibold text-stone-900">10 AM – 5 PM</span>
-                </div>
-                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
-                  <span className="block text-[10px] text-stone-500">UK GMT</span>
-                  <span className="font-semibold text-stone-900">3 PM – 10 PM</span>
-                </div>
-                <div className="rounded-lg bg-[#f7efe6] border border-[#ebdccb] p-2">
-                  <span className="block text-[10px] text-stone-500">AU AEST</span>
-                  <span className="font-semibold text-stone-900">1 AM – 8 AM</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Certifications Count & Proof (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-amber-100 text-amber-800">
-                    <Award className="h-5 w-5" />
-                  </span>
-                  <span className="text-2xl font-black font-mono text-amber-700">4</span>
-                </div>
-                <h2 className="text-base font-bold text-stone-900">
-                  Industry Certifications
-                </h2>
-                <ul className="text-xs space-y-1.5 text-stone-600">
-                  <li>• MOS: Excel Associate</li>
-                  <li>• Semrush SEO Crash Course</li>
-                  <li>• HubSpot Email Marketing</li>
-                  <li>• Google Analytics (GA4 - 2026)</li>
-                </ul>
-              </div>
-
-              <div className="mt-5 pt-3 border-t border-stone-200/70">
-                <Link 
-                  href="/certificates" 
-                  className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] inline-flex items-center gap-1"
-                >
-                  Inspect credentials ↗
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 4: Tools & Bonus Technical Edge (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#efe8df] text-[#6d5742]">
-                    <Wrench className="h-5 w-5" />
-                  </span>
-                  <Badge variant="accent" size="sm">Tools</Badge>
-                </div>
-                <h2 className="text-base font-bold text-stone-900">
-                  Bonus Services &amp; Tech Stack
-                </h2>
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  <Badge variant="secondary" size="sm">Excel / Sheets</Badge>
-                  <Badge variant="secondary" size="sm">Next.js</Badge>
-                  <Badge variant="secondary" size="sm">Canva Pro</Badge>
-                  <Badge variant="secondary" size="sm">Pinterest</Badge>
-                  <Badge variant="secondary" size="sm">Notion</Badge>
-                  <Badge variant="secondary" size="sm">Semrush</Badge>
-                </div>
-              </div>
-
-              <p className="mt-5 pt-3 border-t border-stone-200/70 text-[11px] text-stone-500">
-                Able to build internal automations &amp; customized tracker sheets.
-              </p>
-            </div>
-
-            {/* Card 5: BSIT Degree Status (lg:col-span-4) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-4 flex flex-col justify-between bg-white border border-[#e8ded3]">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-stone-100 text-stone-700">
-                    <GraduationCap className="h-5 w-5" />
-                  </span>
-                  <span className="text-xs font-mono font-semibold text-stone-500">BSIT 2027</span>
-                </div>
-                <h2 className="text-base font-bold text-stone-900">
-                  IT Student Advantage
-                </h2>
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  Graduating BSIT in April 2027. Fast to adapt to proprietary SaaS, database structures, web portals, and API-driven tools.
-                </p>
-              </div>
-
-              <div className="mt-5 pt-3 border-t border-stone-200/70 flex items-center justify-between text-[11px] font-mono text-stone-500">
-                <span>Caraga State / Butuan</span>
-                <span className="text-[#8c532b] font-semibold">Quick Learner</span>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+        {/* Tools Ribbon: Clean horizontal software badges right underneath Hero */}
+        <div className="mt-12 sm:mt-16">
+          <ToolsRibbon />
+        </div>
       </div>
     </section>
   );
