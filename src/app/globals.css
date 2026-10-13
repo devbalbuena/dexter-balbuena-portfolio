@@ -3,37 +3,37 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f6f2ec;
-  --foreground: #1c1917;
+  --background: #fafafa;
+  --foreground: #09090b;
   --card: #ffffff;
-  --card-foreground: #1c1917;
-  --muted: #eae4d9;
-  --muted-foreground: #78716c;
-  --border: #e2ddd3;
+  --card-foreground: #09090b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
   --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --accent: #f0ebe2;
-  --accent-foreground: #1c1917;
+  --accent: #f4f4f5;
+  --accent-foreground: #09090b;
   --success: #16a34a;
   --success-foreground: #ffffff;
   --ring: #2563eb;
 }
 
 .dark {
-  --background: #131110;
-  --foreground: #f5f5f4;
-  --card: #1c1917;
-  --card-foreground: #f5f5f4;
-  --muted: #262220;
-  --muted-foreground: #a8a29e;
-  --border: #2d2825;
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card: #121215;
+  --card-foreground: #f4f4f5;
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
   --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --accent: #221e1c;
-  --accent-foreground: #f5f5f4;
+  --accent: #18181b;
+  --accent-foreground: #f4f4f5;
   --success: #22c55e;
-  --success-foreground: #131110;
-  --ring: #60a5fa;
+  --success-foreground: #09090b;
+  --ring: #3b82f6;
 }
 
 @theme inline {
@@ -62,7 +62,7 @@ html {
   scroll-margin-top: 5rem;
 }
 
-/* Workspace Card styling with warm tones */
+/* Obsidian / Minimalist Workspace Card styling */
 .workspace-card {
   background-color: var(--card);
   border: 1px solid var(--border);
@@ -74,12 +74,12 @@ html {
 .workspace-card:hover {
   border-color: rgba(59, 130, 246, 0.45);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
 }
 
 .dark .workspace-card:hover {
   border-color: rgba(59, 130, 246, 0.5);
-  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.5), 0 8px 12px -6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.65), 0 8px 12px -6px rgba(0, 0, 0, 0.45);
 }
 
 /* Focus styles for keyboard accessibility */

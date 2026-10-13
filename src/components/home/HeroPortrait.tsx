@@ -24,7 +24,7 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
         initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 12 }}
         animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200/90 bg-stone-100/60 shadow-lg dark:border-stone-800/90 dark:bg-stone-900/70"
+        className="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-card shadow-xl"
       >
         {hasPhoto ? (
           <Image

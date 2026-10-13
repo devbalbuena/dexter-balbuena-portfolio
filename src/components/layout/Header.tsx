@@ -34,12 +34,12 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-stone-200/80 bg-[#f6f2ec]/90 backdrop-blur-md dark:border-stone-800/80 dark:bg-[#131110]/90 transition-colors">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/85 backdrop-blur-md transition-colors">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Brand / Name */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5 font-semibold text-stone-900 dark:text-stone-100"
+          className="group flex items-center gap-2.5 font-semibold text-foreground"
         >
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-mono text-xs font-bold text-white shadow-2xs group-hover:bg-blue-500 transition-colors">
             DB
@@ -120,7 +120,7 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="overflow-hidden md:hidden border-b border-stone-200 bg-[#f6f2ec]/98 px-4 pt-2 pb-5 backdrop-blur-lg dark:border-stone-800 dark:bg-[#131110]/98"
+            className="overflow-hidden md:hidden border-b border-border bg-background/98 px-4 pt-2 pb-5 backdrop-blur-lg"
           >
             <nav className="flex flex-col space-y-1">
               {NAV_LINKS.map((link) => {
