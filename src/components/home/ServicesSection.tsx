@@ -99,25 +99,25 @@ const SERVICES = [
 
 export function ServicesSection() {
   return (
-    <section className="w-full py-16 md:py-20 border-y border-[#3d2719] bg-[#291b11] text-white">
+    <section className="w-full py-16 md:py-20 border-y border-[#e5d7c7] bg-[#f6efe6] text-stone-900">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#c28b58]" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#d9a36f]">
+              <span className="h-2 w-2 rounded-full bg-[#8c532b]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
                 Core Capabilities
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900">
               Services Tailored for Growing Online Businesses
             </h2>
-            <p className="text-base text-[#d1bfb0] leading-relaxed">
+            <p className="text-base text-stone-600 leading-relaxed">
               No guesswork or vanity metrics. I combine methodical daily execution with BSIT technical 
               problem-solving to handle high-stakes operational tasks.
             </p>
           </div>
-          <div className="text-xs font-mono text-[#b5a395]">
+          <div className="text-xs font-mono text-stone-500">
             Available 20-30 hrs/week
           </div>
         </div>
@@ -128,11 +128,11 @@ export function ServicesSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl p-6 flex flex-col justify-between bg-[#382519] border border-[#4d3322] hover:border-[#a86e3b] transition-all hover:-translate-y-1 shadow-md text-white"
+                className="rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e5d7c7] hover:border-[#8c532b] transition-all hover:-translate-y-1 shadow-xs hover:shadow-md text-stone-900"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#291b11] text-[#d9a36f] shadow-2xs">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#f4ebe1] text-[#8c532b] shadow-2xs">
                       <Icon className="h-5 w-5" />
                     </span>
                     <Badge variant={srv.badgeVariant} size="sm">
@@ -141,22 +141,22 @@ export function ServicesSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-stone-900">
                       {srv.title}
                     </h3>
-                    <p className="mt-1.5 text-xs text-[#d1bfb0] leading-relaxed">
+                    <p className="mt-1.5 text-xs text-stone-600 leading-relaxed">
                       {srv.description}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#4d3322] space-y-2">
-                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#b5a395]">
+                  <div className="pt-3 border-t border-[#f0e4d7] space-y-2">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-stone-500">
                       Key Deliverables
                     </span>
-                    <ul className="space-y-1.5 text-xs text-[#e8dbce]">
+                    <ul className="space-y-1.5 text-xs text-stone-700">
                       {srv.deliverables.map((item, dIdx) => (
                         <li key={dIdx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}

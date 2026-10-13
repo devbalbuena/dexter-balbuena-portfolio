@@ -25,11 +25,11 @@ export default function ContactPage() {
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900">
-          Hire Dexter or Inquire About a Trial
+          Hire Dexter or Inquire About Services
         </h1>
         <p className="text-base text-stone-600 leading-relaxed">
           Ready to offload e-commerce listing management, product research, or spreadsheet automation. 
-          I reply within 12 hours.
+          Reach out directly or submit your project details below.
         </p>
       </div>
 
@@ -88,9 +88,14 @@ export default function ContactPage() {
                   </svg>
                   LinkedIn
                 </span>
-                <span className="block text-xs text-stone-500">
-                  [TODO: LinkedIn Profile URL]
-                </span>
+                <a
+                  href="https://www.linkedin.com/in/dexterbalbuena"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-xs font-bold text-[#8c532b] hover:underline"
+                >
+                  linkedin.com/in/dexterbalbuena ↗
+                </a>
               </div>
             </div>
 
@@ -112,10 +117,10 @@ export default function ContactPage() {
                 <CheckCircle2 className="h-4 w-4 text-[#8c532b] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-stone-800 block">
-                    Guaranteed Response Window
+                    Fast &amp; Reliable Communication
                   </span>
                   <span className="text-stone-500">
-                    All inquiries answered within 12 hours max.
+                    Direct communication to keep operational handoffs moving without bottlenecks.
                   </span>
                 </div>
               </div>

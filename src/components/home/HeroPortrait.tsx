@@ -13,18 +13,21 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
 
   return (
     <div className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center">
-      {/* Static soft spotlight glow behind portrait (Task 3) */}
-      <div
-        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-[#a86e3b]/10 blur-3xl opacity-70"
+      {/* Ambient soft spotlight glow behind portrait */}
+      <motion.div
+        animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.55, 0.8, 0.55] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-[#8c532b]/15 blur-3xl"
         aria-hidden="true"
       />
 
-      {/* Portrait card frame with motion entrance (Task 4) */}
+      {/* Portrait card frame with motion entrance and hover physics */}
       <motion.div
         initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 12 }}
         animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
+        whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.01 }}
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-2xl border border-[#e8ded3] bg-white shadow-xl"
+        className="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-2xl border border-[#e8ded3] bg-white shadow-xl transition-shadow hover:shadow-2xl"
       >
         {hasPhoto ? (
           <Image

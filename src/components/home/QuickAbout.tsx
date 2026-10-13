@@ -49,7 +49,7 @@ export function QuickAbout() {
                 Read Full Story &amp; Workstyle <ArrowRight className="h-4 w-4 ml-1.5" />
               </Button>
               <Button href="/contact" variant="outline" size="md">
-                Discuss a Trial Task
+                Discuss a Project
               </Button>
             </div>
           </div>
@@ -94,9 +94,9 @@ export function QuickAbout() {
                 <div className="flex items-start gap-3">
                   <ShieldCheck className="h-4 w-4 text-amber-600 mt-1 shrink-0" />
                   <div>
-                    <span className="block font-semibold text-stone-900">Client Guarantee</span>
+                    <span className="block font-semibold text-stone-900">Quality Standard</span>
                     <span className="text-xs text-stone-500">
-                      Open to paid trial assignments or milestone test projects to prove accuracy before ongoing commitment.
+                      Structured deliverables and meticulous quality checks to ensure accuracy and alignment for every client assignment.
                     </span>
                   </div>
                 </div>

@@ -105,7 +105,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             className="object-cover"
           />
           {primaryImage.caption && (
-            <div className="absolute inset-x-0 bottom-0 bg-[#291b11]/90 px-4 py-2 text-xs font-mono text-[#d1bfb0] backdrop-blur-xs">
+            <div className="absolute inset-x-0 bottom-0 bg-[#7a4e2d]/90 px-4 py-2 text-xs font-mono text-[#f2e7dc] backdrop-blur-xs">
               {primaryImage.caption}
             </div>
           )}

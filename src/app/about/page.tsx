@@ -80,8 +80,8 @@ export default function AboutPage() {
               [TRANSPARENCY GUARANTEE]
             </p>
             <p>
-              I have no paying clients yet. I believe in earning client trust through verified test tasks rather than 
-              inflating claims or faking metrics.
+              I have no paying clients yet. I believe in earning client trust through verified work samples, 
+              disciplined execution, and transparent capabilities rather than inflating claims or faking metrics.
             </p>
           </div>
         </div>

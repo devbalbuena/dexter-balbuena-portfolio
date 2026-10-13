@@ -60,18 +60,27 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
               role="tab"
               aria-selected={isActive}
               className={cn(
-                "relative rounded-lg px-3.5 py-1.5 text-xs font-mono font-medium transition-all cursor-pointer",
+                "relative rounded-lg px-3.5 py-1.5 text-xs font-mono font-medium transition-colors cursor-pointer",
                 isActive
-                  ? "bg-[#8c532b] text-white font-semibold shadow-xs"
+                  ? "text-white font-semibold"
                   : "bg-white text-stone-600 hover:text-stone-900 border border-[#e8ded3] hover:bg-[#f7efe6]"
               )}
             >
-              {cat.label}
-              {cat.key !== "all" && (
-                <span className="ml-1.5 opacity-60 text-[10px]">
-                  ({projects.filter((p) => p.category === cat.key).length})
-                </span>
+              {isActive && (
+                <motion.span
+                  layoutId="activeFilterPill"
+                  className="absolute inset-0 rounded-lg bg-[#8c532b] shadow-xs"
+                  transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                />
               )}
+              <span className="relative z-10 flex items-center">
+                {cat.label}
+                {cat.key !== "all" && (
+                  <span className="ml-1.5 opacity-75 text-[10px]">
+                    ({projects.filter((p) => p.category === cat.key).length})
+                  </span>
+                )}
+              </span>
             </button>
           );
         })}

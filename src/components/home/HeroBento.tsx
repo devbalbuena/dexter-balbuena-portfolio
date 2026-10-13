@@ -106,15 +106,15 @@ export function HeroBento() {
             </div>
 
             {/* Card 2: Hours & Timezone Coverage (lg:col-span-6) */}
-            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 flex flex-col justify-between">
+            <div className="workspace-card rounded-2xl p-6 lg:col-span-6 flex flex-col justify-between bg-white border border-[#e8ded3]">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
                     <Clock className="h-5 w-5" />
                   </span>
                   <Badge variant="success" size="sm">Direct Coverage</Badge>
                 </div>
-                <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100">
+                <h2 className="text-lg font-bold text-stone-900">
                   Timezone Availability: 11 PM – 6 AM PHT
                 </h2>
                 <p className="text-sm text-stone-600 leading-relaxed">

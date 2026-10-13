@@ -70,7 +70,7 @@ export function ContactForm() {
             Message Sent Successfully!
           </h3>
           <p className="text-xs text-emerald-700">
-            Thank you! I will review your requirements and respond within 12 hours.
+            Thank you! I will review your requirements and respond promptly.
           </p>
           <Button
             variant="outline"
@@ -149,7 +149,7 @@ export function ContactForm() {
               <option value="Administrative / Executive VA">Administrative / Executive Assistant</option>
               <option value="Web System / Internal Tool Prototype">Web System / Custom Tracker</option>
               <option value="Canva Graphics & Pinterest Marketing">Canva Graphics &amp; Pinterest</option>
-              <option value="Paid Test Task / Trial Week">Paid Test Task / 1-Week Trial</option>
+              <option value="Part-Time VA Contract">Part-Time VA Contract</option>
             </select>
           </div>
 
