@@ -9,7 +9,7 @@ export function Footer() {
           {/* Identity & Bio */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-blue-600 font-mono text-xs font-bold text-white">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#a86e3b] dark:bg-[#c28b58] font-mono text-xs font-bold text-white dark:text-[#110f0d]">
                 DB
               </span>
               <span className="font-bold text-stone-900 dark:text-stone-100">
@@ -22,7 +22,7 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-4 text-xs font-mono pt-1 text-stone-500 dark:text-stone-400">
               <span className="flex items-center gap-1.5">
-                <MapPin className="h-3.5 w-3.5 text-blue-500" /> Butuan City, Philippines
+                <MapPin className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Butuan City, Philippines
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-3.5 w-3.5 text-emerald-500" /> 11 PM – 6 AM PHT (US/UK/AU)
@@ -37,27 +37,27 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/" className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/work" className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors">
                   Work Samples &amp; Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/certificates" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/certificates" className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors">
                   Certifications
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/about" className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors">
                   About &amp; Timezone Coverage
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/contact" className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors">
                   Contact &amp; Inquiries
                 </Link>
               </li>
@@ -73,9 +73,9 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:balbuena.dexter.va@gmail.com"
-                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-2 hover:text-[#8c532b] dark:hover:text-[#d9a36f] transition-colors"
                 >
-                  <Mail className="h-3.5 w-3.5 text-blue-500" /> balbuena.dexter.va@gmail.com
+                  <Mail className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> balbuena.dexter.va@gmail.com
                 </a>
               </li>
               <li>

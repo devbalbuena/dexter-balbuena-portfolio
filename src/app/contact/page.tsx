@@ -19,8 +19,8 @@ export default function ContactPage() {
       {/* Page Header */}
       <div className="max-w-3xl space-y-4">
         <div className="inline-flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-blue-600" />
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+          <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
             Let&apos;s Connect
           </span>
         </div>
@@ -55,11 +55,11 @@ export default function ContactPage() {
               {/* Email */}
               <div className="rounded-xl border border-stone-200/80 bg-stone-50/70 p-3.5 dark:border-stone-800 dark:bg-stone-850/60 space-y-1">
                 <span className="text-[11px] text-stone-500 uppercase flex items-center gap-1.5 font-sans font-semibold">
-                  <Mail className="h-3.5 w-3.5 text-blue-500" /> Direct Email
+                  <Mail className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" /> Direct Email
                 </span>
                 <a
                   href="mailto:balbuena.dexter.va@gmail.com"
-                  className="block text-xs font-bold text-blue-600 hover:underline dark:text-blue-400 break-all"
+                  className="block text-xs font-bold text-[#8c532b] hover:underline dark:text-[#d9a36f] break-all"
                 >
                   balbuena.dexter.va@gmail.com
                 </a>
@@ -83,7 +83,7 @@ export default function ContactPage() {
               {/* LinkedIn */}
               <div className="rounded-xl border border-stone-200/80 bg-stone-50/70 p-3.5 dark:border-stone-800 dark:bg-stone-850/60 space-y-1">
                 <span className="text-[11px] text-stone-500 uppercase flex items-center gap-1.5 font-sans font-semibold">
-                  <svg className="h-3.5 w-3.5 fill-current text-blue-600" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="h-3.5 w-3.5 fill-current text-[#9e6231] dark:text-[#d4a373]" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                   </svg>
                   LinkedIn
@@ -109,7 +109,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-stone-800 dark:text-stone-200 block">
                     Guaranteed Response Window

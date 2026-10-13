@@ -54,7 +54,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-sans selection:bg-blue-600 selection:text-white relative">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans selection:bg-[#a86e3b] selection:text-white dark:selection:bg-[#c28b58] dark:selection:text-[#110f0d] relative">
         <Providers>
           {/* Global film grain noise overlay */}
           <div

@@ -62,7 +62,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
               className={cn(
                 "relative rounded-lg px-3.5 py-1.5 text-xs font-mono font-medium transition-all cursor-pointer",
                 isActive
-                  ? "bg-blue-600 text-white shadow-xs"
+                  ? "bg-[#a86e3b] dark:bg-[#c28b58] text-white dark:text-[#110f0d] font-semibold shadow-xs"
                   : "bg-card text-stone-600 hover:text-stone-900 border border-stone-200/90 hover:bg-stone-100/70 dark:border-stone-800 dark:text-stone-400 dark:hover:text-stone-200 dark:hover:bg-stone-800"
               )}
             >
@@ -129,7 +129,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         <span className="capitalize">{project.projectType.replace("-", " ")}</span>
                       </div>
 
-                      <h3 className="text-base font-bold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-base font-bold text-stone-900 dark:text-stone-100 group-hover:text-[#8c532b] dark:group-hover:text-[#d9a36f] transition-colors">
                         <Link href={`/work/${project.slug}`}>
                           {project.title}
                         </Link>
@@ -179,7 +179,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                     <div className="flex items-center justify-between border-t border-stone-200/60 dark:border-stone-800 pt-3">
                       <Link
                         href={`/work/${project.slug}`}
-                        className="text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1"
+                        className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1"
                       >
                         Case Study Details <ArrowRight className="h-3.5 w-3.5" />
                       </Link>

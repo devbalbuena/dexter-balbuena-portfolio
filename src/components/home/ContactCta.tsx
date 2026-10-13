@@ -6,10 +6,10 @@ export function ContactCta() {
   return (
     <section className="w-full py-16 md:py-20 border-t border-stone-200/80 dark:border-stone-800/80 bg-stone-100/30 dark:bg-stone-900/20">
       <Reveal className="mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="workspace-card rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-lg border-blue-200/50 dark:border-blue-900/30">
+        <div className="workspace-card rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-lg border-[#ebdccb] dark:border-[#382e25]">
           <div className="max-w-2xl mx-auto space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100/80 px-3 py-1 text-xs font-mono font-semibold text-blue-700 dark:bg-blue-950/80 dark:text-blue-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-ping" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#f7efe6] border border-[#ebdccb] px-3.5 py-1 text-xs font-mono font-semibold text-[#8c532b] dark:bg-[#251e18] dark:border-[#3d3126] dark:text-[#d9a36f]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#9e6231] dark:bg-[#c28b58] animate-ping" />
               Ready for Hire • Part-Time (11 PM – 6 AM PHT)
             </div>
 
@@ -43,7 +43,7 @@ export function ContactCta() {
                 Response within 12 hours
               </span>
               <span className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5 text-blue-500" />
+                <Clock className="h-3.5 w-3.5 text-[#9e6231] dark:text-[#d4a373]" />
                 US, UK, AU Hours Friendly
               </span>
             </div>

@@ -31,7 +31,7 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
           <div>
             <Link
               href="/certificates"
-              className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5"
+              className="text-sm font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1.5"
             >
               All credential details <ArrowRight className="h-4 w-4" />
             </Link>
@@ -87,7 +87,7 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1"
+                    className="hover:text-[#8c532b] dark:hover:text-[#d9a36f] flex items-center gap-1"
                   >
                     Verify <ExternalLink className="h-3 w-3" />
                   </a>

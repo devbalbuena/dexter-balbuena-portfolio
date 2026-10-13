@@ -17,8 +17,8 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-blue-600" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
                 Proof of Work
               </span>
             </div>
@@ -75,7 +75,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                       <span className="capitalize">{project.projectType.replace("-", " ")}</span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-[#8c532b] dark:group-hover:text-[#d9a36f] transition-colors">
                       <Link href={`/work/${project.slug}`}>
                         {project.title}
                       </Link>
@@ -126,7 +126,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                   <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
                     <Link
                       href={`/work/${project.slug}`}
-                      className="text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1"
+                      className="text-xs font-semibold text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] inline-flex items-center gap-1"
                     >
                       Case Study Details <ArrowRight className="h-3.5 w-3.5" />
                     </Link>

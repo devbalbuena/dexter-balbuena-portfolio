@@ -15,8 +15,8 @@ export default async function WorkPage() {
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16 space-y-10">
       <div className="max-w-3xl space-y-4">
         <div className="inline-flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-blue-600" />
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+          <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
             Portfolio Hub
           </span>
         </div>

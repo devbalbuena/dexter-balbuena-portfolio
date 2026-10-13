@@ -17,8 +17,8 @@ export function QuickAbout() {
           {/* Left Column: Story */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-blue-600" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
                 About Dexter
               </span>
             </div>
@@ -66,7 +66,7 @@ export function QuickAbout() {
 
               <div className="space-y-4 text-sm">
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-4 w-4 text-blue-500 mt-1 shrink-0" />
+                  <MapPin className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] mt-1 shrink-0" />
                   <div>
                     <span className="block font-semibold text-stone-900 dark:text-stone-100">Location</span>
                     <span className="text-xs text-stone-500 dark:text-stone-400">Butuan City, Caraga, Philippines</span>

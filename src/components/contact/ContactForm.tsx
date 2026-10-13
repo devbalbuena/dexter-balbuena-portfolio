@@ -115,7 +115,7 @@ export function ContactForm() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="Jane Doe (Store Founder)"
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-blue-500 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
             />
           </div>
 
@@ -130,7 +130,7 @@ export function ContactForm() {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="jane@yourbrand.com"
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-blue-500 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
             />
           </div>
 
@@ -142,7 +142,7 @@ export function ContactForm() {
               id="projectType"
               value={formData.projectType}
               onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-blue-500 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 dark:border-stone-700 dark:text-stone-100"
+              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100"
             >
               <option value="E-Commerce Research / Operations">E-Commerce Research &amp; Operations</option>
               <option value="Excel / Google Sheets Ledger & Modeling">Excel &amp; Google Sheets Modeling</option>
@@ -164,7 +164,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Tell me about your product niche, sheet requirements, or weekly hours..."
-              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-blue-500 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 dark:border-stone-700 dark:text-stone-100 resize-none"
+              className="w-full rounded-lg border border-stone-300 bg-card px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#a86e3b] dark:focus:border-[#c28b58] focus:outline-hidden focus:ring-2 focus:ring-[#a86e3b]/20 dark:focus:ring-[#c28b58]/20 dark:border-stone-700 dark:text-stone-100 resize-none"
             />
           </div>
 

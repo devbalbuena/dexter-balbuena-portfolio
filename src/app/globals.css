@@ -3,37 +3,41 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #fafafa;
-  --foreground: #09090b;
+  --background: #fcfaf7;
+  --foreground: #181512;
   --card: #ffffff;
-  --card-foreground: #09090b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --border: #e4e4e7;
-  --primary: #2563eb;
+  --card-foreground: #181512;
+  --muted: #f4eee6;
+  --muted-foreground: #7d7267;
+  --border: #e8dfd5;
+  --primary: #a86e3b;
+  --primary-hover: #935d2d;
   --primary-foreground: #ffffff;
-  --accent: #f4f4f5;
-  --accent-foreground: #09090b;
+  --accent: #f4eee6;
+  --accent-foreground: #181512;
+  --accent-warm: #c28b58;
   --success: #16a34a;
   --success-foreground: #ffffff;
-  --ring: #2563eb;
+  --ring: #a86e3b;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #f4f4f5;
-  --card: #121215;
-  --card-foreground: #f4f4f5;
-  --muted: #18181b;
-  --muted-foreground: #a1a1aa;
-  --border: #27272a;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --accent: #18181b;
-  --accent-foreground: #f4f4f5;
+  --background: #110f0d;
+  --foreground: #fbf8f5;
+  --card: #191613;
+  --card-foreground: #fbf8f5;
+  --muted: #221e1a;
+  --muted-foreground: #a69a8e;
+  --border: #2c251f;
+  --primary: #c28b58;
+  --primary-hover: #d49b6a;
+  --primary-foreground: #110f0d;
+  --accent: #221e1a;
+  --accent-foreground: #fbf8f5;
+  --accent-warm: #c28b58;
   --success: #22c55e;
-  --success-foreground: #09090b;
-  --ring: #3b82f6;
+  --success-foreground: #110f0d;
+  --ring: #c28b58;
 }
 
 @theme inline {
@@ -62,7 +66,7 @@ html {
   scroll-margin-top: 5rem;
 }
 
-/* Obsidian / Minimalist Workspace Card styling */
+/* Luxury Aesthetic Workspace Card styling (Espresso / Mocha / Warm Bronze) */
 .workspace-card {
   background-color: var(--card);
   border: 1px solid var(--border);
@@ -72,13 +76,13 @@ html {
 }
 
 .workspace-card:hover {
-  border-color: rgba(59, 130, 246, 0.45);
+  border-color: rgba(194, 139, 88, 0.45);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
 }
 
 .dark .workspace-card:hover {
-  border-color: rgba(59, 130, 246, 0.5);
+  border-color: rgba(194, 139, 88, 0.45);
   box-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.65), 0 8px 12px -6px rgba(0, 0, 0, 0.45);
 }
 

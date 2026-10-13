@@ -14,15 +14,15 @@ export function Badge({
 }: BadgeProps) {
   const variantStyles = {
     default:
-      "bg-blue-50 text-blue-700 border-blue-200/60 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800/40",
+      "bg-[#f7efe6] text-[#8c532b] border-[#ebdccb] dark:bg-[#231d17] dark:text-[#d9a36f] dark:border-[#3d3126]",
     secondary:
-      "bg-stone-200/60 text-stone-700 border-stone-200/90 dark:bg-stone-800/80 dark:text-stone-300 dark:border-stone-700/80",
+      "bg-[#f0ebe3] text-[#5c5247] border-[#e3dacd] dark:bg-[#1e1a16] dark:text-[#b8aba0] dark:border-[#302821]",
     outline:
-      "bg-transparent text-stone-600 border-stone-300 dark:text-stone-400 dark:border-stone-700",
+      "bg-transparent text-[#6e6356] border-[#ded4c5] dark:text-[#a89d91] dark:border-[#362e26]",
     success:
-      "bg-emerald-50 text-emerald-700 border-emerald-200/70 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/40",
+      "bg-emerald-50 text-emerald-800 border-emerald-200/70 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/40",
     accent:
-      "bg-indigo-50 text-indigo-700 border-indigo-200/60 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800/40",
+      "bg-[#eedfce] text-[#7a4621] border-[#e2cbaf] dark:bg-[#2e2319] dark:text-[#e2b07e] dark:border-[#4e3825]",
     warning:
       "bg-amber-50 text-amber-800 border-amber-200/60 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800/40",
   };

@@ -83,7 +83,7 @@ export default async function CertificatesPage() {
                   href={cert.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 dark:text-blue-400 flex items-center gap-1 font-semibold"
+                  className="text-[#8c532b] hover:text-[#704221] dark:text-[#d9a36f] dark:hover:text-[#ecc094] flex items-center gap-1 font-semibold"
                 >
                   Verify Online <ExternalLink className="h-3 w-3" />
                 </a>

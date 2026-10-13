@@ -28,8 +28,8 @@ export default function AboutPage() {
       {/* Title */}
       <div className="max-w-3xl space-y-4">
         <div className="inline-flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-blue-600" />
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+          <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
             Background &amp; Workstyle
           </span>
         </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-blue-500 mt-1 shrink-0" />
+                <MapPin className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] mt-1 shrink-0" />
                 <div>
                   <span className="block font-semibold text-stone-900 dark:text-stone-100">Location</span>
                   <span className="text-xs text-stone-500 dark:text-stone-400">Butuan City, Caraga, Philippines</span>
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </div>
 
               <div className="flex items-start gap-3">
-                <GraduationCap className="h-4 w-4 text-indigo-500 mt-1 shrink-0" />
+                <GraduationCap className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373] mt-1 shrink-0" />
                 <div>
                   <span className="block font-semibold text-stone-900 dark:text-stone-100">Education</span>
                   <span className="text-xs text-stone-500 dark:text-stone-400">BS Information Technology (Expected April 2027)</span>
@@ -159,7 +159,7 @@ export default function AboutPage() {
           {TOOLS_STACK.map((group, idx) => (
             <div key={idx} className="workspace-card rounded-xl p-5 space-y-3">
               <h3 className="text-sm font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-                <Wrench className="h-4 w-4 text-blue-500" />
+                <Wrench className="h-4 w-4 text-[#9e6231] dark:text-[#d4a373]" />
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-1.5">

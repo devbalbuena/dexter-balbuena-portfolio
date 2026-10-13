@@ -41,12 +41,12 @@ export function Header() {
           href="/"
           className="group flex items-center gap-2.5 font-semibold text-foreground"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-mono text-xs font-bold text-white shadow-2xs group-hover:bg-blue-500 transition-colors">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#a86e3b] dark:bg-[#c28b58] font-mono text-xs font-bold text-white dark:text-[#110f0d] shadow-2xs group-hover:opacity-90 transition-opacity">
             DB
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-bold tracking-tight">Dexter E. Balbuena</span>
-            <span className="flex items-center gap-1.5 text-[11px] font-mono text-stone-500 dark:text-stone-400">
+            <span className="flex items-center gap-1.5 text-[11px] font-mono text-muted-foreground">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -67,15 +67,15 @@ export function Header() {
                 className={cn(
                   "relative rounded-md px-3 py-1.5 transition-colors",
                   isActive
-                    ? "text-blue-600 dark:text-blue-400 font-semibold"
-                    : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 dark:text-stone-400 dark:hover:text-stone-100 dark:hover:bg-stone-800/60"
+                    ? "text-[#a86e3b] dark:text-[#c28b58] font-semibold"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 )}
               >
                 {link.label}
                 {isActive && (
                   <motion.div
                     layoutId="activeNavIndicator"
-                    className="absolute inset-x-2 -bottom-2 h-0.5 rounded-full bg-blue-600 dark:bg-blue-400"
+                    className="absolute inset-x-2 -bottom-2 h-0.5 rounded-full bg-[#a86e3b] dark:bg-[#c28b58]"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -133,12 +133,12 @@ export function Header() {
                     className={cn(
                       "flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                       isActive
-                        ? "bg-blue-50 text-blue-600 font-semibold dark:bg-blue-950/50 dark:text-blue-400"
-                        : "text-stone-700 hover:bg-stone-200/50 dark:text-stone-300 dark:hover:bg-stone-800"
+                        ? "bg-[#a86e3b]/10 text-[#a86e3b] font-semibold dark:bg-[#c28b58]/15 dark:text-[#c28b58]"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
                     )}
                   >
                     {link.label}
-                    {isActive && <span className="h-1.5 w-1.5 rounded-full bg-blue-600 dark:bg-blue-400" />}
+                    {isActive && <span className="h-1.5 w-1.5 rounded-full bg-[#a86e3b] dark:bg-[#c28b58]" />}
                   </Link>
                 );
               })}

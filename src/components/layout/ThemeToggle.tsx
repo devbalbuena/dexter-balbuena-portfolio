@@ -33,7 +33,7 @@ export function ThemeToggle() {
       transition={{ duration: 0.15 }}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="flex h-9 w-9 items-center justify-center rounded-lg border border-stone-200/90 bg-white/80 text-stone-700 shadow-2xs backdrop-blur-xs transition-colors hover:bg-stone-100 hover:text-stone-900 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-stone-800 dark:bg-stone-900/80 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-100 cursor-pointer"
+      className="flex h-9 w-9 items-center justify-center rounded-lg border border-stone-200/90 bg-white/80 text-stone-700 shadow-2xs backdrop-blur-xs transition-colors hover:bg-stone-100 hover:text-stone-900 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#a86e3b] dark:border-stone-800 dark:bg-stone-900/80 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-100 dark:focus-visible:ring-[#c28b58] cursor-pointer"
       type="button"
     >
       {isDark ? (

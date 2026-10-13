@@ -104,8 +104,8 @@ export function ServicesSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-blue-600" />
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              <span className="h-2 w-2 rounded-full bg-[#9e6231] dark:bg-[#c28b58]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b] dark:text-[#d9a36f]">
                 Core Capabilities
               </span>
             </div>
@@ -132,7 +132,7 @@ export function ServicesSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#f7efe6] text-[#8c532b] dark:bg-[#282017] dark:text-[#d9a36f]">
                       <Icon className="h-5 w-5" />
                     </span>
                     <Badge variant={srv.badgeVariant} size="sm">

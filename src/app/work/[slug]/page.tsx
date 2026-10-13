@@ -117,7 +117,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Problem */}
         <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-3">
           <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-            <span className="text-blue-600 dark:text-blue-400 font-mono text-base">01.</span>
+            <span className="text-[#9e6231] dark:text-[#d4a373] font-mono text-base">01.</span>
             The Problem &amp; Context
           </h2>
           <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
@@ -128,7 +128,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* What I Did */}
         <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-4">
           <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-            <span className="text-blue-600 dark:text-blue-400 font-mono text-base">02.</span>
+            <span className="text-[#9e6231] dark:text-[#d4a373] font-mono text-base">02.</span>
             Execution &amp; What I Did
           </h2>
           <ul className="space-y-2.5 text-sm text-stone-600 dark:text-stone-300">
@@ -144,7 +144,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Tools Used */}
         <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-4">
           <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-            <span className="text-blue-600 dark:text-blue-400 font-mono text-base">03.</span>
+            <span className="text-[#9e6231] dark:text-[#d4a373] font-mono text-base">03.</span>
             Tools &amp; Technologies
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -162,7 +162,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Outcome / Result */}
         <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-3">
           <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-            <span className="text-blue-600 dark:text-blue-400 font-mono text-base">04.</span>
+            <span className="text-[#9e6231] dark:text-[#d4a373] font-mono text-base">04.</span>
             Verified Outcome
           </h2>
           {project.result && (

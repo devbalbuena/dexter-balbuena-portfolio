@@ -24,13 +24,13 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-blue-600 text-white shadow-sm hover:bg-blue-700 active:bg-blue-800 focus-visible:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-500",
+      "bg-[#a86e3b] text-white shadow-sm hover:bg-[#935d2d] active:bg-[#7e4f25] focus-visible:ring-[#c28b58] dark:bg-[#c28b58] dark:text-[#110f0d] dark:font-semibold dark:hover:bg-[#d49b6a]",
     secondary:
-      "bg-stone-200/70 text-stone-900 shadow-2xs hover:bg-stone-200 active:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700",
+      "bg-muted text-foreground shadow-2xs hover:opacity-90 active:opacity-80",
     outline:
-      "border border-stone-300 bg-card text-stone-800 shadow-2xs hover:bg-stone-100/70 dark:border-stone-700 dark:text-stone-200 dark:hover:bg-stone-800/80",
+      "border border-border bg-card text-foreground shadow-2xs hover:bg-muted",
     ghost:
-      "text-stone-700 hover:bg-stone-200/50 dark:text-stone-300 dark:hover:bg-stone-800/60",
+      "text-foreground hover:bg-muted",
   };
 
   const sizeStyles = {

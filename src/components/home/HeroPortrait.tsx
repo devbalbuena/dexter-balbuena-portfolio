@@ -15,7 +15,7 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
     <div className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center">
       {/* Static soft spotlight glow behind portrait (Task 3) */}
       <div
-        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-blue-600/10 dark:bg-blue-500/15 blur-3xl opacity-80"
+        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-[#c28b58]/15 dark:bg-[#c28b58]/20 blur-3xl opacity-80"
         aria-hidden="true"
       />
 
@@ -45,7 +45,7 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
             </div>
 
             <div className="space-y-3">
-              <div className="mx-auto flex h-24 w-24 sm:h-28 sm:w-28 items-center justify-center rounded-2xl bg-blue-600 font-mono text-3xl sm:text-4xl font-extrabold text-white shadow-md">
+              <div className="mx-auto flex h-24 w-24 sm:h-28 sm:w-28 items-center justify-center rounded-2xl bg-[#a86e3b] dark:bg-[#c28b58] font-mono text-3xl sm:text-4xl font-extrabold text-white dark:text-[#110f0d] shadow-md">
                 DB
               </div>
               <div>
