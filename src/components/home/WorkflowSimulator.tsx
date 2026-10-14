@@ -85,14 +85,20 @@ const STEPS: WorkflowStep[] = [
   },
 ];
 
-export function WorkflowSimulator() {
+export function WorkflowSimulator({ 
+  className = "w-full py-16 md:py-24 bg-white border-b border-[#eee6dc]",
+  containerClassName = "mx-auto max-w-6xl px-4 sm:px-6 space-y-10"
+}: { 
+  className?: string;
+  containerClassName?: string;
+}) {
   const shouldReduceMotion = useReducedMotion();
   const [activeStepIndex, setActiveStepIndex] = React.useState(0);
   const activeStep = STEPS[activeStepIndex];
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white border-b border-[#eee6dc]">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-10">
+    <section className={className}>
+      <div className={containerClassName}>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-3 max-w-2xl">
