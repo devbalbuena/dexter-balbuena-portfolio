@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingQuickDock } from "@/components/layout/FloatingQuickDock";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,6 +72,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 w-full">{children}</main>
           <Footer />
+          <FloatingQuickDock />
         </Providers>
       </body>
     </html>
