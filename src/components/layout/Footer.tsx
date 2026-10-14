@@ -124,9 +124,6 @@ export function Footer() {
         {/* Bottom Line */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#261c14] pt-6 text-xs text-stone-500">
           <p>© 2026 Dexter E. Balbuena. Built with Next.js &amp; Tailwind CSS.</p>
-          <p className="font-mono text-[11px] text-stone-500">
-            [NOTE: All work samples clearly labeled; metrics are verified or marked placeholders]
-          </p>
         </div>
       </div>
     </footer>
