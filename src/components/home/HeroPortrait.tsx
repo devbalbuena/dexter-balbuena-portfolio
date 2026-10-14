@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
 
 interface HeroPortraitProps {
   hasPhoto: boolean;
@@ -10,14 +10,42 @@ interface HeroPortraitProps {
 
 export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
   const shouldReduceMotion = useReducedMotion();
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  // Mouse coordinate spring physics for the ambient radial spotlight
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const glowX = useSpring(mouseX, { stiffness: 120, damping: 20 });
+  const glowY = useSpring(mouseY, { stiffness: 120, damping: 20 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (shouldReduceMotion || !containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    // Subtly drift up to 25px in the direction of the cursor
+    mouseX.set(x * 0.3);
+    mouseY.set(y * 0.3);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
 
   return (
-    <div className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center">
-      {/* Ambient soft spotlight glow behind portrait */}
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center cursor-default"
+    >
+      {/* Ambient soft spotlight glow behind portrait - tracks cursor with spring physics */}
       <motion.div
+        style={shouldReduceMotion ? {} : { x: glowX, y: glowY }}
         animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.55, 0.8, 0.55] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-[#8c532b]/15 blur-3xl"
+        className="pointer-events-none absolute -inset-6 sm:-inset-10 z-0 rounded-full bg-[#8c532b]/20 blur-3xl"
         aria-hidden="true"
       />
 
