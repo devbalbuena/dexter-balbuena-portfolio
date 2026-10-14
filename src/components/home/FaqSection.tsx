@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
-import { ChevronDown, HelpCircle, Mail } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { ChevronDown } from "lucide-react";
 
 interface FaqItem {
   question: string;
@@ -47,7 +46,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white border-b border-[#eee6dc]">
+    <section className="w-full py-16 md:py-20 bg-white border-b border-[#eee6dc]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 space-y-10">
         {/* Section Header */}
         <div className="text-center space-y-3 max-w-2xl mx-auto">
@@ -121,25 +120,6 @@ export function FaqSection() {
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom Callout */}
-        <div className="rounded-2xl border border-[#ebdccb] bg-[#faf6f0] p-6 text-center space-y-4">
-          <div className="flex items-center justify-center gap-2 text-xs font-mono font-bold text-[#8c532b]">
-            <HelpCircle className="h-4 w-4" />
-            Have a custom workflow or tool not listed here?
-          </div>
-          <p className="text-sm text-stone-600 max-w-lg mx-auto">
-            I adapt quickly to custom internal dashboards, proprietary spreadsheets, or unique store setups.
-          </p>
-          <div className="pt-1 flex items-center justify-center gap-3">
-            <Button href="/contact" size="md">
-              Ask Me Directly
-            </Button>
-            <Button href="mailto:balbuena.dexter.va@gmail.com" variant="outline" size="md" external>
-              <Mail className="h-4 w-4 mr-1.5" /> Email Inquiry
-            </Button>
-          </div>
         </div>
       </div>
     </section>
