@@ -4,9 +4,9 @@ import * as React from "react";
 import Image from "next/image";
 import { Certificate } from "@/types/certificate";
 import { Badge } from "@/components/ui/Badge";
+import { IssuerLogo } from "@/components/ui/BrandLogos";
 import { 
   X, 
-  Award, 
   ExternalLink, 
   Calendar, 
   Building2, 
@@ -24,10 +24,11 @@ interface CertificateModalProps {
 export function CertificateModal({ certificate, onClose }: CertificateModalProps) {
   const [imageError, setImageError] = React.useState(false);
 
-  // Reset image error state whenever selected certificate changes
-  React.useEffect(() => {
+  const [prevCert, setPrevCert] = React.useState(certificate);
+  if (certificate !== prevCert) {
+    setPrevCert(certificate);
     setImageError(false);
-  }, [certificate]);
+  }
 
   // Handle ESC key to close modal
   React.useEffect(() => {
@@ -77,13 +78,13 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
         >
           {/* Header Bar */}
           <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#e8ded3] bg-[#faf6f0] px-5 py-3.5 sm:px-6">
-            <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#f7efe6] text-[#8c532b]">
-                <Award className="h-4 w-4" />
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white border border-[#f0e4d5] shadow-2xs">
+                <IssuerLogo issuer={certificate.issuer} size={20} />
               </span>
               <div>
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
-                  Verified Credential Preview
+                  {certificate.issuer} Credential
                 </span>
               </div>
             </div>

@@ -4,8 +4,8 @@ import * as React from "react";
 import { Certificate } from "@/types/certificate";
 import { Badge } from "@/components/ui/Badge";
 import { CertificateModal } from "./CertificateModal";
+import { IssuerLogo } from "@/components/ui/BrandLogos";
 import { 
-  Award, 
   CheckCircle, 
   ExternalLink, 
   Calendar, 
@@ -30,8 +30,8 @@ export function CertificatesGrid({ certificates }: CertificatesGridProps) {
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe6] text-[#8c532b]">
-                  <Award className="h-5 w-5" />
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#faf6f0] border border-[#f0e4d5] shadow-2xs">
+                  <IssuerLogo issuer={cert.issuer} size={24} />
                 </span>
                 <Badge variant="success" size="sm">
                   <CheckCircle className="h-3 w-3 mr-1" /> Verified

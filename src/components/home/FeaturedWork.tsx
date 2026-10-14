@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, ExternalLink, AlertCircle } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 interface FeaturedWorkProps {
   projects: Project[];
@@ -42,10 +43,10 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
           {projects.map((project) => {
             const previewImage = project.media[0];
             return (
-              <div
-                key={project.slug}
-                className="workspace-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3]"
-              >
+              <TiltCard key={project.slug} className="h-full">
+                <div
+                  className="workspace-card h-full rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] hover:shadow-md transition-all"
+                >
                 <div>
                   {/* Visual Preview */}
                   <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-100">
@@ -144,8 +145,9 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                   </div>
                 </div>
               </div>
-            );
-          })}
+            </TiltCard>
+          );
+        })}
         </div>
       </Reveal>
     </section>

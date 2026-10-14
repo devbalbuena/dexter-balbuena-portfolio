@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowRight, ExternalLink, AlertCircle, FolderGit2 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 interface WorkFilterHubProps {
   projects: Project[];
@@ -107,8 +108,10 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
                   key={project.slug}
-                  className="workspace-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3]"
+                  className="h-full"
                 >
+                  <TiltCard className="h-full">
+                    <div className="workspace-card h-full rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] hover:shadow-md transition-all">
                   <div>
                     {/* Visual Preview */}
                     <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-100">
@@ -205,7 +208,9 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                       )}
                     </div>
                   </div>
-                </motion.div>
+                </div>
+              </TiltCard>
+            </motion.div>
               );
             })}
           </AnimatePresence>

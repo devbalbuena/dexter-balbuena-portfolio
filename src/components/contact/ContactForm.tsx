@@ -148,8 +148,9 @@ export function ContactForm() {
               <option value="Excel / Google Sheets Ledger & Modeling">Excel &amp; Google Sheets Modeling</option>
               <option value="Administrative / Executive VA">Administrative / Executive Assistant</option>
               <option value="Web System / Internal Tool Prototype">Web System / Custom Tracker</option>
-              <option value="Canva Graphics & Pinterest Marketing">Canva Graphics &amp; Pinterest</option>
-              <option value="Part-Time VA Contract">Part-Time VA Contract</option>
+              <option value="Full-Time VA Contract">Full-Time VA Contract (40 hrs/wk)</option>
+              <option value="Part-Time VA Contract">Part-Time VA Contract (20 hrs/wk)</option>
+              <option value="Project-Based Task">Project-Based Task / Flexible</option>
             </select>
           </div>
 
