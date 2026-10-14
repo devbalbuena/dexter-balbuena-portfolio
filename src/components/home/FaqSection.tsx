@@ -13,40 +13,28 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    category: "Security & Access",
+    category: "Security & Store Access",
     question: "How do we securely share access to our store, tools, and passwords?",
     answer:
-      "Security and trust are non-negotiable. I recommend sharing credentials through encrypted password managers like Bitwarden, 1Password, or LastPass. For platforms like Shopify, Amazon Seller Central, or Google Workspace, you can invite me as a restricted collaborator or staff member with only the exact permissions needed. I never require master passwords.",
+      "Security and confidentiality are non-negotiable. I recommend sharing credentials through encrypted password managers like Bitwarden, 1Password, or LastPass. For platforms like Shopify, Amazon Seller Central, or Google Workspace, you can invite me as a restricted staff member with only the exact operational permissions needed. I never require master passwords.",
   },
   {
-    category: "Hiring & Trial",
+    category: "Hiring & Trial Tasks",
     question: "Can we start with a paid test project or trial week?",
     answer:
-      "Yes, absolutely. I encourage starting with a paid 5 to 10-hour test task (such as a 15-item competitor research sheet, SKU catalog update, or inventory ledger setup). This gives you a zero-risk way to evaluate my speed, accuracy, and communication style before committing to ongoing support.",
+      "Yes, absolutely. I welcome starting with a paid 5 to 10-hour trial task (such as a 15-item competitor research sheet, SKU catalog update, or inventory ledger setup). This gives you a zero-risk way to evaluate my turnaround speed, data accuracy, and communication style before committing to an ongoing contract.",
   },
   {
-    category: "Communication",
+    category: "Communication & Handoffs",
     question: "What is your daily communication and handoff routine?",
     answer:
-      "I adapt to your team's stack—whether Slack, Discord, WhatsApp, or email. At the end of every operational shift, I send a concise written End-of-Day (EOD) debrief detailing what was completed, direct links to updated sheets or catalog drafts, any roadblocks resolved, and what is queued next. For nuanced workflows, I record short Loom video walkthroughs.",
+      "I adapt to your team's workflow—Slack, Discord, WhatsApp, or email. At the end of every operational shift, I deliver a concise written End-of-Day (EOD) debrief detailing what was completed, direct links to updated sheets or catalog drafts, any roadblocks resolved, and what is queued next. For nuanced workflows, I record short Loom video walkthroughs.",
   },
   {
-    category: "Timezone & Schedule",
-    question: "How does your nocturnal shift (11 PM - 6 AM PHT) align with my time zone?",
+    category: "Fast Onboarding",
+    question: "How quickly can we get started, and what do you need from me?",
     answer:
-      "My shift is intentionally synchronized for Western operations: 11:00 PM – 6:00 AM Philippines Time directly overlaps with 10:00 AM – 5:00 PM US Eastern (EST), 3:00 PM – 10:00 PM UK GMT, and early AU mornings. You receive prompt real-time replies and live handoffs during your core working hours without 24-hour lag.",
-  },
-  {
-    category: "Technical Capabilities",
-    question: "What software and e-commerce tools do you operate daily?",
-    answer:
-      "My core toolkit includes Microsoft Excel (MOS Certified Associate), Google Sheets (dynamic formulas, pivots, conditional logic), Shopify store catalog admin, Amazon BSR competitor research, Notion, Trello, Asana, Canva Pro (social & product graphics), Semrush, and basic web systems (Next.js, TypeScript, SQL databases).",
-  },
-  {
-    category: "Student Advantage",
-    question: "How does your BSIT student background benefit my business?",
-    answer:
-      "Many virtual assistants only do manual transcription without understanding data schemas. As a BSIT student (graduating April 2027), I understand relational databases, data integrity, formula dependencies, and logic error handling. When I build or update an inventory sheet or catalog, I design it to prevent duplicate SKUs, broken references, or calculation mismatches.",
+      "We can get started within 24 hours. All I need is a quick Loom video or bulleted brief explaining the task, access to the relevant sheet or portal, and any edge-case rules you follow. Because of my BSIT background, I require minimal ramp-up and zero babysitting.",
   },
 ];
 
