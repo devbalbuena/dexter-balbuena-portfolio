@@ -58,7 +58,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-html {
+html[data-scroll-behavior="smooth"] {
   scroll-behavior: smooth;
 }
 
@@ -80,6 +80,34 @@ html {
   border-color: rgba(140, 83, 43, 0.4);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(45, 28, 19, 0.08), 0 8px 10px -6px rgba(45, 28, 19, 0.03);
+}
+
+/* Warm Metallic Bronze / Copper Text Shimmer */
+@keyframes text-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    110deg,
+    #8c532b 0%,
+    #b07542 22%,
+    #f4dfcd 48%,
+    #ffffff 50%,
+    #f4dfcd 52%,
+    #b07542 78%,
+    #8c532b 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-shimmer 5s ease-in-out infinite;
 }
 
 /* Focus styles for keyboard accessibility */
