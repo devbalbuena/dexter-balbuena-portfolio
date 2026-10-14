@@ -8,6 +8,7 @@ import {
   Wrench, 
   ArrowRight
 } from "lucide-react";
+import { WorkflowSimulator } from "@/components/home/WorkflowSimulator";
 
 export const metadata: Metadata = {
   title: "About Dexter E. Balbuena | E-Commerce & Operations VA",
@@ -142,6 +143,14 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Standard Operating Procedure (SOP) Pipeline */}
+      <div className="pt-6 border-t border-[#e8ded3]">
+        <WorkflowSimulator 
+          className="w-full py-4 bg-transparent"
+          containerClassName="w-full space-y-8"
+        />
       </div>
 
       {/* Tools & Tech Stack Matrix */}
