@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Project, CATEGORY_LABELS } from "@/types/project";
@@ -6,12 +8,14 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight, ExternalLink, AlertCircle } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { motion, useReducedMotion } from "motion/react";
 
 interface FeaturedWorkProps {
   projects: Project[];
 }
 
 export function FeaturedWork({ projects }: FeaturedWorkProps) {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <section id="featured-work" className="w-full py-16 md:py-24 bg-white">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -40,13 +44,25 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
 
         {/* Project Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => {
+          {projects.map((project, idx) => {
             const previewImage = project.media[0];
             return (
-              <TiltCard key={project.slug} className="h-full">
-                <div
-                  className="workspace-card h-full rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] hover:shadow-md transition-all"
-                >
+              <motion.div
+                key={project.slug}
+                initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: shouldReduceMotion ? 0.15 : 0.4,
+                  delay: shouldReduceMotion ? 0 : idx * 0.06,
+                  ease: [0.21, 0.47, 0.32, 0.98],
+                }}
+                className="h-full"
+              >
+                <TiltCard className="h-full">
+                  <div
+                    className="workspace-card h-full rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] hover:shadow-md transition-all"
+                  >
                 <div>
                   {/* Visual Preview */}
                   <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-100">
@@ -146,6 +162,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                 </div>
               </div>
             </TiltCard>
+          </motion.div>
           );
         })}
         </div>

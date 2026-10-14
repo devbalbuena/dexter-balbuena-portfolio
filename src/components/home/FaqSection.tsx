@@ -71,8 +71,12 @@ export function FaqSection() {
               const isOpen = openIndex === idx;
 
               return (
-                <div
+                <motion.div
                   key={idx}
+                  initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.4, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
                   className={`rounded-xl border transition-all ${
                     isOpen
                       ? "bg-[#faf6f0] border-[#8c532b]/40 shadow-xs"
@@ -118,7 +122,7 @@ export function FaqSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               );
             })}
           </div>

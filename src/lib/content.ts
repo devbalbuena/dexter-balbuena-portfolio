@@ -61,6 +61,18 @@ export async function getAllCertificates(): Promise<Certificate[]> {
     try {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const certData = JSON.parse(fileContents) as Certificate;
+
+      // Only pass certificateImage if the file exists on disk to avoid 404 image errors
+      if (certData.certificateImage) {
+        const relativeImgPath = certData.certificateImage.startsWith("/")
+          ? certData.certificateImage.slice(1)
+          : certData.certificateImage;
+        const diskPath = path.join(process.cwd(), "public", relativeImgPath);
+        if (!fs.existsSync(diskPath)) {
+          certData.certificateImage = undefined;
+        }
+      }
+
       certificates.push(certData);
     } catch (err) {
       console.error(`Failed to parse certificate file ${fileName}:`, err);
