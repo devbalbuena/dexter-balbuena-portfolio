@@ -23,7 +23,7 @@ export function HeroBento() {
             <div className="inline-flex flex-wrap items-center gap-2">
               <Badge variant="success" size="md">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                Available for Part-Time Hire (11 PM - 6 AM PHT)
+                Available for Full-Time &amp; Part-Time Hire (11 PM - 6 AM PHT)
               </Badge>
               <Badge variant="outline" size="md" className="hidden sm:inline-flex">
                 <MapPin className="h-3 w-3 mr-1 text-stone-500" /> Butuan City, PH
