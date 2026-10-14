@@ -1,13 +1,8 @@
 import { getFeaturedProjects, getAllCertificates } from "@/lib/content";
 import { HeroBento } from "@/components/home/HeroBento";
-import { StatsCounterRibbon } from "@/components/home/StatsCounterRibbon";
-import { LiveTimezoneRadar } from "@/components/home/LiveTimezoneRadar";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { WorkflowSimulator } from "@/components/home/WorkflowSimulator";
-import { LiveExcelSandbox } from "@/components/home/LiveExcelSandbox";
-import { RoiCalculator } from "@/components/home/RoiCalculator";
-import { LogisticsBackground } from "@/components/home/LogisticsBackground";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
+import { ServicesSection } from "@/components/home/ServicesSection";
+import { LogisticsBackground } from "@/components/home/LogisticsBackground";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ContactCta } from "@/components/home/ContactCta";
 
@@ -19,37 +14,22 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* 1. Hero Section + Tools Ribbon */}
+      {/* 1. HERO SECTION (Who you are + Tagline + Photo + CTA) & SYSTEMS RIBBON */}
       <HeroBento />
 
-      {/* 2. Animated Proof & Metric Counters Ribbon */}
-      <StatsCounterRibbon />
-
-      {/* 3. Real-Time Timezone Radar & Interactive Overlap Simulator */}
-      <LiveTimezoneRadar />
-
-      {/* 4. Core Capabilities & Services */}
-      <ServicesSection />
-
-      {/* 5. 4-Step Interactive Client SOP & Handoff Pipeline */}
-      <WorkflowSimulator />
-
-      {/* 6. Live Interactive MOS Excel & Inventory Sandbox */}
-      <LiveExcelSandbox />
-
-      {/* 7. Founder Time-Freedom & Operational ROI Calculator */}
-      <RoiCalculator />
-
-      {/* 8. Logistics & Formal Accreditations (Certificates modal & BSIT advantage) */}
-      <LogisticsBackground certificates={certificates} />
-
-      {/* 9. Selected Projects & 3D Tilt Deliverables Gallery */}
+      {/* 2. PROOF OF WORK SHOWCASE (Moved UP! Clickable case studies with screenshots) */}
       <FeaturedWork projects={featuredProjects} />
 
-      {/* 10. Frequently Asked Questions Accordion */}
+      {/* 3. CORE SERVICES GRID (E-Commerce, Executive Admin, Spreadsheet Systems) */}
+      <ServicesSection />
+
+      {/* 4. LOGISTICS & BACKGROUND (Timezones Overlap, Certifications with Image Modal, BSIT Advantage) */}
+      <LogisticsBackground certificates={certificates} />
+
+      {/* 5. HIGH-TRUST FAQ (Short questions on onboarding, security, and trial tasks) */}
       <FaqSection />
 
-      {/* 11. Contact Call-to-Action */}
+      {/* 6. CONVERSION CTA (Button to contact form / direct email) */}
       <ContactCta />
     </div>
   );
