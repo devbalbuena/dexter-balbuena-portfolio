@@ -10,7 +10,7 @@ export function ContactCta() {
           <div className="max-w-2xl mx-auto space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#643e22] border border-[#7d4f2c] px-3.5 py-1 text-xs font-mono font-semibold text-[#f2e7dc]">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
-              Ready for Hire • Part-Time (11 PM – 6 AM PHT)
+              Ready for Hire • Full-Time or Part-Time (11 PM – 6 AM PHT)
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">

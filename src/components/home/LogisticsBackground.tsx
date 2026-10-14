@@ -6,14 +6,14 @@ import { Certificate } from "@/types/certificate";
 import { Badge } from "@/components/ui/Badge";
 import { Reveal } from "@/components/ui/Reveal";
 import { CertificateModal } from "@/components/certificates/CertificateModal";
+import { IssuerLogo } from "@/components/ui/BrandLogos";
 import { 
   Clock, 
   Award, 
   GraduationCap, 
   ArrowRight, 
   Eye, 
-  CheckCircle2,
-  Calendar
+  CheckCircle2
 } from "lucide-react";
 
 interface LogisticsBackgroundProps {
@@ -132,15 +132,20 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
                     key={cIdx}
                     type="button"
                     onClick={() => setSelectedCert(cert)}
-                    className="w-full text-left rounded-lg bg-[#f9f6f2] hover:bg-[#ebdccb] border border-[#eee6dc] p-2.5 transition-colors flex items-center justify-between group cursor-pointer"
+                    className="w-full text-left rounded-lg bg-[#f9f6f2] hover:bg-[#ebdccb] border border-[#eee6dc] p-2.5 transition-colors flex items-center justify-between gap-3 group cursor-pointer"
                   >
-                    <div className="space-y-0.5">
-                      <span className="block text-xs font-bold text-stone-900 group-hover:text-[#8c532b] transition-colors line-clamp-1">
-                        {cert.name}
-                      </span>
-                      <span className="block text-[10px] font-mono text-stone-500">
-                        {cert.issuer} • {cert.issued}
-                      </span>
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="h-7 w-7 rounded-md bg-white border border-[#eee6dc] flex items-center justify-center shrink-0 shadow-2xs">
+                        <IssuerLogo issuer={cert.issuer} size={18} />
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <span className="block text-xs font-bold text-stone-900 group-hover:text-[#8c532b] transition-colors truncate">
+                          {cert.name}
+                        </span>
+                        <span className="block text-[10px] font-mono text-stone-500">
+                          {cert.issuer} • {cert.issued}
+                        </span>
+                      </div>
                     </div>
                     <span className="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-[#8c532b] bg-white px-2 py-0.5 rounded border border-[#e8ded3] shrink-0">
                       <Eye className="h-3 w-3" /> View
