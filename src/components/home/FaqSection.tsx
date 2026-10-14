@@ -13,7 +13,7 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
   {
     category: "Security & Store Access",
-    question: "How do we securely share access to our store, tools, and passwords?",
+    question: "How do we securely share access to our store and tools?",
     answer:
       "Security and confidentiality are non-negotiable. I recommend sharing credentials through encrypted password managers like Bitwarden, 1Password, or LastPass. For platforms like Shopify, Amazon Seller Central, or Google Workspace, you can invite me as a restricted staff member with only the exact operational permissions needed. I never require master passwords.",
   },
@@ -46,80 +46,82 @@ export function FaqSection() {
   };
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white border-b border-[#eee6dc]">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 space-y-10">
-        {/* Section Header */}
-        <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#8c532b]" />
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
+    <section className="w-full py-12 md:py-16 bg-white border-b border-[#eee6dc]">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          {/* Left Column: Compact Header (Sticky on Desktop) */}
+          <div className="lg:col-span-5 lg:sticky lg:top-24 space-y-3">
+            <div className="inline-flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[#8c532b]" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8c532b]">
+                FAQ
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-900 leading-snug">
               Frequently Asked Questions
-            </span>
+            </h2>
+            <p className="text-sm text-stone-600 leading-relaxed max-w-md">
+              Clear, upfront answers on store credentials, paid test tasks, communication protocols, and fast onboarding.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900">
-            Everything Remote Founders Ask Before Hiring
-          </h2>
-          <p className="text-base text-stone-600 leading-relaxed">
-            Transparent answers regarding security, test tasks, nocturnal working hours, and communication.
-          </p>
-        </div>
 
-        {/* Accordion List */}
-        <div className="space-y-3">
-          {FAQS.map((faq, idx) => {
-            const isOpen = openIndex === idx;
+          {/* Right Column: Sleek Accordion */}
+          <div className="lg:col-span-7 space-y-2.5">
+            {FAQS.map((faq, idx) => {
+              const isOpen = openIndex === idx;
 
-            return (
-              <div
-                key={idx}
-                className={`rounded-2xl border transition-all ${
-                  isOpen
-                    ? "bg-[#faf6f0] border-[#8c532b]/40 shadow-xs"
-                    : "bg-white border-[#e8ded3] hover:border-[#8c532b]/30"
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(idx)}
-                  aria-expanded={isOpen}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 cursor-pointer"
+              return (
+                <div
+                  key={idx}
+                  className={`rounded-xl border transition-all ${
+                    isOpen
+                      ? "bg-[#faf6f0] border-[#8c532b]/40 shadow-xs"
+                      : "bg-white border-[#e8ded3] hover:border-[#8c532b]/30"
+                  }`}
                 >
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-[#8c532b]">
-                      {faq.category}
-                    </span>
-                    <h3 className="text-base sm:text-lg font-bold text-stone-900">
-                      {faq.question}
-                    </h3>
-                  </div>
-
-                  <div
-                    className={`h-8 w-8 rounded-full border border-[#ebdccb] flex items-center justify-center shrink-0 transition-transform ${
-                      isOpen ? "rotate-180 bg-[#8c532b] text-white" : "bg-white text-stone-600"
-                    }`}
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(idx)}
+                    aria-expanded={isOpen}
+                    className="w-full text-left p-4 sm:p-4.5 flex items-center justify-between gap-3 cursor-pointer"
                   >
-                    <ChevronDown className="h-4 w-4" />
-                  </div>
-                </button>
+                    <div className="space-y-0.5 pr-2">
+                      <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-[#8c532b]">
+                        {faq.category}
+                      </span>
+                      <h3 className="text-sm sm:text-base font-bold text-stone-900">
+                        {faq.question}
+                      </h3>
+                    </div>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, height: 0 }}
-                      animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, height: "auto" }}
-                      exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, height: 0 }}
-                      transition={{ duration: 0.24, ease: "easeInOut" }}
-                      className="overflow-hidden"
+                    <div
+                      className={`h-7 w-7 rounded-full border border-[#ebdccb] flex items-center justify-center shrink-0 transition-transform ${
+                        isOpen ? "rotate-180 bg-[#8c532b] text-white" : "bg-white text-stone-600"
+                      }`}
                     >
-                      <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-stone-600 leading-relaxed border-t border-[#ebdccb]/60">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+                      <ChevronDown className="h-3.5 w-3.5" />
+                    </div>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, height: 0 }}
+                        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, height: "auto" }}
+                        exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, height: 0 }}
+                        transition={{ duration: 0.22, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-4 sm:px-4.5 pb-4 pt-1 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-[#ebdccb]/60">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
