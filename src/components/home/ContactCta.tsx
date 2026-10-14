@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { Magnetic } from "@/components/ui/Magnetic";
 import { Mail, ArrowRight, Clock, CheckCircle } from "lucide-react";
 
 export function ContactCta() {
@@ -23,18 +26,22 @@ export function ContactCta() {
             </p>
 
             <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
-              <Button href="/contact" size="lg" className="font-bold bg-white hover:bg-[#faf5ee] text-[#7a4e2d] shadow-md">
-                Send an Inquiry / Hire Me <ArrowRight className="h-4 w-4 ml-1.5" />
-              </Button>
-              <Button
-                href="mailto:balbuena.dexter.va@gmail.com"
-                variant="outline"
-                size="lg"
-                external
-                className="font-medium bg-transparent border-white/40 text-white hover:bg-white/10"
-              >
-                <Mail className="h-4 w-4 mr-1.5" /> Direct Email
-              </Button>
+              <Magnetic strength={0.22}>
+                <Button href="/contact" size="lg" className="font-bold bg-white hover:bg-[#faf5ee] text-[#7a4e2d] shadow-md">
+                  Send an Inquiry / Hire Me <ArrowRight className="h-4 w-4 ml-1.5" />
+                </Button>
+              </Magnetic>
+              <Magnetic strength={0.18}>
+                <Button
+                  href="mailto:balbuena.dexter.va@gmail.com"
+                  variant="outline"
+                  size="lg"
+                  external
+                  className="font-medium bg-transparent border-white/40 text-white hover:bg-white/10"
+                >
+                  <Mail className="h-4 w-4 mr-1.5" /> Direct Email
+                </Button>
+              </Magnetic>
             </div>
 
             <div className="pt-6 border-t border-[#8f5d36] flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-[#eddccf]">

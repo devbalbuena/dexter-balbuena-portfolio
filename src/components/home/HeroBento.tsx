@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { Magnetic } from "@/components/ui/Magnetic";
 import { HeroPortrait } from "./HeroPortrait";
 import { ToolsRibbon } from "./ToolsRibbon";
 import { 
@@ -32,7 +33,7 @@ export function HeroBento() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-[1.1]">
               Virtual Assistant with <br className="hidden sm:inline" />
-              <span className="text-[#8c532b]">
+              <span className="text-shimmer inline-block">
                 Technical Precision.
               </span>
             </h1>
@@ -42,14 +43,18 @@ export function HeroBento() {
               product research, catalog listings, inventory tracking, and spreadsheet systems without babysitting.
             </p>
 
-            {/* 2 CTA Buttons */}
+            {/* 2 CTA Buttons with Magnetic Spring Physics */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button href="/#featured-work" size="lg" className="font-semibold shadow-xs">
-                View My Work <ArrowRight className="h-4 w-4 ml-1" />
-              </Button>
-              <Button href="/contact" variant="outline" size="lg" className="font-semibold">
-                Contact Me
-              </Button>
+              <Magnetic>
+                <Button href="/#featured-work" size="lg" className="font-semibold shadow-xs">
+                  View My Work <ArrowRight className="h-4 w-4 ml-1" />
+                </Button>
+              </Magnetic>
+              <Magnetic>
+                <Button href="/contact" variant="outline" size="lg" className="font-semibold">
+                  Contact Me
+                </Button>
+              </Magnetic>
               <span className="text-xs font-mono text-stone-500 pl-2">
                 US • UK • AU Timezones
               </span>
