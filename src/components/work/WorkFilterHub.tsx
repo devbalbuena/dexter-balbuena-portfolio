@@ -49,48 +49,68 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
   }
 
   return (
-    <div className="space-y-8">
-      {/* Category Filter Chips */}
-      <div className="flex flex-wrap items-center gap-2 pb-2" role="tablist" aria-label="Project category filters">
-        {CATEGORIES.map((cat) => {
-          const isActive = activeCategory === cat.key;
-          return (
-            <button
-              key={cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-              role="tab"
-              aria-selected={isActive}
-              className={cn(
-                "relative rounded-lg px-3.5 py-1.5 text-xs font-mono font-medium transition-colors cursor-pointer",
-                isActive
-                  ? "text-white font-semibold"
-                  : "bg-white text-stone-600 hover:text-stone-900 border border-[#e8ded3] hover:bg-[#f7efe6]"
-              )}
-            >
-              {isActive && (
-                <motion.span
-                  layoutId="activeFilterPill"
-                  className="absolute inset-0 rounded-lg bg-[#8c532b] shadow-xs"
-                  transition={{ type: "spring", stiffness: 450, damping: 32 }}
-                />
-              )}
-              <span className="relative z-10 flex items-center">
-                {cat.label}
-                {cat.key !== "all" && (
-                  <span className="ml-1.5 opacity-75 text-[10px]">
-                    ({projects.filter((p) => p.category === cat.key).length})
-                  </span>
+    <div className="space-y-6">
+      {/* Category Filter Pills & Live Counter */}
+      <div className="space-y-3">
+        <div 
+          className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-[#faf6f0] border border-[#ebdccb] w-fit" 
+          role="tablist" 
+          aria-label="Project category filters"
+        >
+          {CATEGORIES.map((cat) => {
+            const isActive = activeCategory === cat.key;
+            const count = cat.key === "all" ? projects.length : projects.filter((p) => p.category === cat.key).length;
+
+            return (
+              <button
+                key={cat.key}
+                onClick={() => setActiveCategory(cat.key)}
+                role="tab"
+                aria-selected={isActive}
+                className={cn(
+                  "relative rounded-full px-3.5 py-1.5 text-xs font-mono font-medium transition-all cursor-pointer flex items-center gap-1.5 select-none",
+                  isActive
+                    ? "text-white font-semibold shadow-xs"
+                    : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50"
                 )}
-              </span>
-            </button>
-          );
-        })}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="activeFilterPill"
+                    className="absolute inset-0 rounded-full bg-[#8c532b]"
+                    transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                  />
+                )}
+                <span className="relative z-10 flex items-center gap-1.5">
+                  {cat.label}
+                  <span
+                    className={cn(
+                      "px-1.5 py-0.2 rounded-full text-[10px] font-bold font-mono transition-colors",
+                      isActive
+                        ? "bg-white/20 text-white"
+                        : "bg-[#eee4d6] text-stone-600"
+                    )}
+                  >
+                    {count}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Filtered Grid */}
       {filteredProjects.length === 0 ? (
-        <div className="workspace-card rounded-xl p-8 text-center text-sm text-stone-500 bg-white border border-[#e8ded3]">
-          No projects found in this category yet.
+        <div className="workspace-card rounded-2xl p-10 text-center text-sm text-stone-500 bg-white border border-[#e8ded3] space-y-2">
+          <p className="font-semibold text-stone-800">No projects found in this category.</p>
+          <p className="text-xs text-stone-500">Sanitized client samples in this niche are currently being prepared.</p>
+          <button
+            onClick={() => setActiveCategory("all")}
+            className="inline-flex items-center text-xs font-mono font-bold text-[#8c532b] hover:underline pt-2 cursor-pointer"
+          >
+            ← View all projects
+          </button>
         </div>
       ) : (
         <motion.div 
