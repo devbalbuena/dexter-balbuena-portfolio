@@ -7,8 +7,8 @@ import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 export function ContactForm() {
   const [formData, setFormData] = React.useState({
     name: "",
-    email: "",
-    projectType: "E-Commerce Research / Operations",
+    contactInfo: "",
+    category: "E-Commerce Research & Operations",
     message: "",
   });
 
@@ -40,26 +40,31 @@ export function ContactForm() {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", projectType: "E-Commerce Research / Operations", message: "" });
+        setFormData({ name: "", contactInfo: "", category: "E-Commerce Research & Operations", message: "" });
       } else {
         const data = await response.json().catch(() => null);
         setStatus("error");
-        setStatusMessage(data?.error || "Failed to send message. Please reach out via direct email.");
+        setStatusMessage(data?.error || "Failed to send message. Please reach out via direct WhatsApp or email.");
       }
     } catch {
       setStatus("error");
-      setStatusMessage("Network error. Please use direct email (balbuena.dexter.va@gmail.com).");
+      setStatusMessage("Network error. Please use direct email or WhatsApp (+63 9912131795).");
     }
   }
 
   return (
     <div className="workspace-card rounded-2xl p-6 sm:p-8 space-y-6 bg-white border border-[#e8ded3]">
       <div className="space-y-1">
-        <h2 className="text-xl font-bold text-stone-900">
-          Send a Message
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-bold text-stone-900">
+            Quick Inquiry Form
+          </h2>
+          <span className="text-[11px] font-mono font-semibold text-[#8c532b] bg-[#faf6f0] px-2.5 py-0.5 rounded-full border border-[#ebdccb]">
+            Direct Response
+          </span>
+        </div>
         <p className="text-xs text-stone-500">
-          Fill out the form below or message me directly via WhatsApp or Email.
+          Send your project details below, and I will review and reply within a few hours.
         </p>
       </div>
 
@@ -78,7 +83,7 @@ export function ContactForm() {
             onClick={() => setStatus("idle")}
             className="mt-2 text-xs"
           >
-            Send Another Message
+            Send Another Inquiry
           </Button>
         </div>
       ) : (
@@ -104,9 +109,10 @@ export function ContactForm() {
             </div>
           )}
 
+          {/* Name */}
           <div className="space-y-1.5">
             <label htmlFor="name" className="block text-xs font-mono font-medium text-stone-700">
-              Your Name / Company
+              Your Name / Company <span className="text-[#8c532b]">*</span>
             </label>
             <input
               id="name"
@@ -114,57 +120,59 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Jane Doe (Store Founder)"
+              placeholder="e.g. Alex (Store Founder)"
               className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             />
           </div>
 
+          {/* Email or WhatsApp */}
           <div className="space-y-1.5">
-            <label htmlFor="email" className="block text-xs font-mono font-medium text-stone-700">
-              Email Address
+            <label htmlFor="contactInfo" className="block text-xs font-mono font-medium text-stone-700">
+              Email or WhatsApp <span className="text-[#8c532b]">*</span>
             </label>
             <input
-              id="email"
-              type="email"
+              id="contactInfo"
+              type="text"
               required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="jane@yourbrand.com"
+              value={formData.contactInfo}
+              onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
+              placeholder="alex@brand.com or +1 555-0199"
               className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             />
           </div>
 
+          {/* Project Category Dropdown */}
           <div className="space-y-1.5">
-            <label htmlFor="projectType" className="block text-xs font-mono font-medium text-stone-700">
-              Service Needed
+            <label htmlFor="category" className="block text-xs font-mono font-medium text-stone-700">
+              Service Required <span className="text-[#8c532b]">*</span>
             </label>
             <select
-              id="projectType"
-              value={formData.projectType}
-              onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+              id="category"
+              value={formData.category}
+              onChange={(e) => setFormData({ ...formData, category: e.target.value })}
               className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
             >
-              <option value="E-Commerce Research / Operations">E-Commerce Research &amp; Operations</option>
-              <option value="Excel / Google Sheets Ledger & Modeling">Excel &amp; Google Sheets Modeling</option>
-              <option value="Administrative / Executive VA">Administrative / Executive Assistant</option>
-              <option value="Web System / Internal Tool Prototype">Web System / Custom Tracker</option>
-              <option value="Full-Time VA Contract">Full-Time VA Contract (40 hrs/wk)</option>
-              <option value="Part-Time VA Contract">Part-Time VA Contract (20 hrs/wk)</option>
-              <option value="Project-Based Task">Project-Based Task / Flexible</option>
+              <option value="E-Commerce Research & Operations">E-Commerce Research &amp; Store Operations</option>
+              <option value="Excel & Google Sheets Automation">Excel &amp; Google Sheets Automation</option>
+              <option value="Administrative & Executive Support">Administrative &amp; Executive Support</option>
+              <option value="Full-Time Nocturnal VA (40 hrs/wk)">Full-Time Nocturnal VA (40 hrs/wk)</option>
+              <option value="Part-Time Nocturnal VA (20 hrs/wk)">Part-Time Nocturnal VA (20 hrs/wk)</option>
+              <option value="Paid Trial Task / Other">Paid Trial Task / Other Custom Workflow</option>
             </select>
           </div>
 
+          {/* How can I help you? */}
           <div className="space-y-1.5">
             <label htmlFor="message" className="block text-xs font-mono font-medium text-stone-700">
-              Project Details &amp; Timeline
+              How can I help you? <span className="text-[#8c532b]">*</span>
             </label>
             <textarea
               id="message"
               required
-              rows={4}
+              rows={3}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Tell me about your product niche, sheet requirements, or weekly hours..."
+              placeholder="Briefly describe your store, sheet needs, or weekly task requirements..."
               className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20 resize-none"
             />
           </div>
@@ -181,7 +189,7 @@ export function ContactForm() {
               </>
             ) : (
               <>
-                Submit Message <Send className="h-4 w-4 ml-2" />
+                Send Inquiry <Send className="h-4 w-4 ml-2" />
               </>
             )}
           </Button>
