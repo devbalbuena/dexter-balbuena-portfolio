@@ -19,6 +19,7 @@ export interface ProjectLinks {
   githubUrl?: string;
   sheetPreviewUrl?: string;
   canvaPreviewUrl?: string;
+  downloadUrl?: string;
 }
 
 export interface Project {

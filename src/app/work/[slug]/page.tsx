@@ -10,7 +10,8 @@ import {
   ArrowLeft, 
   ExternalLink, 
   CheckCircle2, 
-  AlertCircle 
+  AlertCircle,
+  Download
 } from "lucide-react";
 
 interface ProjectPageProps {
@@ -80,6 +81,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Links bar if any */}
         {project.links && (
           <div className="flex flex-wrap items-center gap-3 pt-2">
+            {project.links.downloadUrl && (
+              <a
+                href={project.links.downloadUrl}
+                download
+                className="inline-flex items-center justify-center font-medium transition-all duration-150 select-none cursor-pointer hover:-translate-y-0.5 active:translate-y-0 bg-[#8c532b] text-white shadow-xs hover:bg-[#734320] h-8 px-3 text-xs rounded-lg gap-1.5 font-mono"
+              >
+                <Download className="h-3.5 w-3.5" /> Download Polished Workbook (.xlsx)
+              </a>
+            )}
             {project.links.githubUrl && (
               <Button href={project.links.githubUrl} variant="outline" size="sm" external>
                 View Repository <ExternalLink className="h-3.5 w-3.5 ml-1" />

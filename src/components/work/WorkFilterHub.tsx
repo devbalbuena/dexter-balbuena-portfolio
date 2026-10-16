@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project, ProjectCategory, CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
-import { ArrowRight, ExternalLink, AlertCircle, FolderGit2 } from "lucide-react";
+import { ArrowRight, ExternalLink, AlertCircle, FolderGit2, Download } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { TiltCard } from "@/components/ui/TiltCard";
@@ -216,16 +216,28 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         Case Study Details <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
 
-                      {project.links?.githubUrl && (
-                        <a
-                          href={project.links.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-mono text-stone-500 hover:text-stone-900 flex items-center gap-1"
-                        >
-                          Code <ExternalLink className="h-3 w-3" />
-                        </a>
-                      )}
+                      <div className="flex items-center gap-2">
+                        {project.links?.downloadUrl && (
+                          <a
+                            href={project.links.downloadUrl}
+                            download
+                            className="text-xs font-mono text-emerald-700 hover:text-emerald-900 flex items-center gap-1 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"
+                            title="Download Excel Workbook"
+                          >
+                            .XLSX <Download className="h-3 w-3" />
+                          </a>
+                        )}
+                        {project.links?.githubUrl && (
+                          <a
+                            href={project.links.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-mono text-stone-500 hover:text-stone-900 flex items-center gap-1"
+                          >
+                            Code <ExternalLink className="h-3 w-3" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
