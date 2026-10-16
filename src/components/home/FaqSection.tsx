@@ -12,28 +12,34 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    category: "Security & Store Access",
-    question: "How do we securely share access to our store and tools?",
+    category: "Platforms & Software Stack",
+    question: "What e-commerce platforms and tools do you work with?",
     answer:
-      "Security and confidentiality are non-negotiable. I recommend sharing credentials through encrypted password managers like Bitwarden, 1Password, or LastPass. For platforms like Shopify, Amazon Seller Central, or Google Workspace, you can invite me as a restricted staff member with only the exact operational permissions needed. I never require master passwords.",
+      "I support operations across Amazon, Shopify, Shopee, Lazada, and Pinterest. On the technical side, I specialize in advanced Microsoft Excel (formula modeling, stock replenishment logic, listing QA audits), Google Workspace, Canva Pro for visual marketing assets, and modern web systems.",
   },
   {
-    category: "Hiring & Trial Tasks",
-    question: "Can we start with a paid test project or trial week?",
+    category: "Spreadsheet & Inventory Automation",
+    question: "Can you build or audit custom spreadsheets for our store's inventory?",
     answer:
-      "Yes, absolutely. I welcome starting with a paid 5 to 10-hour trial task (such as a 15-item competitor research sheet, SKU catalog update, or inventory ledger setup). This gives you a zero-risk way to evaluate my turnaround speed, data accuracy, and communication style before committing to an ongoing contract.",
+      "Yes, absolutely. I engineer formula-driven spreadsheets—including automated reorder point models, multi-channel product comparison matrices, SKU listing quality checklists, and order SLA trackers. By utilizing functions like =ROUND(), =COUNTIF(), and nested logic, I eliminate manual calculations and prevent stockouts.",
+  },
+  {
+    category: "Pinterest & Visual Traffic",
+    question: "How do you generate organic Pinterest traffic for Amazon and store products?",
+    answer:
+      "I manage an active brand channel (@cozynook_finds) generating 24.3k+ organic monthly views. I research trending niches, batch high-contrast 2:3 vertical pin creatives (1000×1500px) with compelling headline hooks, optimize Pinterest visual SEO keywords, and integrate compliant affiliate tracking links with zero paid ad spend.",
+  },
+  {
+    category: "Security & Store Access",
+    question: "How do we securely grant access to our store and credentials?",
+    answer:
+      "Confidentiality and account security are non-negotiable. I recommend sharing credentials through encrypted password vaults like Bitwarden, 1Password, or LastPass. For platforms like Shopify, Amazon Seller Central, or Google Workspace, you can invite me as a restricted staff user with only the exact operational permissions required.",
   },
   {
     category: "Communication & Handoffs",
-    question: "What is your daily communication and handoff routine?",
+    question: "What is your daily communication routine and working schedule?",
     answer:
-      "I adapt to your team's workflow—Slack, Discord, WhatsApp, or email. At the end of every operational shift, I deliver a concise written End-of-Day (EOD) debrief detailing what was completed, direct links to updated sheets or catalog drafts, any roadblocks resolved, and what is queued next. For nuanced workflows, I record short Loom video walkthroughs.",
-  },
-  {
-    category: "Fast Onboarding",
-    question: "How quickly can we get started, and what do you need from me?",
-    answer:
-      "We can get started within 24 hours. All I need is a quick Loom video or bulleted brief explaining the task, access to the relevant sheet or portal, and any edge-case rules you follow. Because of my BSIT background, I require minimal ramp-up and zero babysitting.",
+      "I adapt to your team's communication channels—Slack, Discord, WhatsApp, or email. At the end of every operational shift, I deliver a concise End-of-Day (EOD) debrief detailing completed deliverables, direct links to updated sheets, and queued priorities. Thanks to my BSIT background, I require minimal onboarding and work with high autonomy.",
   },
 ];
 
@@ -61,7 +67,7 @@ export function FaqSection() {
               Frequently Asked Questions
             </h2>
             <p className="text-sm text-stone-600 leading-relaxed max-w-md">
-              Clear, upfront answers on store credentials, paid test tasks, communication protocols, and fast onboarding.
+              Clear, upfront answers on e-commerce platforms, spreadsheet automation, organic Pinterest reach, and secure onboarding.
             </p>
           </div>
 
