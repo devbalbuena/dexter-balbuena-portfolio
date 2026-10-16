@@ -110,6 +110,27 @@ html[data-scroll-behavior="smooth"] {
   animation: text-shimmer 5s ease-in-out infinite;
 }
 
+/* Continuous Gliding Marquee with Smooth Pause on Hover */
+@keyframes glide-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-glide-marquee {
+  display: flex;
+  width: max-content;
+  animation: glide-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-glide-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Focus styles for keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--ring);

@@ -189,6 +189,36 @@ export function ShopifyLogo({ size = 28, className, ...props }: LogoProps) {
   );
 }
 
+export function AmazonLogo({ size = 28, className, ...props }: LogoProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
+      <rect width="32" height="32" rx="7" fill="#131921" />
+      {/* Amazon letter 'a' */}
+      <path
+        d="M17.8 17.2C17.8 18.2 17.2 18.8 16.1 18.8C14.9 18.8 14.3 18 14.3 16.8C14.3 15.2 15.6 14.6 17.8 14.5V17.2ZM20.2 20.2V13.4C20.2 11.3 18.9 10.2 16 10.2C14.3 10.2 12.7 10.8 11.8 11.5L12.7 13.2C13.5 12.6 14.7 12.2 15.8 12.2C17.2 12.2 17.8 12.8 17.8 14.1V14.3C13.6 14.5 11.8 15.9 11.8 18C11.8 19.9 13.3 20.9 15.3 20.9C16.8 20.9 18.1 20.2 18.7 19.2H18.8L19.2 20.6H21.2L20.2 20.2Z"
+        fill="white"
+      />
+      {/* Iconic Amazon smile arrow */}
+      <path
+        d="M8.2 22.4C12.1 24.8 18.2 24.6 22.8 21.8C23.1 21.6 23.4 21.9 23.2 22.2C21.9 23.8 18.3 25.5 13.5 25.5C10.5 25.5 8.1 24.6 7.3 23.7C7 23.4 7.3 23 8.2 22.4Z"
+        fill="#FF9900"
+      />
+      <path
+        d="M23.9 21.1C23.6 20.8 22.6 21.3 22.1 21.6C21.8 21.8 22 22 22.3 22.1C23.1 22.2 23.6 22.2 23.9 21.8C24.1 21.5 24 21.3 23.9 21.1Z"
+        fill="#FF9900"
+      />
+    </svg>
+  );
+}
+
 /* ==========================================================================
    CERTIFICATE ISSUER LOGOS (High-definition official vector representations)
    ========================================================================== */

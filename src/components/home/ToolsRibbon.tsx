@@ -1,15 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { motion, useReducedMotion } from "motion/react";
 import { 
+  AmazonLogo,
   ExcelLogo, 
   GoogleSheetsLogo, 
   NextjsLogo, 
   CanvaLogo, 
   PinterestLogo, 
   NotionLogo, 
-  SemrushLogo, 
   ShopifyLogo 
 } from "@/components/ui/BrandLogos";
 
@@ -18,62 +17,63 @@ interface ToolItem {
   category: string;
   logo: React.ElementType;
   tag: string;
+  highlightTag?: boolean;
 }
 
 const TOOLS: ToolItem[] = [
   {
+    name: "Amazon",
+    category: "Marketplace & Affiliate",
+    logo: AmazonLogo,
+    tag: "ASIN Research & Listings",
+  },
+  {
+    name: "Pinterest",
+    category: "Visual Search & Traffic",
+    logo: PinterestLogo,
+    tag: "24.3K Monthly Views",
+    highlightTag: true,
+  },
+  {
     name: "Microsoft Excel",
     category: "MOS Certified",
     logo: ExcelLogo,
-    tag: "Advanced Formulas",
-  },
-  {
-    name: "Google Sheets",
-    category: "Cloud Spreadsheets",
-    logo: GoogleSheetsLogo,
-    tag: "Live Inventory & Dashboards",
+    tag: "Dynamic Formulas (XLOOKUP/LET)",
+    highlightTag: true,
   },
   {
     name: "Shopify",
-    category: "E-Commerce",
+    category: "E-Commerce Storefront",
     logo: ShopifyLogo,
     tag: "Catalog & Product Listings",
   },
   {
-    name: "Notion",
-    category: "Operations & SOPs",
-    logo: NotionLogo,
-    tag: "Systems & Documentation",
+    name: "Google Sheets",
+    category: "Live Cloud Operations",
+    logo: GoogleSheetsLogo,
+    tag: "Inventory & Reorder Dashboards",
   },
   {
     name: "Canva Pro",
-    category: "Store Visuals",
+    category: "E-Commerce Visuals",
     logo: CanvaLogo,
-    tag: "Product Graphics & Ads",
+    tag: "High-CTR Pins & Ad Creatives",
   },
   {
-    name: "Pinterest",
-    category: "Visual Search",
-    logo: PinterestLogo,
-    tag: "Trend Research & Pins",
+    name: "Notion",
+    category: "Operations & Systems",
+    logo: NotionLogo,
+    tag: "SOPs & Team Documentation",
   },
   {
-    name: "Next.js & TypeScript",
-    category: "Web Engineering",
+    name: "Next.js & SQL",
+    category: "BSIT Web Engineering",
     logo: NextjsLogo,
-    tag: "Custom Web Portals",
-  },
-  {
-    name: "Semrush",
-    category: "Search Marketing",
-    logo: SemrushLogo,
-    tag: "BSR & Keyword Analysis",
+    tag: "Custom Portals & Data Integrity",
   },
 ];
 
 export function ToolsRibbon() {
-  const shouldReduceMotion = useReducedMotion();
-
   // Duplicate items array so the ticker loops seamlessly forever
   const tickerItems = React.useMemo(() => [...TOOLS, ...TOOLS], []);
 
@@ -88,7 +88,7 @@ export function ToolsRibbon() {
           </span>
         </div>
 
-        {/* Outer Carousel Container with Left/Right Fade Masks */}
+        {/* Outer Carousel Container with Left/Right Fade Masks & Pause-on-Hover */}
         <div className="relative w-full overflow-hidden py-2">
           {/* Left Gradient Mask */}
           <div 
@@ -102,26 +102,14 @@ export function ToolsRibbon() {
             aria-hidden="true" 
           />
 
-          {/* Scrolling Motion Track - Glides Continuously */}
-          <motion.div
-            className="flex w-max gap-3.5 sm:gap-4 select-none"
-            animate={
-              shouldReduceMotion
-                ? { x: 0 }
-                : { x: ["0%", "-50%"] }
-            }
-            transition={{
-              ease: "linear",
-              duration: 28,
-              repeat: Infinity,
-            }}
-          >
+          {/* Scrolling Track with CSS Hardware-Accelerated Marquee + Hover Pause */}
+          <div className="animate-glide-marquee gap-3.5 sm:gap-4 select-none py-1">
             {tickerItems.map((tool, idx) => {
               const Logo = tool.logo;
               return (
                 <div
                   key={idx}
-                  className="w-[200px] sm:w-[220px] shrink-0 rounded-2xl border border-[#e8ded3] bg-white p-3.5 flex items-center gap-3.5 shadow-2xs hover:shadow-md hover:border-[#8c532b] hover:-translate-y-1 transition-all group cursor-default"
+                  className="w-[215px] sm:w-[235px] shrink-0 rounded-2xl border border-[#e8ded3] bg-white p-3.5 flex items-center gap-3.5 shadow-2xs hover:shadow-md hover:border-[#8c532b] hover:-translate-y-1 transition-all group cursor-default"
                 >
                   {/* Official Brand Logo */}
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#faf6f0] border border-[#f0e4d5] group-hover:scale-108 transition-transform shadow-xs">
@@ -136,14 +124,14 @@ export function ToolsRibbon() {
                     <span className="text-[10px] font-mono text-[#8c532b] font-medium truncate">
                       {tool.category}
                     </span>
-                    <span className="text-[10px] text-stone-500 truncate mt-0.5">
+                    <span className={`text-[10px] truncate mt-0.5 ${tool.highlightTag ? "text-emerald-700 font-semibold" : "text-stone-500"}`}>
                       {tool.tag}
                     </span>
                   </div>
                 </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
 
         {/* Continuous Gliding Track Footer */}

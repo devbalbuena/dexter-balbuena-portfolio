@@ -32,14 +32,14 @@ export function HeroBento() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-[1.1]">
-              Virtual Assistant with <br className="hidden sm:inline" />
+              E-Commerce &amp; Operations VA with <br className="hidden sm:inline" />
               <span className="text-shimmer inline-block">
                 Technical Precision.
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl">
-              Hi, I&apos;m <strong>Dexter E. Balbuena</strong>. I help e-commerce founders and busy operators streamline 
+              Hi, I&apos;m <strong>Dexter E. Balbuena</strong>. I help e-commerce founders and busy store operators streamline 
               product research, catalog listings, inventory tracking, and spreadsheet systems without babysitting.
             </p>
 
