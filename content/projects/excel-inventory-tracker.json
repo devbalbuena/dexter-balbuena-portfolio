@@ -1,0 +1,37 @@
+{
+  "slug": "excel-inventory-tracker",
+  "title": "Dynamic Inventory, Safety Stock & Reorder Point Tracker",
+  "category": "excel-sheets",
+  "summary": "Dynamic stock replenishment model calculating automated reorder thresholds and suggested batch sizes based on daily sales velocity, supplier lead times, and safety stock buffers.",
+  "problem": "Online retailers face costly stockouts and overstock holding costs due to manual inventory estimation that fails to account for fluctuating lead times and sales velocity.",
+  "whatIDid": [
+    "Structured inventory tracking modeling stock on hand, average daily sales velocity, supplier lead times (days), safety stock buffers, and unit wholesale costs.",
+    "Formulated a dynamic reorder point formula (=ROUND(Daily_Sales * Lead_Time + Safety_Stock, 0)) to automatically determine the exact threshold when replenishment must trigger.",
+    "Engineered suggested order quantity logic (=MAX(0, ROUNDUP(Reorder_Point - Stock_On_Hand + Daily_Sales * 14, 0))) to forecast a 14-day operational supply buffer.",
+    "Implemented high-visibility soft-alert badges (REORDER vs In Stock) and calculated total inventory capital at risk to support proactive supplier negotiations."
+  ],
+  "result": "Established an automated replenishment framework providing continuous visibility into inventory health and mitigating stockout risk through formula-driven order alerts.",
+  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to model e-commerce supply chain logic and replenishment thresholds]",
+  "tools": [
+    "Microsoft Excel",
+    "Dynamic Reorder Logic",
+    "Stock Velocity Modeling",
+    "Conditional Formatting",
+    "Supply Chain Recordkeeping"
+  ],
+  "date": "2026-02-12",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/excel-inventory-tracker.svg",
+      "alt": "Dynamic Inventory and Reorder Tracker Excel Matrix",
+      "caption": "Real-time replenishment tracker displaying automated reorder points, suggested reorder quantities, and stock alerts."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/03_Inventory_Reorder_Tracker.xlsx"
+  }
+}

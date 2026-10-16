@@ -1,0 +1,37 @@
+{
+  "slug": "excel-ecommerce-master-suite",
+  "title": "E-Commerce VA Operations Master Suite & KPI Dashboard",
+  "category": "excel-sheets",
+  "summary": "Consolidated multi-sheet operational workbook connecting product research, catalog listing audits, dynamic inventory reordering, and order fulfillment queues into an executive command dashboard.",
+  "problem": "E-commerce founders and store managers struggle with fragmented spreadsheets that fail to communicate across operational silos, resulting in mismatched inventory numbers and blind spots in store health.",
+  "whatIDid": [
+    "Architected a unified master workbook consolidating four core virtual assistant operational workflows across synchronized, color-coded functional tabs.",
+    "Engineered an executive summary KPI dashboard aggregating cross-sheet metrics using formula linkages (=COUNTA, =COUNTIF) to display total researched SKUs, pending listing audits, safety stock alerts, and open SLA escalations.",
+    "Applied executive styling standards including dark slate headers, frozen view panes, clean number formats (currency, percentages, dates), and soft-tinted conditional badge states.",
+    "Documented complete operational assumptions, column definitions, and formula methodologies on a dedicated onboarding sheet for seamless client handover."
+  ],
+  "result": "Delivered an all-in-one operational toolkit that bridges the gap between daily store tasks and executive decision-making, cutting cross-sheet navigation time and standardizing routine VA workflows.",
+  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to showcase end-to-end e-commerce store operations and multi-sheet dashboard architecture]",
+  "tools": [
+    "Microsoft Excel",
+    "Cross-Sheet Dashboards",
+    "Formula Automation",
+    "Multi-Channel E-Commerce",
+    "SOP Architecture"
+  ],
+  "date": "2026-02-18",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/excel-ecommerce-master-suite.svg",
+      "alt": "E-Commerce VA Operations Master Workbook and Executive Dashboard",
+      "caption": "Executive command center summarizing cross-sheet metrics across product research, quality audits, inventory, and order queues."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/Dexter_Ecommerce_VA_Excel_Portfolio_Projects.xlsx"
+  }
+}

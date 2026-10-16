@@ -1,0 +1,37 @@
+{
+  "slug": "excel-product-research",
+  "title": "E-Commerce Product Research & Margin Analysis Matrix",
+  "category": "ecommerce-research",
+  "summary": "Standardized comparison workbook evaluating candidate products across Amazon and Shopify with formula-driven platform fee modeling and 100-point opportunity scoring.",
+  "problem": "E-commerce store operators waste hours manually evaluating candidate products across disparate marketplaces without a standardized method to calculate true net margins after referral and fulfillment fees.",
+  "whatIDid": [
+    "Built a standardized comparison table tracking marketplace channel, product category, retail price, estimated supplier cost, platform fee rates, rating, and review counts.",
+    "Engineered dynamic formula calculations for platform referral fees (=Price * Fee Rate) and true estimated gross margins (=Price - Cost - Fee).",
+    "Developed an illustrative 100-point opportunity scoring formula weighting rating reliability against gross margin percentage (=ROUND((Rating/5)*60 + MIN(MAX(Margin/Price,0),0.6)*40, 0)).",
+    "Added executive KPI summary blocks, freeze-paned column headers, and structured research notes highlighting verification items before capital allocation."
+  ],
+  "result": "Standardized the candidate evaluation process into a single structured workbook, instantly eliminating manual margin math and ranking viable products by profit potential.",
+  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to illustrate e-commerce research workflows and formula modeling]",
+  "tools": [
+    "Microsoft Excel",
+    "Formula Automation",
+    "Fee Modeling",
+    "Marketplace Research",
+    "Conditional Formatting"
+  ],
+  "date": "2026-02-05",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/excel-product-research.svg",
+      "alt": "Product Research & Margin Analysis Excel Matrix",
+      "caption": "Standardized matrix calculating gross margins, referral fees, and weighted research scores."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/01_Product_Research_Comparison.xlsx"
+  }
+}

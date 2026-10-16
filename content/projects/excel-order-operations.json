@@ -1,0 +1,37 @@
+{
+  "slug": "excel-order-operations",
+  "title": "Order Operations, Fulfillment SLA & Exception Tracker",
+  "category": "excel-sheets",
+  "summary": "Multi-channel order queue monitoring payment settlements and fulfillment stages with automated order aging calculations and conditional escalation flags.",
+  "problem": "Handling customer orders across multiple sales channels leads to unflagged fulfillment delays, delayed shipments, and customer complaints when operational queues lack automated SLA tracking.",
+  "whatIDid": [
+    "Constructed an operational order log capturing Order ID, order date, sales channel (Website, Amazon, Shopify), customer references, SKU, quantity, and total transaction values.",
+    "Integrated standardized data validation dropdowns for payment statuses (Paid, Pending, Failed) and fulfillment stages (Shipped, Processing, On Hold, Delivered).",
+    "Implemented automated order aging formulas calculating elapsed days from order placement to present date (=DATE(...) - DATEVALUE(Order_Date)).",
+    "Engineered complex conditional follow-up triggers (=IF(OR(Payment=\"Pending\", Fulfillment=\"On Hold\", AND(Fulfillment=\"Processing\", Days>=2)), \"FOLLOW UP\", \"No immediate action\")) to highlight SLA breaches."
+  ],
+  "result": "Centralized cross-channel order monitoring into a high-visibility queue, pinpointing stalled orders within 48 hours and expediting operational handoffs to logistics teams.",
+  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to illustrate fulfillment pipeline monitoring and SLA escalation triggers]",
+  "tools": [
+    "Microsoft Excel",
+    "Date & Aging Logic",
+    "Nested OR/AND Formulas",
+    "SLA Exception Tracking",
+    "Fulfillment Operations"
+  ],
+  "date": "2026-02-15",
+  "featured": false,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/excel-order-operations.svg",
+      "alt": "Order Operations and SLA Exception Tracker Excel Matrix",
+      "caption": "Order pipeline log highlighting aging transactions, payment holds, and automated operational follow-up alerts."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/04_Order_Operations_Tracker.xlsx"
+  }
+}

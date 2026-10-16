@@ -1,0 +1,37 @@
+{
+  "slug": "excel-listing-audit",
+  "title": "Multi-Channel Product Listing Quality & SKU Audit Matrix",
+  "category": "excel-sheets",
+  "summary": "Repeatable quality-control audit checklist for multi-channel product listings utilizing nested IF and COUNTIF formulas to systematically flag incomplete attributes and missing imagery.",
+  "problem": "Multi-channel e-commerce stores frequently publish incomplete listings with missing attributes, unverified prices, or poor imagery, leading to suppressed search rankings and lower conversion rates.",
+  "whatIDid": [
+    "Constructed an SKU-level quality-control audit matrix covering title presence, description completeness, image checks, price verification, category mapping, and attribute accuracy.",
+    "Integrated standardized data validation dropdown fields (Yes/No checks and High/Medium/Low priority tags) to prevent inconsistent auditing inputs.",
+    "Engineered automated nested IF/COUNTIF logic to dynamically trigger listing statuses (=IF(COUNTIF(C:H,\"No\")>=3,\"Needs Major Update\",IF(COUNTIF(C:H,\"No\")>=1,\"Needs Review\",\"Ready for QA\"))).",
+    "Configured soft conditional formatting badges and actionable next-step recommendations to streamline copy and asset revisions."
+  ],
+  "result": "Created a systematic QA workflow that replaces manual ad-hoc checks, immediately prioritizing high-risk SKUs and ensuring zero listings go live with missing critical data.",
+  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to illustrate catalog quality control and logic automation]",
+  "tools": [
+    "Microsoft Excel",
+    "Nested IF / COUNTIF",
+    "Data Validation",
+    "Listing Quality Assurance",
+    "Catalog Management"
+  ],
+  "date": "2026-02-08",
+  "featured": false,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/excel-listing-audit.svg",
+      "alt": "Product Listing Quality Audit Excel Matrix",
+      "caption": "Automated QA checklist identifying missing listing attributes, broken image tags, and revision priorities."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/02_Product_Listing_Audit.xlsx"
+  }
+}
