@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "motion/react";
 
 interface HeroPortraitProps {
   hasPhoto: boolean;
@@ -11,24 +11,29 @@ interface HeroPortraitProps {
 export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
   const shouldReduceMotion = useReducedMotion();
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   // Mouse coordinate spring physics for the ambient radial spotlight
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const glowX = useSpring(mouseX, { stiffness: 120, damping: 20 });
-  const glowY = useSpring(mouseY, { stiffness: 120, damping: 20 });
+  const glowX = useSpring(useTransform(mouseX, [-150, 150], [-35, 35]), { stiffness: 140, damping: 20 });
+  const glowY = useSpring(useTransform(mouseY, [-200, 200], [-35, 35]), { stiffness: 140, damping: 20 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (shouldReduceMotion || !containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    // Subtly drift up to 25px in the direction of the cursor
-    mouseX.set(x * 0.3);
-    mouseY.set(y * 0.3);
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
+    setIsHovered(false);
     mouseX.set(0);
     mouseY.set(0);
   };
@@ -37,15 +42,29 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center cursor-default"
+      className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center cursor-default select-none"
     >
-      {/* Ambient soft spotlight glow behind portrait - tracks cursor with spring physics */}
+      {/* Ambient breathing halo backlight with cursor-lag tracking */}
       <motion.div
         style={shouldReduceMotion ? {} : { x: glowX, y: glowY }}
-        animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.55, 0.8, 0.55] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -inset-6 sm:-inset-10 z-0 rounded-full bg-[#8c532b]/20 blur-3xl"
+        animate={
+          shouldReduceMotion
+            ? {}
+            : {
+                scale: [1, 1.08, 1],
+                opacity: isHovered ? [0.75, 0.95, 0.75] : [0.5, 0.7, 0.5],
+              }
+        }
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -inset-6 sm:-inset-10 z-0 rounded-full bg-gradient-to-tr from-[#8c532b]/30 via-[#d4976a]/25 to-[#b87333]/20 blur-3xl"
+        aria-hidden="true"
+      />
+
+      {/* Secondary core warmth layer behind portrait */}
+      <div
+        className="pointer-events-none absolute inset-2 z-0 rounded-3xl bg-[#d4976a]/15 blur-2xl"
         aria-hidden="true"
       />
 
