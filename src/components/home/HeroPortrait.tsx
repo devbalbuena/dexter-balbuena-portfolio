@@ -13,19 +13,35 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = React.useState(false);
 
-  // Mouse coordinate spring physics for the ambient radial spotlight
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const glowX = useSpring(useTransform(mouseX, [-150, 150], [-35, 35]), { stiffness: 140, damping: 20 });
-  const glowY = useSpring(useTransform(mouseY, [-200, 200], [-35, 35]), { stiffness: 140, damping: 20 });
+  // Normalized mouse coordinates (-0.5 to 0.5) for 3D tilt
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  // Spring physics for buttery-smooth tilt damping
+  const mouseXSpring = useSpring(x, { stiffness: 240, damping: 24 });
+  const mouseYSpring = useSpring(y, { stiffness: 240, damping: 24 });
+
+  // Option 1: 3D Tilt angles (Subtle, luxury depth)
+  const tiltAngle = 8;
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], [`${tiltAngle}deg`, `-${tiltAngle}deg`]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], [`-${tiltAngle}deg`, `${tiltAngle}deg`]);
+
+  // Option 3: Ambient spotlight spring tracking cursor movement
+  const glowX = useSpring(useTransform(x, [-0.5, 0.5], [-35, 35]), { stiffness: 140, damping: 20 });
+  const glowY = useSpring(useTransform(y, [-0.5, 0.5], [-35, 35]), { stiffness: 140, damping: 20 });
+
+  // Option 1: Specular glass sheen horizontal sweep on cursor movement
+  const sheenX = useTransform(mouseXSpring, [-0.5, 0.5], ["-60%", "60%"]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (shouldReduceMotion || !containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    mouseX.set(x);
-    mouseY.set(y);
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / rect.width - 0.5;
+    const yPct = mouseY / rect.height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
   };
 
   const handleMouseEnter = () => {
@@ -34,8 +50,8 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    mouseX.set(0);
-    mouseY.set(0);
+    x.set(0);
+    y.set(0);
   };
 
   return (
@@ -44,9 +60,10 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{ perspective: "1000px" }}
       className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center cursor-default select-none"
     >
-      {/* Ambient breathing halo backlight with cursor-lag tracking */}
+      {/* OPTION 3: Warm Ambient Halo Backlight (Breathing + Cursor-Lag Tracking) */}
       <motion.div
         style={shouldReduceMotion ? {} : { x: glowX, y: glowY }}
         animate={
@@ -62,17 +79,25 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
         aria-hidden="true"
       />
 
-      {/* Secondary core warmth layer behind portrait */}
+      {/* OPTION 3: Secondary Subtle Core Warmth Behind Cutout */}
       <div
         className="pointer-events-none absolute inset-2 z-0 rounded-3xl bg-[#d4976a]/15 blur-2xl"
         aria-hidden="true"
       />
 
-      {/* Luxury Gradient Ring Frame */}
+      {/* OPTION 1 & 3: 3D Perspective Tilt Card with Luxury Gradient Ring Border */}
       <motion.div
         initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 14 }}
         animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
-        whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.01 }}
+        style={
+          shouldReduceMotion
+            ? {}
+            : {
+                rotateX,
+                rotateY,
+                transformStyle: "preserve-3d",
+              }
+        }
         transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 w-full aspect-[4/5] rounded-3xl p-[2.5px] bg-gradient-to-b from-[#8c532b]/45 via-[#d4976a]/30 to-[#8c532b]/20 shadow-xl transition-shadow duration-500 hover:shadow-2xl hover:shadow-[#8c532b]/15"
       >
@@ -89,11 +114,25 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
                 className="object-cover object-top transition-transform duration-700 ease-out hover:scale-104"
               />
 
-              {/* Cinematic Bottom Vignette Gradient */}
+              {/* OPTION 3: Cinematic Bottom Vignette Gradient */}
               <div
                 className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#18120d]/20 via-transparent to-transparent"
                 aria-hidden="true"
               />
+
+              {/* OPTION 1: Interactive Specular Glare/Sheen on Hover Tilt */}
+              {!shouldReduceMotion && (
+                <motion.div
+                  style={{
+                    x: sheenX,
+                    opacity: isHovered ? 0.35 : 0,
+                    background:
+                      "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.4) 50%, transparent 65%)",
+                  }}
+                  className="pointer-events-none absolute -inset-full z-20 mix-blend-overlay transition-opacity duration-300"
+                  aria-hidden="true"
+                />
+              )}
             </>
           ) : (
             /* Tidy styled placeholder when portrait.png is not yet uploaded */
