@@ -1,65 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
   <defs>
-    <linearGradient id="excel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#064e3b" />
-      <stop offset="100%" stop-color="#022c22" />
+    <linearGradient id="retail-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#0f172a" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#excel-bg)" />
+  <rect width="800" height="450" fill="url(#retail-bg)" />
   
-  <!-- Outer Window -->
-  <rect x="40" y="30" width="720" height="390" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
-  <rect x="40" y="30" width="720" height="45" rx="12" fill="#042f2e" />
-  <circle cx="65" cy="52" r="6" fill="#ef4444" opacity="0.8" />
-  <circle cx="85" cy="52" r="6" fill="#f59e0b" opacity="0.8" />
-  <circle cx="105" cy="52" r="6" fill="#10b981" opacity="0.8" />
-  <text x="140" y="58" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Sari_Sari_Inventory_Ledger_v3.xlsx (MOS Excel Demo)</text>
+  <!-- Window Container -->
+  <rect x="35" y="25" width="730" height="400" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
   
-  <!-- KPI Metrics Strip -->
-  <rect x="65" y="90" width="200" height="70" rx="8" fill="#134e4a" stroke="#2dd4bf" stroke-width="1" />
-  <text x="80" y="112" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11">TOTAL MONITORED SKUs</text>
-  <text x="80" y="145" fill="#f0fdf4" font-family="monospace" font-size="24" font-weight="700">142 Items</text>
+  <!-- Window Header -->
+  <rect x="35" y="25" width="730" height="42" rx="10" fill="#1e293b" />
+  <circle cx="58" cy="46" r="5" fill="#ef4444" />
+  <circle cx="75" cy="46" r="5" fill="#f59e0b" />
+  <circle cx="92" cy="46" r="5" fill="#10b981" />
+  <text x="115" y="51" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">05_Family_Retail_Daily_Sales_Credit_Ledger.xlsx — Real Business Sample</text>
+  <rect x="635" y="36" width="115" height="20" rx="4" fill="#0f766e" />
+  <text x="647" y="50" fill="#ffffff" font-family="monospace" font-size="10" font-weight="700">RETAIL LEDGER</text>
 
-  <rect x="290" y="90" width="210" height="70" rx="8" fill="#134e4a" stroke="#2dd4bf" stroke-width="1" />
-  <text x="305" y="112" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11">AVG DAILY MARGIN</text>
-  <text x="305" y="145" fill="#4ade80" font-family="monospace" font-size="24" font-weight="700">22.8%</text>
+  <!-- Title Banner -->
+  <rect x="45" y="77" width="710" height="32" rx="4" fill="#042f2e" />
+  <text x="60" y="98" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">FAMILY RETAIL STORE | DAILY SALES, INVENTORY &amp; CREDIT (UTANG) LEDGER</text>
+  
+  <!-- Subtitle -->
+  <rect x="45" y="112" width="710" height="22" rx="3" fill="#f1f5f9" />
+  <text x="55" y="127" fill="#475569" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Practical micro-retail bookkeeping | Daily stock depletion, wholesale markups, and customer receivables log.</text>
 
-  <rect x="525" y="90" width="210" height="70" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1" />
-  <text x="540" y="112" fill="#fecaca" font-family="system-ui, sans-serif" font-size="11">LOW STOCK ALERTS</text>
-  <text x="540" y="145" fill="#f87171" font-family="monospace" font-size="24" font-weight="700">5 SKUs (Restock)</text>
+  <!-- 4 Executive KPI Quick Cards -->
+  <rect x="45" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="58" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">MONITORED SKUs</text>
+  <text x="58" y="184" fill="#0f172a" font-family="system-ui, sans-serif" font-size="18" font-weight="800">12 Staples</text>
 
-  <!-- Spreadsheet Grid -->
-  <rect x="65" y="180" width="670" height="30" fill="#042f2e" />
-  <text x="80" y="200" fill="#ccfbf1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">SKU / Item Name</text>
-  <text x="260" y="200" fill="#ccfbf1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Cost (PHP)</text>
-  <text x="380" y="200" fill="#ccfbf1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Retail (PHP)</text>
-  <text x="500" y="200" fill="#ccfbf1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Stock Qty</text>
-  <text x="620" y="200" fill="#ccfbf1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Auto Alert</text>
+  <rect x="225" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="238" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">DAILY REVENUE</text>
+  <text x="238" y="184" fill="#059669" font-family="system-ui, sans-serif" font-size="18" font-weight="800">₱3,248.00</text>
 
-  <rect x="65" y="215" width="670" height="32" fill="#0f172a" />
-  <text x="80" y="236" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12">Evaporated Milk 370ml</text>
-  <text x="260" y="236" fill="#cbd5e1" font-family="monospace" font-size="12">₱34.50</text>
-  <text x="380" y="236" fill="#cbd5e1" font-family="monospace" font-size="12">₱42.00</text>
-  <text x="500" y="236" fill="#ef4444" font-family="monospace" font-size="12" font-weight="700">2 pcs (CRITICAL)</text>
-  <rect x="620" y="222" width="90" height="20" rx="4" fill="#dc2626" opacity="0.3" />
-  <text x="630" y="236" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="10" font-weight="700">REORDER NOW</text>
+  <rect x="405" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="418" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">AVG MARKUP %</text>
+  <text x="418" y="184" fill="#0f766e" font-family="system-ui, sans-serif" font-size="18" font-weight="800">24.2%</text>
 
-  <rect x="65" y="252" width="670" height="32" fill="#1e293b" />
-  <text x="80" y="273" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12">Instant Coffee Sachet (Twin)</text>
-  <text x="260" y="273" fill="#cbd5e1" font-family="monospace" font-size="12">₱12.00</text>
-  <text x="380" y="273" fill="#cbd5e1" font-family="monospace" font-size="12">₱15.00</text>
-  <text x="500" y="273" fill="#4ade80" font-family="monospace" font-size="12">36 pcs</text>
-  <text x="630" y="273" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11">Optimal</text>
+  <rect x="585" y="142" width="170" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="598" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">UNPAID UTANG</text>
+  <text x="598" y="184" fill="#d97706" font-family="system-ui, sans-serif" font-size="18" font-weight="800">₱510.00</text>
 
-  <rect x="65" y="289" width="670" height="32" fill="#0f172a" />
-  <text x="80" y="310" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12">Washing Powder 50g</text>
-  <text x="260" y="310" fill="#cbd5e1" font-family="monospace" font-size="12">₱8.20</text>
-  <text x="380" y="310" fill="#cbd5e1" font-family="monospace" font-size="12">₱11.00</text>
-  <text x="500" y="310" fill="#4ade80" font-family="monospace" font-size="12">24 pcs</text>
-  <text x="630" y="310" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11">Optimal</text>
+  <!-- Table Header -->
+  <rect x="45" y="204" width="710" height="26" fill="#1e293b" />
+  <text x="55" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">SKU</text>
+  <text x="130" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Item Description</text>
+  <text x="310" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Beg</text>
+  <text x="360" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">End</text>
+  <text x="410" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Sold</text>
+  <text x="470" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Retail</text>
+  <text x="550" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Revenue</text>
+  <text x="645" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Alert</text>
+
+  <!-- Row 1 -->
+  <rect x="45" y="230" width="710" height="25" fill="#ffffff" />
+  <text x="55" y="246" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">GRO-001</text>
+  <text x="130" y="246" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Canned Corned Beef (150g)</text>
+  <text x="315" y="246" fill="#475569" font-family="system-ui, sans-serif" font-size="10">24</text>
+  <text x="365" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">8</text>
+  <text x="415" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">16</text>
+  <text x="470" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">₱42.00</text>
+  <text x="550" y="246" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">₱672.00</text>
+  <rect x="635" y="234" width="75" height="17" rx="3" fill="#d1fae5" />
+  <text x="648" y="246" fill="#065f46" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Adequate</text>
+
+  <!-- Row 2 (Restock Alert) -->
+  <rect x="45" y="255" width="710" height="25" fill="#fef2f2" stroke="#fecaca" stroke-width="0.5" />
+  <text x="55" y="271" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">GRO-005</text>
+  <text x="130" y="271" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Evaporated Milk (370ml Can)</text>
+  <text x="315" y="271" fill="#475569" font-family="system-ui, sans-serif" font-size="10">16</text>
+  <text x="365" y="271" fill="#dc2626" font-family="system-ui, sans-serif" font-size="10" font-weight="700">2</text>
+  <text x="415" y="271" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">14</text>
+  <text x="470" y="271" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">₱42.00</text>
+  <text x="550" y="271" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">₱588.00</text>
+  <rect x="635" y="259" width="75" height="17" rx="3" fill="#fee2e2" />
+  <text x="648" y="271" fill="#991b1b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">RESTOCK</text>
+
+  <!-- Row 3 -->
+  <rect x="45" y="280" width="710" height="25" fill="#ffffff" />
+  <text x="55" y="296" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">GRO-004</text>
+  <text x="130" y="296" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">3-in-1 Coffee Sachet (Twin Pack)</text>
+  <text x="315" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">50</text>
+  <text x="365" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">9</text>
+  <text x="415" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">41</text>
+  <text x="470" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">₱15.00</text>
+  <text x="550" y="296" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">₱615.00</text>
+  <rect x="635" y="284" width="75" height="17" rx="3" fill="#d1fae5" />
+  <text x="648" y="296" fill="#065f46" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Adequate</text>
 
   <!-- Formula Callout -->
-  <rect x="65" y="340" width="670" height="50" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" />
-  <text x="80" y="360" fill="#a7f3d0" font-family="monospace" font-size="11">FORMULA =LET(sales, SUMIFS(tblSales[Qty], tblSales[SKU], [@SKU]), restock, [@MinBuffer] - [@Stock], IF(restock&gt;0, "REORDER NOW", "Optimal"))</text>
-  <text x="80" y="378" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="11">Advanced Excel Dynamic Array logic applied for hands-off operational inventory management.</text>
+  <rect x="45" y="342" width="710" height="38" rx="6" fill="#042f2e" stroke="#115e59" stroke-width="1" />
+  <text x="60" y="365" fill="#a7f3d0" font-family="monospace" font-size="11">Reconciliation Formula: </text>
+  <text x="235" y="365" fill="#6ee7b7" font-family="monospace" font-size="11">=Revenue - (Sold * Wholesale_Cost) | Credit Balance: =Original_Credit - Amount_Paid</text>
 </svg>

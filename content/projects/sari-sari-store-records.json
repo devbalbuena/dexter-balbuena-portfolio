@@ -1,0 +1,37 @@
+{
+  "slug": "sari-sari-store-records",
+  "title": "Family Sari-Sari Store Daily Sales & Credit (Utang) Ledger",
+  "category": "excel-sheets",
+  "summary": "Operational retail bookkeeping ledger tracking daily grocery inventory depletion, wholesale markup percentages, daily gross profit, and neighborhood credit (utang) receivables.",
+  "problem": "Manual paper notebook logging in family micro-retail operations causes unrecorded inventory shrink, missing customer credit payment tracking, and inaccurate end-of-day profit balancing.",
+  "whatIDid": [
+    "Architected an automated daily reconciliation ledger tracking fast-moving household items (canned goods, coffee, noodles, rice, cooking essentials) with beginning and ending stock balances.",
+    "Engineered dynamic formula calculations for units sold (=Beginning - Ending), gross sales revenue (=Sold * Retail), gross profit (=Revenue - Sold * Wholesale), and markup percentage.",
+    "Formulated dynamic restock alerts (=IF(Ending_Stock<=5, \"RESTOCK\", \"Adequate\")) with automated soft red and emerald badge indicators.",
+    "Constructed a structured customer credit (utang) reconciliation log tracking original credit amounts, partial settlements, and outstanding receivables balances (=Credit - Paid)."
+  ],
+  "result": "Digitized daily micro-retail store tracking from paper notebooks into a structured, formula-automated Excel ledger, eliminating credit discrepancy errors and accelerating daily cash reconciliation [REAL FAMILY BUSINESS WORK SAMPLE].",
+  "resultPlaceholder": "[REAL FAMILY BUSINESS DELIVERABLE: Built and deployed to manage daily sales, wholesale margins, and credit logs for a family-owned neighborhood retail store]",
+  "tools": [
+    "Microsoft Excel",
+    "Micro-Retail Bookkeeping",
+    "Wholesale Margin Modeling",
+    "Credit (Utang) Reconciliation",
+    "Conditional Formatting"
+  ],
+  "date": "2025-11-20",
+  "featured": true,
+  "projectType": "family-business",
+  "isDemoSample": false,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/sari-sari-store-records.svg",
+      "alt": "Family Sari-Sari Store Daily Sales and Credit Ledger",
+      "caption": "Executive spreadsheet view displaying daily inventory depletion, wholesale markups, and customer credit ledger."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/05_Family_Retail_Daily_Sales_Credit_Ledger.xlsx"
+  }
+}
