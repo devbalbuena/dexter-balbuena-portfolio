@@ -103,7 +103,7 @@ export function ToolsRibbon() {
           />
 
           {/* Scrolling Track with CSS Hardware-Accelerated Marquee + Hover Pause */}
-          <div className="animate-glide-marquee gap-3.5 sm:gap-4 select-none py-1">
+          <div className="flex flex-row flex-nowrap items-center w-max animate-glide-marquee hover:[animation-play-state:paused] gap-3.5 sm:gap-4 select-none py-1">
             {tickerItems.map((tool, idx) => {
               const Logo = tool.logo;
               return (

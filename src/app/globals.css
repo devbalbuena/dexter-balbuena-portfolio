@@ -121,8 +121,10 @@ html[data-scroll-behavior="smooth"] {
 }
 
 .animate-glide-marquee {
-  display: flex;
-  width: max-content;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
   animation: glide-marquee 32s linear infinite;
   will-change: transform;
 }
