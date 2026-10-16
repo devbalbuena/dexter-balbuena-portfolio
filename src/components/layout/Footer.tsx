@@ -41,27 +41,42 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/" className="text-stone-400 hover:text-white transition-colors">
+                <Link
+                  href="/"
+                  className="inline-block text-stone-400 hover:text-[#d4976a] hover:translate-x-1 transition-all duration-200"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-stone-400 hover:text-white transition-colors">
+                <Link
+                  href="/work"
+                  className="inline-block text-stone-400 hover:text-[#d4976a] hover:translate-x-1 transition-all duration-200"
+                >
                   Work Samples &amp; Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/certificates" className="text-stone-400 hover:text-white transition-colors">
+                <Link
+                  href="/certificates"
+                  className="inline-block text-stone-400 hover:text-[#d4976a] hover:translate-x-1 transition-all duration-200"
+                >
                   Verified Certifications
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-stone-400 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="inline-block text-stone-400 hover:text-[#d4976a] hover:translate-x-1 transition-all duration-200"
+                >
                   About &amp; Coverage Logistics
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-stone-400 hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="inline-block text-stone-400 hover:text-[#d4976a] hover:translate-x-1 transition-all duration-200"
+                >
                   Contact &amp; Inquiries
                 </Link>
               </li>
@@ -73,47 +88,62 @@ export function Footer() {
             <h4 className="text-xs font-bold font-mono uppercase tracking-wider text-stone-200">
               Direct Channels
             </h4>
-            <div className="space-y-2 text-sm font-mono">
+            <div className="space-y-2.5 text-sm font-mono">
               <a
                 href="mailto:balbuena.dexter.va@gmail.com"
-                className="flex items-center justify-between rounded-lg bg-[#221a14] border border-[#33261b] hover:border-[#8c532b] px-3 py-2 text-xs text-stone-300 hover:text-white transition-all group"
+                className="flex items-center justify-between py-1.5 text-xs text-stone-400 hover:text-[#d4976a] transition-colors group"
               >
-                <span className="flex items-center gap-2 truncate">
-                  <Mail className="h-3.5 w-3.5 text-[#b87333] shrink-0" /> balbuena.dexter.va@gmail.com
+                <span className="flex items-center gap-2.5 truncate">
+                  <Mail className="h-4 w-4 text-[#d4976a] group-hover:text-[#e8a878] transition-colors shrink-0" />
+                  <span className="truncate text-stone-300 group-hover:text-white transition-colors">
+                    balbuena.dexter.va@gmail.com
+                  </span>
                 </span>
-                <ArrowUpRight className="h-3 w-3 text-stone-500 group-hover:text-white transition-colors shrink-0" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-stone-500 group-hover:text-[#d4976a] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
               </a>
 
               <a
                 href="https://wa.me/639912131795"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-lg bg-[#221a14] border border-[#33261b] hover:border-[#8c532b] px-3 py-2 text-xs text-stone-300 hover:text-white transition-all group"
+                className="flex items-center justify-between py-1.5 text-xs text-stone-400 hover:text-emerald-400 transition-colors group"
               >
-                <span className="flex items-center gap-2">
-                  <MessageSquare className="h-3.5 w-3.5 text-emerald-400 shrink-0" /> WhatsApp (+63 9912131795)
+                <span className="flex items-center gap-2.5">
+                  <MessageSquare className="h-4 w-4 text-emerald-400 group-hover:text-emerald-300 transition-colors shrink-0" />
+                  <span className="text-stone-300 group-hover:text-white transition-colors">
+                    WhatsApp (+63 9912131795)
+                  </span>
                 </span>
-                <ArrowUpRight className="h-3 w-3 text-stone-500 group-hover:text-white transition-colors shrink-0" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-stone-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
               </a>
 
               <a
                 href="https://www.linkedin.com/in/dexterbalbuena"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-lg bg-[#221a14] border border-[#33261b] hover:border-[#8c532b] px-3 py-2 text-xs text-stone-300 hover:text-white transition-all group"
+                className="flex items-center justify-between py-1.5 text-xs text-stone-400 hover:text-[#0077b5] transition-colors group"
               >
-                <span className="flex items-center gap-2">
-                  <svg className="h-3.5 w-3.5 fill-current text-[#b87333] shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <span className="flex items-center gap-2.5">
+                  <svg
+                    className="h-4 w-4 fill-current text-[#0077b5] group-hover:text-[#38a0dc] transition-colors shrink-0"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                   </svg>
-                  LinkedIn Profile
+                  <span className="text-stone-300 group-hover:text-white transition-colors">
+                    LinkedIn Profile
+                  </span>
                 </span>
-                <ArrowUpRight className="h-3 w-3 text-stone-500 group-hover:text-white transition-colors shrink-0" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-stone-500 group-hover:text-[#0077b5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
               </a>
 
-              <div className="pt-2">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#271d15] border border-[#3e2c1e] text-[11px] font-mono text-emerald-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="pt-3">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-[11px] font-mono font-semibold text-emerald-300 shadow-sm shadow-emerald-950/60">
+                  <span className="relative flex h-2 w-2 shrink-0">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                  </span>
                   Open for Full-Time &amp; Part-Time Contracts
                 </span>
               </div>
