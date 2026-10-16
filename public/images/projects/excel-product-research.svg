@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="research-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#research-bg)" />
+  
+  <!-- Window Container -->
+  <rect x="35" y="25" width="730" height="400" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Window Header -->
+  <rect x="35" y="25" width="730" height="42" rx="10" fill="#1e293b" />
+  <circle cx="58" cy="46" r="5" fill="#ef4444" />
+  <circle cx="75" cy="46" r="5" fill="#f59e0b" />
+  <circle cx="92" cy="46" r="5" fill="#10b981" />
+  <text x="115" y="51" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">01_Product_Research_Comparison.xlsx — Dexter Balbuena VA Portfolio</text>
+  <rect x="640" y="36" width="105" height="20" rx="4" fill="#2563eb" />
+  <text x="653" y="50" fill="#ffffff" font-family="monospace" font-size="10" font-weight="700">EXCEL SHEET</text>
+
+  <!-- Title Banner inside Sheet -->
+  <rect x="45" y="77" width="710" height="32" rx="4" fill="#0f172a" />
+  <text x="60" y="98" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">PRODUCT RESEARCH &amp; COMPETITOR COMPARISON MATRIX</text>
+  
+  <!-- Subtitle note -->
+  <rect x="45" y="112" width="710" height="22" rx="3" fill="#f1f5f9" />
+  <text x="55" y="127" fill="#475569" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Formula-driven fee modeling, gross margins, and multi-factor research opportunity scores.</text>
+
+  <!-- KPI Quick Cards -->
+  <rect x="45" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="58" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">SKUs ANALYZED</text>
+  <text x="58" y="184" fill="#0f172a" font-family="system-ui, sans-serif" font-size="18" font-weight="800">10 Products</text>
+
+  <rect x="225" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="238" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">AVG GROSS MARGIN</text>
+  <text x="238" y="184" fill="#059669" font-family="system-ui, sans-serif" font-size="18" font-weight="800">46.8%</text>
+
+  <rect x="405" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="418" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">TOP RESEARCH SCORE</text>
+  <text x="418" y="184" fill="#2563eb" font-family="system-ui, sans-serif" font-size="18" font-weight="800">82 / 100</text>
+
+  <rect x="585" y="142" width="170" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="598" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">MARKETPLACES</text>
+  <text x="598" y="184" fill="#8c532b" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Amazon &amp; Shopify</text>
+
+  <!-- Spreadsheet Table Header -->
+  <rect x="45" y="204" width="710" height="26" fill="#1e293b" />
+  <text x="55" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Product</text>
+  <text x="220" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Channel</text>
+  <text x="310" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Price (USD)</text>
+  <text x="400" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Cost (USD)</text>
+  <text x="490" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Fee %</text>
+  <text x="570" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Gross Margin</text>
+  <text x="675" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Score</text>
+
+  <!-- Row 1 -->
+  <rect x="45" y="230" width="710" height="25" fill="#ffffff" />
+  <text x="55" y="246" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Adjustable Laptop Stand</text>
+  <text x="220" y="246" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Amazon</text>
+  <text x="310" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$29.99</text>
+  <text x="400" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$12.00</text>
+  <text x="490" y="246" fill="#475569" font-family="system-ui, sans-serif" font-size="10">15.0%</text>
+  <text x="570" y="246" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$13.49</text>
+  <rect x="670" y="234" width="45" height="17" rx="3" fill="#dbeafe" />
+  <text x="684" y="246" fill="#1d4ed8" font-family="monospace" font-size="10" font-weight="700">78</text>
+
+  <!-- Row 2 (Zebra) -->
+  <rect x="45" y="255" width="710" height="25" fill="#f8fafc" />
+  <text x="55" y="271" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Under-Desk Headphone Hanger</text>
+  <text x="220" y="271" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Amazon</text>
+  <text x="310" y="271" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$16.99</text>
+  <text x="400" y="271" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$5.50</text>
+  <text x="490" y="271" fill="#475569" font-family="system-ui, sans-serif" font-size="10">15.0%</text>
+  <text x="570" y="271" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$8.94</text>
+  <rect x="670" y="259" width="45" height="17" rx="3" fill="#dbeafe" />
+  <text x="684" y="271" fill="#1d4ed8" font-family="monospace" font-size="10" font-weight="700">82</text>
+
+  <!-- Row 3 -->
+  <rect x="45" y="280" width="710" height="25" fill="#ffffff" />
+  <text x="55" y="296" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Minimalist Desk Mat (Large)</text>
+  <text x="220" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Shopify</text>
+  <text x="310" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$24.50</text>
+  <text x="400" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$8.00</text>
+  <text x="490" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">3.5%</text>
+  <text x="570" y="296" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$15.64</text>
+  <rect x="670" y="284" width="45" height="17" rx="3" fill="#dbeafe" />
+  <text x="684" y="296" fill="#1d4ed8" font-family="monospace" font-size="10" font-weight="700">81</text>
+
+  <!-- Row 4 (Zebra) -->
+  <rect x="45" y="305" width="710" height="25" fill="#f8fafc" />
+  <text x="55" y="321" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Ceramic Coffee Warmer Plate</text>
+  <text x="220" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Amazon</text>
+  <text x="310" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$34.99</text>
+  <text x="400" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$15.00</text>
+  <text x="490" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">15.0%</text>
+  <text x="570" y="321" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$14.74</text>
+  <rect x="670" y="309" width="45" height="17" rx="3" fill="#fef3c7" />
+  <text x="684" y="321" fill="#b45309" font-family="monospace" font-size="10" font-weight="700">71</text>
+
+  <!-- Formula Callout at bottom -->
+  <rect x="45" y="342" width="710" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="60" y="365" fill="#94a3b8" font-family="monospace" font-size="11">Formula Logic: </text>
+  <text x="170" y="365" fill="#38bdf8" font-family="monospace" font-size="11">=ROUND((Rating/5)*60 + MIN(MAX(Margin/Price,0),0.6)*40, 0)</text>
+</svg>

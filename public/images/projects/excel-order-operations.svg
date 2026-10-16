@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="order-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451a03" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#order-bg)" />
+  
+  <!-- Window Container -->
+  <rect x="35" y="25" width="730" height="400" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Window Header -->
+  <rect x="35" y="25" width="730" height="42" rx="10" fill="#1e293b" />
+  <circle cx="58" cy="46" r="5" fill="#ef4444" />
+  <circle cx="75" cy="46" r="5" fill="#f59e0b" />
+  <circle cx="92" cy="46" r="5" fill="#10b981" />
+  <text x="115" y="51" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">04_Order_Operations_Tracker.xlsx — SLA Queue &amp; Exception Handling</text>
+  <rect x="640" y="36" width="105" height="20" rx="4" fill="#d97706" />
+  <text x="653" y="50" fill="#ffffff" font-family="monospace" font-size="10" font-weight="700">ORDER LOG</text>
+
+  <!-- Title Banner -->
+  <rect x="45" y="77" width="710" height="32" rx="4" fill="#0f172a" />
+  <text x="60" y="98" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">MULTI-CHANNEL ORDER OPERATIONS &amp; SLA EXCEPTION TRACKER</text>
+  
+  <!-- Subtitle -->
+  <rect x="45" y="112" width="710" height="22" rx="3" fill="#f1f5f9" />
+  <text x="55" y="127" fill="#475569" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Automated aging calculation, fulfillment flags, and priority escalations for e-commerce orders.</text>
+
+  <!-- KPI Quick Cards -->
+  <rect x="45" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="58" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">ACTIVE QUEUE</text>
+  <text x="58" y="184" fill="#0f172a" font-family="system-ui, sans-serif" font-size="18" font-weight="800">10 Orders</text>
+
+  <rect x="225" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="238" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">SHIPPED / ON TRACK</text>
+  <text x="238" y="184" fill="#059669" font-family="system-ui, sans-serif" font-size="18" font-weight="800">6 Completed</text>
+
+  <rect x="405" y="142" width="168" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="418" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">FOLLOW-UP NEEDED</text>
+  <text x="418" y="184" fill="#dc2626" font-family="system-ui, sans-serif" font-size="18" font-weight="800">4 Escalated</text>
+
+  <rect x="585" y="142" width="170" height="52" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="598" y="160" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">TOTAL ORDER VALUE</text>
+  <text x="598" y="184" fill="#8c532b" font-family="system-ui, sans-serif" font-size="16" font-weight="800">$459.88</text>
+
+  <!-- Table Header -->
+  <rect x="45" y="204" width="710" height="26" fill="#1e293b" />
+  <text x="55" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Order ID</text>
+  <text x="145" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Channel</text>
+  <text x="230" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">SKU</text>
+  <text x="320" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Value</text>
+  <text x="400" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Payment</text>
+  <text x="490" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Fulfillment</text>
+  <text x="590" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Days</text>
+  <text x="655" y="221" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Action Flag</text>
+
+  <!-- Row 1 -->
+  <rect x="45" y="230" width="710" height="25" fill="#ffffff" />
+  <text x="55" y="246" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">ORD-1001</text>
+  <text x="145" y="246" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Website</text>
+  <text x="230" y="246" fill="#0f172a" font-family="monospace" font-size="10">DSK-001</text>
+  <text x="320" y="246" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$29.99</text>
+  <rect x="395" y="234" width="50" height="17" rx="3" fill="#d1fae5" />
+  <text x="407" y="246" fill="#065f46" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Paid</text>
+  <rect x="485" y="234" width="60" height="17" rx="3" fill="#e0e7ff" />
+  <text x="495" y="246" fill="#3730a3" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Shipped</text>
+  <text x="600" y="246" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">14</text>
+  <text x="655" y="246" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Routine log</text>
+
+  <!-- Row 2 (Follow up needed) -->
+  <rect x="45" y="255" width="710" height="25" fill="#fef2f2" stroke="#fecaca" stroke-width="0.5" />
+  <text x="55" y="271" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">ORD-1002</text>
+  <text x="145" y="271" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Amazon</text>
+  <text x="230" y="271" fill="#0f172a" font-family="monospace" font-size="10">DSK-002</text>
+  <text x="320" y="271" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$33.98</text>
+  <rect x="395" y="259" width="50" height="17" rx="3" fill="#d1fae5" />
+  <text x="407" y="271" fill="#065f46" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Paid</text>
+  <rect x="485" y="259" width="72" height="17" rx="3" fill="#fef3c7" />
+  <text x="492" y="271" fill="#92400e" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Processing</text>
+  <text x="598" y="271" fill="#dc2626" font-family="system-ui, sans-serif" font-size="10" font-weight="700">13</text>
+  <rect x="645" y="259" width="85" height="17" rx="3" fill="#fee2e2" />
+  <text x="653" y="271" fill="#991b1b" font-family="system-ui, sans-serif" font-size="9" font-weight="700">FOLLOW UP</text>
+
+  <!-- Row 3 (Pending Payment) -->
+  <rect x="45" y="280" width="710" height="25" fill="#fef2f2" stroke="#fecaca" stroke-width="0.5" />
+  <text x="55" y="296" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">ORD-1004</text>
+  <text x="145" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Shopify</text>
+  <text x="230" y="296" fill="#0f172a" font-family="monospace" font-size="10">ORG-101</text>
+  <text x="320" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$49.00</text>
+  <rect x="395" y="284" width="60" height="17" rx="3" fill="#fee2e2" />
+  <text x="402" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Pending</text>
+  <rect x="485" y="284" width="60" height="17" rx="3" fill="#fee2e2" />
+  <text x="492" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">On Hold</text>
+  <text x="598" y="296" fill="#dc2626" font-family="system-ui, sans-serif" font-size="10" font-weight="700">9</text>
+  <rect x="645" y="284" width="85" height="17" rx="3" fill="#fee2e2" />
+  <text x="653" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="9" font-weight="700">FOLLOW UP</text>
+
+  <!-- Formula Callout -->
+  <rect x="45" y="342" width="710" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="60" y="365" fill="#94a3b8" font-family="monospace" font-size="11">Automated SLA Flag: </text>
+  <text x="210" y="365" fill="#38bdf8" font-family="monospace" font-size="11">=IF(OR(Payment="Pending", Fulfillment="On Hold", AND(Fulfillment="Processing", Days>=2)), "FOLLOW UP", "OK")</text>
+</svg>

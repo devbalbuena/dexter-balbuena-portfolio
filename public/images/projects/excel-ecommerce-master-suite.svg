@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="master-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#431407" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#master-bg)" />
+  
+  <!-- Window Container -->
+  <rect x="35" y="25" width="730" height="400" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Window Header -->
+  <rect x="35" y="25" width="730" height="42" rx="10" fill="#1e293b" />
+  <circle cx="58" cy="46" r="5" fill="#ef4444" />
+  <circle cx="75" cy="46" r="5" fill="#f59e0b" />
+  <circle cx="92" cy="46" r="5" fill="#10b981" />
+  <text x="115" y="51" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">Dexter_Ecommerce_VA_Excel_Portfolio_Projects.xlsx [Master Suite]</text>
+  <rect x="635" y="36" width="115" height="20" rx="4" fill="#8c532b" />
+  <text x="647" y="50" fill="#ffffff" font-family="monospace" font-size="10" font-weight="700">MASTER SUITE</text>
+
+  <!-- Title Banner -->
+  <rect x="45" y="77" width="710" height="32" rx="4" fill="#0f172a" />
+  <text x="60" y="98" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">E-COMMERCE VA OPERATIONS MASTER WORKBOOK &amp; EXECUTIVE DASHBOARD</text>
+  
+  <!-- Subtitle -->
+  <rect x="45" y="112" width="710" height="22" rx="3" fill="#f1f5f9" />
+  <text x="55" y="127" fill="#475569" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Consolidated multi-sheet operational system aggregating Research, Listing QA, Inventory, and Order SLAs.</text>
+
+  <!-- KPI Grid 2x2 or 4 Cards -->
+  <rect x="45" y="142" width="168" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="58" y="162" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">PRODUCTS RESEARCHED</text>
+  <text x="58" y="188" fill="#2563eb" font-family="system-ui, sans-serif" font-size="20" font-weight="800">10 SKUs</text>
+
+  <rect x="225" y="142" width="168" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="238" y="162" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">LISTINGS AUDITED</text>
+  <text x="238" y="188" fill="#7c3aed" font-family="system-ui, sans-serif" font-size="20" font-weight="800">8 Listings</text>
+
+  <rect x="405" y="142" width="168" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="418" y="162" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">REORDER ALERTS</text>
+  <text x="418" y="188" fill="#dc2626" font-family="system-ui, sans-serif" font-size="20" font-weight="800">3 SKUs</text>
+
+  <rect x="585" y="142" width="170" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="598" y="162" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">ORDER FOLLOW-UPS</text>
+  <text x="598" y="188" fill="#d97706" font-family="system-ui, sans-serif" font-size="20" font-weight="800">4 Orders</text>
+
+  <!-- Multi-Sheet Module Overview Blocks -->
+  <rect x="45" y="214" width="348" height="74" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+  <text x="58" y="235" fill="#1e40af" font-family="system-ui, sans-serif" font-size="11" font-weight="700">MODULE 1: PRODUCT RESEARCH &amp; MARGINS</text>
+  <text x="58" y="254" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Automated fee rate subtraction (=D4*F4)</text>
+  <text x="58" y="271" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Weighted 100-pt opportunity scoring algorithm</text>
+
+  <rect x="407" y="214" width="348" height="74" rx="6" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1" />
+  <text x="420" y="235" fill="#5b21b6" font-family="system-ui, sans-serif" font-size="11" font-weight="700">MODULE 2: LISTING QUALITY ASSURANCE</text>
+  <text x="420" y="254" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• 6-point completeness checklist per SKU</text>
+  <text x="420" y="271" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Nested IF/COUNTIF status flagging</text>
+
+  <rect x="45" y="296" width="348" height="74" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+  <text x="58" y="317" fill="#065f46" font-family="system-ui, sans-serif" font-size="11" font-weight="700">MODULE 3: DYNAMIC INVENTORY &amp; REORDER</text>
+  <text x="58" y="336" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Dynamic replenishment formula (=ROUND(E*F+G,0))</text>
+  <text x="58" y="353" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Suggested order quantity buffers to prevent stockouts</text>
+
+  <rect x="407" y="296" width="348" height="74" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+  <text x="420" y="317" fill="#92400e" font-family="system-ui, sans-serif" font-size="11" font-weight="700">MODULE 4: ORDER SLA &amp; EXCEPTION QUEUE</text>
+  <text x="420" y="336" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Days since order aging calculations</text>
+  <text x="420" y="353" fill="#334155" font-family="system-ui, sans-serif" font-size="10">• Multi-condition escalation flags for pending/held orders</text>
+
+  <!-- Sheet Tabs Navigation Bar at Bottom -->
+  <rect x="45" y="380" width="710" height="34" fill="#f1f5f9" />
+  <rect x="52" y="386" width="85" height="24" rx="3" fill="#8c532b" />
+  <text x="64" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">START HERE</text>
+
+  <rect x="142" y="386" width="95" height="24" rx="3" fill="#0284c7" />
+  <text x="150" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">5 Dashboard</text>
+
+  <rect x="242" y="386" width="120" height="24" rx="3" fill="#2563eb" />
+  <text x="250" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">1 Product Research</text>
+
+  <rect x="367" y="386" width="105" height="24" rx="3" fill="#7c3aed" />
+  <text x="377" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">2 Listing Audit</text>
+
+  <rect x="477" y="386" width="120" height="24" rx="3" fill="#059669" />
+  <text x="485" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">3 Inventory Tracker</text>
+
+  <rect x="602" y="386" width="115" height="24" rx="3" fill="#d97706" />
+  <text x="612" y="402" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="700">4 Order Tracker</text>
+</svg>
