@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { 
-  Mail, 
-  MessageSquare, 
-  Clock, 
-  CheckCircle2 
-} from "lucide-react";
+import { Mail, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact & Hire | Dexter E. Balbuena",
@@ -128,7 +123,6 @@ export default function ContactPage() {
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs font-bold text-stone-900">LinkedIn Profile</span>
-                      <span className="text-[9px] font-mono text-stone-600 font-bold bg-stone-100 border border-stone-200 px-1.5 py-0.2 rounded">Network</span>
                     </div>
                     <span className="block text-xs font-mono font-semibold text-stone-600 truncate">
                       in/dexterbalbuena
@@ -139,21 +133,6 @@ export default function ContactPage() {
                   Connect ↗
                 </span>
               </a>
-            </div>
-
-            {/* Availability details */}
-            <div className="pt-3.5 border-t border-stone-200/80 space-y-2 text-xs">
-              <div className="flex items-start gap-2.5">
-                <Clock className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-semibold text-stone-800 block">
-                    Dedicated Nocturnal Shift: 11 PM – 6 AM PHT
-                  </span>
-                  <span className="text-stone-500 text-[11px] leading-relaxed">
-                    Direct real-time overlap with US business days, UK afternoons, and AU mornings.
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
