@@ -1,16 +1,16 @@
 {
-  "name": "Microsoft Office Specialist: Excel Associate",
+  "name": "Microsoft Office Specialist: Excel Associate (Office 2019)",
   "issuer": "Microsoft",
-  "issued": "2026-10",
-  "expires": "Never",
-  "credentialId": "TODO: Credential ID",
+  "issued": "2026-10-07",
+  "expires": "2031-10-07",
+  "credentialId": "Credly Badge (dexter Balbuena)",
   "credentialUrl": "",
   "skills": [
-    "Advanced Formulas",
+    "Formulas & Calculations",
     "Lookup Functions",
-    "Data Validation",
-    "Pivot Tables & Charts",
-    "Workbook Organization"
+    "Charts & Visual Data",
+    "Cell References & Formatting",
+    "Tables & Worksheets"
   ],
   "isVerified": true,
   "certificateImage": "/images/certificates/mos-excel-associate.png"

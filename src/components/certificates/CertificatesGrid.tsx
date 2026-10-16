@@ -68,6 +68,9 @@ export function CertificatesGrid({ certificates }: CertificatesGridProps) {
             <div className="pt-4 border-t border-[#e8ded3] flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-500">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" /> Issued: {cert.issued}
+                {cert.expires && (
+                  <span className="text-stone-400">• Exp: {cert.expires}</span>
+                )}
               </span>
 
               <div className="flex items-center gap-3">

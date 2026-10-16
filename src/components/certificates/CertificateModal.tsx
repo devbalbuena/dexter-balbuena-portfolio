@@ -107,6 +107,9 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
                 </Badge>
                 <span className="flex items-center gap-1.5 text-xs font-mono text-stone-500">
                   <Calendar className="h-3.5 w-3.5 text-stone-400" /> Issued: {certificate.issued}
+                  {certificate.expires && (
+                    <span className="text-stone-400">• Exp: {certificate.expires}</span>
+                  )}
                 </span>
               </div>
 

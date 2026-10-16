@@ -1,9 +1,9 @@
 {
   "name": "Email Marketing Certified",
   "issuer": "HubSpot Academy",
-  "issued": "2026-10",
-  "expires": "2028-10",
-  "credentialId": "TODO: Credential ID",
+  "issued": "2026-10-11",
+  "expires": "2028-11-09",
+  "credentialId": "319000ee01314303b2f73108679770c8",
   "credentialUrl": "",
   "skills": [
     "Contact List Segmentation",
