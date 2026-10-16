@@ -159,11 +159,11 @@ export function WorkflowSimulator({
                   </div>
 
                   {/* Micro Deliverable Pills */}
-                  <div className="pt-3 border-t border-[#f0e4d5] space-y-1.5">
+                  <div className="pt-3 border-t border-[#f0e4d5] space-y-2">
                     {step.deliverables.map((item, dIdx) => (
-                      <div key={dIdx} className="flex items-center gap-1.5 text-[11px] font-mono text-stone-700">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                        <span className="truncate">{item}</span>
+                      <div key={dIdx} className="flex items-start gap-1.5 text-[11px] font-mono text-stone-700 leading-snug">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="whitespace-normal break-words">{item}</span>
                       </div>
                     ))}
                   </div>
