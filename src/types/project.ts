@@ -26,6 +26,7 @@ export interface Project {
   slug: string;
   title: string;
   category: ProjectCategory;
+  categories?: ProjectCategory[];
   summary: string;
   problem: string;
   whatIDid: string[];

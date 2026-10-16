@@ -29,7 +29,11 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
 
   const filteredProjects = React.useMemo(() => {
     if (activeCategory === "all") return projects;
-    return projects.filter((p) => p.category === activeCategory);
+    return projects.filter(
+      (p) =>
+        p.category === activeCategory ||
+        (p.categories && p.categories.includes(activeCategory))
+    );
   }, [projects, activeCategory]);
 
   if (projects.length === 0) {
@@ -59,7 +63,14 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
         >
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat.key;
-            const count = cat.key === "all" ? projects.length : projects.filter((p) => p.category === cat.key).length;
+            const count =
+              cat.key === "all"
+                ? projects.length
+                : projects.filter(
+                    (p) =>
+                      p.category === cat.key ||
+                      (p.categories && cat.key !== "all" && p.categories.includes(cat.key))
+                  ).length;
 
             return (
               <button

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -34,7 +35,21 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export default async function ProjectDetailPage({ params }: ProjectPageProps) {
+export default function ProjectDetailPage({ params }: ProjectPageProps) {
+  return (
+    <Suspense fallback={
+      <div className="mx-auto max-w-4xl px-4 py-16 text-center">
+        <div className="inline-block animate-pulse font-mono text-xs text-stone-400">
+          Loading case study details...
+        </div>
+      </div>
+    }>
+      <ProjectContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectContent({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
