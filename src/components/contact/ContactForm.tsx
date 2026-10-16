@@ -2,26 +2,40 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/Button";
-import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Loader2, Mail, MessageSquare } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = React.useState({
     name: "",
-    contactInfo: "",
-    category: "E-Commerce Research & Operations",
+    email: "",
+    whatsapp: "",
     message: "",
   });
 
+  const [honeypot, setHoneypot] = React.useState("");
   const [status, setStatus] = React.useState<"idle" | "submitting" | "success" | "error" | "no-endpoint">("idle");
   const [statusMessage, setStatusMessage] = React.useState("");
 
   const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
+  // Pre-filled mailto link when API endpoint is not yet connected
+  const mailToLink = `mailto:balbuena.dexter.va@gmail.com?subject=${encodeURIComponent(
+    `Inquiry from ${formData.name || "Client"}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\nWhatsApp/Phone: ${formData.whatsapp || "Not provided"}\n\nProject Details:\n${formData.message}`
+  )}`;
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
+    // Anti-spam honeypot check (hidden input traps automated bots without burdening real users)
+    if (honeypot) {
+      setStatus("success");
+      return;
+    }
+
     if (!endpoint) {
-      // Graceful handling when endpoint env variable is not configured
+      // Graceful fallback when endpoint env variable is not configured
       setStatus("no-endpoint");
       return;
     }
@@ -35,12 +49,17 @@ export function ContactForm() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp || "Not provided",
+          message: formData.message,
+        }),
       });
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", contactInfo: "", category: "E-Commerce Research & Operations", message: "" });
+        setFormData({ name: "", email: "", whatsapp: "", message: "" });
       } else {
         const data = await response.json().catch(() => null);
         setStatus("error");
@@ -75,7 +94,7 @@ export function ContactForm() {
             Message Sent Successfully!
           </h3>
           <p className="text-xs text-emerald-700">
-            Thank you! I will review your requirements and respond promptly.
+            Thank you! I will review your requirements and respond promptly to your email.
           </p>
           <Button
             variant="outline"
@@ -88,16 +107,41 @@ export function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Honeypot field (hidden from genuine users, traps automated scrapers) */}
+          <input
+            type="text"
+            name="_gotcha"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            aria-hidden="true"
+          />
+
           {status === "no-endpoint" && (
-            <div className="flex items-start gap-2 rounded-lg bg-amber-500/10 p-3 text-xs text-amber-800 border border-amber-200/50">
-              <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
-              <div>
-                <strong>[ENDPOINT PLACEHOLDER]:</strong> The contact form endpoint is not configured yet. 
-                Please reach me directly at{" "}
-                <a href="mailto:balbuena.dexter.va@gmail.com" className="underline font-semibold text-[#8c532b]">
-                  balbuena.dexter.va@gmail.com
-                </a>{" "}
-                or WhatsApp at <strong>+63 9912131795</strong>.
+            <div className="flex flex-col gap-2 rounded-xl bg-amber-500/10 p-3.5 text-xs text-amber-900 border border-amber-200/60">
+              <div className="flex items-start gap-2">
+                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-amber-700" />
+                <p className="leading-relaxed">
+                  Direct API endpoint is currently being finalized. You can send your inquiry directly via your email client or WhatsApp below:
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 pt-1 pl-6">
+                <a
+                  href={mailToLink}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-3.5 py-1.5 font-semibold text-white hover:bg-[#734320] transition-colors shadow-2xs"
+                >
+                  <Mail className="h-3.5 w-3.5" /> Send via Email Draft ↗
+                </a>
+                <a
+                  href="https://wa.me/639912131795"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3.5 py-1.5 font-semibold text-white hover:bg-emerald-700 transition-colors shadow-2xs"
+                >
+                  <MessageSquare className="h-3.5 w-3.5" /> Chat on WhatsApp ↗
+                </a>
               </div>
             </div>
           )}
@@ -125,54 +169,52 @@ export function ContactForm() {
             />
           </div>
 
-          {/* Email or WhatsApp */}
-          <div className="space-y-1.5">
-            <label htmlFor="contactInfo" className="block text-xs font-mono font-medium text-stone-700">
-              Email or WhatsApp <span className="text-[#8c532b]">*</span>
-            </label>
-            <input
-              id="contactInfo"
-              type="text"
-              required
-              value={formData.contactInfo}
-              onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
-              placeholder="alex@brand.com or +1 555-0199"
-              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
-            />
+          {/* Two-Column Split: Required Email Address & Optional WhatsApp */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            {/* Email Address */}
+            <div className="space-y-1.5">
+              <label htmlFor="email" className="block text-xs font-mono font-medium text-stone-700">
+                Email Address <span className="text-[#8c532b]">*</span>
+              </label>
+              <input
+                id="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                placeholder="alex@brand.com"
+                className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
+              />
+            </div>
+
+            {/* WhatsApp / Phone (Optional) */}
+            <div className="space-y-1.5">
+              <label htmlFor="whatsapp" className="block text-xs font-mono font-medium text-stone-700">
+                WhatsApp / Phone <span className="text-stone-400 text-[10px] font-normal">(Optional)</span>
+              </label>
+              <input
+                id="whatsapp"
+                type="tel"
+                value={formData.whatsapp}
+                onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                placeholder="+1 555-0199 or WhatsApp"
+                className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
+              />
+            </div>
           </div>
 
-          {/* Project Category Dropdown */}
-          <div className="space-y-1.5">
-            <label htmlFor="category" className="block text-xs font-mono font-medium text-stone-700">
-              Service Required <span className="text-[#8c532b]">*</span>
-            </label>
-            <select
-              id="category"
-              value={formData.category}
-              onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20"
-            >
-              <option value="E-Commerce Research & Operations">E-Commerce Research &amp; Store Operations</option>
-              <option value="Excel & Google Sheets Automation">Excel &amp; Google Sheets Automation</option>
-              <option value="Administrative & Executive Support">Administrative &amp; Executive Support</option>
-              <option value="Full-Time Nocturnal VA (40 hrs/wk)">Full-Time Nocturnal VA (40 hrs/wk)</option>
-              <option value="Part-Time Nocturnal VA (20 hrs/wk)">Part-Time Nocturnal VA (20 hrs/wk)</option>
-              <option value="Paid Trial Task / Other">Paid Trial Task / Other Custom Workflow</option>
-            </select>
-          </div>
-
-          {/* How can I help you? */}
+          {/* How Can I Help You? */}
           <div className="space-y-1.5">
             <label htmlFor="message" className="block text-xs font-mono font-medium text-stone-700">
-              How can I help you? <span className="text-[#8c532b]">*</span>
+              How Can I Help You? <span className="text-[#8c532b]">*</span>
             </label>
             <textarea
               id="message"
               required
-              rows={3}
+              rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Briefly describe your store, sheet needs, or weekly task requirements..."
+              placeholder="Briefly describe your store, spreadsheet needs, or weekly task requirements..."
               className="w-full rounded-lg border border-[#dcd1c4] bg-white px-3.5 py-2 text-sm text-stone-900 shadow-2xs placeholder:text-stone-400 focus:border-[#8c532b] focus:outline-hidden focus:ring-2 focus:ring-[#8c532b]/20 resize-none"
             />
           </div>
