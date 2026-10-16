@@ -1,16 +1,31 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 import { 
   MapPin, 
   Clock, 
   GraduationCap, 
-  Wrench, 
   ArrowRight,
   ShoppingCart,
   ClipboardList,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  FileSpreadsheet,
+  Code2,
+  Palette,
+  Database,
+  CheckCircle2
 } from "lucide-react";
+import { 
+  ExcelLogo, 
+  GoogleSheetsLogo, 
+  ShopifyLogo, 
+  AmazonLogo, 
+  PinterestLogo, 
+  CanvaLogo, 
+  NotionLogo, 
+  NextjsLogo 
+} from "@/components/ui/BrandLogos";
 import { WorkflowSimulator } from "@/components/home/WorkflowSimulator";
 
 export const metadata: Metadata = {
@@ -19,50 +34,109 @@ export const metadata: Metadata = {
     "Learn about Dexter E. Balbuena: BSIT student, nocturnal working shift (11 PM - 6 AM PHT), tools, and client philosophy.",
 };
 
-const TOOLS_STACK = [
+interface ToolPlatform {
+  name: string;
+  tag?: string;
+  logo: React.ElementType;
+}
+
+interface ToolCategory {
+  title: string;
+  subtitle: string;
+  badge: string;
+  badgeVariant: "default" | "secondary" | "outline" | "success" | "accent" | "warning";
+  icon: React.ElementType;
+  iconBg: string;
+  iconColor: string;
+  platforms: ToolPlatform[];
+  capabilities: string[];
+}
+
+const TOOLS_CATEGORIES: ToolCategory[] = [
   { 
-    category: "Spreadsheets & Data Systems", 
-    tools: [
-      "Microsoft Excel (MOS Certified)", 
-      "Google Sheets Automation", 
-      "Dynamic Formulas (XLOOKUP, LET, INDEX/MATCH)", 
-      "Data Validation & Schema Design", 
-      "Pivot Tables & Summary Modeling",
-      "Automated Reorder Velocity Triggers"
-    ] 
+    title: "Spreadsheets & Data Systems",
+    subtitle: "Advanced formula modeling, inventory tracking & cash balance ledgers",
+    badge: "MOS Certified",
+    badgeVariant: "success",
+    icon: FileSpreadsheet,
+    iconBg: "bg-emerald-50 border-emerald-200",
+    iconColor: "text-emerald-700",
+    platforms: [
+      { name: "Microsoft Excel", tag: "MOS Associate", logo: ExcelLogo },
+      { name: "Google Sheets", tag: "Cloud Live", logo: GoogleSheetsLogo },
+    ],
+    capabilities: [
+      "Dynamic Formulas (XLOOKUP, LET, INDEX/MATCH)",
+      "Automated Reorder Velocity & Stock Triggers",
+      "Daily Sales, Credit & Cashflow Ledgers",
+      "Pivot Tables & Executive Summary Modeling",
+      "Data Validation, Dropdowns & Schema Design",
+      "Margin, Markup & Supplier Cost Calculations",
+    ],
   },
   { 
-    category: "E-Commerce & Market Research", 
-    tools: [
-      "Amazon BSR & Velocity Tracking", 
-      "Pinterest Visual Trend Discovery", 
-      "Shopify Catalog & Variant Entry", 
-      "Competitor ASIN Scraping & Price Mapping", 
+    title: "E-Commerce & Market Research",
+    subtitle: "Catalog variant setup, competitor ASIN scraping & organic discovery",
+    badge: "Primary Niche",
+    badgeVariant: "warning",
+    icon: ShoppingCart,
+    iconBg: "bg-amber-50 border-amber-200",
+    iconColor: "text-amber-800",
+    platforms: [
+      { name: "Amazon", tag: "ASIN & Affiliate", logo: AmazonLogo },
+      { name: "Shopify", tag: "Catalog & SKU", logo: ShopifyLogo },
+      { name: "Pinterest", tag: "24.3K Views", logo: PinterestLogo },
+    ],
+    capabilities: [
+      "Competitor ASIN Scraping & Price Mapping",
+      "Shopify Catalog & Multi-Variant Entry",
+      "Pinterest SEO Titles & High-CTR Pinning",
       "Wholesale Supplier Margin Calculations",
-      "Helium 10 (Demonstration & Product Mining)"
-    ] 
+      "Amazon BSR & Velocity Tracking",
+      "Shopee & Lazada Cross-Platform Price Comparison",
+    ],
   },
   { 
-    category: "Web Systems & Technical Tooling", 
-    tools: [
-      "Next.js & React Frameworks", 
-      "TypeScript & Modern JavaScript", 
-      "Tailwind CSS & Vanilla Styling", 
-      "Relational Databases & SQL Modeling", 
-      "RESTful APIs & Webhook Automation", 
-      "Git Version Control & GitHub Actions"
-    ] 
+    title: "Web Systems & Technical Tooling",
+    subtitle: "Computer science coursework, database models & custom internal tools",
+    badge: "BSIT Advantage",
+    badgeVariant: "accent",
+    icon: Code2,
+    iconBg: "bg-[#f5ece1] border-[#e2cbaf]",
+    iconColor: "text-[#8c532b]",
+    platforms: [
+      { name: "Next.js & React", tag: "Web Portals", logo: NextjsLogo },
+      { name: "Relational SQL", tag: "Data Integrity", logo: Database },
+    ],
+    capabilities: [
+      "Relational Databases & SQL Schema Modeling",
+      "RESTful APIs & Webhook Automation",
+      "Git Version Control & GitHub Repository Actions",
+      "Lightweight Custom Internal Order Portals",
+      "Data Normalization & Input Validation",
+      "Clean TypeScript & Modern UI Styling",
+    ],
   },
   { 
-    category: "Creative & Operational Documentation", 
-    tools: [
-      "Canva Pro Graphic & Pin Asset Batching", 
-      "Standard Operating Procedures (SOPs)", 
-      "Notion Workspaces & Team Wikis", 
+    title: "Creative & Operational Documentation",
+    subtitle: "High-converting visual assets, asynchronous SOPs & team wikis",
+    badge: "SOP & Media",
+    badgeVariant: "default",
+    icon: Palette,
+    iconBg: "bg-purple-50 border-purple-200",
+    iconColor: "text-purple-700",
+    platforms: [
+      { name: "Canva Pro", tag: "High-CTR Visuals", logo: CanvaLogo },
+      { name: "Notion", tag: "SOPs & Wikis", logo: NotionLogo },
+    ],
+    capabilities: [
+      "Canva Pro 2:3 Pinterest Pin & Ad Batching",
+      "Standard Operating Procedures (SOPs) Authoring",
+      "Notion Workspaces & Cross-Functional Team Wikis",
+      "Asynchronous Loom Video Task Handoffs",
       "Google Workspace & Cloud Administration",
-      "Markdown Technical Documentation",
-      "Loom Video Asynchronous Handoffs"
-    ] 
+      "Markdown Documentation for Technical SOPs",
+    ],
   },
 ];
 
@@ -298,30 +372,83 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-          {TOOLS_STACK.map((group, idx) => (
-            <div 
-              key={idx} 
-              className="workspace-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between bg-white border border-[#e8ded3] h-full shadow-2xs hover:border-[#8c532b] transition-all"
-            >
-              <div className="space-y-3.5">
-                <h3 className="text-sm font-bold text-stone-900 flex items-center gap-2">
-                  <Wrench className="h-4 w-4 text-[#8c532b]" />
-                  {group.category}
-                </h3>
-                <div className="flex flex-wrap gap-1.5">
-                  {group.tools.map((t, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="rounded-lg bg-[#f9f6f2] border border-[#eee6dc] px-2.5 py-1 font-mono text-xs text-stone-700"
-                    >
-                      {t}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+          {TOOLS_CATEGORIES.map((group, idx) => {
+            const Icon = group.icon;
+            return (
+              <div 
+                key={idx} 
+                className="workspace-card rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e8ded3] h-full shadow-2xs hover:border-[#8c532b] transition-all space-y-5"
+              >
+                <div className="space-y-4">
+                  {/* Category Header */}
+                  <div className="flex items-start justify-between gap-3 pb-3 border-b border-[#f0e6dc]">
+                    <div className="flex items-center gap-3">
+                      <span className={`h-10 w-10 rounded-xl flex items-center justify-center border shadow-2xs shrink-0 ${group.iconBg}`}>
+                        <Icon className={`h-5 w-5 ${group.iconColor}`} />
+                      </span>
+                      <div>
+                        <h3 className="text-base font-bold text-stone-900 leading-snug">
+                          {group.title}
+                        </h3>
+                        <p className="text-[11px] text-stone-500 leading-tight mt-0.5">
+                          {group.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    <Badge variant={group.badgeVariant} size="sm" className="shrink-0">
+                      {group.badge}
+                    </Badge>
+                  </div>
+
+                  {/* Primary Platforms / Software Badges */}
+                  <div className="space-y-2">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-stone-500 block">
+                      Daily Software &amp; Ecosystem:
                     </span>
-                  ))}
+                    <div className="flex flex-wrap gap-2">
+                      {group.platforms.map((platform, pIdx) => {
+                        const Logo = platform.logo;
+                        return (
+                          <div
+                            key={pIdx}
+                            className="inline-flex items-center gap-2 rounded-xl border border-[#e8ded3] bg-[#faf6f0] px-3 py-1.5 shadow-2xs hover:border-[#8c532b]/50 transition-colors"
+                          >
+                            <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-white shadow-2xs">
+                              <Logo size={16} className="h-4 w-4" />
+                            </div>
+                            <div className="flex items-center gap-1.5">
+                              <span className="text-xs font-bold text-stone-900">{platform.name}</span>
+                              {platform.tag && (
+                                <span className="text-[10px] font-mono font-medium text-[#8c532b] bg-white px-1.5 py-0.5 rounded border border-[#ebdccb]">
+                                  {platform.tag}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* 2-Column Applied Capabilities Checklist */}
+                  <div className="space-y-2 pt-2">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-stone-500 block">
+                      Applied Capabilities &amp; Workflows:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs text-stone-700">
+                      {group.capabilities.map((cap, cIdx) => (
+                        <div key={cIdx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span className="leading-tight text-stone-700">{cap}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
