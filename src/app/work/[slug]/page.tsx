@@ -127,6 +127,7 @@ async function ProjectContent({ params }: ProjectPageProps) {
             alt={primaryImage.alt}
             fill
             priority
+            sizes="(max-width: 896px) 100vw, 896px"
             className="object-cover"
           />
           {primaryImage.caption && (
