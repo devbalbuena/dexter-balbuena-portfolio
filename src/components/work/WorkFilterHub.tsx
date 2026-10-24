@@ -151,6 +151,7 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                           src={previewImage.url}
                           alt={previewImage.alt}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
                           className="object-cover transition-transform duration-300 group-hover:scale-103"
                         />
                       ) : (
