@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="rf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e14" />
+      <stop offset="50%" stop-color="#10141d" />
+      <stop offset="100%" stop-color="#090b10" />
+    </linearGradient>
+
+    <linearGradient id="card-surface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b26" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0e121a" stop-opacity="0.98" />
+    </linearGradient>
+
+    <linearGradient id="gold-copper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="50%" stop-color="#c59b27" />
+      <stop offset="100%" stop-color="#8c532b" />
+    </linearGradient>
+
+    <linearGradient id="cyan-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="emerald-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1200" height="675" fill="url(#rf-bg)" />
+
+  <!-- Subtle Ambient Glow Orbs -->
+  <circle cx="200" cy="150" r="180" fill="#d4af37" opacity="0.06" filter="blur(60px)" />
+  <circle cx="950" cy="400" r="220" fill="#3b82f6" opacity="0.05" filter="blur(80px)" />
+  <circle cx="600" cy="600" r="150" fill="#10b981" opacity="0.04" filter="blur(60px)" />
+
+  <!-- Outer Window Frame -->
+  <rect x="30" y="25" width="1140" height="625" rx="16" fill="#0d1117" stroke="#252d3d" stroke-width="1.5" filter="url(#subtle-shadow)" />
+
+  <!-- Window Header Bar -->
+  <rect x="30" y="25" width="1140" height="48" rx="16" fill="#131822" />
+  <path d="M30 57 h1140 v16 h-1140 z" fill="#131822" />
+  <line x1="30" y1="73" x2="1170" y2="73" stroke="#212838" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="58" cy="49" r="6" fill="#ef4444" opacity="0.8" />
+  <circle cx="78" cy="49" r="6" fill="#f59e0b" opacity="0.8" />
+  <circle cx="98" cy="49" r="6" fill="#10b981" opacity="0.8" />
+
+  <!-- Window Title & Breadcrumbs -->
+  <text x="130" y="53" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="0.5">RAREFINDS</text>
+  <text x="212" y="53" fill="#64748b" font-family="monospace" font-size="12">/ luxury-erp-operations / order-management</text>
+  
+  <!-- Right Header Tags -->
+  <rect x="870" y="38" width="135" height="22" rx="6" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.3" />
+  <circle cx="882" cy="49" r="3" fill="#10b981" />
+  <text x="892" y="53" fill="#34d399" font-family="monospace" font-size="10.5" font-weight="600">STATE_MACHINE: LIVE</text>
+
+  <rect x="1015" y="38" width="135" height="22" rx="6" fill="#d4af37" fill-opacity="0.12" stroke="#d4af37" stroke-opacity="0.3" />
+  <text x="1027" y="53" fill="#facc15" font-family="monospace" font-size="10.5" font-weight="600">ROLE: MASTER_ADMIN</text>
+
+  <!-- Left Sidebar (Nav & Operations) -->
+  <rect x="30" y="73" width="220" height="577" fill="#0f141d" />
+  <line x1="250" y1="73" x2="250" y2="650" stroke="#212838" stroke-width="1" />
+
+  <!-- Sidebar Group 1: CORE ERP -->
+  <text x="50" y="110" fill="#94a3b8" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">OPERATIONS ENGINE</text>
+
+  <!-- Active Item: Order Fulfillment State Machine -->
+  <rect x="42" y="125" width="196" height="34" rx="8" fill="#1e2638" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1" />
+  <rect x="42" y="125" width="4" height="34" rx="2" fill="#3b82f6" />
+  <text x="56" y="146" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Fulfillment Pipeline</text>
+  <rect x="195" y="133" width="32" height="18" rx="4" fill="#3b82f6" fill-opacity="0.2" />
+  <text x="202" y="145" fill="#93c5fd" font-family="monospace" font-size="10" font-weight="700">12</text>
+
+  <!-- Inactive Sidebar Items -->
+  <text x="56" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">1-of-1 Vault Inventory</text>
+  <text x="56" y="218" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Curator QC &amp; Auth</text>
+  <text x="56" y="251" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Cryptographic Handover</text>
+  <text x="56" y="284" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Carrier Waybills (LBC/J&amp;T)</text>
+  <text x="56" y="317" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">COD Area Restrictions</text>
+
+  <line x1="45" y1="340" x2="235" y2="340" stroke="#1e2638" stroke-width="1" />
+  <text x="50" y="365" fill="#94a3b8" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">AUDIT &amp; FINANCIALS</text>
+
+  <text x="56" y="395" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Immutable AuditLog</text>
+  <text x="56" y="428" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">UnitCost Ledger</text>
+  <text x="56" y="461" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Official Invoices</text>
+  <text x="56" y="494" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Sanitized CSV Export</text>
+
+  <!-- Sidebar Footer: Architecture Pill -->
+  <rect x="42" y="570" width="196" height="60" rx="10" fill="#141a24" stroke="#252e40" stroke-width="1" />
+  <text x="54" y="592" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Next.js 16 + Prisma</text>
+  <text x="54" y="612" fill="#64748b" font-family="monospace" font-size="9.5">PostgreSQL Atomic Tx ($transaction)</text>
+
+  <!-- MAIN DASHBOARD CONTENT AREA -->
+  
+  <!-- 4 Top KPI Metric Cards -->
+  <!-- KPI 1 -->
+  <rect x="270" y="90" width="210" height="78" rx="12" fill="url(#card-surface)" stroke="#252e40" stroke-width="1" />
+  <text x="288" y="112" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">1-OF-1 VAULT RESERVES</text>
+  <text x="288" y="142" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">42 Pairs</text>
+  <text x="390" y="142" fill="#10b981" font-family="monospace" font-size="11" font-weight="600">Lock: 15m</text>
+
+  <!-- KPI 2 -->
+  <rect x="495" y="90" width="210" height="78" rx="12" fill="url(#card-surface)" stroke="#252e40" stroke-width="1" />
+  <text x="513" y="112" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">QC INSPECTION QUEUE</text>
+  <text x="513" y="142" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">19 Verified</text>
+  <text x="635" y="142" fill="#f59e0b" font-family="monospace" font-size="11" font-weight="600">3 Pending</text>
+
+  <!-- KPI 3 -->
+  <rect x="720" y="90" width="210" height="78" rx="12" fill="url(#card-surface)" stroke="#252e40" stroke-width="1" />
+  <text x="738" y="112" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">CRYPTO PIN DISPATCH</text>
+  <text x="738" y="142" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">100%</text>
+  <text x="795" y="142" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="600">0 Disputes</text>
+
+  <!-- KPI 4 -->
+  <rect x="945" y="90" width="210" height="78" rx="12" fill="url(#card-surface)" stroke="#252e40" stroke-width="1" />
+  <text x="963" y="112" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">NET PROFIT MARGIN</text>
+  <text x="963" y="142" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="800">38.4%</text>
+  <text x="1038" y="142" fill="#d4af37" font-family="monospace" font-size="11" font-weight="600">Immutable</text>
+
+  <!-- MAIN FULFILLMENT INSPECTION CONSOLE -->
+  <rect x="270" y="182" width="885" height="448" rx="14" fill="url(#card-surface)" stroke="#263145" stroke-width="1" />
+
+  <!-- Order Console Top Bar -->
+  <rect x="270" y="182" width="885" height="56" rx="14" fill="#131924" />
+  <path d="M270 220 h885 v18 h-885 z" fill="#131924" />
+  <line x1="270" y1="238" x2="1155" y2="238" stroke="#222c3e" stroke-width="1" />
+
+  <text x="290" y="217" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Order #RF-94821</text>
+  <text x="430" y="217" fill="#d4af37" font-family="monospace" font-size="13" font-weight="700">₱84,500.00 PHP</text>
+
+  <!-- 5-Step State Machine Progress Rail -->
+  <g transform="translate(620, 198)">
+    <!-- Step 1: Placed -->
+    <circle cx="12" cy="12" r="10" fill="#10b981" />
+    <path d="M8 12 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" />
+    <text x="28" y="16" fill="#10b981" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700">Placed</text>
+
+    <line x1="75" y1="12" x2="105" y2="12" stroke="#10b981" stroke-width="2" />
+
+    <!-- Step 2: Payment Verified -->
+    <circle cx="118" cy="12" r="10" fill="#10b981" />
+    <path d="M114 12 l3 3 l6 -6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" />
+    <text x="134" y="16" fill="#10b981" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700">Paid (GCash)</text>
+
+    <line x1="205" y1="12" x2="235" y2="12" stroke="#f59e0b" stroke-width="2" />
+
+    <!-- Step 3: QC Authentication (Active) -->
+    <circle cx="248" cy="12" r="11" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="248" cy="12" r="4" fill="#f59e0b" />
+    <text x="268" y="16" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800">In QC Auth</text>
+
+    <line x1="335" y1="12" x2="365" y2="12" stroke="#334155" stroke-width="2" stroke-dasharray="4" />
+
+    <!-- Step 4: Dispatched -->
+    <circle cx="378" cy="12" r="10" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <text x="396" y="16" fill="#64748b" font-family="system-ui, sans-serif" font-size="10.5">Dispatched</text>
+
+    <line x1="465" y1="12" x2="495" y2="12" stroke="#334155" stroke-width="2" stroke-dasharray="4" />
+
+    <!-- Step 5: Delivered -->
+    <circle cx="508" cy="12" r="10" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <text x="525" y="16" fill="#64748b" font-family="system-ui, sans-serif" font-size="10.5">Delivered</text>
+  </g>
+
+  <!-- Left Detail Column: Item & Authentication Details -->
+  <!-- Item Card -->
+  <rect x="290" y="255" width="410" height="150" rx="10" fill="#121722" stroke="#253042" stroke-width="1" />
+  
+  <!-- Thumbnail Placeholder -->
+  <rect x="305" y="270" width="100" height="100" rx="8" fill="#1a2230" stroke="#334155" stroke-width="1" />
+  <circle cx="355" cy="320" r="28" fill="#d4af37" fill-opacity="0.1" />
+  <text x="355" y="325" fill="#d4af37" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">1-of-1</text>
+  <text x="355" y="385" fill="#64748b" font-family="monospace" font-size="9" text-anchor="middle">AUTHENTIC</text>
+
+  <!-- Item Description -->
+  <text x="420" y="288" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Travis Scott x AJ1 Low OG</text>
+  <text x="420" y="306" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">'Reverse Mocha' • US Men 9.5 / DS</text>
+  <text x="420" y="328" fill="#64748b" font-family="monospace" font-size="10">SERIAL: RF-VAULT-2026-9042A</text>
+  <text x="420" y="346" fill="#38bdf8" font-family="monospace" font-size="10">ROW_LOCK: pg_try_advisory_lock(OK)</text>
+
+  <rect x="420" y="358" width="120" height="22" rx="4" fill="#d4af37" fill-opacity="0.15" stroke="#d4af37" stroke-opacity="0.3" />
+  <text x="430" y="373" fill="#fde047" font-family="monospace" font-size="9.5" font-weight="700">CONSIGNOR PAY: ₱68k</text>
+
+  <rect x="550" y="358" width="125" height="22" rx="4" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.3" />
+  <text x="560" y="373" fill="#6ee7b7" font-family="monospace" font-size="9.5" font-weight="700">STORE NET: ₱16,500</text>
+
+  <!-- Curator Inspection Checkpoints -->
+  <rect x="290" y="420" width="410" height="192" rx="10" fill="#121722" stroke="#253042" stroke-width="1" />
+  <text x="305" y="444" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">PHYSICAL AUTHENTICITY QC CHECKPOINTS</text>
+
+  <g transform="translate(305, 460)">
+    <!-- Check 1 -->
+    <circle cx="8" cy="8" r="7" fill="#10b981" fill-opacity="0.2" stroke="#10b981" />
+    <path d="M5 8 l2 2 l4 -4" stroke="#10b981" stroke-width="1.5" fill="none" />
+    <text x="24" y="12" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Blacklight UV Stamping &amp; Stitching Density</text>
+    <text x="330" y="12" fill="#10b981" font-family="monospace" font-size="10" font-weight="700">PASSED</text>
+
+    <!-- Check 2 -->
+    <circle cx="8" cy="38" r="7" fill="#10b981" fill-opacity="0.2" stroke="#10b981" />
+    <path d="M5 38 l2 2 l4 -4" stroke="#10b981" stroke-width="1.5" fill="none" />
+    <text x="24" y="42" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Insole Stitching Pattern &amp; Factory Sizing Tag</text>
+    <text x="330" y="42" fill="#10b981" font-family="monospace" font-size="10" font-weight="700">PASSED</text>
+
+    <!-- Check 3 -->
+    <circle cx="8" cy="68" r="7" fill="#10b981" fill-opacity="0.2" stroke="#10b981" />
+    <path d="M5 68 l2 2 l4 -4" stroke="#10b981" stroke-width="1.5" fill="none" />
+    <text x="24" y="72" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Holographic Certificate of Verification Tagged</text>
+    <text x="330" y="72" fill="#10b981" font-family="monospace" font-size="10" font-weight="700">TAG: #892</text>
+
+    <!-- Check 4 Action Button -->
+    <rect x="0" y="98" width="380" height="34" rx="6" fill="#2563eb" />
+    <text x="190" y="119" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">STAMP QC APPROVAL &amp; PROCEED TO DISPATCH ➔</text>
+  </g>
+
+  <!-- Right Detail Column: Delivery Mode & Cryptographic PIN -->
+  <rect x="715" y="255" width="425" height="357" rx="10" fill="#121722" stroke="#253042" stroke-width="1" />
+
+  <!-- Delivery Protocol Header -->
+  <rect x="715" y="255" width="425" height="40" rx="10" fill="#171e2c" />
+  <line x1="715" y1="295" x2="1140" y2="295" stroke="#253042" stroke-width="1" />
+  <text x="735" y="280" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">SECURE HANDOVER &amp; CARRIER LOGISTICS</text>
+
+  <!-- Mode Badge -->
+  <rect x="735" y="310" width="180" height="26" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-opacity="0.4" />
+  <text x="745" y="327" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Local Express Rider Delivery</text>
+
+  <rect x="925" y="310" width="150" height="26" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4" />
+  <text x="935" y="327" fill="#34d399" font-family="monospace" font-size="11" font-weight="700">PIN GUARD: ACTIVE</text>
+
+  <!-- Customer & Destination -->
+  <g transform="translate(735, 350)">
+    <text x="0" y="15" fill="#64748b" font-family="monospace" font-size="10">RECIPIENT:</text>
+    <text x="90" y="15" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">Marcus Sterling (Verified Customer)</text>
+
+    <text x="0" y="38" fill="#64748b" font-family="monospace" font-size="10">DESTINATION:</text>
+    <text x="90" y="38" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11.5">One Bonifacio High Street, BGC, Taguig</text>
+
+    <text x="0" y="61" fill="#64748b" font-family="monospace" font-size="10">CARRIER SYNC:</text>
+    <text x="90" y="61" fill="#f59e0b" font-family="monospace" font-size="11">Rider Assigned: Carlos M. (#RM-401)</text>
+  </g>
+
+  <!-- Cryptographic PIN Verification Card -->
+  <rect x="735" y="430" width="385" height="110" rx="8" fill="#0b0e14" stroke="#d4af37" stroke-opacity="0.4" stroke-width="1.5" />
+  
+  <text x="755" y="455" fill="#facc15" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">CRYPTOGRAPHIC DELIVERY PIN VERIFICATION</text>
+  <text x="755" y="475" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">Rider must collect &amp; input recipient's secret 4-digit token</text>
+  
+  <!-- 4 PIN Digits Box -->
+  <g transform="translate(755, 490)">
+    <rect x="0" y="0" width="38" height="38" rx="6" fill="#161c28" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="19" y="26" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="800" text-anchor="middle">8</text>
+
+    <rect x="46" y="0" width="38" height="38" rx="6" fill="#161c28" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="65" y="26" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="800" text-anchor="middle">4</text>
+
+    <rect x="92" y="0" width="38" height="38" rx="6" fill="#161c28" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="111" y="26" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="800" text-anchor="middle">1</text>
+
+    <rect x="138" y="0" width="38" height="38" rx="6" fill="#161c28" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="157" y="26" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="800" text-anchor="middle">9</text>
+
+    <rect x="190" y="4" width="180" height="30" rx="6" fill="#10b981" />
+    <text x="280" y="23" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">VERIFY &amp; RELEASE CLAIM</text>
+  </g>
+
+  <!-- Security Audit Note -->
+  <g transform="translate(735, 560)">
+    <circle cx="6" cy="6" r="4" fill="#3b82f6" />
+    <text x="16" y="9" fill="#64748b" font-family="monospace" font-size="9.5">Generated via crypto.randomInt() • Attempt Lock: 5 Max • Tamper-Audit Logged</text>
+  </g>
+</svg>
