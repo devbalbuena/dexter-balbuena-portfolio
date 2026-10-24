@@ -1,0 +1,46 @@
+{
+  "slug": "rarefinds-retail-erp",
+  "title": "RareFinds — Luxury Retail ERP & High-Value Inventory Management Platform",
+  "category": "web-system",
+  "categories": ["web-system", "ecommerce-research"],
+  "summary": "Full-stack luxury retail ERP and collector consignment platform engineered with concurrency-safe 1-of-1 inventory locking, a server-enforced 5-step state machine fulfillment lifecycle, and cryptographic delivery PIN verification.",
+  "problem": "High-value retail and sneaker consignment platforms face catastrophic double-selling on 1-of-1 collector stock, delivery fraud disputes on high-ticket handovers, and inventory shrinkage from unverified quality control handoffs.",
+  "whatIDid": [
+    "Architected a concurrency-safe 1-of-1 inventory engine using PostgreSQL row-level atomic locking ($transaction) and automated hold-expiration timers to eliminate overselling on serialized luxury assets.",
+    "Engineered a server-enforced 5-step state machine fulfillment lifecycle (Placed ➔ Payment Verified ➔ Authentication & QC ➔ Dispatched / Ready for Pickup ➔ Delivered / Claimed) preventing skipped inspection steps.",
+    "Developed multi-channel delivery modules including nationwide courier tracking integration (LBC, J&T, 2GO, DHL), store vault pickup with digital claim verification, and local express rider handover protected by cryptographic 4-digit PINs (crypto.randomInt).",
+    "Constructed a multi-tier payment ledger supporting COD, GCash, Maya, cards, and manual bank transfers with server-enforced geographical coverage matching and image-validated payment verification.",
+    "Engineered real-time financial reporting tracking gross revenue, net profit, and gross margins calculated from immutable unitCost snapshots per order line item.",
+    "Implemented Role-Based Access Control (RBAC: Admin vs. Staff vs. Customer) via NextAuth.js v5 and an immutable, tamper-evident audit logging engine capturing all inventory corrections, PIN attempts, and CSV exports.",
+    "Delivered operational utilities including print-ready official invoices, packing slips with holographic certificate disclosures, and formula-injection-sanitized CSV exports for bookkeeping."
+  ],
+  "result": "Engineered zero double-selling risks on 1-of-1 inventory, 100% auditable chain of custody, cryptographic dispute-proof delivery verification, and automated margin bookkeeping across multi-channel retail operations.",
+  "resultPlaceholder": "[ENTERPRISE FULL-STACK ARCHITECTURE: Production-grade Next.js 16 + Prisma/PostgreSQL ERP deployed for luxury retail & consignment operations]",
+  "tools": [
+    "Next.js 16 (App Router)",
+    "TypeScript (Strict Mode)",
+    "PostgreSQL",
+    "Prisma ORM",
+    "NextAuth.js (Auth.js v5)",
+    "Tailwind CSS",
+    "Supabase Storage",
+    "Zod Validation",
+    "State Machine Fulfillment",
+    "Cryptographic Handover PIN"
+  ],
+  "date": "2026-04-18",
+  "featured": true,
+  "projectType": "web-system",
+  "isDemoSample": false,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/rarefinds-retail-erp.svg",
+      "alt": "RareFinds Luxury Retail ERP & High-Value Inventory Management Platform Console",
+      "caption": "Executive Master Operations View: Order fulfillment state machine, curator authenticity QC inspection, cryptographic delivery PIN verification, and real-time margin ledger."
+    }
+  ],
+  "links": {
+    "githubUrl": "https://github.com/devbalbuena/RareFinds"
+  }
+}
