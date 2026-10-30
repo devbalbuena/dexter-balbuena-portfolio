@@ -284,7 +284,8 @@ export function DesignGalleryStage({ initialIndex = 0, className = "" }: DesignG
                       src={item.imageUrl}
                       alt={item.alt}
                       fill
-                      className="object-contain p-1"
+                      sizes="56px"
+                      className="object-contain p-0.5"
                     />
                   </div>
                   <div className="text-left pr-2 hidden sm:block">

@@ -69,8 +69,8 @@ export function GraphicDesignCarouselSection() {
                 High-Converting E-Commerce &amp; Social Graphics
               </h2>
               <p className="text-base text-stone-600 leading-relaxed">
-                Clean, high-impact portrait pins &amp; visuals designed in Figma &amp; Canva Pro. 
-                Click any design to inspect full size, or view all work for case studies.
+                Clean, high-impact commercial visuals, 3D product drops, and viral social pins designed in Figma &amp; Canva Pro. 
+                Click any design to inspect in high definition, or view all work for case studies.
               </p>
             </div>
 
