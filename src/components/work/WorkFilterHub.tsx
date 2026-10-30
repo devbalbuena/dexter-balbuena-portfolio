@@ -5,10 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project, ProjectCategory, CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
-import { ArrowRight, ExternalLink, AlertCircle, FolderGit2, Download } from "lucide-react";
+import { ArrowRight, ExternalLink, AlertCircle, FolderGit2, Download, Palette, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { DesignGalleryStage } from "@/components/work/DesignGalleryStage";
 
 interface WorkFilterHubProps {
   projects: Project[];
@@ -109,7 +110,40 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
             );
           })}
         </div>
+
+        {/* Quick Launch Banner for Graphic Design Slideshow if viewing All */}
+        {activeCategory !== "graphic-design" && (
+          <div className="flex items-center justify-between gap-3 p-3 sm:px-4 rounded-xl bg-gradient-to-r from-[#faf5ee] via-white to-[#faf5ee] border border-[#ebdccb] text-xs">
+            <div className="flex items-center gap-2 text-stone-700">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#8c532b]/15 text-[#8c532b]">
+                <Palette className="h-3 w-3" />
+              </span>
+              <span>
+                Want to browse creative ad formats? Check out the interactive <strong className="text-stone-900">Graphic Design Slideshow Gallery</strong>.
+              </span>
+            </div>
+            <button
+              onClick={() => setActiveCategory("graphic-design")}
+              className="inline-flex items-center gap-1 font-mono font-bold text-[#8c532b] hover:text-[#704221] shrink-0 hover:underline cursor-pointer"
+            >
+              Launch Gallery ➔
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* Dedicated Interactive Graphic Design Slideshow Showcase when 'graphic-design' is active */}
+      {activeCategory === "graphic-design" && (
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -16 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="pb-2"
+        >
+          <DesignGalleryStage />
+        </motion.div>
+      )}
 
       {/* Filtered Grid */}
       {filteredProjects.length === 0 ? (
