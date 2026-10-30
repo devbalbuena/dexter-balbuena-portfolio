@@ -7,6 +7,7 @@ import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { ProjectMediaGallery } from "@/components/work/ProjectMediaGallery";
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -56,8 +57,6 @@ async function ProjectContent({ params }: ProjectPageProps) {
   if (!project) {
     notFound();
   }
-
-  const primaryImage = project.media[0];
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 md:py-16 space-y-10">
@@ -119,24 +118,8 @@ async function ProjectContent({ params }: ProjectPageProps) {
         )}
       </div>
 
-      {/* Primary media preview */}
-      {primaryImage && (
-        <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-[#e8ded3] bg-stone-900 shadow-md">
-          <Image
-            src={primaryImage.url}
-            alt={primaryImage.alt}
-            fill
-            priority
-            sizes="(max-width: 896px) 100vw, 896px"
-            className="object-cover"
-          />
-          {primaryImage.caption && (
-            <div className="absolute inset-x-0 bottom-0 bg-[#7a4e2d]/90 px-4 py-2 text-xs font-mono text-[#f2e7dc] backdrop-blur-xs">
-              {primaryImage.caption}
-            </div>
-          )}
-        </div>
-      )}
+      {/* Interactive Media Carousel / Gallery */}
+      <ProjectMediaGallery media={project.media} title={project.title} />
 
       {/* Rigid Scannable 3-Part Operational Narrative Layout (Problem -> Execution -> Result) */}
       <div className="space-y-6 pt-2">
