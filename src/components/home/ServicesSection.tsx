@@ -136,13 +136,13 @@ export function ServicesSection() {
             return (
               <motion.div
                 key={idx}
-                initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 18 }}
+                initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 38 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.12, margin: "0px 0px -40px 0px" }}
                 transition={{
-                  duration: shouldReduceMotion ? 0.15 : 0.4,
-                  delay: shouldReduceMotion ? 0 : idx * 0.06,
-                  ease: [0.21, 0.47, 0.32, 0.98],
+                  duration: shouldReduceMotion ? 0.15 : 0.65,
+                  delay: shouldReduceMotion ? 0 : idx * 0.08,
+                  ease: [0.16, 1, 0.3, 1],
                 }}
                 className="group rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e5d7c7] hover:border-[#8c532b] transition-all hover:-translate-y-1 shadow-xs hover:shadow-md text-stone-900"
               >

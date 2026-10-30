@@ -49,13 +49,13 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
             return (
               <motion.div
                 key={project.slug}
-                initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}
+                initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 38 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.12, margin: "0px 0px -40px 0px" }}
                 transition={{
-                  duration: shouldReduceMotion ? 0.15 : 0.4,
-                  delay: shouldReduceMotion ? 0 : idx * 0.06,
-                  ease: [0.21, 0.47, 0.32, 0.98],
+                  duration: shouldReduceMotion ? 0.15 : 0.65,
+                  delay: shouldReduceMotion ? 0 : idx * 0.09,
+                  ease: [0.16, 1, 0.3, 1],
                 }}
                 className="h-full"
               >

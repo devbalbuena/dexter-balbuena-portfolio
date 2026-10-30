@@ -62,10 +62,10 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Timezone Availability */}
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 38 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.65, delay: 0, ease: [0.16, 1, 0.3, 1] }}
             className="workspace-card rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] transition-all"
           >
             <div className="space-y-4">
@@ -117,10 +117,10 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
 
           {/* Card 2: Industry Certifications with Quick-Glimpse Hover & Full Modal */}
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 38 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.06, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.65, delay: 0.09, ease: [0.16, 1, 0.3, 1] }}
             className="workspace-card rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] transition-all relative"
           >
             <div className="space-y-4">
@@ -253,10 +253,10 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
 
           {/* Card 3: BSIT 2027 Student Advantage */}
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 38 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="workspace-card rounded-2xl p-6 flex flex-col justify-between bg-white border border-[#e8ded3] shadow-xs hover:border-[#8c532b] transition-all"
           >
             <div className="space-y-4">
