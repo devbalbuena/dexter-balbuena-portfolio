@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" width="1000" height="1500">
+  <defs>
+    <linearGradient id="pin-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdfbf7" />
+      <stop offset="50%" stop-color="#f5eee6" />
+      <stop offset="100%" stop-color="#eadbc8" />
+    </linearGradient>
+    <linearGradient id="bronze-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8c532b" />
+      <stop offset="100%" stop-color="#b87333" />
+    </linearGradient>
+    <filter id="card-shadow" x="-10%" y="-5%" width="120%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#18120d" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1500" fill="url(#pin-bg)" />
+  
+  <!-- Subtle Header Brand Pill -->
+  <g transform="translate(100, 70)">
+    <rect width="800" height="54" rx="27" fill="#ffffff" stroke="#e8ded3" stroke-width="2" />
+    <circle cx="45" cy="27" r="14" fill="#8c532b" />
+    <text x="45" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="900" text-anchor="middle">CN</text>
+    <text x="75" y="34" fill="#18120d" font-family="system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="1.5">@COZYNOOK_FINDS</text>
+    <rect x="620" y="12" width="160" height="30" rx="15" fill="#8c532b" fill-opacity="0.1" />
+    <text x="700" y="32" fill="#8c532b" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">AMAZON FINDS</text>
+  </g>
+
+  <!-- Main Headline Area -->
+  <g transform="translate(100, 170)">
+    <rect width="210" height="36" rx="8" fill="#8c532b" />
+    <text x="105" y="24" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle" letter-spacing="2">ORGANIZED WORKSPACE</text>
+    
+    <text x="0" y="110" fill="#18120d" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" line-height="1.05">
+      5 Aesthetic Desk
+    </text>
+    <text x="0" y="190" fill="#8c532b" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900">
+      Essentials Under $50
+    </text>
+    <text x="0" y="240" fill="#78716c" font-family="system-ui, sans-serif" font-size="24" font-weight="500">
+      Boost daily focus, eliminate desk clutter &amp; upgrade your setup aesthetic.
+    </text>
+  </g>
+
+  <!-- Featured Product Card 1: Wireless Charging Tray -->
+  <g transform="translate(100, 470)" filter="url(#card-shadow)">
+    <rect width="800" height="420" rx="28" fill="#ffffff" stroke="#e8ded3" stroke-width="2" />
+    
+    <!-- Image Mockup Side -->
+    <rect x="25" y="25" width="370" height="370" rx="20" fill="#18120d" />
+    <!-- Visual representation of minimal tray -->
+    <rect x="65" y="85" width="290" height="250" rx="16" fill="#2c2017" stroke="#8c532b" stroke-width="2" />
+    <rect x="95" y="115" width="140" height="190" rx="12" fill="#3a2b1f" />
+    <circle cx="165" cy="210" r="30" fill="#8c532b" fill-opacity="0.3" stroke="#d4976a" stroke-width="2" stroke-dasharray="4 4" />
+    <text x="165" y="215" fill="#f5eee6" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">FAST CHARGE</text>
+    <circle cx="300" cy="155" r="24" fill="#18120d" stroke="#d4976a" stroke-width="1.5" />
+    <text x="300" y="160" fill="#d4976a" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">98%</text>
+
+    <!-- Details Side -->
+    <g transform="translate(425, 60)">
+      <rect width="95" height="28" rx="6" fill="#10b981" fill-opacity="0.15" />
+      <text x="47" y="19" fill="#059669" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">#1 TOP PICK</text>
+      
+      <text x="0" y="70" fill="#18120d" font-family="system-ui, sans-serif" font-size="32" font-weight="800">Mag-Safe Walnut Dock</text>
+      <text x="0" y="105" fill="#78716c" font-family="system-ui, sans-serif" font-size="18">Solid American walnut with integrated hidden cable routing channel.</text>
+
+      <g transform="translate(0, 155)">
+        <text x="0" y="32" fill="#8c532b" font-family="system-ui, sans-serif" font-size="44" font-weight="900">$38.99</text>
+        <text x="170" y="28" fill="#a8a29e" font-family="system-ui, sans-serif" font-size="22" text-decoration="line-through">$54.00</text>
+        
+        <rect x="0" y="65" width="340" height="48" rx="12" fill="url(#bronze-grad)" />
+        <text x="170" y="96" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">View Product on Amazon ↗</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Secondary 2-Column Product Grid -->
+  <g transform="translate(100, 930)">
+    <!-- Small Card A -->
+    <g filter="url(#card-shadow)">
+      <rect width="385" height="340" rx="24" fill="#ffffff" stroke="#e8ded3" stroke-width="2" />
+      <rect x="20" y="20" width="345" height="175" rx="16" fill="#f3eae0" />
+      <circle cx="192" cy="107" r="45" fill="#8c532b" fill-opacity="0.15" />
+      <text x="192" y="112" fill="#8c532b" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Felt Desk Mat (90×40cm)</text>
+      <text x="24" y="235" fill="#18120d" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Ultra-Smooth Wool Felt</text>
+      <text x="24" y="262" fill="#78716c" font-family="system-ui, sans-serif" font-size="15">Anti-slip rubber backing base</text>
+      <text x="24" y="305" fill="#8c532b" font-family="system-ui, sans-serif" font-size="28" font-weight="900">$22.50</text>
+      <rect x="240" y="278" width="125" height="36" rx="10" fill="#18120d" />
+      <text x="302" y="301" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Get Link ↗</text>
+    </g>
+
+    <!-- Small Card B -->
+    <g transform="translate(415, 0)" filter="url(#card-shadow)">
+      <rect width="385" height="340" rx="24" fill="#ffffff" stroke="#e8ded3" stroke-width="2" />
+      <rect x="20" y="20" width="345" height="175" rx="16" fill="#efe6db" />
+      <circle cx="192" cy="107" r="45" fill="#059669" fill-opacity="0.15" />
+      <text x="192" y="112" fill="#059669" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Monitor Light Bar ScreenBar</text>
+      <text x="24" y="235" fill="#18120d" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Touch Dimmable LED Bar</text>
+      <text x="24" y="262" fill="#78716c" font-family="system-ui, sans-serif" font-size="15">Zero screen glare auto-dimmer</text>
+      <text x="24" y="305" fill="#8c532b" font-family="system-ui, sans-serif" font-size="28" font-weight="900">$34.99</text>
+      <rect x="240" y="278" width="125" height="36" rx="10" fill="#18120d" />
+      <text x="302" y="301" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Get Link ↗</text>
+    </g>
+  </g>
+
+  <!-- Bottom Pin CTA Footer Bar -->
+  <g transform="translate(100, 1315)">
+    <rect width="800" height="110" rx="24" fill="#18120d" />
+    <text x="45" y="52" fill="#ffffff" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Save this pin for your next desk upgrade 📌</text>
+    <text x="45" y="82" fill="#d4976a" font-family="monospace" font-size="15">24.3K+ Pinterest Monthly Views • High-CTR Creative by Dexter</text>
+    <rect x="620" y="30" width="145" height="50" rx="25" fill="url(#bronze-grad)" />
+    <text x="692" y="61" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Tap Here ↗</text>
+  </g>
+</svg>

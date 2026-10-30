@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="banner-bg" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#1b140e" />
+      <stop offset="45%" stop-color="#2c1e14" />
+      <stop offset="100%" stop-color="#0e0a07" />
+    </linearGradient>
+    <linearGradient id="warm-copper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8c532b" />
+      <stop offset="50%" stop-color="#d4976a" />
+      <stop offset="100%" stop-color="#b87333" />
+    </linearGradient>
+    <linearGradient id="card-soft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34251a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1d140e" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="banner-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="28" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#banner-bg)" />
+  
+  <!-- Subtle Ambient Glow -->
+  <circle cx="1400" cy="450" r="500" fill="#8c532b" fill-opacity="0.15" filter="blur(90px)" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(140, 180)">
+    <!-- Category Pill -->
+    <rect width="260" height="42" rx="21" fill="#8c532b" fill-opacity="0.25" stroke="#8c532b" stroke-opacity="0.6" stroke-width="1.5" />
+    <circle cx="24" cy="21" r="5" fill="#d4976a" />
+    <text x="38" y="26" fill="#f5ede3" font-family="monospace" font-size="13" font-weight="700" letter-spacing="2">AUTUMN COLLECTION • 2026</text>
+
+    <!-- Main Headline -->
+    <text x="0" y="140" fill="#fdfbf9" font-family="system-ui, -apple-system, sans-serif" font-size="88" font-weight="900" letter-spacing="-2">
+      Curated Workspaces,
+    </text>
+    <text x="0" y="240" fill="url(#warm-copper)" font-family="system-ui, -apple-system, sans-serif" font-size="88" font-weight="900" letter-spacing="-2">
+      Engineered for Flow.
+    </text>
+
+    <text x="0" y="320" fill="#c4b5a5" font-family="system-ui, sans-serif" font-size="24" font-weight="400" max-width="650">
+      Precision hardwood desk risers, ambient lighting bars, and modular leather desk mats designed to eliminate distraction.
+    </text>
+
+    <!-- Key Metrics / Trust Badges -->
+    <g transform="translate(0, 400)">
+      <rect width="140" height="70" rx="14" fill="#251a12" stroke="#443022" />
+      <text x="70" y="35" fill="#f5ede3" font-family="monospace" font-size="24" font-weight="900" text-anchor="middle">4.9 ★</text>
+      <text x="70" y="55" fill="#8c7866" font-family="system-ui" font-size="12" text-anchor="middle">2,400+ REVIEWS</text>
+
+      <rect x="160" y="0" width="160" height="70" rx="14" fill="#251a12" stroke="#443022" />
+      <text x="240" y="35" fill="#10b981" font-family="monospace" font-size="24" font-weight="900" text-anchor="middle">FREE</text>
+      <text x="240" y="55" fill="#8c7866" font-family="system-ui" font-size="12" text-anchor="middle">EXPRESS SHIPPING</text>
+
+      <rect x="340" y="0" width="160" height="70" rx="14" fill="#251a12" stroke="#443022" />
+      <text x="420" y="35" fill="#d4976a" font-family="monospace" font-size="24" font-weight="900" text-anchor="middle">30-DAY</text>
+      <text x="420" y="55" fill="#8c7866" font-family="system-ui" font-size="12" text-anchor="middle">RISK-FREE TRIAL</text>
+    </g>
+
+    <!-- CTAs -->
+    <g transform="translate(0, 520)">
+      <rect width="280" height="66" rx="16" fill="url(#warm-copper)" />
+      <text x="140" y="41" fill="#18120d" font-family="system-ui, sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="1">
+        SHOP COLLECTION ➔
+      </text>
+
+      <rect x="305" y="0" width="220" height="66" rx="16" fill="none" stroke="#664d3b" stroke-width="2" />
+      <text x="415" y="41" fill="#f5ede3" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle">
+        View Lookbook ↗
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Visual Stage: Layered Storefront Mockup Cards -->
+  <g transform="translate(1080, 180)" filter="url(#banner-shadow)">
+    <!-- Card Back Layer -->
+    <rect x="60" y="40" width="620" height="540" rx="28" fill="#1e150f" stroke="#3d2a1c" stroke-width="1.5" />
+    
+    <!-- Primary Product Showcase Card -->
+    <rect x="0" y="0" width="620" height="540" rx="28" fill="url(#card-soft)" stroke="#573e2a" stroke-width="2" />
+    
+    <!-- Visual Image Box inside Product Card -->
+    <rect x="35" y="35" width="550" height="340" rx="20" fill="#150e09" stroke="#362518" />
+    
+    <!-- Desk Setup Graphic Representation -->
+    <rect x="75" y="180" width="470" height="20" rx="6" fill="#8c532b" />
+    <rect x="140" y="100" width="260" height="80" rx="8" fill="#2d1e13" stroke="#d4976a" stroke-width="1.5" />
+    <circle cx="270" cy="140" r="24" fill="#d4976a" fill-opacity="0.2" />
+    <text x="270" y="145" fill="#f3e5ab" font-family="system-ui" font-size="12" font-weight="bold" text-anchor="middle">4K MONITOR</text>
+    
+    <rect x="120" y="80" width="300" height="10" rx="5" fill="#10b981" />
+    <text x="270" y="70" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle">AMBIENT LIGHTBAR ACTIVE</text>
+
+    <!-- Card Description -->
+    <text x="40" y="420" fill="#ffffff" font-family="system-ui, sans-serif" font-size="30" font-weight="800">The Minimalist Dual-Tier Desk Shelf</text>
+    <text x="40" y="455" fill="#a89a8c" font-family="system-ui, sans-serif" font-size="17">Solid walnut hardwood with anodized aluminum heavy-duty risers.</text>
+    
+    <text x="40" y="505" fill="#d4976a" font-family="monospace" font-size="36" font-weight="900">$189.00</text>
+    <rect x="420" y="465" width="165" height="46" rx="12" fill="#8c532b" />
+    <text x="502" y="494" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">Quick Add +</text>
+  </g>
+
+  <!-- Bottom Brand Ribbon -->
+  <g transform="translate(140, 930)">
+    <text x="0" y="30" fill="#6e5a4a" font-family="monospace" font-size="14">
+      SHOPIFY STOREFRONT HERO BANNER (1920×1080) • DESIGNED IN FIGMA &amp; CANVA PRO FOR MAXIMUM CONVERSION
+    </text>
+  </g>
+</svg>
