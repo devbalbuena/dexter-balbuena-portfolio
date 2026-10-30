@@ -24,16 +24,11 @@ export function GraphicDesignCarouselSection() {
   const [isPlaying, setIsPlaying] = React.useState(true);
   const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null);
 
-  // Focus specifically on portrait / vertical pins for pure whole-picture gallery posters
-  const portraitDesigns = React.useMemo(() => {
-    return GRAPHIC_DESIGNS.filter((d) => d.format === "2:3 Vertical");
-  }, []);
-
-  const total = portraitDesigns.length;
+  const total = GRAPHIC_DESIGNS.length;
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-    const cardWidth = 320;
+    const cardWidth = 330;
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
     scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
@@ -47,13 +42,13 @@ export function GraphicDesignCarouselSection() {
       if (scrollLeft + clientWidth >= scrollWidth - 20) {
         scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        scrollRef.current.scrollBy({ left: 320, behavior: "smooth" });
+        scrollRef.current.scrollBy({ left: 330, behavior: "smooth" });
       }
     }, 4500);
     return () => clearInterval(timer);
   }, [isPlaying, lightboxIndex]);
 
-  const activeLightboxItem = lightboxIndex !== null ? portraitDesigns[lightboxIndex] : null;
+  const activeLightboxItem = lightboxIndex !== null ? GRAPHIC_DESIGNS[lightboxIndex] : null;
 
   return (
     <section className="w-full py-16 md:py-24 bg-[#faf6f0] border-t border-[#ebdccb]">
@@ -132,19 +127,19 @@ export function GraphicDesignCarouselSection() {
           className="flex items-stretch gap-6 overflow-x-auto pb-4 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-none snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          {portraitDesigns.map((design, idx) => (
+          {GRAPHIC_DESIGNS.map((design, idx) => (
             <motion.div
               key={design.id}
               initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.35, delay: idx * 0.05 }}
-              className="w-[260px] sm:w-[290px] aspect-[2/3] shrink-0 snap-start"
+              className="w-[270px] sm:w-[310px] aspect-[4/5] shrink-0 snap-start"
             >
               {/* Pure Portrait Image Container - No explanation text below */}
               <div
                 onClick={() => setLightboxIndex(idx)}
-                className="group relative w-full h-full overflow-hidden rounded-2xl bg-[#18120d] border border-[#ebdccb] shadow-sm hover:shadow-xl hover:border-[#8c532b] transition-all duration-300 cursor-zoom-in"
+                className="group relative w-full h-full overflow-hidden rounded-2xl bg-[#140e0a] border border-[#ebdccb] shadow-sm hover:shadow-xl hover:border-[#8c532b] transition-all duration-300 cursor-zoom-in"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => {
@@ -160,7 +155,7 @@ export function GraphicDesignCarouselSection() {
                   src={design.imageUrl}
                   alt={design.alt}
                   fill
-                  sizes="(max-width: 768px) 260px, 290px"
+                  sizes="(max-width: 768px) 270px, 310px"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                 />
 
