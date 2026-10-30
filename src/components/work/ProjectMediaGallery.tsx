@@ -164,3 +164,4 @@ export function ProjectMediaGallery({ media, title }: ProjectMediaGalleryProps) 
     </div>
   );
 }
+

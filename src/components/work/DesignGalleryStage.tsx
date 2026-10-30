@@ -317,3 +317,4 @@ export function DesignGalleryStage({ initialIndex = 0, className = "" }: DesignG
     </div>
   );
 }
+
