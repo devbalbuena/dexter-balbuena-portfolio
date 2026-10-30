@@ -87,7 +87,7 @@ export function HeroBento() {
                     <ArrowUpRight className="h-3.5 w-3.5 text-stone-400 group-hover:text-[#8c532b] transition-colors" />
                   </div>
                   <div className="text-sm sm:text-base font-extrabold text-stone-900 leading-tight">
-                    24.3K+ Views
+                    39.5K+ Views
                   </div>
                   <div className="text-[10.5px] font-mono text-emerald-700 font-semibold mt-0.5">
                     Pinterest SEO • $0 Ads

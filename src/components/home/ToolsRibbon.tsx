@@ -31,7 +31,7 @@ const TOOLS: ToolItem[] = [
     name: "Pinterest",
     category: "Visual Search & Traffic",
     logo: PinterestLogo,
-    tag: "24.3K Monthly Views",
+    tag: "39.5K Monthly Views",
     highlightTag: true,
   },
   {

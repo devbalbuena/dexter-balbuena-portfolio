@@ -85,7 +85,7 @@ const TOOLS_CATEGORIES: ToolCategory[] = [
     platforms: [
       { name: "Amazon", tag: "ASIN & Affiliate", logo: AmazonLogo },
       { name: "Shopify", tag: "Catalog & SKU", logo: ShopifyLogo },
-      { name: "Pinterest", tag: "24.3K Views", logo: PinterestLogo },
+      { name: "Pinterest", tag: "39.5K Views", logo: PinterestLogo },
     ],
     capabilities: [
       "Competitor ASIN Scraping & Price Mapping",

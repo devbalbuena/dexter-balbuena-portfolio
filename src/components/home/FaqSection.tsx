@@ -27,7 +27,7 @@ const FAQS: FaqItem[] = [
     category: "Pinterest & Visual Traffic",
     question: "How do you generate organic Pinterest traffic for Amazon and store products?",
     answer:
-      "I manage an active brand channel (@cozynook_finds) generating 24.3k+ organic monthly views. I research trending niches, batch high-contrast 2:3 vertical pin creatives (1000×1500px) with compelling headline hooks, optimize Pinterest visual SEO keywords, and integrate compliant affiliate tracking links with zero paid ad spend.",
+      "I manage an active brand channel (@cozynook_finds) generating 39.5k+ organic monthly views. I research trending niches, batch high-contrast 2:3 vertical pin creatives (1000×1500px) with compelling headline hooks, optimize Pinterest visual SEO keywords, and integrate compliant affiliate tracking links with zero paid ad spend.",
   },
   {
     category: "Security & Store Access",
