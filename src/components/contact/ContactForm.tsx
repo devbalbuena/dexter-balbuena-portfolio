@@ -2,7 +2,18 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/Button";
-import { Send, CheckCircle2, AlertCircle, Loader2, Mail, MessageSquare } from "lucide-react";
+import { 
+  Send, 
+  CheckCircle2, 
+  AlertCircle, 
+  Loader2, 
+  Mail, 
+  MessageSquare, 
+  Copy, 
+  Check, 
+  ExternalLink,
+  ArrowRight
+} from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = React.useState({
@@ -13,37 +24,52 @@ export function ContactForm() {
   });
 
   const [honeypot, setHoneypot] = React.useState("");
-  const [status, setStatus] = React.useState<"idle" | "submitting" | "success" | "error" | "no-endpoint">("idle");
+  const [status, setStatus] = React.useState<"idle" | "submitting" | "success" | "dispatched" | "error">("idle");
   const [statusMessage, setStatusMessage] = React.useState("");
+  const [copied, setCopied] = React.useState(false);
 
-  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+  // Formatted message payload for email & WhatsApp
+  const formattedSummary = `Name: ${formData.name}\nEmail: ${formData.email}\nWhatsApp/Phone: ${formData.whatsapp || "Not provided"}\n\nProject Details:\n${formData.message}`;
 
-  // Pre-filled mailto link when API endpoint is not yet connected
+  // Gmail Web Client 1-Click Link
+  const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=balbuena.dexter.va@gmail.com&su=${encodeURIComponent(
+    `Inquiry from ${formData.name || "Client"} (E-Commerce VA)`
+  )}&body=${encodeURIComponent(formattedSummary)}`;
+
+  // Default Mail Client (mailto:)
   const mailToLink = `mailto:balbuena.dexter.va@gmail.com?subject=${encodeURIComponent(
     `Inquiry from ${formData.name || "Client"}`
-  )}&body=${encodeURIComponent(
-    `Name: ${formData.name}\nEmail: ${formData.email}\nWhatsApp/Phone: ${formData.whatsapp || "Not provided"}\n\nProject Details:\n${formData.message}`
+  )}&body=${encodeURIComponent(formattedSummary)}`;
+
+  // WhatsApp with exact pre-filled user message
+  const whatsappLink = `https://wa.me/639912131795?text=${encodeURIComponent(
+    `Hi Dexter! My name is ${formData.name} (${formData.email}).\n\nProject details:\n${formData.message}`
   )}`;
+
+  const handleCopyDetails = async () => {
+    try {
+      await navigator.clipboard.writeText(formattedSummary);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2400);
+    } catch {
+      // Fallback
+    }
+  };
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    // Anti-spam honeypot check (hidden input traps automated bots without burdening real users)
+    // Anti-spam honeypot check
     if (honeypot) {
       setStatus("success");
       return;
     }
 
-    if (!endpoint) {
-      // Graceful fallback when endpoint env variable is not configured
-      setStatus("no-endpoint");
-      return;
-    }
-
     setStatus("submitting");
+    setStatusMessage("");
 
     try {
-      const response = await fetch(endpoint, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,22 +78,30 @@ export function ContactForm() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          whatsapp: formData.whatsapp || "Not provided",
+          whatsapp: formData.whatsapp,
           message: formData.message,
+          _gotcha: honeypot,
         }),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (!response.ok) {
+        setStatus("error");
+        setStatusMessage(data?.error || "Could not process inquiry. Please message via WhatsApp or email directly.");
+        return;
+      }
+
+      if (data.delivered) {
         setStatus("success");
         setFormData({ name: "", email: "", whatsapp: "", message: "" });
       } else {
-        const data = await response.json().catch(() => null);
-        setStatus("error");
-        setStatusMessage(data?.error || "Failed to send message. Please reach out via direct WhatsApp or email.");
+        // Direct dispatch hub
+        setStatus("dispatched");
       }
     } catch {
       setStatus("error");
-      setStatusMessage("Network error. Please use direct email or WhatsApp (+63 9912131795).");
+      setStatusMessage("Network connection issue. Please use direct email or WhatsApp (+63 9912131795).");
     }
   }
 
@@ -87,14 +121,15 @@ export function ContactForm() {
         </p>
       </div>
 
-      {status === "success" ? (
+      {/* Case 1: Automated Delivery Success */}
+      {status === "success" && (
         <div className="rounded-xl border border-emerald-200 bg-emerald-50/80 p-6 text-center space-y-3">
           <CheckCircle2 className="mx-auto h-8 w-8 text-emerald-600" />
           <h3 className="font-bold text-emerald-900">
             Message Sent Successfully!
           </h3>
-          <p className="text-xs text-emerald-700">
-            Thank you! I will review your requirements and respond promptly to your email.
+          <p className="text-xs text-emerald-700 max-w-md mx-auto leading-relaxed">
+            Thank you, {formData.name || "friend"}! Your inquiry has been received. I will review your requirements and respond promptly to your email.
           </p>
           <Button
             variant="outline"
@@ -105,7 +140,100 @@ export function ContactForm() {
             Send Another Inquiry
           </Button>
         </div>
-      ) : (
+      )}
+
+      {/* Case 2: Multi-Channel 1-Click Dispatch Hub */}
+      {status === "dispatched" && (
+        <div className="rounded-xl border border-[#ebdccb] bg-[#faf6f0] p-6 space-y-4">
+          <div className="flex items-start gap-3">
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 shrink-0 mt-0.5">
+              <CheckCircle2 className="h-4.5 w-4.5" />
+            </span>
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold text-stone-900">
+                Inquiry Formatted &amp; Ready to Dispatch
+              </h3>
+              <p className="text-xs text-stone-600 leading-relaxed">
+                Choose your preferred method to send your formatted inquiry directly to Dexter:
+              </p>
+            </div>
+          </div>
+
+          {/* Action Buttons Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            {/* WhatsApp Direct (with prefilled message) */}
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shadow-2xs group"
+            >
+              <span className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4" />
+                <span>Send via WhatsApp</span>
+              </span>
+              <ExternalLink className="h-3.5 w-3.5 opacity-80 group-hover:opacity-100 transition-opacity" />
+            </a>
+
+            {/* Gmail Web 1-Click (Works without native mail app) */}
+            <a
+              href={gmailWebLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-3 rounded-xl bg-[#8c532b] hover:bg-[#734320] text-white font-semibold text-xs transition-colors shadow-2xs group"
+            >
+              <span className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <span>Open in Gmail Web</span>
+              </span>
+              <ExternalLink className="h-3.5 w-3.5 opacity-80 group-hover:opacity-100 transition-opacity" />
+            </a>
+
+            {/* Copy Details to Clipboard */}
+            <button
+              type="button"
+              onClick={handleCopyDetails}
+              className="flex items-center justify-between p-3 rounded-xl bg-white hover:bg-stone-50 border border-[#ebdccb] text-stone-800 font-semibold text-xs transition-colors shadow-2xs cursor-pointer"
+            >
+              <span className="flex items-center gap-2">
+                {copied ? (
+                  <Check className="h-4 w-4 text-emerald-600" />
+                ) : (
+                  <Copy className="h-4 w-4 text-[#8c532b]" />
+                )}
+                <span>{copied ? "Inquiry Copied!" : "Copy Full Message"}</span>
+              </span>
+              <span className="text-[10px] font-mono text-stone-400">Clipboard</span>
+            </button>
+
+            {/* Default Mail Client (mailto) */}
+            <a
+              href={mailToLink}
+              className="flex items-center justify-between p-3 rounded-xl bg-white hover:bg-stone-50 border border-[#ebdccb] text-stone-800 font-semibold text-xs transition-colors shadow-2xs group"
+            >
+              <span className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-stone-600" />
+                <span>Default Mail App</span>
+              </span>
+              <ArrowRight className="h-3.5 w-3.5 text-stone-400 group-hover:text-stone-700 transition-colors" />
+            </a>
+          </div>
+
+          <div className="pt-2 flex items-center justify-between border-t border-[#ebdccb]/60 text-[11px] font-mono text-stone-500">
+            <span>Direct Email: balbuena.dexter.va@gmail.com</span>
+            <button
+              type="button"
+              onClick={() => setStatus("idle")}
+              className="text-[#8c532b] hover:underline font-semibold cursor-pointer"
+            >
+              Edit Form ↺
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Case 3: Interactive Input Form */}
+      {status !== "success" && status !== "dispatched" && (
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Honeypot field (hidden from genuine users, traps automated scrapers) */}
           <input
@@ -119,36 +247,9 @@ export function ContactForm() {
             aria-hidden="true"
           />
 
-          {status === "no-endpoint" && (
-            <div className="flex flex-col gap-2 rounded-xl bg-amber-500/10 p-3.5 text-xs text-amber-900 border border-amber-200/60">
-              <div className="flex items-start gap-2">
-                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-amber-700" />
-                <p className="leading-relaxed">
-                  Direct API endpoint is currently being finalized. You can send your inquiry directly via your email client or WhatsApp below:
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-2 pt-1 pl-6">
-                <a
-                  href={mailToLink}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-3.5 py-1.5 font-semibold text-white hover:bg-[#734320] transition-colors shadow-2xs"
-                >
-                  <Mail className="h-3.5 w-3.5" /> Send via Email Draft ↗
-                </a>
-                <a
-                  href="https://wa.me/639912131795"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3.5 py-1.5 font-semibold text-white hover:bg-emerald-700 transition-colors shadow-2xs"
-                >
-                  <MessageSquare className="h-3.5 w-3.5" /> Chat on WhatsApp ↗
-                </a>
-              </div>
-            </div>
-          )}
-
           {status === "error" && (
-            <div className="flex items-start gap-2 rounded-lg bg-red-500/10 p-3 text-xs text-red-800">
-              <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2 rounded-lg bg-red-500/10 p-3 text-xs text-red-800 border border-red-200">
+              <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-red-600" />
               <span>{statusMessage}</span>
             </div>
           )}
@@ -227,7 +328,7 @@ export function ContactForm() {
           >
             {status === "submitting" ? (
               <>
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Sending...
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Preparing Inquiry...
               </>
             ) : (
               <>
