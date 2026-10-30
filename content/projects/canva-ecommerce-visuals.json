@@ -1,28 +1,25 @@
 {
   "slug": "canva-ecommerce-visuals",
-  "title": "Canva Pro & Figma E-Commerce Visuals & Ad Creative Suite",
+  "title": "Commercial Ad Creatives & Social Visual Design Suite",
   "category": "graphic-design",
   "categories": ["graphic-design", "social-media", "ecommerce-research"],
-  "summary": "Multi-format commercial visual marketing suite engineered in Figma and Canva Pro, featuring high-converting 4:5 and 2:3 portrait ad creatives, exploded food infographics, and 3D kinetic product drops.",
-  "problem": "E-commerce brands and local restaurants struggle to stop feed scrolling and generate buyer clicks when relying on low-effort generic photos without clear visual hierarchy, ingredient callouts, and strategic price anchors.",
+  "summary": "A 9-piece commercial graphic design portfolio engineered in Figma and Canva Pro, spanning 3D kinetic product drops, deconstructed food infographics, luxury lifestyle ads, event posters, and editorial book illustration.",
+  "problem": "E-commerce brands, restaurants, and event organizers struggle to capture attention on crowded vertical social feeds when relying on plain product photos without clear visual hierarchy, price anchoring, and benefit callouts.",
   "whatIDid": [
-    "Engineered dynamic 3D kinetic e-commerce product ads (Volt Run X1) with neon speed-trail motion blur, electric magenta lighting, and friction-free 'Shop Now' call-to-actions.",
-    "Formulated 3-step ingredient callout infographics for food & beverage brands (Tala Coffee Co. & Stackhouse Burgers) breaking down premium layers to drive organic saves and shares.",
-    "Composed luxury tactile lifestyle compositions (Haven & Wick soy candles) balancing raw terracotta textures, scent profile notes, and burn-time specifications.",
-    "Illustrated high-concept editorial book covers (The Door in the Oak) using multi-plane papercut woodland vector layers with illuminated focal points.",
-    "Designed high-converting event and workshop marketing posters (Golden Hour Music Festival & Focus Lab Study Workshop) featuring nostalgic 70s typography, flatlay study arrangements, and scarcity-driven registration triggers."
+    "Designed high-impact 3D & promotional product ads (Volt Run X1 Kinetic Sneaker Drop & Stackhouse Double Trouble BOGO) using motion speed-trails, warm studio rim lighting, and clear price anchors (₱3,299 / ₱149) with direct 'Shop Now' CTAs.",
+    "Built deconstructed & ingredient callout infographics (Tala Coffee Co. 3-Step Cold Brew & Stackhouse 7-Layer Burger Breakdown) using numbered pointer lines to turn product specs into thumb-stopping educational visuals.",
+    "Crafted luxury lifestyle & editorial compositions (Haven & Wick Soy Candle, Ember & Co. Smokehouse Grill, and The Door in the Oak Book Cover) balancing tactile textures, serif typography, and multi-plane papercut illustration.",
+    "Created event & lead-generation marketing posters (Golden Hour Sunset Music Festival & Focus Lab 5-Day Study Workshop) combining retro 70s typography, flatlay desk photography, and urgency-driven ticket/seat reservation triggers."
   ],
-  "result": "Generated 24,300+ organic monthly impressions with $0 ad spend across active Pinterest affiliate channels and established standardized ad templates for rapid product launch turnaround.",
+  "result": "Delivered a versatile 9-piece commercial creative suite across 5 industries (Food & Beverage, Footwear, Home Lifestyle, Events, and Publishing), formatted in native 1080×1350 (4:5) and 1080×1620 (2:3) portrait ratios for high-CTR social campaigns.",
   "tools": [
     "Figma",
     "Canva Pro",
-    "Photoshop",
-    "Lightroom",
-    "Visual Search SEO",
-    "E-Commerce Ad Copywriting",
-    "Multi-Ratio Asset Batching",
-    "3D Lighting & Composition",
-    "Brand Kit Styling"
+    "Typography Hierarchy",
+    "Visual Composition",
+    "Ad Copy & Price Anchoring",
+    "Product Callout Infographics",
+    "Color Grading"
   ],
   "date": "2026-09-10",
   "featured": true,
@@ -33,58 +30,55 @@
       "type": "image",
       "url": "/images/designs/shoes-volt-run-kinetic.png",
       "alt": "Volt Run X1 Kinetic 3D Sneaker Social Ad Creative",
-      "caption": "Footwear & E-Commerce Drop (1080×1350px): 3D kinetic neon speed-trail visual engineered with price anchoring and conversion CTA."
+      "caption": "Volt Run X1 Sneaker Drop (1080×1350px): 3D kinetic neon speed-trail visual with ₱3,299 price anchoring and high-contrast 'Shop Now' CTA."
     },
     {
       "type": "image",
       "url": "/images/designs/coffee-tala-cold-brew.png",
       "alt": "Tala Coffee Co Slow Steeped Cold Brew Ingredient Callout Infographic",
-      "caption": "Cafe & Beverage Social Pin (1080×1350px): Aesthetic 3-step ingredient callout graphic designed for high viral re-shares and saves."
+      "caption": "Tala Coffee Co. Cold Brew (1080×1350px): Warm editorial 3-step ingredient callout infographic (hand-cracked ice, oat-milk swirl, 18-hour brew)."
     },
     {
       "type": "image",
       "url": "/images/designs/burger-stackhouse-double-trouble.png",
       "alt": "Stackhouse Burgers Double Trouble BOGO Weekend Ad Creative",
-      "caption": "Commercial Food Ad (1080×1350px): Appetite-inducing smash burger creative with studio rim lighting and weekend promo trigger."
+      "caption": "Stackhouse Burgers Promo (1080×1350px): Appetite-inducing double smash burger creative with studio steam lighting and ₱149 weekend BOGO badge."
     },
     {
       "type": "image",
       "url": "/images/designs/candle-haven-wick-luxury.png",
       "alt": "Haven and Wick Ember Fig Luxury Scented Candle Ad Creative",
-      "caption": "Home & Lifestyle Product (1080×1350px): Tactile terracotta split composition elevating artisanal brand perception."
+      "caption": "Haven & Wick Artisanal Candle (1080×1350px): Tactile terracotta split composition highlighting amber, cedar, and dried fig scent notes."
     },
     {
       "type": "image",
       "url": "/images/designs/book-cover-door-in-oak.png",
       "alt": "The Door in the Oak Fantasy Novel Papercut Forest Book Cover",
-      "caption": "Editorial & Publishing (1080×1620px): Intricate multi-layer papercut forest illustration for author Maren Alder."
+      "caption": "The Door in the Oak Book Cover (1080×1620px): Multi-layered papercut woodland illustration with illuminated doorway and gold foil framing."
     },
     {
       "type": "image",
       "url": "/images/designs/poster-golden-hour-fest.png",
       "alt": "Golden Hour Summer Sunset Music Festival Event Poster",
-      "caption": "Event & Festival Promotion (1080×1350px): Nostalgic 70s typography paired with sunset photography and ticket pricing tiers."
+      "caption": "Golden Hour Music Festival (1080×1350px): Retro 70s dimensional typography paired with sunset field photography and lineup hierarchy."
     },
     {
       "type": "image",
       "url": "/images/designs/burger-stackhouse-deconstructed.png",
       "alt": "Stackhouse Burgers 7 Layer Deconstructed Exploded Food Infographic",
-      "caption": "Product Breakdown (1080×1350px): Exploded 7-layer ingredient infographic highlighting artisanal freshness."
+      "caption": "Stackhouse 7-Layer Breakdown (1080×1350px): Deconstructed floating ingredient diagram from toasted butter bun to sesame crown."
     },
     {
       "type": "image",
       "url": "/images/designs/workshop-focus-lab-study.png",
       "alt": "Focus Lab Study Smart Free Workshop Lead Magnet Ad Creative",
-      "caption": "Education & Coaching Ad (1080×1350px): High-contrast flatlay study desk designed to drive free webinar seat reservations."
+      "caption": "Focus Lab Study Workshop (1080×1350px): High-contrast student productivity flatlay designed to drive free 5-day workshop registrations."
     },
     {
       "type": "image",
       "url": "/images/designs/burger-ember-editorial.png",
       "alt": "Ember and Co Smokehouse Stack Framed Editorial Burger Ad",
-      "caption": "Fine-Dining Editorial (1080×1350px): Gourmet crimson composition highlighting flame-grilled quality and fast delivery."
+      "caption": "Ember & Co. Smokehouse Stack (1080×1350px): Crimson fine-dining editorial frame showcasing flame-grilled patty and melted cheddar."
     }
-  ],
-  "links": {
-    "liveUrl": "https://ph.pinterest.com/cozynook_finds"
-  }
+  ]
 }

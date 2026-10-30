@@ -2,15 +2,16 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ProjectMediaGallery } from "@/components/work/ProjectMediaGallery";
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  CheckCircle2, 
+import {
+  ArrowLeft,
+  ExternalLink,
+  CheckCircle2,
   Download
 } from "lucide-react";
 
@@ -152,7 +153,7 @@ async function ProjectContent({ params }: ProjectPageProps) {
                 Action-Verb Deliverables
               </span>
             </div>
-            
+
             <ul className="space-y-3 text-sm text-stone-700">
               {project.whatIDid.map((step, idx) => (
                 <li key={idx} className="flex items-start gap-3">

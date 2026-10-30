@@ -65,8 +65,28 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                   >
                 <div>
                   {/* Visual Preview */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-stone-900 border-b border-stone-100">
-                    {previewImage ? (
+                  <div className="relative aspect-video w-full overflow-hidden bg-[#140e0a] border-b border-stone-100">
+                    {project.media.length >= 3 ? (
+                      <div className="grid grid-cols-3 gap-2 p-3 h-full w-full items-center bg-gradient-to-br from-[#1c130d] via-[#120d09] to-[#1c130d]">
+                        {project.media.slice(0, 3).map((item, mIdx) => (
+                          <div
+                            key={mIdx}
+                            className="relative h-full w-full rounded-lg overflow-hidden border border-white/15 shadow-md transition-transform duration-300 group-hover:scale-[1.03]"
+                          >
+                            <Image
+                              src={item.url}
+                              alt={item.alt}
+                              fill
+                              sizes="130px"
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
+                        <span className="absolute bottom-2.5 right-2.5 z-10 rounded-md bg-black/75 px-2 py-0.5 font-mono text-[10px] font-bold text-amber-200 backdrop-blur-xs border border-white/10">
+                          {project.media.length} Designs
+                        </span>
+                      </div>
+                    ) : previewImage ? (
                       <Image
                         src={previewImage.url}
                         alt={previewImage.alt}
@@ -79,7 +99,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                         Work Sample Preview
                       </div>
                     )}
-                    <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                    <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5">
                       <Badge variant="secondary" size="sm" className="bg-white/95 shadow-xs">
                         {CATEGORY_LABELS[project.category]}
                       </Badge>
