@@ -29,10 +29,10 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className="w-full py-10 md:py-14 bg-white">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-[#8c532b]" />

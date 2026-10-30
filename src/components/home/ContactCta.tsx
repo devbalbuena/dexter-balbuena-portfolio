@@ -7,7 +7,7 @@ import { Mail, ArrowRight, Clock, CheckCircle } from "lucide-react";
 
 export function ContactCta() {
   return (
-    <section className="w-full py-16 md:py-20 bg-white">
+    <section className="w-full py-10 md:py-14 bg-white">
       <Reveal className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-xl bg-[#7a4e2d] border border-[#945e35] text-white">
           <div className="max-w-2xl mx-auto space-y-5">

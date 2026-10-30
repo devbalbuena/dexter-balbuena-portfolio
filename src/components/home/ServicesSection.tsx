@@ -104,10 +104,10 @@ export function ServicesSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="w-full py-16 md:py-20 border-y border-[#e5d7c7] bg-[#f6efe6] text-stone-900">
+    <section className="w-full py-10 md:py-14 border-y border-[#e5d7c7] bg-[#f6efe6] text-stone-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-[#8c532b]" />

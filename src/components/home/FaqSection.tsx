@@ -52,7 +52,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="w-full py-12 md:py-16 bg-white border-b border-[#eee6dc]">
+    <section className="w-full py-10 md:py-12 bg-white border-b border-[#eee6dc]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Compact Header (Sticky on Desktop) */}

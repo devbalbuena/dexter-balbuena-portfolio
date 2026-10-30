@@ -21,7 +21,7 @@ export function HeroBento() {
   const hasPhoto = fs.existsSync(photoPath);
 
   return (
-    <section className="relative w-full pt-8 pb-4 md:pt-14 md:pb-6">
+    <section className="relative w-full pt-6 pb-2 md:pt-10 md:pb-3">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top 2-Column Hero: Headline + Proof Dock on Left, Clean Studio Portrait on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
@@ -142,7 +142,7 @@ export function HeroBento() {
         </div>
 
         {/* Tools Ribbon: Clean horizontal software badges right underneath Hero */}
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-6 sm:mt-8">
           <ToolsRibbon />
         </div>
       </div>
