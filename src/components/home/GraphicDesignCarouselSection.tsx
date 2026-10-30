@@ -51,7 +51,7 @@ export function GraphicDesignCarouselSection() {
   const activeLightboxItem = lightboxIndex !== null ? GRAPHIC_DESIGNS[lightboxIndex] : null;
 
   return (
-    <section className="w-full py-16 md:py-24 bg-[#faf6f0] border-t border-[#ebdccb]">
+    <section id="design-gallery" className="w-full py-16 md:py-24 bg-[#faf6f0] border-t border-[#ebdccb]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-8">
         {/* Section Header */}
         <Reveal>

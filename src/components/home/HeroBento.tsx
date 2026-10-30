@@ -17,10 +17,10 @@ export function HeroBento() {
   return (
     <section className="relative w-full pt-8 pb-4 md:pt-14 md:pb-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Top 2-Column Hero: Text on Left, Portrait on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        {/* Top 2-Column Hero: Text on Left, Portrait + Orbiting Proof Cards on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Positioning & Headline */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-6 space-y-5">
             <div className="inline-flex flex-wrap items-center gap-2">
               <Badge variant="success" size="md">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -31,16 +31,16 @@ export function HeroBento() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-stone-900 leading-[1.08]">
               E-Commerce &amp; Operations VA with <br className="hidden sm:inline" />
               <span className="text-shimmer inline-block">
                 Technical Precision.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-xl">
               Hi, I&apos;m <strong>Dexter E. Balbuena</strong>. I help e-commerce founders and busy store operators streamline 
-              product research, catalog listings, inventory tracking, and spreadsheet systems without babysitting.
+              product research, catalog listings, high-CTR ad creatives, and automated spreadsheet systems without babysitting.
             </p>
 
             {/* 2 CTA Buttons with Magnetic Spring Physics */}
@@ -61,8 +61,8 @@ export function HeroBento() {
             </div>
           </div>
 
-          {/* Right Column: Portrait Frame with Spotlight Glow */}
-          <div className="lg:col-span-5 flex justify-center">
+          {/* Right Column: Portrait Frame + 3 Orbiting Interactive Proof Cards */}
+          <div className="lg:col-span-6 flex justify-center">
             <HeroPortrait hasPhoto={hasPhoto} />
           </div>
         </div>

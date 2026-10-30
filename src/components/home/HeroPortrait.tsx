@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { TrendingUp, Zap, Palette, ArrowUpRight } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "motion/react";
 
 interface HeroPortraitProps {
@@ -13,24 +15,34 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = React.useState(false);
 
-  // Normalized mouse coordinates (-0.5 to 0.5) for 3D tilt
+  // Normalized mouse coordinates (-0.5 to 0.5) for 3D tilt & orbiting parallax
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
   // Spring physics for buttery-smooth tilt damping
-  const mouseXSpring = useSpring(x, { stiffness: 240, damping: 24 });
-  const mouseYSpring = useSpring(y, { stiffness: 240, damping: 24 });
+  const mouseXSpring = useSpring(x, { stiffness: 220, damping: 24 });
+  const mouseYSpring = useSpring(y, { stiffness: 220, damping: 24 });
 
-  // Option 1: 3D Tilt angles (Subtle, luxury depth)
-  const tiltAngle = 8;
+  // 3D Tilt angles for central portrait
+  const tiltAngle = 6;
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], [`${tiltAngle}deg`, `-${tiltAngle}deg`]);
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], [`-${tiltAngle}deg`, `${tiltAngle}deg`]);
 
-  // Option 3: Ambient spotlight spring tracking cursor movement
-  const glowX = useSpring(useTransform(x, [-0.5, 0.5], [-35, 35]), { stiffness: 140, damping: 20 });
-  const glowY = useSpring(useTransform(y, [-0.5, 0.5], [-35, 35]), { stiffness: 140, damping: 20 });
+  // Parallax offsets for the 3 orbiting proof cards
+  const orbit1X = useTransform(mouseXSpring, [-0.5, 0.5], [-10, 10]);
+  const orbit1Y = useTransform(mouseYSpring, [-0.5, 0.5], [-8, 8]);
 
-  // Option 1: Specular glass sheen horizontal sweep on cursor movement
+  const orbit2X = useTransform(mouseXSpring, [-0.5, 0.5], [12, -12]);
+  const orbit2Y = useTransform(mouseYSpring, [-0.5, 0.5], [8, -8]);
+
+  const orbit3X = useTransform(mouseXSpring, [-0.5, 0.5], [-14, 14]);
+  const orbit3Y = useTransform(mouseYSpring, [-0.5, 0.5], [10, -10]);
+
+  // Ambient spotlight spring tracking cursor movement
+  const glowX = useSpring(useTransform(x, [-0.5, 0.5], [-30, 30]), { stiffness: 140, damping: 20 });
+  const glowY = useSpring(useTransform(y, [-0.5, 0.5], [-30, 30]), { stiffness: 140, damping: 20 });
+
+  // Specular glass sheen horizontal sweep on cursor movement
   const sheenX = useTransform(mouseXSpring, [-0.5, 0.5], ["-60%", "60%"]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -60,110 +72,264 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ perspective: "1000px" }}
-      className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[380px] items-center justify-center cursor-default select-none"
+      style={{ perspective: "1100px" }}
+      className="relative mx-auto flex flex-col items-center justify-center w-full max-w-[440px] py-4 sm:py-6 select-none"
     >
-      {/* OPTION 3: Warm Ambient Halo Backlight (Breathing + Cursor-Lag Tracking) */}
+      {/* Warm Ambient Halo Backlight */}
       <motion.div
         style={shouldReduceMotion ? {} : { x: glowX, y: glowY }}
         animate={
           shouldReduceMotion
             ? {}
             : {
-                scale: [1, 1.08, 1],
-                opacity: isHovered ? [0.75, 0.95, 0.75] : [0.5, 0.7, 0.5],
+                scale: [1, 1.06, 1],
+                opacity: isHovered ? [0.8, 1, 0.8] : [0.55, 0.75, 0.55],
               }
         }
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -inset-6 sm:-inset-10 z-0 rounded-full bg-gradient-to-tr from-[#8c532b]/30 via-[#d4976a]/25 to-[#b87333]/20 blur-3xl"
+        className="pointer-events-none absolute -inset-4 sm:-inset-8 z-0 rounded-full bg-gradient-to-tr from-[#8c532b]/30 via-[#d4976a]/25 to-[#b87333]/20 blur-3xl"
         aria-hidden="true"
       />
 
-      {/* OPTION 3: Secondary Subtle Core Warmth Behind Cutout */}
-      <div
-        className="pointer-events-none absolute inset-2 z-0 rounded-3xl bg-[#d4976a]/15 blur-2xl"
-        aria-hidden="true"
-      />
+      {/* Central Portrait Studio Wrapper */}
+      <div className="relative flex items-center justify-center w-full">
+        {/* MAIN PORTRAIT CARD */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 14 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
+          style={
+            shouldReduceMotion
+              ? {}
+              : {
+                  rotateX,
+                  rotateY,
+                  transformStyle: "preserve-3d",
+                }
+          }
+          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="relative z-10 w-[265px] sm:w-[295px] aspect-[4/5] rounded-3xl p-[2.5px] bg-gradient-to-b from-[#8c532b] via-[#d4976a]/60 to-[#18120d] shadow-2xl transition-shadow duration-500 hover:shadow-[#8c532b]/25"
+        >
+          {/* Inner Studio Frame */}
+          <div className="relative h-full w-full overflow-hidden rounded-[22px] bg-gradient-to-b from-[#faf6f0] via-[#f5ede2] to-[#e8dacb]">
+            {/* Subtle Studio Ring & Warm Radial Backdrop Behind Portrait */}
+            <div
+              className="pointer-events-none absolute inset-0 bg-radial from-[#8c532b]/15 via-transparent to-transparent"
+              aria-hidden="true"
+            />
 
-      {/* OPTION 1 & 3: 3D Perspective Tilt Card with Luxury Gradient Ring Border */}
-      <motion.div
-        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 14 }}
-        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
-        style={
-          shouldReduceMotion
-            ? {}
-            : {
-                rotateX,
-                rotateY,
-                transformStyle: "preserve-3d",
-              }
-        }
-        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full aspect-[4/5] rounded-3xl p-[2.5px] bg-gradient-to-b from-[#8c532b]/45 via-[#d4976a]/30 to-[#8c532b]/20 shadow-xl transition-shadow duration-500 hover:shadow-2xl hover:shadow-[#8c532b]/15"
-      >
-        {/* Inner Card Container */}
-        <div className="relative h-full w-full overflow-hidden rounded-[22px] bg-gradient-to-b from-[#fdfbf9] to-[#f9f5ef]">
-          {hasPhoto ? (
-            <>
-              <Image
-                src="/images/portrait.png"
-                alt="Portrait of Dexter E. Balbuena"
-                fill
-                priority
-                sizes="(max-width: 768px) 320px, (max-width: 1200px) 360px, 380px"
-                className="object-cover object-top transition-transform duration-700 ease-out hover:scale-104"
-              />
+            {hasPhoto ? (
+              <>
+                <Image
+                  src="/images/portrait.png"
+                  alt="Portrait of Dexter E. Balbuena"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 265px, 295px"
+                  className="object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.03]"
+                />
 
-              {/* OPTION 3: Cinematic Bottom Vignette Gradient */}
-              <div
-                className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#18120d]/20 via-transparent to-transparent"
-                aria-hidden="true"
-              />
-
-              {/* OPTION 1: Interactive Specular Glare/Sheen on Hover Tilt */}
-              {!shouldReduceMotion && (
-                <motion.div
-                  style={{
-                    x: sheenX,
-                    opacity: isHovered ? 0.35 : 0,
-                    background:
-                      "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.4) 50%, transparent 65%)",
-                  }}
-                  className="pointer-events-none absolute -inset-full z-20 mix-blend-overlay transition-opacity duration-300"
+                {/* Cinematic Bottom Vignette + Operator Nameplate */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-28 z-10 bg-gradient-to-t from-[#18120d]/90 via-[#18120d]/45 to-transparent"
                   aria-hidden="true"
                 />
-              )}
-            </>
-          ) : (
-            /* Tidy styled placeholder when portrait.png is not yet uploaded */
-            <div className="flex h-full w-full flex-col items-center justify-between p-6 text-center">
-              <div className="w-full flex justify-end">
-                <span className="inline-flex items-center gap-1 rounded-md bg-stone-100 px-2 py-0.5 font-mono text-[10px] text-stone-600">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Verified Identity
-                </span>
-              </div>
 
-              <div className="space-y-3">
-                <div className="mx-auto flex h-24 w-24 sm:h-28 sm:w-28 items-center justify-center rounded-2xl bg-[#a86e3b] font-mono text-3xl sm:text-4xl font-extrabold text-white shadow-md">
-                  DB
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-stone-900">
-                    Dexter E. Balbuena
-                  </h3>
-                  <p className="text-xs font-mono text-stone-500">
-                    E-Commerce &amp; Admin VA
+                <div className="absolute inset-x-3 bottom-3 z-20 rounded-xl bg-[#18120d]/90 backdrop-blur-md border border-[#8c532b]/50 px-3.5 py-2 text-center shadow-lg">
+                  <p className="text-xs font-bold text-white tracking-tight">
+                    Dexter E. Balbuena <span className="text-[#d4976a] font-mono">• BSIT</span>
+                  </p>
+                  <p className="text-[10px] font-mono text-stone-300">
+                    E-Commerce &amp; Systems Operator
                   </p>
                 </div>
-              </div>
 
-              <div className="w-full rounded-lg border border-dashed border-[#e8ded3] bg-[#f9f6f2] p-2.5 text-[11px] font-mono text-stone-500">
-                [Photo placeholder: save as public/images/portrait.png]
+                {/* Interactive Specular Glare/Sheen on Hover Tilt */}
+                {!shouldReduceMotion && (
+                  <motion.div
+                    style={{
+                      x: sheenX,
+                      opacity: isHovered ? 0.3 : 0,
+                      background:
+                        "linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.45) 50%, transparent 65%)",
+                    }}
+                    className="pointer-events-none absolute -inset-full z-20 mix-blend-overlay transition-opacity duration-300"
+                    aria-hidden="true"
+                  />
+                )}
+              </>
+            ) : (
+              <div className="flex h-full w-full flex-col items-center justify-center p-6 text-center">
+                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-[#8c532b] font-mono text-3xl font-extrabold text-white shadow-md">
+                  DB
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.div>
+
+        {/* ORBITING CARD 1 (Top-Left): Live Pinterest Organic Growth Proof */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: -20, y: -10 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          style={shouldReduceMotion ? {} : { x: orbit1X, y: orbit1Y }}
+          className="hidden sm:block absolute -left-4 md:-left-8 top-3 z-20"
+        >
+          <Link
+            href="/work/amazon-pinterest-affiliate"
+            className="group/card block w-[190px] rounded-2xl bg-white/95 backdrop-blur-md border border-[#e8ded3] p-3 shadow-xl hover:border-[#8c532b] hover:shadow-2xl transition-all duration-300"
+          >
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                <TrendingUp className="h-4.5 w-4.5" />
+              </span>
+              <div className="min-w-0">
+                <span className="block font-mono text-[9.5px] font-bold uppercase tracking-wider text-emerald-700">
+                  Organic Traffic
+                </span>
+                <span className="block text-base font-extrabold text-stone-900 leading-tight">
+                  24.3K+ Views
+                </span>
               </div>
             </div>
-          )}
-        </div>
-      </motion.div>
+            <div className="mt-2 pt-1.5 border-t border-stone-100 flex items-center justify-between text-[10px] font-mono text-stone-500 group-hover/card:text-[#8c532b] transition-colors">
+              <span>Pinterest SEO • $0 Ads</span>
+              <ArrowUpRight className="h-3 w-3 shrink-0" />
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* ORBITING CARD 2 (Bottom-Left): Fanned 3-Poster Figma Ad Creative Stack */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: -24, y: 12 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          style={shouldReduceMotion ? {} : { x: orbit2X, y: orbit2Y }}
+          className="hidden sm:block absolute -left-6 md:-left-10 bottom-5 z-20"
+        >
+          <Link
+            href="/#design-gallery"
+            className="group/ad block w-[210px] rounded-2xl bg-[#18120d]/95 backdrop-blur-md border border-[#8c532b]/80 p-3 shadow-2xl hover:border-amber-400 transition-all duration-300"
+          >
+            <div className="flex items-center gap-3">
+              {/* Miniature 3-Poster Fan */}
+              <div className="relative flex items-center justify-center w-[88px] h-[54px] shrink-0">
+                <div className="absolute left-0 w-9 h-12 rounded-md overflow-hidden border border-white/20 shadow-md -rotate-10 group-hover/ad:-rotate-16 group-hover/ad:-translate-x-1 transition-transform duration-300">
+                  <Image
+                    src="/images/designs/shoes-volt-run-kinetic.png"
+                    alt="Volt Run Sneaker Ad"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative z-10 w-9 h-12 rounded-md overflow-hidden border border-white/30 shadow-lg group-hover/ad:-translate-y-1 transition-transform duration-300">
+                  <Image
+                    src="/images/designs/burger-stackhouse-double-trouble.png"
+                    alt="Stackhouse Burger Ad"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute right-0 w-9 h-12 rounded-md overflow-hidden border border-white/20 shadow-md rotate-10 group-hover/ad:rotate-16 group-hover/ad:translate-x-1 transition-transform duration-300">
+                  <Image
+                    src="/images/designs/coffee-tala-cold-brew.png"
+                    alt="Tala Coffee Ad"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="min-w-0">
+                <span className="block font-mono text-[9.5px] font-bold uppercase tracking-wider text-amber-400">
+                  Figma &amp; Canva
+                </span>
+                <span className="block text-sm font-extrabold text-white leading-tight">
+                  9 Ad Suites
+                </span>
+                <span className="block text-[10px] font-mono text-stone-300 mt-0.5">
+                  4:5 &amp; 2:3 Visuals
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-2.5 rounded-lg bg-[#2a1f16] px-2.5 py-1 flex items-center justify-between text-[10px] font-mono text-amber-200 group-hover/ad:bg-[#8c532b] group-hover/ad:text-white transition-colors">
+              <span className="inline-flex items-center gap-1">
+                <Palette className="h-3 w-3" /> Inspect Designs
+              </span>
+              <span>→</span>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* ORBITING CARD 3 (Right): Automated Excel & ERP Systems Proof */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: 24, y: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          style={shouldReduceMotion ? {} : { x: orbit3X, y: orbit3Y }}
+          className="hidden sm:block absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 z-20"
+        >
+          <Link
+            href="/work"
+            className="group/sys block w-[185px] rounded-2xl bg-white/95 backdrop-blur-md border border-[#e8ded3] p-3 shadow-xl hover:border-[#8c532b] hover:shadow-2xl transition-all duration-300"
+          >
+            <div className="inline-flex items-center gap-1 rounded-md bg-[#faf5ee] border border-[#ebdccb] px-2 py-0.5 text-[9.5px] font-mono font-bold text-[#8c532b]">
+              <Zap className="h-3 w-3" /> AUTOMATED SYSTEMS
+            </div>
+            <p className="mt-1.5 text-sm font-extrabold text-stone-900 leading-snug">
+              6 Excel Workbooks
+            </p>
+            <p className="text-[11px] font-medium text-stone-600">
+              + Next.js Retail ERP
+            </p>
+            <div className="mt-2 pt-1.5 border-t border-stone-100 flex items-center justify-between text-[10px] font-mono font-bold text-emerald-700 group-hover/sys:text-[#8c532b] transition-colors">
+              <span>Explore .XLSX &amp; ERP</span>
+              <ArrowUpRight className="h-3 w-3 shrink-0" />
+            </div>
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Mobile Compact Proof Strip (Visible only on < sm screens so cards never clip on small phones) */}
+      <div className="grid grid-cols-3 gap-2 w-full mt-4 sm:hidden">
+        <Link
+          href="/work/amazon-pinterest-affiliate"
+          className="rounded-xl bg-white border border-[#e8ded3] p-2.5 text-center shadow-xs"
+        >
+          <span className="block font-mono text-[9px] font-bold text-emerald-700 uppercase">
+            Pinterest SEO
+          </span>
+          <span className="block text-xs font-extrabold text-stone-900 mt-0.5">
+            24.3K+ Views
+          </span>
+        </Link>
+        <Link
+          href="/#design-gallery"
+          className="rounded-xl bg-[#18120d] border border-[#8c532b] p-2.5 text-center shadow-xs"
+        >
+          <span className="block font-mono text-[9px] font-bold text-amber-400 uppercase">
+            Figma &amp; Canva
+          </span>
+          <span className="block text-xs font-extrabold text-white mt-0.5">
+            9 Ad Suites
+          </span>
+        </Link>
+        <Link
+          href="/work"
+          className="rounded-xl bg-white border border-[#e8ded3] p-2.5 text-center shadow-xs"
+        >
+          <span className="block font-mono text-[9px] font-bold text-[#8c532b] uppercase">
+            Operations
+          </span>
+          <span className="block text-xs font-extrabold text-stone-900 mt-0.5">
+            6 .XLSX + ERP
+          </span>
+        </Link>
+      </div>
     </div>
   );
 }
