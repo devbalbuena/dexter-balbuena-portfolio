@@ -1,6 +1,7 @@
 import { getFeaturedProjects, getAllCertificates } from "@/lib/content";
 import { HeroBento } from "@/components/home/HeroBento";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
+import { GraphicDesignCarouselSection } from "@/components/home/GraphicDesignCarouselSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { LogisticsBackground } from "@/components/home/LogisticsBackground";
 import { FaqSection } from "@/components/home/FaqSection";
@@ -17,19 +18,22 @@ export default async function Home() {
       {/* 1. HERO SECTION (Who you are + Tagline + Photo + CTA) & SYSTEMS RIBBON */}
       <HeroBento />
 
-      {/* 2. PROOF OF WORK SHOWCASE (Moved UP! Clickable case studies with screenshots) */}
+      {/* 2. PROOF OF WORK SHOWCASE (Clickable case studies with screenshots) */}
       <FeaturedWork projects={featuredProjects} />
 
-      {/* 3. CORE SERVICES GRID (E-Commerce, Executive Admin, Spreadsheet Systems) */}
+      {/* 3. VISUAL DESIGN & AD CREATIVES CAROUSEL (Canva & Figma E-Commerce Assets) */}
+      <GraphicDesignCarouselSection />
+
+      {/* 4. CORE SERVICES GRID (E-Commerce, Executive Admin, Spreadsheet Systems) */}
       <ServicesSection />
 
-      {/* 4. LOGISTICS & BACKGROUND (Timezones Overlap, Certifications with Image Modal, BSIT Advantage) */}
+      {/* 5. LOGISTICS & BACKGROUND (Timezones Overlap, Certifications with Image Modal, BSIT Advantage) */}
       <LogisticsBackground certificates={certificates} />
 
-      {/* 5. HIGH-TRUST FAQ (Short questions on onboarding, security, and trial tasks) */}
+      {/* 6. HIGH-TRUST FAQ (Short questions on onboarding, security, and trial tasks) */}
       <FaqSection />
 
-      {/* 6. CONVERSION CTA (Button to contact form / direct email) */}
+      {/* 7. CONVERSION CTA (Button to contact form / direct email) */}
       <ContactCta />
     </div>
   );
