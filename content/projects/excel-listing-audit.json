@@ -11,7 +11,6 @@
     "Configured soft conditional formatting badges and actionable next-step recommendations to streamline copy and asset revisions."
   ],
   "result": "Created a systematic QA workflow that replaces manual ad-hoc checks, immediately prioritizing high-risk SKUs and ensuring zero listings go live with missing critical data.",
-  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to illustrate catalog quality control and logic automation]",
   "tools": [
     "Microsoft Excel",
     "Nested IF / COUNTIF",

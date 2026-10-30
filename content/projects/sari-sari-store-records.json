@@ -10,8 +10,7 @@
     "Formulated dynamic restock alerts (=IF(Ending_Stock<=5, \"RESTOCK\", \"Adequate\")) with automated soft red and emerald badge indicators.",
     "Constructed a structured customer credit (utang) reconciliation log tracking original credit amounts, partial settlements, and outstanding receivables balances (=Credit - Paid)."
   ],
-  "result": "Digitized daily micro-retail store tracking from paper notebooks into a structured, formula-automated Excel ledger, eliminating credit discrepancy errors and accelerating daily cash reconciliation [REAL FAMILY BUSINESS WORK SAMPLE].",
-  "resultPlaceholder": "[REAL FAMILY BUSINESS DELIVERABLE: Built and deployed to manage daily sales, wholesale margins, and credit logs for a family-owned neighborhood retail store]",
+  "result": "Digitized daily micro-retail store tracking from paper notebooks into a structured, formula-automated Excel ledger, eliminating credit discrepancy errors and accelerating daily cash reconciliation.",
   "tools": [
     "Microsoft Excel",
     "Micro-Retail Bookkeeping",

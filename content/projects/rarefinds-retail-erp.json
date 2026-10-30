@@ -15,7 +15,6 @@
     "Delivered operational utilities including print-ready official invoices, packing slips with holographic certificate disclosures, and formula-injection-sanitized CSV exports for bookkeeping."
   ],
   "result": "Engineered zero double-selling risks on 1-of-1 inventory, 100% auditable chain of custody, cryptographic dispute-proof delivery verification, and automated margin bookkeeping across multi-channel retail operations.",
-  "resultPlaceholder": "[ENTERPRISE FULL-STACK ARCHITECTURE: Production-grade Next.js 16 + Prisma/PostgreSQL ERP deployed for luxury retail & consignment operations]",
   "tools": [
     "Next.js 16 (App Router)",
     "TypeScript (Strict Mode)",

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project, ProjectCategory, CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
-import { ArrowRight, ExternalLink, AlertCircle, FolderGit2, Download, Palette, Sparkles } from "lucide-react";
+import { ArrowRight, ExternalLink, FolderGit2, Download, Palette } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { TiltCard } from "@/components/ui/TiltCard";
@@ -217,13 +217,24 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
                         {project.summary}
                       </p>
 
-                      <div className="rounded-lg bg-[#f9f6f2] border border-[#eee6dc] p-2.5 text-xs">
-                        <span className="font-semibold text-stone-900 block mb-0.5">
-                          Problem &amp; Approach:
-                        </span>
-                        <p className="text-stone-600 line-clamp-2 text-[11px]">
-                          {project.problem}
-                        </p>
+                      {/* Problem & Approach Impact Box */}
+                      <div className="rounded-xl bg-[#f9f6f2] border border-[#eee6dc] p-3.5 text-xs space-y-2.5">
+                        <div>
+                          <span className="font-semibold text-stone-900 block mb-0.5">
+                            Problem:
+                          </span>
+                          <p className="text-stone-600 leading-relaxed line-clamp-2 text-[11.5px]">
+                            {project.problem}
+                          </p>
+                        </div>
+                        <div className="pt-2 border-t border-[#e8ded3]/70">
+                          <span className="font-semibold text-[#8c532b] block mb-0.5">
+                            Approach:
+                          </span>
+                          <p className="text-stone-700 leading-relaxed line-clamp-2 text-[11.5px]">
+                            {project.whatIDid[0]}
+                          </p>
+                        </div>
                       </div>
 
                       {/* Tool tags */}
@@ -247,13 +258,6 @@ export function WorkFilterHub({ projects }: WorkFilterHubProps) {
 
                   {/* Card bottom */}
                   <div className="p-5 pt-0">
-                    {project.resultPlaceholder && (
-                      <div className="mb-3 flex items-start gap-1.5 rounded-md bg-amber-500/10 p-2 text-[11px] text-amber-800">
-                        <AlertCircle className="h-3.5 w-3.5 shrink-0 mt-0.5" />
-                        <span className="line-clamp-2">{project.resultPlaceholder}</span>
-                      </div>
-                    )}
-
                     <div className="flex items-center justify-between border-t border-stone-100 pt-3">
                       <Link
                         href={`/work/${project.slug}`}

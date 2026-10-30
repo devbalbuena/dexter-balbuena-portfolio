@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";
@@ -12,7 +11,6 @@ import {
   ArrowLeft, 
   ExternalLink, 
   CheckCircle2, 
-  AlertCircle,
   Download
 } from "lucide-react";
 
@@ -179,12 +177,6 @@ async function ProjectContent({ params }: ProjectPageProps) {
               <p className="text-base sm:text-lg font-bold text-stone-900 leading-snug">
                 {project.result}
               </p>
-            )}
-            {project.resultPlaceholder && (
-              <div className="flex items-start gap-2 rounded-lg bg-amber-500/10 border border-amber-200/80 p-3 text-xs text-amber-900 font-mono">
-                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-amber-700" />
-                <span>{project.resultPlaceholder}</span>
-              </div>
             )}
           </div>
         </div>

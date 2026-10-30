@@ -11,12 +11,11 @@ import {
   Pause, 
   CheckCircle2, 
   ArrowRight,
-  Sparkles,
   Layers
 } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Badge } from "@/components/ui/Badge";
-import { GRAPHIC_DESIGNS, GraphicDesignItem } from "@/data/graphicDesigns";
+import { GRAPHIC_DESIGNS } from "@/data/graphicDesigns";
 import { LightboxModal } from "@/components/ui/LightboxModal";
 import { cn } from "@/lib/utils";
 

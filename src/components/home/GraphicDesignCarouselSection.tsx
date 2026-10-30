@@ -14,7 +14,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { GRAPHIC_DESIGNS, GraphicDesignItem } from "@/data/graphicDesigns";
+import { GRAPHIC_DESIGNS } from "@/data/graphicDesigns";
 import { LightboxModal } from "@/components/ui/LightboxModal";
 import { Reveal } from "@/components/ui/Reveal";
 

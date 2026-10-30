@@ -11,7 +11,6 @@
     "Engineered complex conditional follow-up triggers (=IF(OR(Payment=\"Pending\", Fulfillment=\"On Hold\", AND(Fulfillment=\"Processing\", Days>=2)), \"FOLLOW UP\", \"No immediate action\")) to highlight SLA breaches."
   ],
   "result": "Centralized cross-channel order monitoring into a high-visibility queue, pinpointing stalled orders within 48 hours and expediting operational handoffs to logistics teams.",
-  "resultPlaceholder": "[SELF-INITIATED DEMONSTRATION WORKBOOK: Built with sanitized mock data to illustrate fulfillment pipeline monitoring and SLA escalation triggers]",
   "tools": [
     "Microsoft Excel",
     "Date & Aging Logic",

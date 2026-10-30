@@ -141,6 +141,7 @@ export function ProjectMediaGallery({ media, title }: ProjectMediaGalleryProps) 
                   src={item.url}
                   alt={item.alt}
                   fill
+                  sizes="96px"
                   className="object-cover"
                 />
               </button>
