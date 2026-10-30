@@ -1,0 +1,71 @@
+{
+  "slug": "canva-ecommerce-visuals",
+  "title": "Canva Pro & Figma E-Commerce Visuals & Ad Creative Suite",
+  "category": "graphic-design",
+  "categories": ["graphic-design", "social-media", "ecommerce-research"],
+  "summary": "Multi-format visual marketing suite engineered in Canva Pro and Figma, featuring 2:3 high-CTR Pinterest pins, 1:1 Instagram promotional ads, and 16:9 Shopify storefront hero banners.",
+  "problem": "E-commerce stores and affiliate marketers fail to capture consumer purchase intent when relying on generic supplier product photos without clear typography hooks, benefit callouts, and platform-optimized aspect ratios.",
+  "whatIDid": [
+    "Conceptualized and batch-designed 2:3 vertical pins (1000×1500px) structured with curiosity-inducing headline typography, price strike-throughs, and verified benefit overlays for the @cozynook_finds channel.",
+    "Engineered 1:1 square social media ad creatives (1080×1080px) tailored for high-ticket consignment drops with luxury obsidian-gold contrast and security verification badges.",
+    "Constructed 16:9 responsive storefront hero banners (1920×1080px) establishing brand authority through social proof callouts, clear primary CTAs, and 3D product card elevation.",
+    "Formulated educational multi-slide comparison carousels designed to increase consumer retention and overcome buyer hesitation through side-by-side spec breakdowns.",
+    "Established repeatable brand design kits, consistent typography hierarchies, and compliant commercial color palettes across Pinterest, Instagram, and Shopify channels."
+  ],
+  "result": "Generated 24,300+ organic monthly impressions with $0 ad spend across active Pinterest affiliate channels and established standardized ad templates for rapid product launch turnaround [REAL ACTIVE BRAND ASSETS].",
+  "resultPlaceholder": "[VERIFIED ACTIVE CREATIVE ASSETS: Production visual creatives powering live Amazon affiliate discovery and e-commerce campaigns]",
+  "tools": [
+    "Canva Pro",
+    "Figma",
+    "Visual Search SEO",
+    "E-Commerce Ad Copywriting",
+    "Multi-Ratio Asset Batching",
+    "Pinterest Business",
+    "Brand Kit Styling"
+  ],
+  "date": "2026-09-10",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": false,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/designs/pin-desk-essentials.svg",
+      "alt": "5 Aesthetic Desk Essentials Under $50 Vertical Pinterest Pin",
+      "caption": "2:3 Vertical Pinterest Pin (1000×1500px): Designed with clear benefit badges and price anchors to maximize organic click-through rates."
+    },
+    {
+      "type": "image",
+      "url": "/images/designs/ad-flash-sale-square.svg",
+      "alt": "RareFinds Luxury 1-of-1 Consignment Instagram Ad Creative",
+      "caption": "1:1 Square Ad Creative (1080×1080px): High-ticket consignment drop format emphasizing authenticity tagging and cryptographic handover security."
+    },
+    {
+      "type": "image",
+      "url": "/images/designs/banner-shopify-collection.svg",
+      "alt": "Autumn Curated Workspaces Shopify Hero Storefront Banner",
+      "caption": "16:9 E-Commerce Storefront Banner (1920×1080px): Autumn workspace collection banner with social proof badges, star ratings, and primary CTA buttons."
+    },
+    {
+      "type": "image",
+      "url": "/images/designs/pin-aesthetic-tech.svg",
+      "alt": "Clean Desk Tech Viral 2:3 Vertical Pinterest Pin",
+      "caption": "2:3 Curated Tech Pin: High-velocity pin designed for algorithmic re-pins and affiliate Amazon referral traffic."
+    },
+    {
+      "type": "image",
+      "url": "/images/designs/carousel-product-breakdown.svg",
+      "alt": "Ergonomic Chair vs Traditional Foam Product Comparison Carousel Slide",
+      "caption": "1:1 Educational Comparison Slide: Side-by-side pain point vs solution layout engineered for high LinkedIn and Instagram retention."
+    },
+    {
+      "type": "image",
+      "url": "/images/designs/banner-luxury-consignment.svg",
+      "alt": "RareFinds 16:9 Brand Authority and Operational Storefront Header",
+      "caption": "16:9 Brand Authority Storefront Header: Enterprise trust banner highlighting 3 core operational guarantees."
+    }
+  ],
+  "links": {
+    "liveUrl": "https://ph.pinterest.com/cozynook_finds"
+  }
+}
