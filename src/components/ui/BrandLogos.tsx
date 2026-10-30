@@ -31,6 +31,29 @@ export function ExcelLogo({ size = 28, className, ...props }: LogoProps) {
   );
 }
 
+export function AccessLogo({ size = 28, className, ...props }: LogoProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+      aria-label="Microsoft Access Logo"
+    >
+      <rect x="6" y="5" width="20" height="22" rx="3" fill="#a4373a" />
+      <rect x="18" y="9" width="8" height="14" rx="2" fill="#c43e1c" opacity="0.6" />
+      <rect x="2" y="8" width="16" height="16" rx="2" fill="#ba141a" />
+      <path
+        d="M10 11.5L6.8 20.5H8.6L9.3 18.5H12.7L13.4 20.5H15.2L12 11.5H10ZM9.8 17.1L11 13.5L12.2 17.1H9.8Z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
 export function GoogleSheetsLogo({ size = 28, className, ...props }: LogoProps) {
   return (
     <svg

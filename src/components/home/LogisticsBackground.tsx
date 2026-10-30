@@ -144,7 +144,7 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
 
               {/* Certificate Quick List with Quick-Glimpse Hover Card */}
               <div className="space-y-2 pt-1 relative">
-                {certificates.slice(0, 4).map((cert, cIdx) => (
+                {certificates.slice(0, 5).map((cert, cIdx) => (
                   <div
                     key={cIdx}
                     className="relative"

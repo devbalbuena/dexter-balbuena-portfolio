@@ -44,16 +44,16 @@ const SERVICES = [
   },
   {
     icon: FileSpreadsheet,
-    badge: "MOS Certified",
+    badge: "MOS Expert",
     badgeVariant: "success" as const,
-    title: "Advanced Excel & Google Sheets",
+    title: "Advanced Excel & Database Systems",
     description:
-      "Certified formula wizardry transforming messy records into self-updating operational hubs.",
+      "Certified formula wizardry and relational database architecture transforming messy records into self-updating hubs.",
     deliverables: [
       "Dynamic formulas (XLOOKUP, LET, INDEX/MATCH)",
-      "Daily cash balance & sales ledger workbooks",
+      "Relational Access databases & structured SQL",
       "Automated low-inventory warning triggers",
-      "Data cleanup, validation & pivot modeling",
+      "Daily cash balance & sales ledger workbooks",
     ],
   },
   {

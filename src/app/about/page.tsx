@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { 
   ExcelLogo, 
+  AccessLogo,
   GoogleSheetsLogo, 
   ShopifyLogo, 
   AmazonLogo, 
@@ -56,21 +57,23 @@ const TOOLS_CATEGORIES: ToolCategory[] = [
   { 
     title: "Spreadsheets & Data Systems",
     subtitle: "Advanced formula modeling, inventory tracking & cash balance ledgers",
-    badge: "MOS Certified",
+    badge: "MOS Expert",
     badgeVariant: "success",
     icon: FileSpreadsheet,
     iconBg: "bg-emerald-50 border-emerald-200",
     iconColor: "text-emerald-700",
     platforms: [
       { name: "Microsoft Excel", tag: "MOS Associate", logo: ExcelLogo },
+      { name: "Microsoft Access", tag: "MOS Expert", logo: AccessLogo },
       { name: "Google Sheets", tag: "Cloud Live", logo: GoogleSheetsLogo },
     ],
     capabilities: [
       "Dynamic Formulas (XLOOKUP, LET, INDEX/MATCH)",
+      "Relational Database Architecture & SQL Queries",
       "Automated Reorder Velocity & Stock Triggers",
       "Daily Sales, Credit & Cashflow Ledgers",
       "Pivot Tables & Executive Summary Modeling",
-      "Data Validation, Dropdowns & Schema Design",
+      "Data Validation, Normalization & Schema Design",
       "Margin, Markup & Supplier Cost Calculations",
     ],
   },
@@ -341,7 +344,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="pt-3 border-t border-stone-100 text-[11px] font-mono text-stone-500">
-              MOS Excel • Next.js • Canva Pro
+              MOS Excel &amp; Access Expert • Next.js • Canva Pro
             </div>
           </div>
         </div>

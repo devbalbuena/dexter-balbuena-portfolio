@@ -1,0 +1,18 @@
+{
+  "name": "Microsoft Office Specialist: Microsoft Access Expert (Office 2019)",
+  "issuer": "Microsoft",
+  "issued": "2026-10-28",
+  "expires": "2031-10-28",
+  "credentialId": "53ba884d-9939-48ba-abfe-e5c887ee05ac",
+  "credentialUrl": "https://www.credly.com/badges/53ba884d-9939-48ba-abfe-e5c887ee05ac",
+  "skills": [
+    "Database Design",
+    "Database Relationships",
+    "Advanced Queries & SQL",
+    "Interactive Forms & Reports",
+    "Relational Data Modeling",
+    "Access Table Architecture"
+  ],
+  "isVerified": true,
+  "certificateImage": "/images/certificates/mos-access-expert.jpg"
+}
