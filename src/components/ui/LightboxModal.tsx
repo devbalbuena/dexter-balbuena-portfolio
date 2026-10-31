@@ -158,9 +158,9 @@ export function LightboxModal({
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
             onClick={(e) => e.stopPropagation()}
-            className="relative flex flex-col items-center justify-center max-w-5xl max-h-[82vh] w-full"
+            className="relative flex flex-col items-center justify-center max-w-5xl max-h-[86vh] w-full"
           >
-            <div className="relative w-full h-[62vh] sm:h-[68vh] flex items-center justify-center">
+            <div className="relative w-full h-[72vh] sm:h-[78vh] flex items-center justify-center">
               <Image
                 src={item.imageUrl}
                 alt={item.alt}
@@ -170,32 +170,6 @@ export function LightboxModal({
                 className="object-contain"
               />
             </div>
-
-            {/* Bottom Caption Pill */}
-            {(item.dimensions || item.tool || item.resultMetric) && (
-              <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 py-2 rounded-xl bg-stone-900/80 border border-stone-800 text-xs font-mono text-stone-300">
-                {item.format && (
-                  <span className="text-[#d4976a] font-bold">
-                    {item.format}
-                  </span>
-                )}
-                {item.dimensions && (
-                  <span className="text-stone-400">
-                    {item.dimensions}
-                  </span>
-                )}
-                {item.tool && (
-                  <span className="text-stone-400">
-                    Built with {item.tool}
-                  </span>
-                )}
-                {item.resultMetric && (
-                  <span className="text-emerald-400 font-semibold">
-                    {item.resultMetric}
-                  </span>
-                )}
-              </div>
-            )}
           </motion.div>
         </motion.div>
       )}
