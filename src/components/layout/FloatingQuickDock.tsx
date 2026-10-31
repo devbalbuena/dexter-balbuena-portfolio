@@ -12,10 +12,12 @@ import {
   X, 
   ChevronUp
 } from "lucide-react";
+import { useToast } from "@/components/ui/Toast";
 
 const emptySubscribe = () => () => {};
 
 export function FloatingQuickDock() {
+  const toast = useToast();
   const shouldReduceMotion = useReducedMotion();
   const mounted = React.useSyncExternalStore(
     emptySubscribe,
@@ -29,9 +31,10 @@ export function FloatingQuickDock() {
     try {
       await navigator.clipboard.writeText("balbuena.dexter.va@gmail.com");
       setCopied(true);
+      toast.copied("Email address copied!", "balbuena.dexter.va@gmail.com");
       setTimeout(() => setCopied(false), 2600);
     } catch {
-      // Fallback
+      toast.error("Failed to copy", "Please manually copy: balbuena.dexter.va@gmail.com");
     }
   };
 

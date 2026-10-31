@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/Button";
+import { useToast } from "@/components/ui/Toast";
 import { 
   Send, 
   CheckCircle2, 
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 
 export function ContactForm() {
+  const toast = useToast();
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -50,9 +52,10 @@ export function ContactForm() {
     try {
       await navigator.clipboard.writeText(formattedSummary);
       setCopied(true);
+      toast.copied("Inquiry details copied!", "Summary ready to paste into any messaging app.");
       setTimeout(() => setCopied(false), 2400);
     } catch {
-      // Fallback
+      toast.error("Failed to copy", "Please select and copy the text manually.");
     }
   };
 
@@ -62,6 +65,7 @@ export function ContactForm() {
     // Anti-spam honeypot check
     if (honeypot) {
       setStatus("success");
+      toast.success("Inquiry sent successfully!", "Dexter will review and reply within a few hours.");
       return;
     }
 
@@ -88,20 +92,26 @@ export function ContactForm() {
 
       if (!response.ok) {
         setStatus("error");
-        setStatusMessage(data?.error || "Could not process inquiry. Please message via WhatsApp or email directly.");
+        const errMsg = data?.error || "Could not process inquiry. Please message via WhatsApp or email directly.";
+        setStatusMessage(errMsg);
+        toast.error("Submission failed", errMsg);
         return;
       }
 
       if (data.delivered) {
         setStatus("success");
         setFormData({ name: "", email: "", whatsapp: "", message: "" });
+        toast.success("Inquiry sent successfully!", "Dexter will review and reply within a few hours.");
       } else {
         // Direct dispatch hub
         setStatus("dispatched");
+        toast.info("Inquiry ready to dispatch!", "Choose your preferred channel below (Gmail or WhatsApp).");
       }
     } catch {
+      const errMsg = "Network connection issue. Please use direct email or WhatsApp (+63 9912131795).";
       setStatus("error");
-      setStatusMessage("Network connection issue. Please use direct email or WhatsApp (+63 9912131795).");
+      setStatusMessage(errMsg);
+      toast.error("Network issue", errMsg);
     }
   }
 

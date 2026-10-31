@@ -12,9 +12,11 @@ import {
   Building2, 
   CheckCircle, 
   FileCheck, 
-  Maximize2 
+  Maximize2,
+  Copy
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { useToast } from "@/components/ui/Toast";
 
 interface CertificateModalProps {
   certificate: Certificate | null;
@@ -22,7 +24,28 @@ interface CertificateModalProps {
 }
 
 export function CertificateModal({ certificate, onClose }: CertificateModalProps) {
+  const toast = useToast();
   const [imageError, setImageError] = React.useState(false);
+
+  const handleCopyCredentialId = async () => {
+    if (!certificate?.credentialId) return;
+    try {
+      await navigator.clipboard.writeText(certificate.credentialId);
+      toast.copied("Credential ID copied!", certificate.credentialId);
+    } catch {
+      toast.error("Failed to copy", certificate.credentialId);
+    }
+  };
+
+  const handleCopyVerifyUrl = async () => {
+    if (!certificate?.credentialUrl) return;
+    try {
+      await navigator.clipboard.writeText(certificate.credentialUrl);
+      toast.copied("Verification URL copied to clipboard!", certificate.name);
+    } catch {
+      toast.error("Failed to copy link");
+    }
+  };
 
   const [prevCert, setPrevCert] = React.useState(certificate);
   if (certificate !== prevCert) {
@@ -117,13 +140,21 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
                 {certificate.name}
               </h2>
 
-              <div className="flex items-center gap-2 text-xs font-medium text-stone-600">
-                <Building2 className="h-3.5 w-3.5 text-[#8c532b]" />
-                <span>Issuer: <strong>{certificate.issuer}</strong></span>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-stone-600">
+                <span className="flex items-center gap-1.5">
+                  <Building2 className="h-3.5 w-3.5 text-[#8c532b]" />
+                  <span>Issuer: <strong>{certificate.issuer}</strong></span>
+                </span>
                 {certificate.credentialId && (
-                  <span className="text-stone-400 font-mono text-[11px] ml-2">
-                    • ID: {certificate.credentialId}
-                  </span>
+                  <button
+                    type="button"
+                    onClick={handleCopyCredentialId}
+                    title="Copy Credential ID"
+                    className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 font-mono text-[11px] bg-stone-100 hover:bg-stone-200/80 px-2 py-0.5 rounded transition-colors cursor-pointer"
+                  >
+                    <span>ID: {certificate.credentialId}</span>
+                    <Copy className="h-2.5 w-2.5 text-stone-400" />
+                  </button>
                 )}
               </div>
             </div>
@@ -193,20 +224,31 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
 
             {/* Bottom Actions */}
             <div className="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-[#e8ded3]">
-              {certificate.credentialUrl ? (
-                <a
-                  href={certificate.credentialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-4 py-2 text-xs font-semibold text-white hover:bg-[#734320] transition-colors"
-                >
-                  Verify on {certificate.issuer} <ExternalLink className="h-3 w-3" />
-                </a>
-              ) : (
-                <span className="text-xs font-mono text-stone-500">
-                  Formally issued credential
-                </span>
-              )}
+              <div className="flex flex-wrap items-center gap-2">
+                {certificate.credentialUrl ? (
+                  <>
+                    <a
+                      href={certificate.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-4 py-2 text-xs font-semibold text-white hover:bg-[#734320] transition-colors"
+                    >
+                      Verify on {certificate.issuer} <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <button
+                      type="button"
+                      onClick={handleCopyVerifyUrl}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-[#ebdccb] bg-[#faf6f0] px-3 py-2 text-xs font-semibold text-[#8c532b] hover:bg-[#f3e6d6] transition-colors cursor-pointer"
+                    >
+                      <Copy className="h-3 w-3" /> Copy Link
+                    </button>
+                  </>
+                ) : (
+                  <span className="text-xs font-mono text-stone-500">
+                    Formally issued credential
+                  </span>
+                )}
+              </div>
 
               <button
                 type="button"
