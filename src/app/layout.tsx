@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#faf6f0",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -35,6 +41,15 @@ export const metadata: Metadata = {
     "Butuan City VA",
   ],
   authors: [{ name: "Dexter E. Balbuena", url: "https://github.com/devbalbuena" }],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Dexter VA",
+  },
+  formatDetection: {
+    telephone: true,
+    email: true,
+  },
   openGraph: {
     title: "Dexter E. Balbuena | E-Commerce & Administrative Virtual Assistant",
     description:
