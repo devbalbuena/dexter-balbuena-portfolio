@@ -28,6 +28,13 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
   const [hoveredCertIndex, setHoveredCertIndex] = React.useState<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
+  // Enforce strict alphabetical A-Z order by certificate name
+  const sortedCertificates = React.useMemo(() => {
+    return [...certificates].sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+    );
+  }, [certificates]);
+
   return (
     <section className="w-full py-10 md:py-14 bg-white">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -144,7 +151,7 @@ export function LogisticsBackground({ certificates }: LogisticsBackgroundProps) 
 
               {/* Certificate Quick List with Quick-Glimpse Hover Card */}
               <div className="space-y-2 pt-1 relative">
-                {certificates.slice(0, 5).map((cert, cIdx) => (
+                {sortedCertificates.slice(0, 5).map((cert, cIdx) => (
                   <div
                     key={cIdx}
                     className="relative"
