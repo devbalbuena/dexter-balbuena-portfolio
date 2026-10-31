@@ -109,14 +109,6 @@ export function GraphicDesignCarouselSection() {
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
-
-              <Link
-                href="/work"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#8c532b] text-white text-xs font-mono font-semibold hover:bg-[#704221] transition-all shadow-xs ml-1"
-              >
-                <span>View All Work</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
             </div>
           </div>
         </Reveal>
