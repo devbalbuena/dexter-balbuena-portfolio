@@ -79,5 +79,8 @@ export async function getAllCertificates(): Promise<Certificate[]> {
     }
   }
 
-  return certificates.sort((a, b) => new Date(b.issued).getTime() - new Date(a.issued).getTime());
+  // Sort certificates alphabetically (A-Z) by credential name
+  return certificates.sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+  );
 }
