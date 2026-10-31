@@ -55,6 +55,139 @@ export const metadata: Metadata = {
   },
 };
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://devbalbuena.github.io/dexter-balbuena-portfolio";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}#person`,
+      name: "Dexter E. Balbuena",
+      givenName: "Dexter",
+      familyName: "Balbuena",
+      jobTitle: "E-Commerce & Administrative Virtual Assistant",
+      description:
+        "E-Commerce & Administrative Virtual Assistant specializing in Amazon and Shopify product research, dynamic Excel spreadsheets, Access relational database architecture, and Pinterest SEO.",
+      url: siteUrl,
+      email: "balbuena.dexter.va@gmail.com",
+      telephone: "+639912131795",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Butuan City",
+        addressRegion: "Agusan del Norte",
+        addressCountry: "PH",
+      },
+      sameAs: [
+        "https://github.com/devbalbuena",
+        "https://wa.me/639912131795",
+        "https://www.credly.com/users/dexter-balbuena",
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Microsoft Office Specialist: Microsoft Access Expert (Office 2019)",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Microsoft",
+          },
+          identifier: "53ba884d-9939-48ba-abfe-e5c887ee05ac",
+          validFrom: "2026-10-28",
+          validUntil: "2031-10-28",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Microsoft Office Specialist: Excel Associate (Office 2019)",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Microsoft",
+          },
+          identifier: "wH3w-s4R7",
+          validFrom: "2024-06-15",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Email Marketing Certified",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "HubSpot Academy",
+          },
+          validFrom: "2026-10-11",
+          validUntil: "2027-11-10",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Google Analytics Certification (2026)",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Google Skillshop",
+          },
+          validFrom: "2026-10-12",
+          validUntil: "2027-10-12",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Semrush SEO Crash Course with Brian Dean",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Semrush Academy",
+          },
+          validFrom: "2026-10-11",
+          validUntil: "2027-11-10",
+        },
+      ],
+      knowsAbout: [
+        "E-Commerce Operations",
+        "Amazon Product Research",
+        "Shopify Catalog Management",
+        "Microsoft Excel Advanced Modeling",
+        "Microsoft Access Relational Database Design",
+        "Pinterest SEO & Visual Marketing",
+        "Inventory Reconciliation",
+        "Supply Chain Logistics",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}#service`,
+      name: "Dexter Balbuena Virtual Assistant Services",
+      url: siteUrl,
+      provider: {
+        "@id": `${siteUrl}#person`,
+      },
+      areaServed: ["United States", "United Kingdom", "Australia", "Philippines"],
+      serviceType: [
+        "E-Commerce Virtual Assistant",
+        "Administrative Support",
+        "Spreadsheet & Database Automation",
+        "Product Research",
+        "Pinterest SEO Growth",
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "23:00",
+          closes: "06:00",
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}#website`,
+      url: siteUrl,
+      name: "Dexter E. Balbuena Portfolio",
+      description:
+        "Official portfolio of Dexter E. Balbuena — E-Commerce & Administrative Virtual Assistant",
+      publisher: {
+        "@id": `${siteUrl}#person`,
+      },
+      inLanguage: "en-US",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -67,6 +200,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-white text-stone-900 font-sans selection:bg-[#a86e3b] selection:text-white relative"
