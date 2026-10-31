@@ -20,10 +20,17 @@ interface CertificatesGridProps {
 export function CertificatesGrid({ certificates }: CertificatesGridProps) {
   const [selectedCert, setSelectedCert] = React.useState<Certificate | null>(null);
 
+  // Enforce strict alphabetical A-Z order by certificate name
+  const sortedCertificates = React.useMemo(() => {
+    return [...certificates].sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+    );
+  }, [certificates]);
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {certificates.map((cert, idx) => (
+        {sortedCertificates.map((cert, idx) => (
           <div
             key={idx}
             className="workspace-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-6 bg-white border border-[#e8ded3]"

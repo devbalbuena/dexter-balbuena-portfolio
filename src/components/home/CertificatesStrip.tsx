@@ -9,6 +9,10 @@ interface CertificatesStripProps {
 }
 
 export function CertificatesStrip({ certificates }: CertificatesStripProps) {
+  const sortedCertificates = [...certificates].sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+  );
+
   return (
     <section className="w-full py-16 border-t border-[#e8ded3] bg-[#fbf9f6]">
       <Reveal className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -39,7 +43,7 @@ export function CertificatesStrip({ certificates }: CertificatesStripProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {certificates.map((cert, idx) => (
+          {sortedCertificates.map((cert, idx) => (
             <div
               key={idx}
               className="workspace-card rounded-xl p-5 flex flex-col justify-between bg-white border border-[#e8ded3]"
