@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useToast } from "@/components/ui/Toast";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 
 interface CertificateModalProps {
   certificate: Certificate | null;
@@ -25,6 +26,7 @@ interface CertificateModalProps {
 
 export function CertificateModal({ certificate, onClose }: CertificateModalProps) {
   const toast = useToast();
+  const modalRef = useFocusTrap<HTMLDivElement>(Boolean(certificate));
   const [imageError, setImageError] = React.useState(false);
 
   const handleCopyCredentialId = async () => {
@@ -93,11 +95,13 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
 
         {/* Modal Window */}
         <motion.div
+          ref={modalRef}
+          tabIndex={-1}
           initial={{ opacity: 0, scale: 0.95, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 12 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white border border-[#e8ded3] shadow-2xl flex flex-col"
+          className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white border border-[#e8ded3] shadow-2xl flex flex-col focus:outline-none"
         >
           {/* Header Bar */}
           <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#e8ded3] bg-[#faf6f0] px-5 py-3.5 sm:px-6">
@@ -114,7 +118,7 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
             <button
               onClick={onClose}
               aria-label="Close certificate modal"
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-stone-500 hover:bg-stone-200/60 hover:text-stone-900 transition-colors cursor-pointer"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-stone-500 hover:bg-stone-200/60 hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8c532b] transition-colors cursor-pointer"
             >
               <X className="h-4 w-4" />
             </button>
@@ -231,14 +235,14 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
                       href={certificate.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-4 py-2 text-xs font-semibold text-white hover:bg-[#734320] transition-colors"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#8c532b] px-4 py-2 text-xs font-semibold text-white hover:bg-[#734320] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8c532b] focus-visible:ring-offset-2 transition-colors"
                     >
                       Verify on {certificate.issuer} <ExternalLink className="h-3 w-3" />
                     </a>
                     <button
                       type="button"
                       onClick={handleCopyVerifyUrl}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-[#ebdccb] bg-[#faf6f0] px-3 py-2 text-xs font-semibold text-[#8c532b] hover:bg-[#f3e6d6] transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-[#ebdccb] bg-[#faf6f0] px-3 py-2 text-xs font-semibold text-[#8c532b] hover:bg-[#f3e6d6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8c532b] focus-visible:ring-offset-2 transition-colors cursor-pointer"
                     >
                       <Copy className="h-3 w-3" /> Copy Link
                     </button>
@@ -253,7 +257,7 @@ export function CertificateModal({ certificate, onClose }: CertificateModalProps
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex items-center justify-center rounded-lg border border-[#e8ded3] bg-white px-4 py-2 text-xs font-semibold text-stone-700 hover:bg-stone-50 transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center rounded-lg border border-[#e8ded3] bg-white px-4 py-2 text-xs font-semibold text-stone-700 hover:bg-stone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8c532b] focus-visible:ring-offset-2 transition-colors cursor-pointer"
               >
                 Close Preview
               </button>

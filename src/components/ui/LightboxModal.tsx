@@ -5,6 +5,7 @@ import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Badge } from "@/components/ui/Badge";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 
 export interface LightboxItem {
   imageUrl: string;
@@ -42,6 +43,8 @@ export function LightboxModal({
   currentIndex,
   totalItems,
 }: LightboxModalProps) {
+  const modalRef = useFocusTrap<HTMLDivElement>(isOpen && Boolean(item));
+
   // Lock body scroll when open
   React.useEffect(() => {
     if (isOpen) {
@@ -76,6 +79,10 @@ export function LightboxModal({
     <AnimatePresence>
       {isOpen && item && (
         <motion.div
+          ref={modalRef}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="lightbox-item-title"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -91,7 +98,7 @@ export function LightboxModal({
             <div className="flex items-center gap-3 min-w-0">
               <span className="h-2 w-2 rounded-full bg-[#d4976a]" />
               <div className="min-w-0">
-                <h3 className="text-sm sm:text-base font-bold text-white truncate">
+                <h3 id="lightbox-item-title" className="text-sm sm:text-base font-bold text-white truncate">
                   {item.title}
                 </h3>
                 {item.subtitle && (
@@ -115,8 +122,8 @@ export function LightboxModal({
               )}
               <button
                 onClick={onClose}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors cursor-pointer"
-                aria-label="Close modal"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-colors cursor-pointer"
+                aria-label="Close fullscreen viewer (Escape)"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -130,8 +137,8 @@ export function LightboxModal({
                 e.stopPropagation();
                 onPrev();
               }}
-              className="absolute left-3 sm:left-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/25 hover:scale-105 active:scale-95 transition-all cursor-pointer backdrop-blur-xs"
-              aria-label="Previous design"
+              className="absolute left-3 sm:left-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/25 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-all cursor-pointer backdrop-blur-xs"
+              aria-label="Previous artwork (Left arrow key)"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -143,8 +150,8 @@ export function LightboxModal({
                 e.stopPropagation();
                 onNext();
               }}
-              className="absolute right-3 sm:right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/25 hover:scale-105 active:scale-95 transition-all cursor-pointer backdrop-blur-xs"
-              aria-label="Next design"
+              className="absolute right-3 sm:right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/25 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-all cursor-pointer backdrop-blur-xs"
+              aria-label="Next artwork (Right arrow key)"
             >
               <ChevronRight className="h-6 w-6" />
             </button>
