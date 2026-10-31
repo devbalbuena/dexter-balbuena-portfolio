@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://devbalbuena.github.io/dexter-balbuena-portfolio"
+  ),
   title: "Dexter E. Balbuena | E-Commerce & Administrative Virtual Assistant",
   description:
     "Freelance Virtual Assistant based in Butuan City, Philippines. Specializing in e-commerce product research, listing optimization, inventory tracking, and advanced Excel systems.",
@@ -26,6 +29,7 @@ export const metadata: Metadata = {
     "Ecommerce VA",
     "Product Research VA",
     "Amazon VA",
+    "MOS Access Expert",
     "MOS Excel Associate",
     "Administrative VA",
     "Butuan City VA",
@@ -37,6 +41,13 @@ export const metadata: Metadata = {
       "Reliable e-commerce and administrative virtual assistant with technical systems rigor. Available 11 PM - 6 AM PHT for US, UK, and AU teams.",
     type: "website",
     locale: "en_US",
+    siteName: "Dexter Balbuena Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dexter E. Balbuena | E-Commerce & Administrative Virtual Assistant",
+    description:
+      "Reliable e-commerce and administrative virtual assistant with technical systems rigor. Available 11 PM - 6 AM PHT for US, UK, and AU teams.",
   },
   robots: {
     index: true,
