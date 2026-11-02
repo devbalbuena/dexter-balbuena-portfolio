@@ -16,6 +16,10 @@ import {
   ArrowRight
 } from "lucide-react";
 
+const WEB3FORMS_PUBLIC_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ||
+  "475fbf03-5600-432c-baec-1fd5ea11ea0f";
+
 export function ContactForm() {
   const toast = useToast();
   const [formData, setFormData] = React.useState({
@@ -73,45 +77,40 @@ export function ContactForm() {
     setStatusMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      // 1. Direct client-side submission to Web3Forms (bypasses cloud datacenter IP blocks)
+      const formPayload = new FormData();
+      formPayload.append("access_key", WEB3FORMS_PUBLIC_KEY);
+      formPayload.append("name", formData.name.trim());
+      formPayload.append("email", formData.email.trim());
+      formPayload.append("whatsapp", formData.whatsapp?.trim() || "Not provided");
+      formPayload.append("message", formData.message.trim());
+      formPayload.append("from_name", "Dexter Balbuena Portfolio");
+      formPayload.append(
+        "subject",
+        `New Portfolio Inquiry from ${formData.name.trim()} (E-Commerce VA)`
+      );
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          whatsapp: formData.whatsapp,
-          message: formData.message,
-          _gotcha: honeypot,
-        }),
+        body: formPayload,
       });
 
       const data = await response.json();
 
-      if (!response.ok) {
-        setStatus("error");
-        const errMsg = data?.error || "Could not process inquiry. Please message via WhatsApp or email directly.";
-        setStatusMessage(errMsg);
-        toast.error("Submission failed", errMsg);
-        return;
-      }
-
-      if (data.delivered) {
+      if (data.success) {
         setStatus("success");
         setFormData({ name: "", email: "", whatsapp: "", message: "" });
         toast.success("Inquiry sent successfully!", "Dexter will review and reply within a few hours.");
-      } else {
-        // Direct dispatch hub
-        setStatus("dispatched");
-        toast.info("Inquiry ready to dispatch!", "Choose your preferred channel below (Gmail or WhatsApp).");
+        return;
       }
+
+      // If Web3Forms reported an issue, fallback gracefully to dispatch hub
+      setStatus("dispatched");
+      toast.info("Inquiry ready to dispatch!", "Choose WhatsApp or Gmail below to send directly.");
     } catch {
-      const errMsg = "Network connection issue. Please use direct email or WhatsApp (+63 9912131795).";
-      setStatus("error");
-      setStatusMessage(errMsg);
-      toast.error("Network issue", errMsg);
+      // Graceful fallback to 1-click dispatch hub so client's inquiry is never lost
+      setStatus("dispatched");
+      toast.info("Inquiry ready to dispatch!", "Choose WhatsApp or Gmail below to send directly.");
     }
   }
 
