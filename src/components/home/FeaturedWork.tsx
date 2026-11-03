@@ -9,6 +9,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { motion, useReducedMotion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 interface FeaturedWorkProps {
   projects: Project[];
@@ -100,7 +101,11 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                       </div>
                     )}
                     <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5">
-                      <Badge variant="secondary" size="sm" className="bg-white/95 shadow-xs">
+                      <Badge 
+                        variant={project.category === "shopify-ops" ? "success" : "secondary"} 
+                        size="sm" 
+                        className={cn("shadow-xs", project.category === "shopify-ops" ? "bg-emerald-50 font-bold text-emerald-900 border-emerald-300" : "bg-white/95")}
+                      >
                         {CATEGORY_LABELS[project.category]}
                       </Badge>
                     </div>
