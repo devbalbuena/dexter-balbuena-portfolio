@@ -1,0 +1,45 @@
+{
+  "slug": "shopify-flow-automations",
+  "title": "Shopify Flow Store Operations & Hands-Free Automation Playbook",
+  "category": "shopify-ops",
+  "categories": [
+    "shopify-ops",
+    "web-system",
+    "admin-docs"
+  ],
+  "summary": "Systematic implementation of event-driven Shopify Flow automations eliminating 12+ hours of weekly manual store administration, including VIP tier tagging, automated low-stock reorder triggers, and high-risk fraud quarantine.",
+  "problem": "High-volume e-commerce store founders lose hours every day manually checking stock levels, verifying suspicious order locations, tagging repeat VIP customers, and handling collection housekeeping—leading to human oversight, delayed supplier reorders, and costly fraudulent chargebacks.",
+  "whatIDid": [
+    "Mapped end-to-end operational logic trees connecting native Shopify events (Order Created, Inventory Changed, Risk Analyzed) into conditional decision paths.",
+    "Engineered a VIP retention workflow that automatically calculates cumulative customer spend, applies 'VIP-Tier-1' customer tags, and alerts warehouse packaging teams via Slack.",
+    "Built an autonomous low-stock reorder alert system monitoring 500+ SKUs that flags products below 10 units, triggers frontend scarcity badges, and emails structured supplier reorder digests to procurement.",
+    "Constructed a high-risk fraud defense automation that intercepts orders with high risk scores or international billing/shipping discrepancies, placing fulfillment on hold and generating verification checklists.",
+    "Designed smart collection auto-archiving that demotes zero-stock products to prevent ad spend waste and reduce mobile bounce rates.",
+    "Authored complete Standard Operating Procedure (SOP) documentation allowing remote support teams to execute fraud and reorder verification seamlessly."
+  ],
+  "result": "Eliminated an estimated 12.0 hours per week of manual founder/VA store maintenance (~$3,600/month in founder time savings) while achieving 100% automated protection against unauthorized high-risk fulfillments.",
+  "tools": [
+    "Shopify Flow",
+    "Event-Driven Automations",
+    "Slack Webhooks",
+    "Inventory Trigger Logic",
+    "Fraud & Risk Mitigation",
+    "Operations SOPs",
+    "Smart Tag Rules"
+  ],
+  "date": "2026-03-10",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/shopify-flow-automations.svg",
+      "alt": "Shopify Flow Automated Store Operations Architecture Diagram",
+      "caption": "Visual logic architecture for VIP customer tagging, real-time low-stock alerts, and fraud quarantine."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/09_Shopify_Flow_Automations_Playbook.xlsx"
+  }
+}
