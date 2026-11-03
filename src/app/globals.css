@@ -120,22 +120,22 @@ html[data-scroll-behavior="smooth"] {
   }
 }
 
-/* Hero Section: Shade C (Golden Honey & Peach Amber Sunlit Horizon) */
-.hero-gradient-shade-c {
+/* Hero Section: Shade A (Cashmere Linen & Warm Toffee Horizon) */
+.hero-gradient-horizon {
   position: relative;
-  background-color: #fffdf9;
+  background-color: #faf7f2;
   background-image: 
-    radial-gradient(ellipse 90% 65% at 50% 125%, rgba(230, 160, 95, 0.42) 0%, rgba(250, 225, 195, 0.78) 45%, #fffdf9 100%),
-    radial-gradient(circle at 85% 20%, rgba(245, 185, 120, 0.2) 0%, transparent 55%);
+    radial-gradient(ellipse 90% 65% at 50% 125%, rgba(195, 145, 105, 0.48) 0%, rgba(238, 220, 200, 0.82) 45%, #faf7f2 100%),
+    radial-gradient(circle at 85% 20%, rgba(212, 163, 115, 0.22) 0%, transparent 55%);
 }
 
 .hero-stipple-pattern {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(#b45309 0.75px, transparent 0.75px);
-  background-size: 20px 20px;
-  opacity: 0.12;
+  background-image: radial-gradient(#8c532b 0.75px, transparent 0.75px);
+  background-size: 22px 22px;
+  opacity: 0.13;
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, transparent 95%);
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, transparent 95%);
 }

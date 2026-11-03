@@ -21,13 +21,13 @@ export function HeroBento() {
   const hasPhoto = fs.existsSync(photoPath);
 
   return (
-    <section className="relative w-full pt-8 pb-4 md:pt-12 md:pb-6 hero-gradient-shade-c border-b border-[#ebdccb]/60 overflow-hidden">
+    <section className="relative w-full pt-8 pb-4 md:pt-12 md:pb-6 hero-gradient-horizon border-b border-[#e8ded3]/70 overflow-hidden">
       {/* Delicate Micro-Stipple Grain Texture inspired by Shopify Partners */}
       <div className="hero-stipple-pattern" aria-hidden="true" />
 
-      {/* Atmospheric Ambient Glow behind Portrait */}
+      {/* Atmospheric Ambient Glow behind Portrait (Shade A Toffee/Cashmere Warmth) */}
       <div 
-        className="pointer-events-none absolute right-0 top-1/4 -z-0 h-[480px] w-[480px] rounded-full bg-gradient-to-br from-[#f8dfc2]/35 via-[#fdeed9]/25 to-transparent blur-3xl" 
+        className="pointer-events-none absolute right-0 top-1/4 -z-0 h-[480px] w-[480px] rounded-full bg-gradient-to-br from-[#eedcc8]/45 via-[#d8bfa6]/25 to-transparent blur-3xl" 
         aria-hidden="true" 
       />
 
