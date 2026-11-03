@@ -5,6 +5,8 @@ FILES
 02_Product_Listing_Audit.xlsx
 03_Inventory_Reorder_Tracker.xlsx
 04_Order_Operations_Tracker.xlsx
+07_Shopify_Matrixify_Bulk_Catalog_Template.xlsx
+08_Shopify_PDP_Conversion_Rate_Optimization_Audit.xlsx
 Ready_to_Post_Portfolio_Descriptions.docx
 
 HOW TO USE
