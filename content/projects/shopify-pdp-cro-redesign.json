@@ -1,0 +1,45 @@
+{
+  "slug": "shopify-pdp-cro-redesign",
+  "title": "Shopify Product Detail Page (PDP) Conversion Rate Optimization & Audit",
+  "category": "shopify-ops",
+  "categories": [
+    "shopify-ops",
+    "ecommerce-research",
+    "graphic-design"
+  ],
+  "summary": "Comprehensive before-and-after conversion rate optimization (CRO) audit and redesign for Shopify OS 2.0 product pages, implementing mobile sticky buy boxes, trust architecture, dynamic tier bundles, and metafield accordion blocks.",
+  "problem": "E-commerce store operators drive expensive paid traffic from Meta and Google Ads directly to default Shopify product pages, suffering from high mobile bounce rates (58%+), clunky variant dropdowns, zero social proof above the fold, and buried add-to-cart buttons that kill mobile conversion velocity.",
+  "whatIDid": [
+    "Conducted a 25-point heuristic CRO audit evaluating Above-The-Fold hierarchy, decision friction, trust architecture, and mobile responsive behavior.",
+    "Engineered a high-contrast floating sticky mobile Add-to-Cart bar with real-time price updates ensuring shoppers never lose access to the buy action while scrolling.",
+    "Replaced default unformatted HTML descriptions with Shopify OS 2.0 native collapsible accordion tabs connected to product metafields for technical specifications and care guides.",
+    "Integrated star rating badges with anchor jump links to verified customer review galleries directly above the product title.",
+    "Designed a tiered volume discount module ('Buy 2 Save 10%') directly inside the buy box to boost Average Order Value (AOV) on impulse and gifting purchases.",
+    "Structured a 3-point risk-reversal trust badge cluster (30-day trial, carbon-neutral delivery, SSL security) directly beneath the primary checkout button."
+  ],
+  "result": "Modeled conversion performance metrics showing a +57.8% lift in checkout conversion rate (1.85% to 2.92%), a +67.3% surge in mobile add-to-cart interactions, and a +$10.70 expansion in Average Order Value (AOV).",
+  "tools": [
+    "Shopify OS 2.0",
+    "CRO Heuristic Audit",
+    "Mobile UX Optimization",
+    "Dawn / Refresh Theme",
+    "Judge.me / Loox Reviews",
+    "Metafield Architecture",
+    "Tiered Bundle Pricing"
+  ],
+  "date": "2026-03-05",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/shopify-pdp-cro-redesign.svg",
+      "alt": "Shopify Product Detail Page (PDP) CRO Before-and-After Redesign Diagram",
+      "caption": "Annotated before-and-after comparison showing 6 key conversion triggers implemented on Shopify OS 2.0."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/08_Shopify_PDP_Conversion_Rate_Optimization_Audit.xlsx"
+  }
+}
