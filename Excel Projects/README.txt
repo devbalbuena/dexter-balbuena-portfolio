@@ -7,6 +7,7 @@ FILES
 04_Order_Operations_Tracker.xlsx
 07_Shopify_Matrixify_Bulk_Catalog_Template.xlsx
 08_Shopify_PDP_Conversion_Rate_Optimization_Audit.xlsx
+09_Shopify_Flow_Automations_Playbook.xlsx
 Ready_to_Post_Portfolio_Descriptions.docx
 
 HOW TO USE
