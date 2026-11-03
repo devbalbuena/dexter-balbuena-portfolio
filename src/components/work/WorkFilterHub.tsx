@@ -17,6 +17,7 @@ interface WorkFilterHubProps {
 
 const CATEGORIES: { key: "all" | ProjectCategory; label: string }[] = [
   { key: "all", label: "All Projects" },
+  { key: "shopify-ops", label: "Shopify Operations" },
   { key: "ecommerce-research", label: "E-Commerce Research" },
   { key: "excel-sheets", label: "Excel & Sheets" },
   { key: "web-system", label: "Web Systems" },

@@ -1,4 +1,5 @@
 export type ProjectCategory =
+  | "shopify-ops"
   | "ecommerce-research"
   | "excel-sheets"
   | "web-system"
@@ -51,6 +52,7 @@ export interface Project {
 }
 
 export const CATEGORY_LABELS: Record<ProjectCategory, string> = {
+  "shopify-ops": "Shopify Operations",
   "ecommerce-research": "E-Commerce Research",
   "excel-sheets": "Excel & Sheets",
   "web-system": "Web Systems",
