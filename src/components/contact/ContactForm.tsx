@@ -81,23 +81,24 @@ export function ContactForm() {
   }>({});
 
   // Bot speed trap timer: track when the form mounted
-  const mountTimeRef = React.useRef<number>(Date.now());
-  const [cooldownRemaining, setCooldownRemaining] = React.useState<number>(0);
-
-  // Check rate limiting cooldown on mount and tick down
-  React.useEffect(() => {
-    mountTimeRef.current = Date.now();
+  const mountTimeRef = React.useRef<number>(0);
+  const [cooldownRemaining, setCooldownRemaining] = React.useState<number>(() => {
+    if (typeof window === "undefined") return 0;
     try {
       const lastSubmit = localStorage.getItem("dexter_portfolio_last_submit");
       if (lastSubmit) {
         const elapsed = Math.floor((Date.now() - parseInt(lastSubmit, 10)) / 1000);
-        if (elapsed < 45) {
-          setCooldownRemaining(45 - elapsed);
-        }
+        if (elapsed < 45) return 45 - elapsed;
       }
     } catch {
       // LocalStorage access safe
     }
+    return 0;
+  });
+
+  // Track mount timestamp
+  React.useEffect(() => {
+    mountTimeRef.current = Date.now();
   }, []);
 
   React.useEffect(() => {

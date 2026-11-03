@@ -14,8 +14,7 @@ import {
   ArrowRight, 
   Eye, 
   CheckCircle2,
-  ShieldCheck,
-  ExternalLink
+  ShieldCheck
 } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 

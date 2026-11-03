@@ -45,7 +45,8 @@ const TOOLS: ToolItem[] = [
     name: "Shopify",
     category: "E-Commerce Storefront",
     logo: ShopifyLogo,
-    tag: "Catalog & Product Listings",
+    tag: "OS 2.0 & Matrixify Migration",
+    highlightTag: true,
   },
   {
     name: "Google Sheets",

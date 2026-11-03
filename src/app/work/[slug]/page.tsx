@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { getProjectBySlug, getAllProjects } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/types/project";
 import { Badge } from "@/components/ui/Badge";

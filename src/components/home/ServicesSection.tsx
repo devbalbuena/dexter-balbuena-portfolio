@@ -23,9 +23,9 @@ const SERVICES = [
       "Reliable back-office and listing operations for Amazon, Shopify, and multichannel stores.",
     deliverables: [
       "Product & competitor market research",
+      "Shopify OS 2.0 catalog & Matrixify bulk migration",
       "Listing creation & SKU optimization",
       "Inventory tracking & stock reorder alerts",
-      "High-accuracy catalog data entry",
     ],
   },
   {

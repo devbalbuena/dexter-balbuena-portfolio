@@ -36,8 +36,8 @@ export function ProjectMediaGallery({ media, title }: ProjectMediaGalleryProps) 
   };
 
   // Split caption into a bold label and description if formatted as "Label: Description"
-  const captionParts = React.useMemo(() => {
-    if (!current.caption) return null;
+  const captionParts = (() => {
+    if (!current?.caption) return null;
     const colonIdx = current.caption.indexOf(":");
     if (colonIdx !== -1 && colonIdx < 48) {
       return {
@@ -46,7 +46,7 @@ export function ProjectMediaGallery({ media, title }: ProjectMediaGalleryProps) 
       };
     }
     return { badge: null, text: current.caption };
-  }, [current.caption]);
+  })();
 
   const lightboxItem: LightboxItem = {
     imageUrl: current.url,
