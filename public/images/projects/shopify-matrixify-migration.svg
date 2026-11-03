@@ -68,8 +68,8 @@
 
   <!-- Row 1 (Parent) -->
   <rect x="42" y="222" width="716" height="24" fill="#FFFFFF" />
-  <text x="52" y="238" fill="#008060" font-family="monospace" font-size="9" font-weight="600">desk-mat-felt-leather</text>
-  <text x="210" y="238" fill="#0F172A" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Minimalist Wool Desk Mat</text>
+  <text x="52" y="238" fill="#008060" font-family="monospace" font-size="9" font-weight="600">minimalist-ergonomic-desk-mat</text>
+  <text x="210" y="238" fill="#0F172A" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Minimalist Ergonomic Wool Desk Mat</text>
   <text x="365" y="238" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Medium (80x40cm)</text>
   <text x="455" y="238" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Charcoal Gray</text>
   <text x="550" y="238" fill="#0F172A" font-family="monospace" font-size="9" font-weight="600">ND-DSK-MED-CHR</text>
@@ -79,7 +79,7 @@
 
   <!-- Row 2 (Child Variant) -->
   <rect x="42" y="248" width="716" height="24" fill="#F8FAFC" />
-  <text x="52" y="264" fill="#94A3B8" font-family="monospace" font-size="9">desk-mat-felt-leather</text>
+  <text x="52" y="264" fill="#94A3B8" font-family="monospace" font-size="9">minimalist-ergonomic-desk-mat</text>
   <text x="210" y="264" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">⤷ Variant Row</text>
   <text x="365" y="264" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Large (90x45cm)</text>
   <text x="455" y="264" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Charcoal Gray</text>
@@ -90,7 +90,7 @@
 
   <!-- Row 3 (Child Variant 2) -->
   <rect x="42" y="274" width="716" height="24" fill="#FFFFFF" />
-  <text x="52" y="290" fill="#94A3B8" font-family="monospace" font-size="9">desk-mat-felt-leather</text>
+  <text x="52" y="290" fill="#94A3B8" font-family="monospace" font-size="9">minimalist-ergonomic-desk-mat</text>
   <text x="210" y="290" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">⤷ Variant Row</text>
   <text x="365" y="290" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Medium (80x40cm)</text>
   <text x="455" y="290" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Warm Sand</text>
@@ -101,8 +101,8 @@
 
   <!-- Row 4 (New Product) -->
   <rect x="42" y="300" width="716" height="24" fill="#F8FAFC" />
-  <text x="52" y="316" fill="#008060" font-family="monospace" font-size="9" font-weight="600">walnut-monitor-riser</text>
-  <text x="210" y="316" fill="#0F172A" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Solid Walnut Dual Riser</text>
+  <text x="52" y="316" fill="#008060" font-family="monospace" font-size="9" font-weight="600">solid-walnut-monitor-riser</text>
+  <text x="210" y="316" fill="#0F172A" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Solid American Walnut Dual-Monitor Stand</text>
   <text x="365" y="316" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Standard (105cm)</text>
   <text x="455" y="316" fill="#475569" font-family="system-ui, sans-serif" font-size="9">Natural Walnut</text>
   <text x="550" y="316" fill="#0F172A" font-family="monospace" font-size="9" font-weight="600">ND-RSR-STD-WAL</text>

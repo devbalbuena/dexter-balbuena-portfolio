@@ -89,14 +89,14 @@
 
   <!-- Row 4 (Zebra) -->
   <rect x="45" y="305" width="710" height="25" fill="#f8fafc" />
-  <text x="55" y="321" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Ceramic Coffee Warmer Plate</text>
-  <text x="220" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Amazon</text>
-  <text x="310" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$34.99</text>
-  <text x="400" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$15.00</text>
-  <text x="490" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">15.0%</text>
-  <text x="570" y="321" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$14.74</text>
-  <rect x="670" y="309" width="45" height="17" rx="3" fill="#fef3c7" />
-  <text x="684" y="321" fill="#b45309" font-family="monospace" font-size="10" font-weight="700">71</text>
+  <text x="55" y="321" fill="#1e293b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Cable Management Spine</text>
+  <text x="220" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Shopify</text>
+  <text x="310" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$19.99</text>
+  <text x="400" y="321" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10">$6.25</text>
+  <text x="490" y="321" fill="#475569" font-family="system-ui, sans-serif" font-size="10">3.5%</text>
+  <text x="570" y="321" fill="#059669" font-family="system-ui, sans-serif" font-size="10" font-weight="700">$13.04</text>
+  <rect x="670" y="309" width="45" height="17" rx="3" fill="#dbeafe" />
+  <text x="684" y="321" fill="#1d4ed8" font-family="monospace" font-size="10" font-weight="700">75</text>
 
   <!-- Formula Callout at bottom -->
   <rect x="45" y="342" width="710" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />

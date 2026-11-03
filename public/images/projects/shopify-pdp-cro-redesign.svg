@@ -26,7 +26,7 @@
   <circle cx="64" cy="35" r="5" fill="#F59E0B" />
   <circle cx="80" cy="35" r="5" fill="#10B981" />
   <text x="100" y="39" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">
-    Shopify_OS2_PDP_CRO_Audit.xlsx — Conversion Rate Optimization Case Study (Dexter Balbuena)
+    08_Shopify_PDP_Conversion_Rate_Optimization_Audit.xlsx — Conversion Rate Optimization Case Study (Dexter Balbuena)
   </text>
   <rect x="635" y="25" width="128" height="20" rx="4" fill="url(#cro-badge)" />
   <text x="647" y="39" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="700">CRO &amp; PDP AUDIT</text>
@@ -101,7 +101,7 @@
 
     <!-- Product Title & Price -->
     <text x="15" y="60" fill="#0F172A" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
-      Minimalist Dual-Sided Wool Desk Mat
+      Minimalist Ergonomic Wool Desk Mat
     </text>
     <text x="15" y="78" fill="#008060" font-family="system-ui, sans-serif" font-size="14" font-weight="800">$38.00</text>
     <text x="68" y="78" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-decoration="line-through">$48.00</text>

@@ -84,15 +84,15 @@
 
   <!-- Row 3 (Pending Payment) -->
   <rect x="45" y="280" width="710" height="25" fill="#fef2f2" stroke="#fecaca" stroke-width="0.5" />
-  <text x="55" y="296" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">ORD-1004</text>
-  <text x="145" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Shopify</text>
-  <text x="230" y="296" fill="#0f172a" font-family="monospace" font-size="10">ORG-101</text>
-  <text x="320" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$49.00</text>
+  <text x="55" y="296" fill="#0f172a" font-family="monospace" font-size="10" font-weight="600">ORD-1003</text>
+  <text x="145" y="296" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Shopee</text>
+  <text x="230" y="296" fill="#0f172a" font-family="monospace" font-size="10">ORG-003</text>
+  <text x="320" y="296" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="600">$22.50</text>
   <rect x="395" y="284" width="60" height="17" rx="3" fill="#fee2e2" />
   <text x="402" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Pending</text>
   <rect x="485" y="284" width="60" height="17" rx="3" fill="#fee2e2" />
   <text x="492" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="10" font-weight="700">On Hold</text>
-  <text x="598" y="296" fill="#dc2626" font-family="system-ui, sans-serif" font-size="10" font-weight="700">9</text>
+  <text x="598" y="296" fill="#dc2626" font-family="system-ui, sans-serif" font-size="10" font-weight="700">12</text>
   <rect x="645" y="284" width="85" height="17" rx="3" fill="#fee2e2" />
   <text x="653" y="296" fill="#991b1b" font-family="system-ui, sans-serif" font-size="9" font-weight="700">FOLLOW UP</text>
 
