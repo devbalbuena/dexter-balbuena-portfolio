@@ -120,6 +120,26 @@ html[data-scroll-behavior="smooth"] {
   }
 }
 
+/* Hero Section: Shade C (Golden Honey & Peach Amber Sunlit Horizon) */
+.hero-gradient-shade-c {
+  position: relative;
+  background-color: #fffdf9;
+  background-image: 
+    radial-gradient(ellipse 90% 65% at 50% 125%, rgba(230, 160, 95, 0.42) 0%, rgba(250, 225, 195, 0.78) 45%, #fffdf9 100%),
+    radial-gradient(circle at 85% 20%, rgba(245, 185, 120, 0.2) 0%, transparent 55%);
+}
+
+.hero-stipple-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#b45309 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+  opacity: 0.12;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, transparent 95%);
+}
+
 .animate-glide-marquee {
   display: flex !important;
   flex-direction: row !important;

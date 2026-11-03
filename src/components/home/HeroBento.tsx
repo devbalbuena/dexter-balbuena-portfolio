@@ -21,8 +21,17 @@ export function HeroBento() {
   const hasPhoto = fs.existsSync(photoPath);
 
   return (
-    <section className="relative w-full pt-6 pb-2 md:pt-10 md:pb-3">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="relative w-full pt-8 pb-4 md:pt-12 md:pb-6 hero-gradient-shade-c border-b border-[#ebdccb]/60 overflow-hidden">
+      {/* Delicate Micro-Stipple Grain Texture inspired by Shopify Partners */}
+      <div className="hero-stipple-pattern" aria-hidden="true" />
+
+      {/* Atmospheric Ambient Glow behind Portrait */}
+      <div 
+        className="pointer-events-none absolute right-0 top-1/4 -z-0 h-[480px] w-[480px] rounded-full bg-gradient-to-br from-[#f8dfc2]/35 via-[#fdeed9]/25 to-transparent blur-3xl" 
+        aria-hidden="true" 
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top 2-Column Hero: Headline + Proof Dock on Left, Clean Studio Portrait on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
           {/* Left Column: Positioning, Headline, CTAs, and 3-Card Proof Dock */}
