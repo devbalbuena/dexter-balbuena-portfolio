@@ -215,16 +215,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-white text-stone-900 font-sans selection:bg-[#a86e3b] selection:text-white relative"
       >
+        <script
+          id="schema-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          suppressHydrationWarning
+        />
         <Providers>
           {/* Global film grain noise overlay */}
           <div
