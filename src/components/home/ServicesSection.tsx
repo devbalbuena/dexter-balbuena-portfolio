@@ -22,10 +22,10 @@ const SERVICES = [
     description:
       "Reliable back-office and listing operations for Amazon, Shopify, and multichannel stores.",
     deliverables: [
+      "Shopify OS 2.0 & Matrixify bulk catalog migration",
+      "Hands-free Shopify Flow automations & triggers",
       "Product & competitor market research",
-      "Shopify OS 2.0 catalog & Matrixify bulk migration",
       "Listing creation & SKU optimization",
-      "Inventory tracking & stock reorder alerts",
     ],
   },
   {
@@ -67,7 +67,7 @@ const SERVICES = [
       "Lightweight custom order & task trackers",
       "Internal catalog browsing prototypes",
       "Database data extraction & QA testing",
-      "SaaS tool integration & workflow testing",
+      "Shopify Flow webhook & automation logic",
     ],
   },
   {
