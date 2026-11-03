@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="pdp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="cro-badge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="accent-btn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#008060" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#pdp-bg)" />
+
+  <!-- Outer Window Shell -->
+  <rect x="25" y="16" width="750" height="418" rx="12" fill="#FFFFFF" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Window Header -->
+  <rect x="25" y="16" width="750" height="38" rx="12" fill="#0F172A" />
+  <circle cx="48" cy="35" r="5" fill="#EF4444" />
+  <circle cx="64" cy="35" r="5" fill="#F59E0B" />
+  <circle cx="80" cy="35" r="5" fill="#10B981" />
+  <text x="100" y="39" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">
+    Shopify_OS2_PDP_CRO_Audit.xlsx — Conversion Rate Optimization Case Study (Dexter Balbuena)
+  </text>
+  <rect x="635" y="25" width="128" height="20" rx="4" fill="url(#cro-badge)" />
+  <text x="647" y="39" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="700">CRO &amp; PDP AUDIT</text>
+
+  <!-- Split Comparison Layout -->
+  
+  <!-- LEFT: BEFORE (Control / Default) -->
+  <g transform="translate(40, 64)">
+    <rect width="345" height="305" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    
+    <!-- Header -->
+    <rect width="345" height="28" rx="8" fill="#EF4444" />
+    <text x="12" y="19" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+      BEFORE: Default Unoptimized PDP
+    </text>
+    <rect x="255" y="5" width="80" height="18" rx="3" fill="#991B1B" />
+    <text x="263" y="17" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="700">1.85% CVR</text>
+
+    <!-- Wireframe content -->
+    <rect x="15" y="38" width="120" height="120" rx="4" fill="#E2E8F0" />
+    <text x="50" y="103" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Image</text>
+
+    <!-- Weak Buy Box -->
+    <text x="145" y="52" fill="#64748B" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Desk Mat 80*40</text>
+    <text x="145" y="70" fill="#0F172A" font-family="system-ui, sans-serif" font-size="13" font-weight="600">$38.00</text>
+    <text x="145" y="86" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">Select Option:</text>
+    <rect x="145" y="92" width="185" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1" />
+    <text x="155" y="107" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">Medium - Charcoal ▾</text>
+
+    <rect x="145" y="122" width="185" height="28" rx="4" fill="#334155" />
+    <text x="200" y="140" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Add to cart</text>
+
+    <!-- Defect Callouts -->
+    <rect x="15" y="170" width="315" height="120" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-dasharray="3,3" />
+    <text x="25" y="188" fill="#991B1B" font-family="system-ui, sans-serif" font-size="10" font-weight="700">
+      IDENTIFIED CONVERSION FRICTION:
+    </text>
+    <text x="25" y="206" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9">
+      ✕ Zero social proof or review count above fold
+    </text>
+    <text x="25" y="224" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9">
+      ✕ Clunky dropdown hides out-of-stock color inventory
+    </text>
+    <text x="25" y="242" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9">
+      ✕ No sticky mobile ATC (users scroll past &amp; bounce)
+    </text>
+    <text x="25" y="260" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9">
+      ✕ 800-word unformatted text block, missing trust badges
+    </text>
+    <text x="25" y="278" fill="#B91C1C" font-family="system-ui, sans-serif" font-size="9">
+      ✕ Single quantity only (zero bundle or AOV incentive)
+    </text>
+  </g>
+
+  <!-- RIGHT: AFTER (Optimized OS 2.0 CRO Redesign) -->
+  <g transform="translate(415, 64)">
+    <rect width="345" height="305" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5" />
+    
+    <!-- Header -->
+    <rect width="345" height="28" rx="8" fill="#008060" />
+    <text x="12" y="19" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+      AFTER: High-Converting OS 2.0 Redesign
+    </text>
+    <rect x="255" y="5" width="80" height="18" rx="3" fill="#047857" />
+    <text x="263" y="17" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="700">2.92% CVR</text>
+
+    <!-- Star rating & Trust -->
+    <text x="15" y="44" fill="#D97706" font-family="system-ui, sans-serif" font-size="10" font-weight="700">★★★★★</text>
+    <text x="65" y="44" fill="#15803D" font-family="system-ui, sans-serif" font-size="9" font-weight="700">4.9/5 (182 Reviews)</text>
+    <rect x="225" y="32" width="105" height="16" rx="3" fill="#DCFCE7" />
+    <text x="233" y="44" fill="#166534" font-family="system-ui, sans-serif" font-size="8" font-weight="800">SAVE $10 (21% OFF)</text>
+
+    <!-- Product Title & Price -->
+    <text x="15" y="60" fill="#0F172A" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+      Minimalist Dual-Sided Wool Desk Mat
+    </text>
+    <text x="15" y="78" fill="#008060" font-family="system-ui, sans-serif" font-size="14" font-weight="800">$38.00</text>
+    <text x="68" y="78" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-decoration="line-through">$48.00</text>
+
+    <!-- Free Shipping Progress -->
+    <rect x="15" y="86" width="315" height="16" rx="3" fill="#DCFCE7" />
+    <text x="22" y="98" fill="#166534" font-family="system-ui, sans-serif" font-size="8" font-weight="700">
+      ✓ Free Worldwide Shipping Unlocked!
+    </text>
+
+    <!-- Variant Pills -->
+    <text x="15" y="114" fill="#334155" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Size:</text>
+    <rect x="42" y="104" width="70" height="16" rx="3" fill="#008060" />
+    <text x="48" y="116" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="8" font-weight="700">Med (80x40)</text>
+    <rect x="118" y="104" width="72" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1" />
+    <text x="124" y="116" fill="#475569" font-family="system-ui, sans-serif" font-size="8">Large (90x45)</text>
+
+    <!-- Tiered Bundle Offer (AOV Booster) -->
+    <rect x="15" y="126" width="315" height="34" rx="4" fill="#ECFDF5" stroke="#008060" stroke-width="1" />
+    <circle cx="28" cy="143" r="5" fill="#008060" />
+    <text x="40" y="139" fill="#065F46" font-family="system-ui, sans-serif" font-size="9" font-weight="800">
+      POPULAR: Buy 2 Desk Mats (Save Extra 10%)
+    </text>
+    <text x="40" y="152" fill="#047857" font-family="system-ui, sans-serif" font-size="8">
+      $68.40 total · Keep one for office &amp; home setup
+    </text>
+
+    <!-- Sticky ATC Button -->
+    <rect x="15" y="168" width="315" height="30" rx="5" fill="url(#accent-btn)" />
+    <text x="100" y="187" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+      ADD TO CART · $38.00 →
+    </text>
+
+    <!-- Trust Badges & Accordions -->
+    <rect x="15" y="206" width="100" height="20" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="22" y="220" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">🛡 30-Day Trial</text>
+
+    <rect x="122" y="206" width="100" height="20" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="130" y="220" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">📦 Fast Dispatch</text>
+
+    <rect x="230" y="206" width="100" height="20" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="238" y="220" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">🔒 SSL Secure</text>
+
+    <!-- Metafield Accordions -->
+    <rect x="15" y="234" width="315" height="18" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="24" y="247" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">▸ Dimensions &amp; Technical Specs</text>
+
+    <rect x="15" y="256" width="315" height="18" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="24" y="269" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">▸ Materials &amp; Eco Care Guide</text>
+
+    <rect x="15" y="278" width="315" height="18" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    <text x="24" y="291" fill="#334155" font-family="system-ui, sans-serif" font-size="8" font-weight="700">▸ Shipping &amp; Hassle-Free Returns</text>
+  </g>
+
+  <!-- Bottom Metric Summary Bar -->
+  <rect x="40" y="378" width="720" height="42" rx="6" fill="#0F172A" />
+  
+  <text x="55" y="403" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">AUDIT IMPACT:</text>
+  
+  <text x="145" y="403" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+    +57.8% Conversion Lift
+  </text>
+  <text x="285" y="403" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+    +67.3% Mobile ATC
+  </text>
+  <text x="415" y="403" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+    +$10.70 AOV via Bundles
+  </text>
+  <text x="575" y="403" fill="#F472B6" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+    -$32.8% Mobile Bounce
+  </text>
+</svg>
