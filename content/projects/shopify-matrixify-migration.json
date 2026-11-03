@@ -1,0 +1,45 @@
+{
+  "slug": "shopify-matrixify-migration",
+  "title": "500+ SKU Multi-Variant Catalog Restructuring & Matrixify Bulk Migration",
+  "category": "shopify-ops",
+  "categories": [
+    "shopify-ops",
+    "ecommerce-research",
+    "excel-sheets"
+  ],
+  "summary": "End-to-end catalog restructuring transforming raw supplier inventory sheets into a standardized Matrixify schema for Shopify OS 2.0 with multi-variant matrices, barcode validation, and automated smart collection rules.",
+  "problem": "E-commerce store owners frequently receive unstructured product feeds from wholesale suppliers with merged size/color options in single cells, missing variant SKUs, duplicate URL handles, and zero barcode validation, causing failed bulk imports and catalog inventory mismatches.",
+  "whatIDid": [
+    "Cleaned and normalized raw supplier spreadsheets by parsing composite variant strings into dedicated Option1 (Size) and Option2 (Color) relational matrices.",
+    "Engineered programmatic kebab-case URL handles ensuring parent-child variant grouping and zero duplicate handle collisions.",
+    "Generated standardized SKU naming hierarchies (BRAND-CAT-SIZE-COLOR) and cross-checked 1,500+ barcode entries with validation formulas to prevent duplicate inventory records.",
+    "Structured Shopify OS 2.0 native metafield attributes (specifications, dimensions, care guides) directly into Matrixify import columns for automated PDP accordion population.",
+    "Authored high-converting SEO page titles, meta descriptions, and image alt-tags targeting purchase-intent search keywords.",
+    "Configured automated smart collection tags allowing instant storefront merchandising without manual product-by-product assignment."
+  ],
+  "result": "Successfully restructured and prepared 520+ parent products into 1,560 child variants with 100% data validation accuracy, eliminating manual listing overhead and enabling error-free Matrixify bulk store deployment.",
+  "tools": [
+    "Shopify OS 2.0",
+    "Matrixify (Excelify)",
+    "Microsoft Excel",
+    "Catalog Restructuring",
+    "Variant Matrix Architecture",
+    "Metafields & Schema",
+    "SEO Metadata"
+  ],
+  "date": "2026-03-01",
+  "featured": true,
+  "projectType": "independent-research",
+  "isDemoSample": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/projects/shopify-matrixify-migration.svg",
+      "alt": "500+ SKU Catalog Restructuring & Matrixify Bulk Migration Architecture",
+      "caption": "Three-stage catalog normalization pipeline from raw supplier feed to live Shopify OS 2.0 storefront."
+    }
+  ],
+  "links": {
+    "downloadUrl": "/downloads/excel/07_Shopify_Matrixify_Bulk_Catalog_Template.xlsx"
+  }
+}
