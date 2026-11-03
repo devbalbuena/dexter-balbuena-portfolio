@@ -149,6 +149,55 @@ export function HeroPortrait({ hasPhoto }: HeroPortraitProps) {
           )}
         </div>
       </motion.div>
+
+      {/* Interactive Floating Mascot Companion (Waving Beaver) */}
+      <motion.div
+        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.8, y: 12 }}
+        animate={
+          shouldReduceMotion
+            ? { opacity: 1 }
+            : {
+                opacity: 1,
+                scale: 1,
+                y: [0, -8, 0],
+              }
+        }
+        transition={
+          shouldReduceMotion
+            ? { duration: 0.3 }
+            : {
+                opacity: { duration: 0.5, delay: 0.2 },
+                scale: { duration: 0.5, delay: 0.2 },
+                y: { duration: 3.5, repeat: Infinity, ease: "easeInOut" },
+              }
+        }
+        whileHover={shouldReduceMotion ? {} : { scale: 1.08, rotate: [0, -2, 2, 0] }}
+        whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
+        className="absolute -bottom-5 -left-3 sm:-bottom-6 sm:-left-6 z-30 flex items-end gap-2 cursor-pointer group"
+        aria-label="Dexter's friendly beaver mascot"
+      >
+        <div className="relative">
+          {/* Mascot Speech Bubble */}
+          <div className="absolute -top-9 left-2 sm:left-4 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 shadow-md border border-[#ebdccb] text-[11px] font-mono font-semibold text-[#8c532b] backdrop-blur-xs transition-all duration-300 group-hover:scale-105 group-hover:border-[#8c532b] flex items-center gap-1.5 pointer-events-none">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Hi, welcome!</span>
+            {/* Speech bubble pointer */}
+            <span className="absolute -bottom-1 left-4 h-2 w-2 rotate-45 border-r border-b border-[#ebdccb] bg-white" />
+          </div>
+
+          {/* Mascot Image */}
+          <div className="relative h-24 w-28 sm:h-28 sm:w-32 drop-shadow-[0_12px_18px_rgba(24,18,13,0.18)] transition-transform duration-300">
+            <Image
+              src="/images/mascot/beaver-waving.webp"
+              alt="Dexter's friendly beaver mascot waving hello"
+              fill
+              sizes="(max-width: 640px) 112px, 128px"
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Mail, MessageSquare } from "lucide-react";
 
@@ -35,7 +36,31 @@ export default function ContactPage() {
         </div>
 
         {/* Direct Channels & Availability Card on Right */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-5">
+          {/* Mascot Availability & Scheduling Banner */}
+          <div className="rounded-2xl p-4 sm:p-5 bg-gradient-to-r from-[#faf5ee] via-[#f7efe4] to-[#f4ebe0] border border-[#ebdccb] shadow-2xs flex items-center gap-4">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20 shrink-0 drop-shadow-md">
+              <Image
+                src="/images/mascot/beaver-calendar.webp"
+                alt="Dexter's beaver mascot holding scheduling calendar"
+                fill
+                sizes="(max-width: 640px) 64px, 80px"
+                className="object-contain"
+              />
+            </div>
+            <div className="space-y-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-stone-900">Live Scheduling Ready</span>
+                <span className="text-[9px] font-mono font-bold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                  Available for Hire
+                </span>
+              </div>
+              <p className="text-xs text-stone-600 leading-snug">
+                Operating <strong>11 PM – 6 AM PHT</strong> with direct live overlap for US, UK, and Australian business hours.
+              </p>
+            </div>
+          </div>
+
           <div className="workspace-card rounded-2xl p-6 sm:p-7 space-y-5 bg-white border border-[#e8ded3]">
             {/* Header */}
             <div className="flex items-center justify-between pb-3.5 border-b border-stone-200/80">
